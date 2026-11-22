@@ -1,0 +1,135 @@
+{
+  "_nota": "OB (BRIEF «Dettagli di OB», approvato da Marco il 21/11/2026): obiettivi per salire di livello col municipio. tipo: abitanti (valore), costruzioni (id, valore = quante collegate), senza_blackout_giorni (valore), felicita (valore), produce (id: una costruzione di quel tipo ha prodotto nell'ultimo giorno), denaro (valore), inquinamento_sotto (valore). premio in denaro. OB-2 (Claude, 21/11/2026): ob_abitanti_200 vale 200 — con 250 il livello III (e il cementificio) arrivava al giorno 237 e il mix rendeva solo l'8% più di senza_materiali (criterio I: 15%); con 200 arriva al 177. Id rinominato da ob_abitanti_250, testi delle lingue portati a 200.",
+  "livelli": [
+    {
+      "livello": 2,
+      "nome": "paese",
+      "costo": 3000,
+      "materiali": {
+        "legname": 40
+      },
+      "giorni_cantiere": 1,
+      "obiettivi": [
+        {
+          "id": "ob_abitanti_100",
+          "tipo": "abitanti",
+          "valore": 100,
+          "premio": 500
+        },
+        {
+          "id": "ob_quartieri_5",
+          "tipo": "costruzioni",
+          "id_costruzione": "quartiere",
+          "valore": 5,
+          "premio": 400
+        },
+        {
+          "id": "ob_blackout_3",
+          "tipo": "senza_blackout_giorni",
+          "valore": 3,
+          "premio": 500
+        },
+        {
+          "id": "ob_felicita_60",
+          "tipo": "felicita",
+          "valore": 60,
+          "premio": 400
+        }
+      ]
+    },
+    {
+      "livello": 3,
+      "nome": "cittadina",
+      "costo": 8000,
+      "materiali": {
+        "legname": 80,
+        "pietra": 60
+      },
+      "giorni_cantiere": 2,
+      "obiettivi": [
+        {
+          "id": "ob_abitanti_200",
+          "tipo": "abitanti",
+          "valore": 200,
+          "premio": 1000
+        },
+        {
+          "id": "ob_segheria",
+          "tipo": "produce",
+          "id_costruzione": "segheria",
+          "premio": 600
+        },
+        {
+          "id": "ob_deposito",
+          "tipo": "costruzioni",
+          "id_costruzione": "deposito",
+          "valore": 1,
+          "premio": 600
+        },
+        {
+          "id": "ob_denaro_20000",
+          "tipo": "denaro",
+          "valore": 20000,
+          "premio": 800
+        }
+      ]
+    },
+    {
+      "livello": 4,
+      "nome": "citta",
+      "costo": 15000,
+      "materiali": {
+        "legname": 100,
+        "pietra": 100,
+        "cemento": 80
+      },
+      "giorni_cantiere": 3,
+      "obiettivi": [
+        {
+          "id": "ob_abitanti_400",
+          "tipo": "abitanti",
+          "valore": 400,
+          "premio": 2000
+        },
+        {
+          "id": "ob_ospedale",
+          "tipo": "costruzioni",
+          "id_costruzione": "ospedale",
+          "valore": 1,
+          "premio": 1000
+        },
+        {
+          "id": "ob_inquinamento_30",
+          "tipo": "inquinamento_sotto",
+          "valore": 30,
+          "premio": 1000
+        },
+        {
+          "id": "ob_blackout_7",
+          "tipo": "senza_blackout_giorni",
+          "valore": 7,
+          "premio": 1000
+        }
+      ]
+    }
+  ],
+  "strade_municipio_minimo": {
+    "sterrata": 1,
+    "strada": 2,
+    "viale": 3
+  },
+  "difficolta": {
+    "facile": {
+      "denaro": 1.5,
+      "manutenzione": 0.8
+    },
+    "normale": {
+      "denaro": 1.0,
+      "manutenzione": 1.0
+    },
+    "difficile": {
+      "denaro": 0.7,
+      "manutenzione": 1.2
+    }
+  }
+}

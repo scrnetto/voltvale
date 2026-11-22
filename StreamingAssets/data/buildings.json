@@ -4,6 +4,9 @@
     {
       "id": "linea",
       "categoria": "rete",
+      "municipio_minimo": 1,
+      "ore_costruzione": 0,
+      "famiglia_lavoro": "edile",
       "richiede_strada": false,
       "nome_log": "Linea elettrica",
       "tipo": "linea",
@@ -27,6 +30,9 @@
     {
       "id": "miniera",
       "categoria": "industria",
+      "municipio_minimo": 1,
+      "ore_costruzione": 24,
+      "famiglia_lavoro": "meccanica",
       "richiede_strada": true,
       "nome_log": "Miniera di carbone",
       "tipo": "miniera",
@@ -53,6 +59,9 @@
     {
       "id": "centrale_carbone",
       "categoria": "energia",
+      "municipio_minimo": 1,
+      "ore_costruzione": 48,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": true,
       "nome_log": "Centrale a carbone",
       "tipo": "centrale",
@@ -81,6 +90,9 @@
     {
       "id": "solare",
       "categoria": "energia",
+      "municipio_minimo": 1,
+      "ore_costruzione": 12,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": true,
       "nome_log": "Impianto solare",
       "tipo": "centrale",
@@ -107,6 +119,9 @@
     {
       "id": "eolico",
       "categoria": "energia",
+      "municipio_minimo": 1,
+      "ore_costruzione": 24,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": true,
       "nome_log": "Parco eolico",
       "tipo": "centrale",
@@ -133,6 +148,9 @@
     {
       "id": "batteria",
       "categoria": "energia",
+      "municipio_minimo": 1,
+      "ore_costruzione": 12,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": false,
       "nome_log": "Batteria",
       "tipo": "batteria",
@@ -159,6 +177,9 @@
     {
       "id": "quartiere",
       "categoria": "citta",
+      "municipio_minimo": 1,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Quartiere",
       "tipo": "quartiere",
@@ -185,6 +206,9 @@
     {
       "id": "fattoria",
       "categoria": "cibo",
+      "municipio_minimo": 1,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Fattoria",
       "tipo": "cibo",
@@ -214,6 +238,9 @@
     {
       "id": "peschereccio",
       "categoria": "cibo",
+      "municipio_minimo": 2,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "meccanica",
       "richiede_strada": true,
       "nome_log": "Peschereccio",
       "tipo": "cibo",
@@ -243,6 +270,9 @@
     {
       "id": "serra",
       "categoria": "cibo",
+      "municipio_minimo": 2,
+      "ore_costruzione": 24,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Serra",
       "tipo": "cibo",
@@ -271,6 +301,9 @@
     {
       "id": "frigorifero",
       "categoria": "cibo",
+      "municipio_minimo": 2,
+      "ore_costruzione": 20,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Magazzino frigorifero",
       "tipo": "magazzino",
@@ -298,6 +331,9 @@
     {
       "id": "parco",
       "categoria": "citta",
+      "municipio_minimo": 1,
+      "ore_costruzione": 8,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Parco",
       "tipo": "servizio",
@@ -326,6 +362,9 @@
     {
       "id": "ospedale",
       "categoria": "citta",
+      "municipio_minimo": 3,
+      "ore_costruzione": 48,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Ospedale",
       "tipo": "servizio",
@@ -354,6 +393,9 @@
     {
       "id": "segheria",
       "categoria": "industria",
+      "municipio_minimo": 2,
+      "ore_costruzione": 20,
+      "famiglia_lavoro": "meccanica",
       "richiede_strada": true,
       "nome_log": "Segheria",
       "tipo": "industria",
@@ -384,6 +426,9 @@
     {
       "id": "cava",
       "categoria": "industria",
+      "municipio_minimo": 2,
+      "ore_costruzione": 20,
+      "famiglia_lavoro": "meccanica",
       "richiede_strada": true,
       "nome_log": "Cava",
       "tipo": "industria",
@@ -413,6 +458,9 @@
     {
       "id": "cementificio",
       "categoria": "industria",
+      "municipio_minimo": 3,
+      "ore_costruzione": 40,
+      "famiglia_lavoro": "meccanica",
       "richiede_strada": true,
       "nome_log": "Cementificio",
       "tipo": "industria",
@@ -443,6 +491,9 @@
     {
       "id": "deposito",
       "categoria": "trasporti",
+      "municipio_minimo": 2,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Deposito",
       "tipo": "servizio",
@@ -469,6 +520,9 @@
     {
       "id": "autoparco",
       "categoria": "trasporti",
+      "municipio_minimo": 2,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Autoparco",
       "tipo": "servizio",
@@ -495,6 +549,9 @@
     {
       "id": "trasformatore",
       "categoria": "rete",
+      "municipio_minimo": 3,
+      "ore_costruzione": 16,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": true,
       "nome_log": "Trasformatore",
       "tipo": "servizio",
@@ -521,6 +578,9 @@
     {
       "id": "pompaggio",
       "categoria": "energia",
+      "municipio_minimo": 3,
+      "ore_costruzione": 48,
+      "famiglia_lavoro": "elettrica",
       "richiede_strada": true,
       "nome_log": "Pompaggio",
       "tipo": "batteria",
@@ -548,6 +608,9 @@
     {
       "id": "mercato",
       "categoria": "trasporti",
+      "municipio_minimo": 2,
+      "ore_costruzione": 24,
+      "famiglia_lavoro": "edile",
       "richiede_strada": true,
       "nome_log": "Mercato",
       "tipo": "servizio",
@@ -571,6 +634,41 @@
       "sprite": "mercato",
       "animazione": null,
       "unico": true
+    },
+    {
+      "id": "officina",
+      "categoria": "citta",
+      "municipio_minimo": 2,
+      "ore_costruzione": 24,
+      "famiglia_lavoro": "edile",
+      "richiede_strada": true,
+      "nome_log": "Officina",
+      "tipo": "servizio",
+      "fonte": "nessuna",
+      "costo": 1200,
+      "materiali": {
+        "legname": 30
+      },
+      "manutenzione": 0.15,
+      "stipendio_ora": 1.5,
+      "capacita": 0,
+      "consumo_energia": 0.2,
+      "propaga_rete": true,
+      "consumo_carbone": 0,
+      "produzione_carbone": 0,
+      "inquinamento": 0,
+      "abitanti": 0,
+      "posti_lavoro": {
+        "lavoratori": 8
+      },
+      "capacita_batteria": 0,
+      "efficienza_batteria": 1.0,
+      "bonus_collina": 1.0,
+      "terreni": ["pianura", "collina"],
+      "sprite": "officina",
+      "animazione": null,
+      "orario": "giornaliero",
+      "squadre": 2
     }
   ]
 }

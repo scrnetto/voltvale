@@ -229,6 +229,25 @@
     "lago_raffreddamento": 0.05,
     "lago_felicita": 1
   },
+  "squadre": {
+    "_nota": "MT-a (BRIEF «Dettagli di MT-a»): squadre di manutentori che costruiscono gli edifici. attive = false: costruzione istantanea come prima (i test dei sistemi la spengono, come trasporti.attivi). municipio = squadre iniziali con base al municipio; le officine aggiungono il loro campo «squadre». Lavorano dalle ore_inizio alle ore_fine ogni giorno. Esperienza per famiglia di lavoro: + esperienza_per_ora a ogni ora di lavoro, velocità = 1 + min(tetto_esperienza, esperienza). Senza un percorso su strada il viaggio vale ore_per_casella_senza_strada a casella.",
+    "attive": true,
+    "municipio": 2,
+    "ore_inizio": 8,
+    "ore_fine": 17,
+    "esperienza_per_ora": 0.005,
+    "tetto_esperienza": 0.5,
+    "ore_per_casella_senza_strada": 0.25
+  },
+  "collegamenti": {
+    "attivi": true,
+    "lato": "ovest",
+    "portata_acquisto_mw": [20, 30, 45, 60],
+    "portata_vendita_mw": [40, 60, 90, 120],
+    "fattore_prezzo_acquisto": 2.0,
+    "vendita_automatica": true,
+    "acquisto_automatico": true
+  },
   "orari": {
     "continuo": {
       "persone_per_posto": 4.2,
@@ -256,6 +275,7 @@
     }
   },
   "nomi": {
+    "citta": ["Voltvale", "Lumenta", "Ampereto", "Castelvolta", "Rivaluce", "Pontecorrente", "Borgoscintilla", "Valdinamo", "Montefaro", "Campolume", "Torrevento", "Acquavolta", "Sassolume", "Pianamperia", "Collefaro", "Fontelume", "Poggiovolta", "Marlume", "Serralta", "Rocca Ventosa"],
       "strade": [
           "Volta",
           "Galvani",
