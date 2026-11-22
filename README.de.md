@@ -16,14 +16,15 @@
 [![Lizenz](https://img.shields.io/badge/lizenz-kostenlos%2C%20alle%20rechte%20vorbehalten-lightgrey)](LICENSE.md)
 [![Sprachen](https://img.shields.io/badge/sprachen-it%20%7C%20en%20%7C%20de%20%7C%20fr%20%7C%20es-009246)](#sprachen)
 [![Mit Unity gemacht](https://img.shields.io/badge/gemacht%20mit-Unity%206-1d2330?logo=unity)](https://unity.com/)
+[![Offizielle Website](https://img.shields.io/badge/website-voltvale.it-f2c230)](https://voltvale.it/de/)
 
 **Du betreibst das Stromnetz einer wachsenden Kleinstadt.** Jede Stunde braucht die Stadt Strom: wenig in der
 Nacht, viel am Abend. Baue Kraftwerke, Solarparks, Windparks und Batterien, verbinde alles mit Stromleitungen und
 Straßen, finde Leute, die dort arbeiten, Schicht für Schicht, versorge alle mit Nahrung, bringe Waren und Baustoffe
-mit Lkw ans Ziel, ohne den Verkehr lahmzulegen, und lass die Stadt **innerhalb von zwei Spieljahren auf 400
-Einwohner** wachsen, ohne ständige Stromausfälle, ohne Schulden und ohne sie in Abgasen zu ersticken.
+mit Lkw ans Ziel, ohne den Verkehr lahmzulegen, und lass dein Dorf **innerhalb von zwei Spieljahren auf 400
+Einwohner** wachsen, ohne ständige Stromausfälle, ohne Schulden und ohne es in Abgasen zu ersticken.
 
-Ein Originalspiel von **Marco Scarlino**. Kostenlos.
+Ein Originalspiel von **Marco Scarlino**. Kostenlos. Offizielle Website: **[voltvale.it](https://voltvale.it/de/)**.
 
 ![Ein laufendes Spiel: die Stadt mit ihren Straßen rund um das Rathaus, Wohnviertel, Solarparks, Windparks, Batterien und Industrie; rechts das Fenster „Feld“, unten die Diagramme](immagini/schermata-partita-de.png)
 
@@ -96,15 +97,20 @@ Unter Linux mit `sha256sum -c --ignore-missing SHA256SUMS.txt`, unter macOS mit 
 
 ## So wird gespielt
 
-Das Spiel öffnet mit dem **Startmenü**: **Neues Spiel**, oder **Fortsetzen**, um mit dem letzten Spielstand
-weiterzumachen. Das Spiel beginnt am **Sonntag, 18. Oktober 2020**, um 8 Uhr und startet **pausiert**: Drücke die
+Das Spiel öffnet mit dem **Startmenü**: **Neues Spiel**, wo du den Namen der Stadt und den Schwierigkeitsgrad
+wählst (siehe [Neues Spiel](#neues-spiel)), oder **Fortsetzen**, um mit dem letzten Spielstand weiterzumachen. Das Spiel beginnt am **Sonntag, 18. Oktober 2020**, um 8 Uhr und startet **pausiert**: Drücke die
 **Leertaste**, damit die Zeit läuft. Bei 1× dauert eine Spielstunde eine Sekunde; du kannst auf 2× und 4×
 beschleunigen. Die Jahreszeiten folgen dem Kalender: Du beginnst im Herbst, und im Winter sind die Tage kürzer und
 der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Datum und die Uhrzeit, zum Beispiel
 „Tag 1 · So 18.10.2020 · 08:00“.
 
-- **Ziel**: **400 Einwohner** mit einer Verschmutzung **unter dem Grenzwert** innerhalb von **2 Jahren**.
-- **Niederlage**: wenn dein Geld **30 Tage am Stück** im Minus bleibt oder die 2 Jahre abgelaufen sind.
+- **Ziel**: **400 Einwohner** mit einer Verschmutzung **unter dem Grenzwert** innerhalb von **2 Jahren**. Nach dem
+  Sieg kannst du **weiterspielen**, ohne Zeitlimit.
+- **Niederlage**: wenn dein Geld **30 Tage am Stück** im Minus bleibt oder die 2 Jahre vor dem Sieg abgelaufen sind.
+- **Das Rathaus wächst**: vom **Dorf** zur **Kleinstadt**, zur **Stadt** und zur **Großstadt**, indem du kleine Ziele
+  erfüllst. Jede Stufe schaltet neue Gebäude frei: siehe [Rathausstufen und Ziele](#rathausstufen-und-ziele).
+- **Gebaut wird mit Trupps**: Ein neues Gebäude ist zuerst eine **Baustelle** und arbeitet erst, wenn ein Trupp fertig
+  ist. Siehe [Baustellen und Bautrupps](#baustellen-und-bautrupps).
 - **Das Netz**: Jedes Gebäude muss mit dem **Rathaus** verbunden sein. **Stromleitungen** gehen vom Rathaus aus und
   verlängern es, auch diagonal. Ein Gebäude ist verbunden, wenn es das Rathaus, eine Leitung oder ein anderes
   verbundenes Gebäude berührt: Eine Gruppe nebeneinanderliegender Gebäude ist verbunden, wenn eines davon das Netz
@@ -112,7 +118,8 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
 - **Straßen**: Außer dem Strom muss jedes Gebäude mit einer Seite eine **mit dem Rathaus verbundene Straße**
   berühren (Stromleitungen brauchen keine). Siehe [Straßen und Verkehr](#straßen-und-verkehr).
 - **Nachfrage und Strom**: Nachts verbraucht die Stadt wenig, abends gegen 19 Uhr viel. Reicht der Strom nicht,
-  gibt es einen **Stromausfall**: Die Einwohner ärgern sich, und manche ziehen weg.
+  auch nicht mit dem von außen gekauften, gibt es einen **Stromausfall**: Die Einwohner ärgern sich, und manche ziehen
+  weg.
 - **Energiequellen**:
   - die **Sonne** liefert nur tagsüber Strom, und wenig im Winter oder bei Wolken;
   - der **Wind** ändert Stärke und Richtung von Stunde zu Stunde (das Fenster Wetter zeigt, woher er weht); ein
@@ -120,11 +127,102 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
     Anlagen, bis zu 40 % weniger);
   - **Kohle** liefert immer, verschmutzt aber die Luft und verbrennt die Kohle aus den **Minen**.
 - **Batterien** speichern den überschüssigen Strom und geben ihn bei Bedarf ab, zum Beispiel am Abend.
-- **Überschüssiger Strom** wird an das Netz draußen verkauft, aber je mehr du anbietest, desto weniger ist er wert.
+- **Strom von außen**: Überschüssiger Strom wird **verkauft**, und was fehlt, wird zum doppelten Preis **gekauft**,
+  über die **Grenzleitung** neben der Brücke; je mehr du in einer Stunde verkaufst, desto weniger ist er wert. Siehe
+  [Verbindungen zum Festland](#verbindungen-zum-festland).
 - **Verschmutzung**: Kohlekraftwerke verschmutzen die Luft, und sie klärt sich nur langsam. Ein Kraftwerk geht,
   zu viele nicht. Sie macht die Einwohner krank, und über dem Grenzwert kannst du nicht gewinnen.
 - **Wachstum**: Die Stadt wächst, wenn die Einwohner **zufrieden** genug sind, in den **Wohnvierteln** Platz ist und
   genug **Nahrung** auf Vorrat liegt.
+
+### Neues Spiel
+
+**Neues Spiel** (im Startmenü oder im Pausenmenü) öffnet einen Bildschirm, auf dem du wählst:
+
+- den **Namen der Stadt**: Das Spiel schlägt einen vor, der Knopf mit dem Würfel einen anderen, oder du schreibst
+  deinen eigenen. Das Rathaus trägt den Namen der Stadt;
+- den **Schwierigkeitsgrad**: **leicht** (Startgeld ×1,5, Unterhalt ×0,8), **normal** oder **schwer** (Startgeld ×0,7,
+  Unterhalt ×1,2).
+
+Die Punkte „Katastrophen“ und „Kartengröße“ gibt es schon, aber vorerst sind Katastrophen aus und es gibt nur eine
+Karte.
+
+### Rathausstufen und Ziele
+
+Das Rathaus wächst mit der Stadt: **I Dorf**, **II Kleinstadt**, **III Stadt**, **IV Großstadt**.
+
+- Jede Stufe hat **4 Ziele**, und jedes erfüllte Ziel bringt eine **Belohnung in Geld**:
+  - zur **Kleinstadt**: 100 Einwohner, 5 angeschlossene Wohnviertel, 3 Tage ohne Stromausfall, Zufriedenheit
+    mindestens 60 %;
+  - zur **Stadt**: 200 Einwohner, ein arbeitendes Sägewerk, ein Lager, 20.000 in der Kasse;
+  - zur **Großstadt**: 400 Einwohner, ein Krankenhaus, Verschmutzung unter 30, 7 Tage ohne Stromausfall.
+- Sind alle Ziele der Stufe erfüllt, leuchtet im Fenster Feld des Rathauses **Ausbauen** auf (das Symbol mit dem
+  Pfeil, oben). Es kostet Geld und Baustoffe (Kleinstadt 3.000 und 40 Holz; Stadt 8.000, 80 Holz und 60 Stein;
+  Großstadt 15.000, 100 Holz, 100 Stein und 80 Zement), und die Arbeiten dauern ein bis drei Tage. Das Rathaus steigt
+  nie von selbst auf.
+- Die Gebäude werden so **freigeschaltet**:
+
+| Stufe | Gebäude |
+|---|---|
+| **I Dorf** | Stromleitungen, Feldwege, Wohnviertel, Solarparks, Windparks, Kohlekraftwerke und Kohleminen, Batterien, Bauernhöfe, Parks |
+| **II Kleinstadt** | asphaltierte Straßen, Lager, Fuhrparks, Sägewerke, Steinbrüche, Gewächshäuser, Kühlhäuser, Fischkutter, Markt, Bauhof |
+| **III Stadt** | Alleen, Zementwerke, Umspannwerke, Krankenhäuser, Pumpspeicher |
+| **IV Großstadt** | vorerst nichts Neues: Die Stufe ist für die Gebäude der nächsten Updates da |
+
+- In der Liste sind noch gesperrte Gebäude ausgegraut, mit einem **Schloss**; fährst du mit der Maus darüber, siehst
+  du die nötige Stufe. Den **Markt** gibt es nur einmal pro Stadt: Nach dem ersten wird er grau.
+- Das Fenster **Ziele** hat zwei Reiter: **Partie** (das Endziel und die Prognose) und **Stufe** (die Ziele der Stufe
+  und wie viele erfüllt sind). Manche Ziele, etwa die Zufriedenheit, zählen erst um Mitternacht: Das Fenster schreibt
+  „erreicht: zählt um Mitternacht“.
+- Für den Verkehr zählt das Rathaus als asphaltierte Straße, ab Stufe III als Allee.
+
+### Baustellen und Bautrupps
+
+- Wenn du ein Gebäude setzt, zahlst du sofort, und an seiner Stelle entsteht eine **Baustelle**. Ein **Trupp** fährt
+  vom Rathaus los, kommt an und arbeitet die nötigen Stunden; das Gebäude arbeitet, wenn er fertig ist.
+- Jedes Gebäude hat seine **Bauzeit**, die in der Liste und im Tooltip neben den Kosten steht: zum Beispiel 8 Stunden
+  für einen Park, 12 für einen Solarpark, 24 für einen Windpark, 48 für ein Kohlekraftwerk oder ein Krankenhaus.
+  Stromleitungen und Straßen entstehen weiterhin sofort.
+- Die Trupps arbeiten **von 8 bis 17 Uhr**, jeden Tag. Das Rathaus hat **2**: Gibt es mehr Baustellen, stellen sie
+  sich **in die Warteschlange** und warten auf einen freien Trupp.
+- Der **Bauhof** (Reiter Stadt, ab Stufe II) bringt **2 Trupps** dazu, die von dort losfahren: Er lohnt sich, wenn
+  Baustellen lange warten oder weit vom Rathaus entfernt sind. Er braucht Personal, Strom und eine Straße.
+- Die Trupps sammeln **Erfahrung** im Bau, bei Elektro- und Mechanikarbeiten: Je mehr sie arbeiten, desto schneller
+  werden sie, bis zu 50 % schneller.
+- Ein Klick auf eine Baustelle zeigt im Fenster Feld, ob sie wartet (und an welcher Stelle), ob der Trupp unterwegs
+  oder bei der Arbeit ist und wie viele Stunden fehlen. Die Fenster Feld von Rathaus und Bauhof zeigen ihre Trupps,
+  was sie tun und ihre Erfahrung.
+- Eine Baustelle lässt sich wie ein Gebäude abreißen, die Hälfte der Kosten wird erstattet.
+
+### Verbindungen zum Festland
+
+Die Karte ist eine **Insel**, die über eine **Brücke im Westen**, auf der Höhe des Rathauses, mit dem Festland
+verbunden ist.
+
+- Neben der Brücke liegen die **Grenzleitung** und die **Bundesstraße**, schon mit einer Reihe Stromleitungen und
+  einem Feldweg an das Rathaus angeschlossen. Brücke, Grenzleitung und Bundesstraße lassen sich nicht abreißen; die
+  Leitungen und der Feldweg schon, aber ohne Verbindung handelt die Stadt nichts mehr.
+- **Strom**: Überschüssiger Strom wird **verkauft**; was fehlt, wird zum doppelten Preis **gekauft**, solange Geld da
+  ist. So beginnt das Spiel nicht im Dunkeln, während du auf die ersten Baustellen wartest, aber alles lange zu
+  kaufen leert die Kasse.
+- Gehandelt wird nur bis zur **Kapazität** der Leitung, die mit der Stufe des Rathauses wächst:
+
+| Rathaus | Verkauf bis | Kauf bis |
+|---|---|---|
+| I Dorf | 40 MW | 20 MW |
+| II Kleinstadt | 60 MW | 30 MW |
+| III Stadt | 90 MW | 45 MW |
+| IV Großstadt | 120 MW | 60 MW |
+
+  In der Abendspitze einer großen Stadt reicht der gekaufte Strom nicht: Dann brauchst du eigene Kraftwerke und
+  Batterien.
+- Im Fenster Feld der Grenzleitung gibt es die zwei Schalter **Verkauf** und **Kauf**, die Kapazitäten, den Kaufpreis
+  und wie viel in der letzten Stunde gekauft und verkauft wurde. Mit „Kauf: aus“ gibt es einen Stromausfall, wenn die
+  Erzeugung nicht reicht.
+- Ein **Handelssymbol** über der Grenzleitung zeigt, wann in der letzten Stunde Strom gekauft oder verkauft wurde; das
+  Diagramm **Energie** zeigt den gekauften Strom.
+- **Waren von außen**: Importierte Nahrung, Kupfer und der Handel des Markts kommen über die **Bundesstraße** und
+  kommen nur an, wenn sie mit den Straßen der Stadt verbunden ist.
 
 ### Arbeit und Personal
 
@@ -133,7 +231,7 @@ Gebäude brauchen Leute, die sie betreiben.
 - Etwa **56 %** der Einwohner arbeiten. Die Leiste oben zeigt, wie viele Menschen von den verfügbaren
   Arbeitskräften eine Stelle haben.
 - **Kohlekraftwerke**, **Kohleminen**, **Industrie**, die Gebäude für **Nahrung**, **Krankenhäuser**, **Parks**,
-  **Kühlhäuser**, **Lager** und **Pumpspeicher** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
+  **Kühlhäuser**, **Lager**, **Bauhöfe** und **Pumpspeicher** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
   Stromleitungen und Umspannwerke laufen von selbst.
 - Das Fenster **Feld** zeigt, wie viele Stellen besetzt sind, zum Beispiel **Personal: 4/4**, und wie viele
   Menschen dafür nötig sind, alle Schichten eingerechnet.
@@ -153,7 +251,7 @@ Jedes Gebäude mit Personal hat eigene Arbeitszeiten, die das Fenster **Feld** a
 |---|---|---|
 | **Immer geöffnet, 3 Schichten (6, 14, 22)** | Kohlekraftwerke, Kohleminen, Krankenhäuser, Kühlhäuser, Fuhrparks, Pumpspeicher | etwa 4: Eine Stelle, die Tag und Nacht besetzt ist, braucht drei Schichten plus Ruhetage |
 | **Geöffnet 8–17, Montag bis Freitag** | Sägewerke, Steinbrüche, Zementwerke, Lager | 1 |
-| **Geöffnet 8–17, jeden Tag** | Bauernhöfe, Fischkutter, Gewächshäuser, Parks, die Dienste der Wohnviertel | etwa 1,4, für die freien Tage |
+| **Geöffnet 8–17, jeden Tag** | Bauernhöfe, Fischkutter, Gewächshäuser, Parks, Bauhöfe, die Dienste der Wohnviertel | etwa 1,4, für die freien Tage |
 
 - Ein Kohlekraftwerk mit allen Stellen besetzt beschäftigt etwa **17 Menschen**: Plane deine Wohnviertel danach.
 - **Außerhalb der Arbeitszeit ist ein Gebäude geschlossen**: Es produziert nichts und verbraucht weder Strom noch
@@ -174,7 +272,7 @@ knapp wird.
 - **Kühlhaus** (Ebene): erhöht, wie viel Nahrung die Stadt lagern kann.
 - **Nahrung hängt am Netz**: Die Nahrungsgebäude verbrauchen Strom. Bei einem **Stromausfall** produzieren sie
   nicht, und die Kühlhäuser verlieren einen Teil der zusätzlichen Nahrung.
-- **Ist der Vorrat leer**, wird Nahrung automatisch importiert, aber das ist teuer. Mit importierter Nahrung
+- **Ist der Vorrat leer**, wird Nahrung automatisch über die Bundesstraße importiert, aber das ist teuer. Mit importierter Nahrung
   verhungert die Stadt nicht, aber sie **wächst nicht**: Zum Wachsen braucht sie mindestens einen Tag eigenen
   Vorrat.
 - **Geht auch das Geld aus**, kommt der Hunger, und die Einwohner ziehen weg.
@@ -237,10 +335,12 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 ### Straßen und Verkehr
 
 - Jedes Gebäude außer Stromleitungen muss mit einer Seite eine **mit dem Rathaus verbundene Straße** berühren. Ohne
-  Straße steht es still und zeigt das Signal „ohne Straße“. Du beginnst mit vier Feldwegen rund um das Rathaus.
+  Straße steht es still und zeigt das Signal „ohne Straße“. Du beginnst mit vier Feldwegen rund um das Rathaus und
+  einem zur Bundesstraße.
 - Werkzeug **Straße** (Taste **R** oder der erste Knopf der Liste): klicken oder ziehen, um **Feldwege** zu legen.
   Eine Straße kann unter einer Stromleitung verlaufen, aber nicht unter anderen Gebäuden.
-- Werkzeug **Straße ausbauen** (Taste **M**): **Feldweg → asphaltierte Straße → Allee**. Jede Stufe trägt mehr
+- Werkzeug **Straße ausbauen** (Taste **M**): **Feldweg → asphaltierte Straße** (ab Stufe II) **→ Allee** (ab
+  Stufe III). Jede Stufe trägt mehr
   Verkehr und ist schneller, kostet aber Zement. Nach dem Ausbau bleibt das Feld ein paar Stunden eine
   **Baustelle**, mit weniger Platz für den Verkehr.
 - **Pendler**: Die Arbeitskräfte fahren aus den Wohnvierteln zur Arbeit, wenn ihre Arbeitszeit beginnt, und nach
@@ -271,8 +371,9 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 
 ### Markt
 
-- Den **Markt** baust du im Reiter **Verkehr** der Liste; es gibt einen pro Stadt. Er braucht eine Straße und
-  Personal und ist werktags von 8 bis 17 Uhr geöffnet.
+- Den **Markt** baust du im Reiter **Verkehr** der Liste, ab Stufe II; es gibt einen pro Stadt. Er braucht eine
+  Straße und Personal und ist werktags von 8 bis 17 Uhr geöffnet. Der Handel läuft über die **Bundesstraße**: Ist sie
+  nicht angebunden, kauft und verkauft der Markt nichts.
 - Mit dem Markt kaufst du Baustoffe und Nahrung **ohne den Importaufschlag**, und du kannst auch **Kohle und Stein**
   kaufen. Was du nicht brauchst, **verkaufst** du zu 70 % des Kaufpreises.
 - Fenster **Markt** (Taste **K** oder der Knopf mit der Waage oben): Vorrat und Preise jedes Materials; die
@@ -286,7 +387,7 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
   **Rathaus** oder einem **Umspannwerk** (in der Liste baubar). Je weiter das Kraftwerk entfernt ist, desto mehr
   verliert es; das Fenster Feld zeigt, wie viel.
 - Werkzeug **Leitung ausbauen** (Taste **L**): Leitungen gehen von Stufe **I** auf **II** und **III** und verlieren
-  weniger, kosten aber **Kupfer**, das von außen gekauft wird.
+  weniger, kosten aber **Kupfer**, das von außen gekauft wird und über die Bundesstraße ankommt.
 - Das Diagramm **Energie** unten hat einen Balken für die Verluste.
 
 ### Minen und Seen
@@ -330,7 +431,7 @@ Das Fenster unten hat sechs Registerkarten. Die ersten fünf zeigen die **letzte
 Stunde; die sechste, **Ziele**, das ganze Spiel mit der Prognose. Ein Klick auf eine Registerkarte wechselt dorthin
 (das Spiel merkt sich deine Wahl); fährst du mit der Maus über eine Spalte, liest du die genauen Werte dieser Stunde.
 
-- **Energie**: Erzeugung, Nachfrage, Batterien und Leitungsverluste.
+- **Energie**: Erzeugung, Nachfrage, Batterien, Leitungsverluste und gekaufter Strom.
 - **Geld**: Einnahmen über der Null, Ausgaben darunter, und der Kontostand, mit Verkäufen und Käufen am Markt.
 - **Materialien**: wie viel von jedem Material erzeugt und verbraucht wird, und der Vorrat; das Material wählst du
   mit den Knöpfen neben dem Diagramm.
@@ -349,7 +450,7 @@ auf der Karte stehen, siehst du seinen Zustand und wie viel Strom es erzeugt ode
 
 | Steuerung | Was sie tut |
 |---|---|
-| Tasten **1–9** und **0** | Wählen, was gebaut wird: Stromleitung, Kohlemine, Kohlekraftwerk, Solarpark, Windpark, Batterie, Wohnviertel, Bauernhof, Fischkutter, Gewächshaus. Die übrigen Gebäude (Kühlhaus, Park, Krankenhaus, Industrie, Lager, Fuhrpark, Umspannwerk, Pumpspeicher, Markt) stehen in der Liste links, auf sechs Reitern: Energie, Netz, Verkehr, Stadt, Nahrung, Industrie |
+| Tasten **1–9** und **0** | Wählen, was gebaut wird: Stromleitung, Kohlemine, Kohlekraftwerk, Solarpark, Windpark, Batterie, Wohnviertel, Bauernhof, Fischkutter, Gewächshaus. Die übrigen Gebäude (Kühlhaus, Park, Krankenhaus, Industrie, Lager, Fuhrpark, Umspannwerk, Pumpspeicher, Markt, Bauhof) stehen in der Liste links, auf sechs Reitern: Energie, Netz, Verkehr, Stadt, Nahrung, Industrie |
 | **Linksklick** | Setzt das gewählte Gebäude. Ohne Auswahl wählt er ein Feld und zeigt dessen Details |
 | **Rechtsklick** (auf dem Tablet: langes Drücken) | Mit gewähltem Gebäude: hebt die Auswahl auf. Ohne Auswahl: fragt nach, ob abgerissen werden soll (die Hälfte der Kosten wird erstattet) |
 | **Esc** | Hebt die Auswahl auf; gibt es nichts aufzuheben, öffnet es das **Pausenmenü** (Weiter, Speichern unter…, Schnellspeichern, Spiel laden, Speichern und zum Menü, Neues Spiel, Einstellungen) |
@@ -372,7 +473,9 @@ auf der Karte stehen, siehst du seinen Zustand und wie viel Strom es erzeugt ode
 | **H** oder der Knopf **Haushalte** (oben) | Fenster Haushalte: Löhne, Ausgaben, Energietarif |
 | **K** oder der Knopf mit der Waage (oben) | Fenster Markt: Baustoffe und Nahrung kaufen und verkaufen |
 | Knopf **Umbenennen** (im Fenster Feld) | Benennt eine Straße, ein Wohnviertel, ein Krankenhaus oder einen Park um |
-| Knopf **Abreißen** (Symbol im Fenster Feld) | Reißt das gewählte Gebäude ab (die Hälfte der Kosten wird erstattet) |
+| Knopf **Abreißen** (Symbol im Fenster Feld) | Reißt das gewählte Gebäude oder die gewählte Baustelle ab (die Hälfte der Kosten wird erstattet) |
+| Knopf **Ausbauen** (Symbol im Fenster Feld des Rathauses) | Hebt das Rathaus auf die nächste Stufe, wenn die Ziele der Stufe erfüllt sind |
+| Knöpfe **Verkauf** und **Kauf** (im Fenster Feld der Grenzleitung) | Schalten den automatischen Verkauf und Kauf von Strom ein und aus |
 | Registerkarten des Diagramms (unten) | Energie, Geld, Materialien, Stadt, Verkehr, Ziele |
 
 ### Sprachen
@@ -432,38 +535,45 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
   erreicht es.
 - **Kistenstapel** (violetter Kreis): **Hof voll**, die Lkw kommen mit dem Abtransport nicht nach.
 - **Mit Brettern vernagelte Mine**: Die Mine ist **erschöpft** und wird in ein paar Tagen zu einem See.
+- **Baustelle**: Das Gebäude wird noch gebaut; es arbeitet, wenn der Trupp fertig ist.
+- **Handelssymbol** über der Grenzleitung: Die Stadt hat in der letzten Stunde Strom gekauft oder verkauft.
 - **Licht in der Nacht**: Bei Dunkelheit machen Wohnviertel und Rathaus Licht. Ein Gebäude ohne Strom bleibt
   dunkel: Ein dunkles Wohnviertel in der Nacht ist ein Warnzeichen.
 
 ### Tipps für das erste Spiel
 
 1. Pausiere und sieh dir die Karte an: **Hügel** eignen sich für Windparks, und auf die dunklen **Kohlevorkommen**
-   kommen die Minen.
+   kommen die Minen. Im Westen liegt die **Brücke**: Über sie kommen Strom und Waren von außen.
 2. Zieh eine **Stromleitung** vom Rathaus dorthin, wo du bauen willst, mit einer **Straße** (Taste **R**)
    daneben: Jedes Gebäude muss eine berühren.
-3. Beginne mit etwas **Solar und Wind** und einer **Batterie** für den Abend.
+3. Am Anfang **kauft die Stadt ihren Strom** von außen, zum doppelten Preis: Setze gleich etwas **Solar und Wind**
+   und eine **Batterie** für den Abend. Bauen dauert Stunden, und die zwei Trupps des Rathauses erledigen zwei
+   Aufträge gleichzeitig.
 4. Baue nicht zu viele Kohlekraftwerke auf einmal: Jedes braucht etwa **17 Menschen** in drei Schichten, und die
    Stadt ist noch klein. Solar- und Windparks brauchen kein Personal.
 5. Baue **Wohnviertel**, solange die Erzeugung mit der Nachfrage mithält.
 6. Setze früh einen **Bauernhof** und denk an den Winter: Im Winter stehen die Bauernhöfe still, also brauchst du
-   einen Vorrat, einen Fischkutter oder ein Gewächshaus.
-7. Setze im ersten Monat ein **Sägewerk** in den Wald und einen **Steinbruch** auf einen Hügel; nimm ein
-   **Zementwerk** dazu, wenn du etwas Geld übrig hast. Baustoffe jedes Mal von außen zu kaufen, summiert sich. Die
-   Industrie ruht am Wochenende: Halte einen Vorrat.
-8. Ein früher **Park** hebt die Zufriedenheit, solange die Stadt klein ist. Baust du Kohlekraftwerke, plane ein
-   **Krankenhaus** ein.
-9. Behalte das Diagramm **Energie** unten im Auge: Steigt die rote Linie (Nachfrage) über die grüne (Erzeugung),
-   kommt gleich ein Stromausfall.
-10. Erscheint „Zu wenige Lkw“, baue einen **Fuhrpark**. Wenn die Stadt wächst, sieh auf die **Verkehrskarte** (G)
+   einen Vorrat und, ab Stufe II, einen Fischkutter oder ein Gewächshaus.
+7. Öffne das Fenster **Ziele**, Reiter **Stufe**, und drücke **Ausbauen**, sobald du kannst: Stufe II bringt
+   Sägewerke, Steinbrüche, Lager, den Markt und den Bauhof.
+8. Setze ab Stufe II ein **Sägewerk** in den Wald und einen **Steinbruch** auf einen Hügel; ab Stufe III kommt ein
+   **Zementwerk** dazu. Baustoffe jedes Mal von außen zu kaufen, summiert sich. Die Industrie ruht am Wochenende:
+   Halte einen Vorrat.
+9. Ein früher **Park** hebt die Zufriedenheit, solange die Stadt klein ist. Baust du Kohlekraftwerke, plane ab
+   Stufe III ein **Krankenhaus** ein.
+10. Behalte das Diagramm **Energie** unten im Auge: Steigt die rote Linie (Nachfrage) über die grüne (Erzeugung),
+    kaufst du Strom oder es kommt gleich ein Stromausfall.
+11. Warten Baustellen lange in der Schlange, baue einen **Bauhof**.
+12. Erscheint „Zu wenige Lkw“, baue einen **Fuhrpark**. Wenn die Stadt wächst, sieh auf die **Verkehrskarte** (G)
     und baue die am stärksten belasteten Straßen aus (M); setze Alleen nicht direkt neben Wohnviertel.
-11. Halte Kraftwerke nahe am Rathaus oder an einem **Umspannwerk**: Weit weg verlieren sie Strom.
-12. Wird die **Glocke** rot, öffne das **Ereignisprotokoll** (E): Oben stehen die Probleme, die du lösen musst, und
+13. Halte Kraftwerke nahe am Rathaus oder an einem **Umspannwerk**: Weit weg verlieren sie Strom.
+14. Wird die **Glocke** rot, öffne das **Ereignisprotokoll** (E): Oben stehen die Probleme, die du lösen musst, und
     ein Klick bringt dich hin.
-13. Sieh dir die **Prognose** im Fenster Ziele an: Steht dort „nicht im Plan“, gewinnst du unter den aktuellen
+15. Sieh dir die **Prognose** im Fenster Ziele an: Steht dort „nicht im Plan“, gewinnst du unter den aktuellen
     Bedingungen nicht.
-14. Erzeugt deine Industrie mehr, als du verbrauchst, verkauft ein **Markt** den Überschuss und lässt dich Baustoffe
+16. Erzeugt deine Industrie mehr, als du verbrauchst, verkauft ein **Markt** den Überschuss und lässt dich Baustoffe
     günstiger kaufen.
-15. Stelle **Windparks** in Windrichtung mit Abstand auf (Fenster Wetter): Hintereinander nehmen sie sich gegenseitig
+17. Stelle **Windparks** in Windrichtung mit Abstand auf (Fenster Wetter): Hintereinander nehmen sie sich gegenseitig
     den Wind.
 
 ## Spielstände
@@ -521,6 +631,11 @@ früherer Versionen lassen sich laden: Das Ereignisprotokoll beginnt leer, der T
 ohne Erfahrung neu an, und das Diagramm Ziele beginnt an dem Tag, an dem du das Spiel wieder aufnimmst. Ein
 Spielstand der 0.10.0 öffnet sich nicht in früheren Versionen.
 
+**Ab 0.11.0** ändert sich das Format erneut: Rathausstufen, Baustellen und Verbindungen zum Festland. Spielstände
+früherer Versionen lassen sich laden: Das Rathaus beginnt auf der niedrigsten Stufe, die alles umfasst, was du schon
+gebaut hast, und die Karte bekommt Brücke, Bundesstraße und Grenzleitung, an die Stadt angeschlossen. Ein Spielstand
+der 0.11.0 öffnet sich nicht in früheren Versionen.
+
 Spielstände einer Alpha-Version funktionieren in der nächsten vielleicht nicht: Das [Changelog](CHANGELOG.md) sagt
 es, wenn das passiert.
 
@@ -528,18 +643,15 @@ es, wenn das passiert.
 
 Was schon geplant ist, ungefähr in dieser Reihenfolge. Pläne können sich ändern.
 
-- **Ziele und Freischaltungen**: kleine Ziele wie „baue 10 Häuser“, die neue Gebäude freischalten und das Rathaus
-  wachsen lassen; und ein Bildschirm **Neues Spiel**, auf dem du den Namen der Stadt, den Schwierigkeitsgrad und
-  Katastrophen ja oder nein wählst.
-- **Bautrupps und Bauhof**: Bauen wird Zeit brauchen. Die Arbeit erledigen Trupps des Rathauses und später der
-  Bauhöfe, die mit deinen Baustoffen auch reparieren, was sich abnutzt.
-- **Öl, Gas und Wärme**: neue Energiequellen, und Heizung im Winter.
+- **Wärme, Gas und Kraftstoff**: Heizung der Häuser im Winter, Gaskraftwerke für die Spitzenstunden und Lkw, die
+  Kraftstoff verbrauchen.
 - **Wasser und Abfall**: Wasserwerke, Kläranlagen und Deponien für eine größere Stadt.
-- **Bildung und Forschung**: Schulen und Technologien zum Entdecken, die neue Gebäude freischalten.
-- **Verschleiß, Notfälle und Streiks**: Gebäude nutzen sich ab und müssen repariert werden; Notfälle wie Brände und
-  Naturkatastrophen, für alle, die sie wählen.
-- **Neue Karten, und später**: in jedem Spiel eine andere Karte, größere Karten mit Flüssen und Brücken, eine
-  Minikarte; dann mehrere miteinander verbundene Städte und, noch später, eine isometrische Ansicht.
+- **Bildung**: Schulen und besser ausgebildete Arbeitskräfte.
+- **Forschung**: Technologien zum Entdecken, die neue Gebäude freischalten, etwa die Förderung von Öl und Gas.
+- **Verschleiß und Reparaturen**: Gebäude nutzen sich ab, und die Trupps reparieren sie mit deinen Baustoffen; danach
+  Streiks und Notfälle, für alle, die sie wählen.
+- **Neue Karten**: in jedem Spiel eine andere Karte, größere Karten mit Flüssen und Brücken und eine Minikarte.
+- **Später**: mehrere miteinander verbundene Städte und eine isometrische Ansicht.
 
 ## Bekannte Probleme
 
@@ -553,9 +665,6 @@ Was schon geplant ist, ungefähr in dieser Reihenfolge. Pläne können sich änd
 - Es ist eine **Alpha**: Das Gleichgewicht des Spiels (Kosten, Produktion, Wachstum, Verkehr) ändert sich noch von
   Version zu Version. Die Industrie produziert in wenigen Stunden viel: Wenn ihre Höfe voll werden, baue früh einen
   Fuhrpark.
-- Auf einem langsamen Computer oder im Browser kann ein sehr schneller Klick gelegentlich verloren gehen; der
-  nächste Klick verschiebt dann die Karte. Während die Prognose neu berechnet wird, verdeckt der Hinweis darauf
-  teilweise den Titel des Bereichs „Ziele“. Beides wird in einer späteren Version behoben.
 - Die Übersetzungen ins Deutsche, Französische und Spanische hat noch keine Person mit dieser Muttersprache
   durchgesehen: Meldungen zu Fehlern sind willkommen.
 

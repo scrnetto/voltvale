@@ -16,14 +16,15 @@
 [![Licence](https://img.shields.io/badge/licence-free%2C%20all%20rights%20reserved-lightgrey)](LICENSE.md)
 [![Languages](https://img.shields.io/badge/languages-it%20%7C%20en%20%7C%20de%20%7C%20fr%20%7C%20es-009246)](#languages)
 [![Made with Unity](https://img.shields.io/badge/made%20with-Unity%206-1d2330?logo=unity)](https://unity.com/)
+[![Official website](https://img.shields.io/badge/website-voltvale.it-f2c230)](https://voltvale.it/en/)
 
 **You run the power grid of a growing town.** Every hour the town needs energy: a little at night, a lot in the
 evening. Build power plants, solar farms, wind farms and batteries, connect everything with power lines and
 roads, find people to work in them, shift after shift, feed everyone, move freight and materials by truck without jamming the
-traffic, and grow the town to **400 residents within two game years**, without constant blackouts, without debt
+traffic, and grow your village to **400 residents within two game years**, without constant blackouts, without debt
 and without choking it with pollution.
 
-An original game by **Marco Scarlino**. Free to play.
+An original game by **Marco Scarlino**. Free to play. Official website: **[voltvale.it](https://voltvale.it/en/)**.
 
 ![A game in progress: the town with its roads around the town hall, districts, solar farms, wind farms, batteries and industries; on the right, the Tile panel, and at the bottom the charts](immagini/schermata-partita.png)
 
@@ -93,32 +94,125 @@ On Linux run `sha256sum -c --ignore-missing SHA256SUMS.txt`, on macOS `shasum -a
 
 ## How to play
 
-The game opens with the **start menu**: **New game**, or **Continue** to pick up your last save. The game starts on
+The game opens with the **start menu**: **New game**, where you choose the town's name and the difficulty (see
+[New game](#new-game)), or **Continue** to pick up your last save. The game starts on
 **Sunday 18 October 2020** at 8 am and begins **paused**: press **Space** to start the clock. At 1× speed one game
 hour lasts one second, and you can speed up to 2× and 4×. The seasons follow the calendar: you start in autumn, and in winter the
 days are shorter and the sky is cloudier. The top bar shows the day of the game, the day of the week, the date and
 the time, for example «Day 1 · Sun 18 Oct 2020 · 08:00».
 
-- **Goal**: reach **400 residents** with pollution **below the limit** within **2 years**.
-- **Defeat**: if your money stays in the red for **30 days in a row**, or if the 2 years run out.
+- **Goal**: reach **400 residents** with pollution **below the limit** within **2 years**. After the victory you
+  can **keep playing**, with no more time limit.
+- **Defeat**: if your money stays in the red for **30 days in a row**, or if the 2 years run out before you win.
+- **The town hall grows**: from **village** to **small town**, **town** and **city**, as you complete small goals.
+  Each level unlocks new buildings: see [Town hall levels and goals](#town-hall-levels-and-goals).
+- **Crews do the building**: a new building is first a **construction site**, and it works once a crew has finished
+  the job. See [Construction sites and crews](#construction-sites-and-crews).
 - **The grid**: every building must be connected to the **town hall**. **Power lines** start from the town hall
   and extend it, diagonals included. A building is connected if it touches the town hall, a line or another
   connected building: a group of buildings side by side is connected if one of them touches the grid.
 - **Roads**: besides power, every building must touch, with one side, a **road connected to the town hall** (power
   lines don't need one). See [Roads and traffic](#roads-and-traffic).
 - **Demand and energy**: the town uses little energy at night and a lot in the evening, around 7 pm. If there
-  isn't enough, there's a **blackout**: residents get angry and some leave.
+  isn't enough, even with the energy bought from outside, there's a **blackout**: residents get angry and some leave.
 - **Energy sources**:
   - the **sun** only produces by day, and little in winter or under clouds;
   - the **wind** changes strength and direction from hour to hour (the Weather panel shows where it blows from); a
     wind farm **downwind** of another one, a few tiles away, produces less (the turbines' «wake», up to 40% less);
   - **coal** always produces, but it pollutes and burns the coal dug up by the **mines**.
 - **Batteries** store the extra energy and give it back when needed, for example in the evening.
-- **Surplus energy** is sold to the outside grid, but the more you offer, the less it's worth.
+- **Energy from outside**: surplus energy is **sold**, and what's missing is **bought** at twice the price, through
+  the **border line** next to the bridge; the more you sell in an hour, the less it's worth. See
+  [Links to the mainland](#links-to-the-mainland).
 - **Pollution**: coal power plants pollute and the air clears slowly. One power plant is fine, too many are not.
   It makes residents sick, and above the limit you can't win.
 - **Growth**: the town grows if residents are **happy** enough, there's room in the **districts** and there's enough
   **food** in store.
+
+### New game
+
+**New game** (from the start menu or the pause menu) opens a screen where you choose:
+
+- the **town's name**: the game suggests one, the dice button suggests another, or you type your own. The town
+  hall takes the town's name;
+- the **difficulty**: **easy** (starting money ×1.5, upkeep ×0.8), **normal** or **hard** (starting money ×0.7,
+  upkeep ×1.2).
+
+The «Disasters» and «Map size» options are already there, but for now disasters are off and there's only one map.
+
+### Town hall levels and goals
+
+The town hall grows with the town: **I village**, **II small town**, **III town**, **IV city**.
+
+- Each level has **4 goals**, and each one you complete pays a **cash reward**:
+  - to become a **small town**: 100 residents, 5 connected districts, 3 days without blackouts, happiness at least
+    60%;
+  - to become a **town**: 200 residents, a working sawmill, a depot, 20,000 in the bank;
+  - to become a **city**: 400 residents, a hospital, pollution below 30, 7 days without blackouts.
+- When every goal of the level is complete, the **Upgrade** button (the arrow icon at the top of the town hall's
+  Tile panel) lights up. It costs money and materials (small town 3,000 and 40 timber; town 8,000, 80 timber and 60
+  stone; city 15,000, 100 timber, 100 stone and 80 cement) and the work takes one to three days. The town hall never
+  levels up by itself.
+- Buildings **unlock** like this:
+
+| Level | Buildings |
+|---|---|
+| **I village** | power lines, dirt roads, districts, solar farms, wind farms, coal power plants and mines, batteries, farms, parks |
+| **II small town** | paved roads, depots, truck depots, sawmills, quarries, greenhouses, cold stores, fishing boats, Market, Workshop |
+| **III town** | avenues, cement works, transformers, hospitals, pumped storage |
+| **IV city** | nothing new for now: it's there for the buildings of upcoming updates |
+
+- In the list, buildings that are still locked are greyed out with a **padlock**; hover over them to see the level
+  they need. The **Market** can be built only once per town: after the first one it turns grey.
+- The **Goals** panel has two tabs: **Game** (the final goal and the forecast) and **Level** (the goals of the level
+  and how many you've completed). Some goals, such as happiness, are counted at midnight: the panel says «reached:
+  counts at midnight».
+- For traffic, the town hall counts as a paved road, and as an avenue from level III.
+
+### Construction sites and crews
+
+- When you place a building you pay straight away, and a **construction site** opens in its place. A **crew** sets
+  off from the town hall, gets there and works for the hours the job needs; the building works once it's done.
+- Every building has its own **build time**, shown in the list and in the tooltip next to the cost: for example 8
+  hours for a park, 12 for a solar farm, 24 for a wind farm, 48 for a coal power plant or a hospital. Power lines and
+  roads are still instant.
+- Crews work **from 8 to 17**, every day. The town hall has **2**: if there are more sites, they **queue up** and wait
+  for a free crew.
+- The **Workshop** (Town tab, from level II) adds **2 crews** that set off from there: worth it when sites wait a long
+  time in the queue, or are far from the town hall. It needs staff, power and a road.
+- Crews gain **experience** in building, electrical and mechanical work: the more they work, the faster they get, up
+  to 50% faster.
+- Click a construction site to see in the Tile panel whether it's queued (and in which position), whether the crew
+  is on its way or at work, and how many hours are left. The town hall's and the Workshop's Tile panels show their
+  crews, what they're doing and their experience.
+- A construction site can be demolished like a building, with half the cost refunded.
+
+### Links to the mainland
+
+The map is an **island**, joined to the mainland by a **bridge to the west**, level with the town hall.
+
+- Next to the bridge are the **border line** and the **highway**, already connected to the town hall by a row of
+  power lines and a dirt road. The bridge, the border line and the highway can't be demolished; the lines and the
+  dirt road can, but without a link the town can't trade anything.
+- **Power**: surplus energy is **sold**; what's missing is **bought** at twice the price, as long as there's money.
+  So the game doesn't start in the dark while you wait for the first construction sites, but buying everything for
+  long empties the coffers.
+- Trading is limited by the line's **capacity**, which grows with the town hall's level:
+
+| Town hall | Sell up to | Buy up to |
+|---|---|---|
+| I village | 40 MW | 20 MW |
+| II small town | 60 MW | 30 MW |
+| III town | 90 MW | 45 MW |
+| IV city | 120 MW | 60 MW |
+
+  At the evening peak of a big town, bought power isn't enough: you need your own power plants and batteries.
+- The border line's Tile panel has the two switches **Sell** and **Buy**, the capacities, the buying price and how
+  much was bought and sold in the last hour. With «Buy: off» the town has a blackout when production isn't enough.
+- A **trade icon** above the border line shows when power was bought or sold in the last hour; the **Energy** chart
+  shows the power bought.
+- **Goods from outside**: imported food, copper and Market trades come through the **highway**, and only arrive if
+  it's connected to the town's roads.
 
 ### Work and staff
 
@@ -127,7 +221,7 @@ Buildings need people to run them.
 - About **56 %** of the residents work. The bar at the top shows how many people have a job out of the available
   workforce.
 - **Coal power plants**, **coal mines**, **industries**, the **food** buildings, **hospitals**, **parks**, **cold
-  stores**, **depots** and **pumped storage** need staff. **Solar farms**, **wind farms**, **batteries**, power lines
+  stores**, **depots**, **Workshops** and **pumped storage** need staff. **Solar farms**, **wind farms**, **batteries**, power lines
   and transformers run by themselves.
 - The **Tile** panel shows how many jobs are filled, for example **Staff: 4/4**, and how many people that takes,
   shifts included.
@@ -146,7 +240,7 @@ Every building with staff has its own working hours, shown in the **Tile** panel
 |---|---|---|
 | **Always open, 3 shifts (6, 14, 22)** | coal power plants, coal mines, hospitals, cold stores, truck depots, pumped storage | about 4: one job covered day and night takes three shifts plus rest days |
 | **Open 8–17, Monday to Friday** | sawmills, quarries, cement works, depots | 1 |
-| **Open 8–17, every day** | farms, fishing boats, greenhouses, parks, the services of the districts | about 1.4, for the days off |
+| **Open 8–17, every day** | farms, fishing boats, greenhouses, parks, Workshops, the services of the districts | about 1.4, for the days off |
 
 - A coal power plant with all its jobs filled employs about **17 people**: plan your districts accordingly.
 - **Outside its hours a building is closed**: it produces nothing and uses no power or materials. The Tile panel
@@ -165,7 +259,7 @@ running low.
 - **Cold store** (plains): raises how much food the town can keep.
 - **Food runs on the grid**: food buildings use power. During a **blackout** they don't produce, and cold stores
   lose part of the extra food.
-- **If the stock runs out**, food is imported automatically, but it's expensive. Imported food keeps the town from
+- **If the stock runs out**, food is imported automatically through the highway, but it's expensive. Imported food keeps the town from
   starving, but it **doesn't grow**: growth needs at least one day of its own stock.
 - **If the money runs out too**, famine hits and residents leave.
 - The **Tile** panel shows how much each building produced in the last hour (for example **Food: 5.4/h**), how much room a cold
@@ -222,10 +316,12 @@ under the price, with small icons; hover over the button to read them in full.
 ### Roads and traffic
 
 - Every building except power lines must touch, with one side, a **road connected to the town hall**. Without one
-  it stops and shows the «no road» signal. You start with four dirt roads around the town hall.
+  it stops and shows the «no road» signal. You start with four dirt roads around the town hall and one to the
+  highway.
 - **Road** tool (**R** key, or the first button of the list): click or drag to lay **dirt roads**. A road can run
   under a power line, but not under other buildings.
-- **Upgrade road** tool (**M** key): **dirt road → paved road → avenue**. Each level carries more traffic and is
+- **Upgrade road** tool (**M** key): **dirt road → paved road** (from level II) **→ avenue** (from level III).
+  Each level carries more traffic and is
   faster, but costs cement. After an upgrade the tile stays **under construction** for a few hours, with less room
   for traffic.
 - **Commuters**: workers travel from the districts to work when their hours start and go home when they end:
@@ -254,8 +350,9 @@ under the price, with small icons; hover over the button to read them in full.
 
 ### Market
 
-- Build the **Market** from the **Transport** tab of the list; there's one per town. It needs a road and staff, and
-  it's open 8–17 on weekdays.
+- Build the **Market** from the **Transport** tab of the list, from level II; there's one per town. It needs a road
+  and staff, and it's open 8–17 on weekdays. Trades go through the **highway**: if it isn't connected, the Market
+  neither buys nor sells.
 - With the Market you buy materials and food **without the import surcharge**, and you can buy **coal and stone**
   too. Whatever you don't need you can **sell** at 70% of the purchase price.
 - **Market** panel (**K** key or the scales button at the top): stock and prices for every material; the
@@ -268,7 +365,7 @@ under the price, with small icons; hover over the button to read them in full.
 - A power plant's energy is partly lost along the lines on the way to the nearest **node**: the **town hall** or a
   **transformer** (built from the list). The farther the plant, the more it loses; the Tile panel shows how much.
 - **Upgrade line** tool (**L** key): lines go from level **I** to **II** and **III** and lose less, but cost
-  **copper**, which is bought from outside.
+  **copper**, which is bought from outside and arrives through the highway.
 - The **Energy** chart at the bottom has a bar for losses.
 
 ### Mines and lakes
@@ -312,7 +409,7 @@ The panel at the bottom has six tabs. The first five show the **last 24 hours**,
 **Goals**, shows the whole game with the forecast. Click a tab to switch (the game remembers your choice), and hover
 over a column to read the exact values of that hour.
 
-- **Energy**: production, demand, batteries and line losses.
+- **Energy**: production, demand, batteries, line losses and power bought.
 - **Money**: income above zero, spending below, and the balance, with sales and purchases at the Market.
 - **Materials**: how much of each material is produced and used, and the stock; pick the material with the buttons next to the chart.
 - **Town**: food produced and food eaten, the food stock, happiness and health.
@@ -329,7 +426,7 @@ and how much energy it produces or uses.
 
 | Control | What it does |
 |---|---|
-| Keys **1–9** and **0** | Pick what to build: Power line, Coal mine, Coal power plant, Solar farm, Wind farm, Battery, District, Farm, Fishing boat, Greenhouse. The other buildings (cold store, park, hospital, industries, depots, transformer, pumped storage, Market) are in the list on the left, in six tabs: Energy, Grid, Transport, Town, Food, Industry |
+| Keys **1–9** and **0** | Pick what to build: Power line, Coal mine, Coal power plant, Solar farm, Wind farm, Battery, District, Farm, Fishing boat, Greenhouse. The other buildings (cold store, park, hospital, industries, depots, transformer, pumped storage, Market, Workshop) are in the list on the left, in six tabs: Energy, Grid, Transport, Town, Food, Industry |
 | **Left click** | Places the chosen building. With nothing chosen, selects a tile and shows its details |
 | **Right click** (on a tablet: long press) | With a building chosen, cancels the choice. With nothing chosen, asks to confirm demolition (half the cost refunded) |
 | **Esc** | Cancels the choice; if there's nothing to cancel, opens the **pause menu** (Resume, Save as…, Quick save, Load game, Save and quit to menu, New game, Settings) |
@@ -352,7 +449,9 @@ and how much energy it produces or uses.
 | **H** or the **Households** button (at the top) | Households panel: wages, spending, energy tariff |
 | **K** or the scales button (at the top) | Market panel: buy and sell materials and food |
 | **Rename** button (in the Tile panel) | Renames a street, district, hospital or park |
-| **Demolish** button (icon in the Tile panel) | Demolishes the selected building (half the cost refunded) |
+| **Demolish** button (icon in the Tile panel) | Demolishes the selected building or construction site (half the cost refunded) |
+| **Upgrade** button (icon in the town hall's Tile panel) | Raises the town hall to the next level, once the goals of the level are complete |
+| **Sell** and **Buy** buttons (in the border line's Tile panel) | Switch automatic selling and buying of power on and off |
 | Tabs of the chart (at the bottom) | Energy, Money, Materials, Town, Transport, Goals |
 
 ### Languages
@@ -409,35 +508,42 @@ The layout is picked automatically; you can switch between phone and computer in
 - **Broken road** (orange circle): **no road**, no road connected to the town hall reaches it.
 - **Stack of crates** (purple circle): **yard full**, the trucks can't keep up with the goods.
 - **Mine boarded up**: the mine is **exhausted** and will become a lake in a few days.
+- **Construction site**: the building is still being built; it works once the crew has finished.
+- **Trade icon** above the border line: the town bought or sold power in the last hour.
 - **Lights at night**: after dark, districts and the town hall switch their lights on. A building with no power
   stays dark, so a dark district at night is a warning.
 
 ### Tips for your first game
 
 1. Pause and look at the map: **hills** are good for wind farms, and the dark **coal deposits** are where mines go.
+   To the west is the **bridge**: power and goods from outside come through it.
 2. Run a **power line** from the town hall towards where you want to build, with a **road** (**R** key) next to it:
    every building must touch one.
-3. Start with some **solar and wind** and a **battery** for the evening.
+3. At the start the town **buys its power** from outside, at twice the price: put down some **solar and wind** and a
+   **battery** for the evening right away. Construction takes hours, and the town hall's two crews do two jobs at a
+   time.
 4. Don't build too many coal power plants at once: each one needs about **17 people** on three shifts, and the
    town is still small. Solar and wind farms need no staff.
 5. Build **districts** as long as production keeps up with demand.
-6. Put down a **farm** early and plan for winter: farms stop in winter, so you need a stock, a fishing boat or a
-   greenhouse.
-7. In the first month, put a **sawmill** in the woods and a **quarry** on a hill; add a **cement works** when you
-   have some spare money. Buying materials from outside every time adds up. Industries rest at the weekend: keep a
-   stock.
-8. An early **park** lifts happiness while the town is small. If you build coal power plants, plan a
-   **hospital**.
-9. Keep an eye on the **Energy** chart at the bottom: if the red line (demand) goes above the green one (production), a
-   blackout is coming.
-10. When «Not enough trucks» shows up, build a **truck depot**. As the town grows, check the **traffic map** (G)
+6. Put down a **farm** early and plan for winter: farms stop in winter, so you need a stock and, from level II, a
+   fishing boat or a greenhouse.
+7. Open the **Goals** panel, **Level** tab, and press **Upgrade** as soon as you can: level II brings sawmills,
+   quarries, depots, the Market and the Workshop.
+8. From level II, put a **sawmill** in the woods and a **quarry** on a hill; from level III add a **cement works**.
+   Buying materials from outside every time adds up. Industries rest at the weekend: keep a stock.
+9. An early **park** lifts happiness while the town is small. If you build coal power plants, plan a **hospital**
+   once you reach level III.
+10. Keep an eye on the **Energy** chart at the bottom: if the red line (demand) goes above the green one
+    (production), you're buying power or a blackout is coming.
+11. When construction sites wait a long time in the queue, build a **Workshop**.
+12. When «Not enough trucks» shows up, build a **truck depot**. As the town grows, check the **traffic map** (G)
     and upgrade the busiest roads (M); don't put avenues right next to districts.
-11. Keep power plants close to the town hall or a **transformer**: far away they lose energy.
-12. When the **bell** turns red, open the **event log** (E): the problems to fix are at the top, and a click takes
+13. Keep power plants close to the town hall or a **transformer**: far away they lose energy.
+14. When the **bell** turns red, open the **event log** (E): the problems to fix are at the top, and a click takes
     you there.
-13. Check the **forecast** in the Goals panel: if it says «off track», the game won't be won as things stand.
-14. When your industries make more than you use, a **Market** sells the surplus and lets you buy materials for less.
-15. Space out your **wind farms** along the wind direction (Weather panel): one behind the other, they steal each
+15. Check the **forecast** in the Goals panel: if it says «off track», the game won't be won as things stand.
+16. When your industries make more than you use, a **Market** sells the surplus and lets you buy materials for less.
+17. Space out your **wind farms** along the wind direction (Weather panel): one behind the other, they steal each
     other's wind.
 
 ## Saves
@@ -492,6 +598,11 @@ hours.
 versions still load: the event log starts empty, the tariff is normal, staff start again with no experience and the
 Goals chart begins on the day you pick the game up again. A 0.10.0 save doesn't open in earlier versions.
 
+**From 0.11.0** the format changes again: town hall levels, construction sites and links to the mainland. Saves
+from earlier versions still load: the town hall starts at the lowest level that covers everything you've already
+built, and the map gains the bridge, the highway and the border line, connected to the town. A 0.11.0 save doesn't
+open in earlier versions.
+
 Saves from one alpha version might not work with the next one: the [changelog](CHANGELOG.md) says so when it
 happens.
 
@@ -499,17 +610,14 @@ happens.
 
 What's already planned, roughly in this order. Plans may change.
 
-- **Goals and unlocks**: small goals, like «build 10 houses», that unlock new buildings and grow the town hall; and
-  a **New game** screen to choose the town's name, the difficulty and whether you want disasters.
-- **Maintenance crews and the Workshop**: buildings will take time to build, with crews from the town hall and
-  then from the Workshops doing the work, and later repairing what wears out, with the materials you have.
-- **Oil, gas and heat**: new energy sources, and heating in winter.
+- **Heat, gas and fuel**: heating homes in winter, gas power plants for the peak hours and trucks that burn fuel.
 - **Water and waste**: waterworks, treatment plants and landfills for a bigger town.
-- **Education and research**: schools, and technologies to discover that unlock new buildings.
-- **Wear, emergencies and strikes**: buildings wear out and need repairs; emergencies such as fires and natural
-  disasters, for those who choose them.
-- **New maps, and later on**: a different map every game, bigger maps with rivers and bridges, a minimap; then
-  several towns linked together and, further on, an isometric view.
+- **Education**: schools, and better-trained workers.
+- **Research**: technologies to discover that unlock new buildings, such as oil and gas extraction.
+- **Wear and repairs**: buildings wear out and crews repair them with the materials you have; then strikes and
+  emergencies, for those who choose them.
+- **New maps**: a different map every game, bigger maps with rivers and bridges, and a minimap.
+- **Later on**: several towns linked together and an isometric view.
 
 ## Known issues
 
@@ -521,9 +629,6 @@ What's already planned, roughly in this order. Plans may change.
 - In the **web** version saves live in your browser: if you clear the site's data, you lose them.
 - It's an **alpha**: the game's balance (costs, production, growth, traffic) still changes from one version to
   the next. Industries produce a lot in a few hours: if their yards fill up, build a truck depot early.
-- On a slow computer or in the browser, a very quick click can occasionally be lost, and the next click
-  then moves the map. The Goals panel title can be partly covered by the text «forecast updating» while the
-  forecast is being recalculated. Both will be fixed in a later version.
 - The German, French and Spanish translations haven't been reviewed by a native speaker yet: reports of
   mistakes are welcome.
 

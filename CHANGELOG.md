@@ -12,6 +12,77 @@ Ogni versione ha queste sezioni, quando servono:
 
 ## [Non ancora pubblicata]
 
+## [0.11.0-alpha.1] - 2026-11-22
+
+Obiettivi e sblocchi, cantieri e squadre, collegamenti con la terraferma. *Goals and unlocks, construction sites and
+crews, links to the mainland.*
+
+### Novità
+- **Livelli del municipio**: la città parte come **villaggio** e può diventare **paese**, **cittadina** e **città**.
+  - Ogni livello ha **4 obiettivi**, per esempio «100 abitanti», «5 quartieri collegati», «nessun blackout per 3
+    giorni» o «un deposito»; ognuno, quando lo compi, dà un **premio in denaro**, con un avviso e un suono.
+  - Quando gli obiettivi del livello sono tutti compiuti, nella Casella del municipio si accende **Potenzia**
+    (l'icona con la freccia): costa denaro e materiali, e dopo da uno a tre giorni di lavori il municipio sale di
+    livello. Non succede mai da solo.
+  - Le costruzioni si **sbloccano per livello**. Da villaggio: linee, sterrate, quartieri, solare, eolico, centrali e
+    miniere di carbone, batterie, fattorie e parchi. Da paese: strade asfaltate, depositi, autoparchi, segherie,
+    cave, serre, frigoriferi, pescherecci, Mercato e Officina. Da cittadina: viali, cementifici, trasformatori,
+    ospedali e pompaggio. Nella lista le costruzioni ancora bloccate sono spente, con il lucchetto e il livello che
+    serve.
+  - Il pannello **Obiettivi** ha due schede: **Partita** (l'obiettivo finale e la previsione) e **Livello** (gli
+    obiettivi del livello, con l'avanzamento). Alcuni obiettivi si controllano a mezzanotte, e il pannello lo dice.
+  - Il **Mercato** si costruisce una volta sola per città: dopo il primo, nella lista diventa grigio.
+- **Schermata «Nuova partita»**: scegli il **nome della città** (il gioco ne propone uno, il dado ne propone un
+  altro) e la **difficoltà**: facile (più denaro all'inizio, manutenzione più bassa), normale o difficile. Il
+  municipio porta il nome della città.
+- **Dopo la vittoria si continua**: la schermata della vittoria ha il pulsante **Continua a giocare**. La vittoria
+  resta nel registro e da lì in poi non c'è più limite di tempo, così si può arrivare all'ultimo livello del
+  municipio.
+- **Cantieri e squadre**: le costruzioni non compaiono più all'istante.
+  - Quando posi un edificio paghi subito e si apre un **cantiere**: una **squadra** parte dal municipio, arriva e
+    lavora per le ore del cantiere, dalle 8 alle 17. L'edificio funziona quando la squadra ha finito.
+  - Ogni costruzione ha il suo **tempo di costruzione**, scritto nella lista e nel riquadro accanto al costo: da 8 ore
+    per un parco a 48 per una centrale a carbone o un ospedale. Linee e strade restano immediate.
+  - Il municipio ha **2 squadre**; se ci sono più cantieri, si mettono **in fila**. L'**Officina** (scheda Città, da
+    paese) aggiunge 2 squadre che partono da lì.
+  - Le squadre fanno **esperienza**: più lavorano, più sono veloci, fino al 50 % in più.
+  - Un clic su un cantiere mostra nella Casella se è in coda, se la squadra è in arrivo o al lavoro e quante ore
+    mancano; nel municipio e nell'Officina si vedono le squadre. Un cantiere si può demolire come una costruzione,
+    con il rimborso di metà della spesa.
+- **Collegamenti con la terraferma**: la mappa è un'isola, unita alla terraferma da un **ponte a ovest**.
+  - Accanto al ponte ci sono la **linea di confine** e la **strada statale**, già collegate al municipio da una fila di
+    linee e da una sterrata.
+  - La corrente in più si **vende** dalla linea di confine; quella che manca si **compra**, al doppio del prezzo,
+    finché ci sono soldi. Così la partita **non comincia più al buio** mentre si aspettano i primi cantieri.
+  - Si scambia solo fino alla **portata** della linea, che cresce con il livello del municipio: si vende fino a 40 MW
+    e si compra fino a 20 MW da villaggio, fino a 120 e 60 MW da città. Se non basta, c'è il blackout.
+  - Nella Casella della linea di confine ci sono i due interruttori **Vendi** e **Compra**, le portate, il prezzo e
+    quanto si è scambiato nell'ultima ora. Con «Compra: no» la città va in blackout quando la produzione non basta,
+    come prima.
+  - Le **merci da fuori** (cibo importato, rame, scambi del Mercato) arrivano solo se la strada statale è collegata
+    alle strade della città.
+  - Sulla mappa un'icona sopra la linea di confine dice quando si compra o si vende; il grafico **Energia** ha la
+    serie «comprata».
+
+### Modifiche
+- Per il traffico il municipio conta come una strada asfaltata, e come un viale da cittadina.
+- L'equilibrio del gioco è stato rivisto per i livelli, i cantieri e la corrente comprata: si vince ancora in poco più
+  di un anno di gioco, giocando bene. Se non costruisci niente, comprare tutta la corrente porta presto in debito.
+
+### Correzioni
+- Un clic molto rapido, con pressione e rilascio quasi insieme, a volte andava perso e il clic successivo spostava la
+  mappa.
+- Mentre la previsione si ricalcolava, la scritta copriva in parte il titolo del pannello Obiettivi.
+- Il titolo della Casella si tagliava dopo poche lettere.
+- Nel pannello Mercato, il messaggio che compare quando il Mercato non è ancora costruito non andava a capo.
+- Sul telefono il foglio delle famiglie aveva un nome diverso dal pannello in inglese, tedesco e francese.
+- Il pulsante Demolisci compariva nella Casella anche senza nessuna casella scelta.
+
+### Da sapere
+- I salvataggi della 0.11.0 hanno un formato nuovo e **non si aprono nelle versioni precedenti**.
+- I salvataggi delle versioni precedenti si caricano: il municipio parte dal livello che contiene già tutto quello che
+  hai costruito, e la mappa riceve ponte, strada statale e linea di confine, collegati alla città.
+
 ## [0.10.0-alpha.1] - 2026-11-21
 
 Musica e suoni, Mercato, stipendi e famiglie, registro degli eventi, interfaccia per telefono, previsione degli

@@ -16,15 +16,16 @@
 [![Licence](https://img.shields.io/badge/licence-gratuit%2C%20tous%20droits%20r%C3%A9serv%C3%A9s-lightgrey)](LICENSE.md)
 [![Langues](https://img.shields.io/badge/langues-it%20%7C%20en%20%7C%20de%20%7C%20fr%20%7C%20es-009246)](#langues)
 [![Fait avec Unity](https://img.shields.io/badge/fait%20avec-Unity%206-1d2330?logo=unity)](https://unity.com/)
+[![Site officiel](https://img.shields.io/badge/site-voltvale.it-f2c230)](https://voltvale.it/fr/)
 
 **Tu gères le réseau électrique d'une petite ville qui grandit.** Chaque heure, la ville a besoin d'énergie : un
 peu la nuit, beaucoup le soir. Construis des centrales, des centrales solaires, des parcs éoliens et des batteries,
 relie le tout par des lignes électriques et des routes, trouve des gens pour y travailler, équipe après équipe,
 nourris tout le monde, transporte marchandises et matériaux en camion sans bloquer la circulation, et fais grandir
-la ville jusqu'à **400 habitants en deux ans de jeu**, sans pannes à répétition, sans dettes et sans l'étouffer
+ton village jusqu'à **400 habitants en deux ans de jeu**, sans pannes à répétition, sans dettes et sans l'étouffer
 sous la pollution.
 
-Un jeu original de **Marco Scarlino**. Gratuit.
+Un jeu original de **Marco Scarlino**. Gratuit. Site officiel : **[voltvale.it](https://voltvale.it/fr/)**.
 
 ![Une partie en cours : la ville avec ses routes autour de la mairie, des quartiers, des centrales solaires, des parcs éoliens, des batteries et des industries ; à droite le panneau Case, en bas les graphiques](immagini/schermata-partita-fr.png)
 
@@ -98,22 +99,30 @@ chaque zip. Sous Linux, lance `sha256sum -c --ignore-missing SHA256SUMS.txt`, so
 
 ## Comment jouer
 
-Le jeu s'ouvre sur le **menu de départ** : **Nouvelle partie**, ou **Continuer** pour reprendre ta dernière
-sauvegarde. La partie commence le **dimanche 18 octobre 2020** à 8 h et démarre **en pause** : appuie sur
+Le jeu s'ouvre sur le **menu de départ** : **Nouvelle partie**, où tu choisis le nom de la ville et la difficulté
+(voir [Nouvelle partie](#nouvelle-partie)), ou **Continuer** pour reprendre ta dernière sauvegarde. La partie commence le **dimanche 18 octobre 2020** à 8 h et démarre **en pause** : appuie sur
 **Espace** pour faire avancer le temps. À la vitesse 1×, une heure de jeu dure une seconde, et tu peux accélérer à
 2× et 4×. Les saisons suivent le calendrier : tu commences en automne, et en hiver les journées sont plus courtes
 et le ciel plus couvert. La barre du haut indique le jour de la partie, le jour de la semaine, la date et l'heure,
 par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
 
-- **Objectif** : atteindre **400 habitants** avec une pollution **sous le seuil** en **2 ans**.
-- **Défaite** : si ton argent reste dans le rouge **30 jours d'affilée**, ou si les 2 ans s'écoulent.
+- **Objectif** : atteindre **400 habitants** avec une pollution **sous le seuil** en **2 ans**. Après la victoire,
+  tu peux **continuer à jouer**, sans limite de temps.
+- **Défaite** : si ton argent reste dans le rouge **30 jours d'affilée**, ou si les 2 ans s'écoulent avant la
+  victoire.
+- **La mairie grandit** : de **village** à **bourg**, **petite ville** et **ville**, en remplissant de petits
+  objectifs. Chaque niveau débloque de nouveaux bâtiments : voir
+  [Niveaux de la mairie et objectifs](#niveaux-de-la-mairie-et-objectifs).
+- **On construit avec des équipes** : un nouveau bâtiment est d'abord un **chantier**, et il fonctionne quand une
+  équipe a fini les travaux. Voir [Chantiers et équipes](#chantiers-et-équipes).
 - **Le réseau** : chaque bâtiment doit être raccordé à la **mairie**. Les **lignes électriques** partent de la
   mairie et la prolongent, y compris en diagonale. Un bâtiment est raccordé s'il touche la mairie, une ligne ou un
   autre bâtiment raccordé : un groupe de bâtiments accolés est raccordé si l'un d'eux touche le réseau.
 - **Les routes** : en plus du courant, chaque bâtiment doit toucher par un côté une **route reliée à la mairie**
   (les lignes électriques n'en ont pas besoin). Voir [Routes et trafic](#routes-et-trafic).
 - **Demande et énergie** : la ville consomme peu la nuit et beaucoup le soir, vers 19 h. S'il n'y a pas assez
-  d'énergie, c'est la **panne** : les habitants se fâchent et certains s'en vont.
+  d'énergie, même avec celle achetée à l'extérieur, c'est la **panne** : les habitants se fâchent et certains s'en
+  vont.
 - **Les sources** :
   - le **soleil** ne produit que le jour, et peu en hiver ou par temps couvert ;
   - le **vent** change de force et de direction d'heure en heure (le panneau Météo dit d'où il souffle) ; un parc
@@ -121,11 +130,99 @@ par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
     de moins) ;
   - le **charbon** produit toujours, mais il pollue et brûle le charbon extrait par les **mines**.
 - **Les batteries** stockent l'énergie en trop et la restituent quand il le faut, par exemple le soir.
-- **Le surplus** est vendu au réseau extérieur, mais plus tu en proposes, moins il vaut.
+- **Le courant de l'extérieur** : l'énergie en trop est **vendue**, et celle qui manque est **achetée** au double du
+  prix, par la **ligne frontalière** à côté du pont ; plus tu en vends en une heure, moins elle vaut. Voir
+  [Liaisons avec le continent](#liaisons-avec-le-continent).
 - **Pollution** : les centrales à charbon polluent et l'air se purifie lentement. Une centrale, ça passe ; trop,
   non. La pollution rend les habitants malades, et au-dessus du seuil tu ne peux pas gagner.
 - **Croissance** : la ville grandit si les habitants sont assez **heureux**, s'il reste de la place dans les
   **quartiers** et s'il y a assez de **nourriture** en réserve.
+
+### Nouvelle partie
+
+**Nouvelle partie** (depuis le menu de départ ou le menu de pause) ouvre un écran où tu choisis :
+
+- le **nom de la ville** : le jeu en propose un, le bouton avec le dé en propose un autre, ou tu écris le tien. La
+  mairie porte le nom de la ville ;
+- la **difficulté** : **facile** (argent de départ ×1,5, entretien ×0,8), **normale** ou **difficile** (argent de
+  départ ×0,7, entretien ×1,2).
+
+Les options « Catastrophes » et « Taille de la carte » sont déjà là, mais pour l'instant les catastrophes sont
+désactivées et il n'y a qu'une carte.
+
+### Niveaux de la mairie et objectifs
+
+La mairie grandit avec la ville : **I village**, **II bourg**, **III petite ville**, **IV ville**.
+
+- Chaque niveau a **4 objectifs**, et chacun, quand tu le remplis, rapporte une **récompense en argent** :
+  - pour devenir un **bourg** : 100 habitants, 5 quartiers raccordés, 3 jours sans coupure, bonheur d'au moins 60 % ;
+  - pour devenir une **petite ville** : 200 habitants, une scierie en activité, un entrepôt, 20 000 en caisse ;
+  - pour devenir une **ville** : 400 habitants, un hôpital, pollution sous 30, 7 jours sans coupure.
+- Quand tous les objectifs du niveau sont remplis, le bouton **Améliorer** (l'icône avec la flèche, en haut du
+  panneau Case de la mairie) s'allume. Il coûte de l'argent et des matériaux (bourg 3 000 et 40 bois ; petite ville
+  8 000, 80 bois et 60 pierre ; ville 15 000, 100 bois, 100 pierre et 80 ciment) et les travaux durent d'un à trois
+  jours. La mairie ne monte jamais de niveau toute seule.
+- Les bâtiments se **débloquent** ainsi :
+
+| Niveau | Bâtiments |
+|---|---|
+| **I village** | lignes, chemins de terre, quartiers, centrales solaires, parcs éoliens, centrales et mines de charbon, batteries, fermes, parcs |
+| **II bourg** | routes goudronnées, entrepôts, parcs de camions, scieries, carrières, serres, entrepôts frigorifiques, bateaux de pêche, Marché, Atelier municipal |
+| **III petite ville** | avenues, cimenteries, transformateurs, hôpitaux, stations de pompage |
+| **IV ville** | rien de nouveau pour l'instant : ce niveau servira aux bâtiments des prochaines mises à jour |
+
+- Dans la liste, les bâtiments encore bloqués sont grisés, avec un **cadenas** ; en passant la souris dessus, tu lis
+  le niveau nécessaire. Le **Marché** ne se construit qu'une fois par ville : après le premier, il devient gris.
+- Le panneau **Objectifs** a deux onglets : **Partie** (l'objectif final et la prévision) et **Niveau** (les
+  objectifs du niveau et combien tu en as remplis). Certains objectifs, comme le bonheur, se comptent à minuit : le
+  panneau écrit « atteint : compte à minuit ».
+- Pour le trafic, la mairie compte comme une route goudronnée, et comme une avenue à partir du niveau III.
+
+### Chantiers et équipes
+
+- Quand tu poses un bâtiment, tu paies tout de suite, et un **chantier** s'ouvre à sa place. Une **équipe** part de
+  la mairie, arrive et travaille le nombre d'heures nécessaire ; le bâtiment fonctionne quand elle a fini.
+- Chaque bâtiment a sa **durée des travaux**, indiquée dans la liste et dans l'infobulle à côté du coût : par exemple
+  8 heures pour un parc, 12 pour une centrale solaire, 24 pour un parc éolien, 48 pour une centrale à charbon ou un
+  hôpital. Les lignes et les routes restent immédiates.
+- Les équipes travaillent **de 8 h à 17 h**, tous les jours. La mairie en a **2** : s'il y a plus de chantiers, ils
+  **attendent leur tour** dans une file.
+- L'**Atelier municipal** (onglet Ville, à partir du niveau II) ajoute **2 équipes** qui partent de là : utile quand
+  les chantiers attendent longtemps, ou sont loin de la mairie. Il lui faut du personnel, du courant et une route.
+- Les équipes gagnent de l'**expérience** dans le bâtiment, l'électricité et la mécanique : plus elles travaillent,
+  plus elles vont vite, jusqu'à 50 % plus vite.
+- Un clic sur un chantier montre dans le panneau Case s'il attend (et à quelle place), si l'équipe est en route ou au
+  travail et combien d'heures il reste. Les panneaux Case de la mairie et de l'Atelier municipal montrent leurs
+  équipes, ce qu'elles font et leur expérience.
+- Un chantier se démolit comme un bâtiment, avec le remboursement de la moitié du coût.
+
+### Liaisons avec le continent
+
+La carte est une **île**, reliée au continent par un **pont à l'ouest**, à la hauteur de la mairie.
+
+- À côté du pont se trouvent la **ligne frontalière** et la **route nationale**, déjà reliées à la mairie par une file
+  de lignes et un chemin de terre. Le pont, la ligne frontalière et la route nationale ne se démolissent pas ; les
+  lignes et le chemin de terre si, mais sans liaison la ville n'échange plus rien.
+- **Courant** : l'énergie en trop est **vendue** ; celle qui manque est **achetée** au double du prix, tant qu'il y a
+  de l'argent. Ainsi la partie ne commence pas dans le noir pendant que tu attends les premiers chantiers, mais tout
+  acheter longtemps vide la caisse.
+- Les échanges sont limités par la **capacité** de la ligne, qui augmente avec le niveau de la mairie :
+
+| Mairie | Vente jusqu'à | Achat jusqu'à |
+|---|---|---|
+| I village | 40 MW | 20 MW |
+| II bourg | 60 MW | 30 MW |
+| III petite ville | 90 MW | 45 MW |
+| IV ville | 120 MW | 60 MW |
+
+  Au pic du soir d'une grande ville, le courant acheté ne suffit pas : il faut tes propres centrales et batteries.
+- Dans le panneau Case de la ligne frontalière, il y a les deux interrupteurs **Vente** et **Achat**, les capacités,
+  le prix d'achat et ce qui a été acheté et vendu pendant la dernière heure. Avec « Achat : non », la ville tombe en
+  panne quand la production ne suffit pas.
+- Une **icône d'échange** au-dessus de la ligne frontalière indique quand du courant a été acheté ou vendu pendant la
+  dernière heure ; le graphique **Énergie** montre le courant acheté.
+- **Marchandises de l'extérieur** : la nourriture importée, le cuivre et les échanges du Marché passent par la
+  **route nationale**, et n'arrivent que si elle est reliée aux routes de la ville.
 
 ### Travail et personnel
 
@@ -134,8 +231,8 @@ Les bâtiments ont besoin de gens pour les faire tourner.
 - Environ **56 %** des habitants travaillent. La barre du haut montre combien de personnes ont un emploi par
   rapport à la main-d'œuvre disponible.
 - Les **centrales à charbon**, les **mines de charbon**, les **industries**, les bâtiments de **nourriture**, les
-  **hôpitaux**, les **parcs**, les **entrepôts frigorifiques**, les **entrepôts** et les **stations de pompage** ont
-  besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les **batteries**, les lignes et les
+  **hôpitaux**, les **parcs**, les **entrepôts frigorifiques**, les **entrepôts**, les **ateliers municipaux** et les
+  **stations de pompage** ont besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les **batteries**, les lignes et les
   transformateurs fonctionnent tout seuls.
 - Le panneau **Case** montre combien de postes sont pourvus, par exemple **Personnel : 4/4**, et combien de
   personnes il faut pour cela, toutes équipes comprises.
@@ -155,7 +252,7 @@ Chaque bâtiment avec du personnel a ses propres horaires, affichés dans le pan
 |---|---|---|
 | **Toujours ouvert, 3 équipes (6, 14, 22)** | centrales à charbon, mines de charbon, hôpitaux, entrepôts frigorifiques, parcs de camions, stations de pompage | environ 4 : un poste tenu jour et nuit demande trois équipes plus les jours de repos |
 | **Ouvert 8–17, du lundi au vendredi** | scieries, carrières, cimenteries, entrepôts | 1 |
-| **Ouvert 8–17, tous les jours** | fermes, bateaux de pêche, serres, parcs, les services des quartiers | environ 1,4, pour les jours de repos |
+| **Ouvert 8–17, tous les jours** | fermes, bateaux de pêche, serres, parcs, ateliers municipaux, les services des quartiers | environ 1,4, pour les jours de repos |
 
 - Une centrale à charbon avec tous ses postes pourvus emploie environ **17 personnes** : prévois tes quartiers en
   conséquence.
@@ -177,7 +274,7 @@ blé, et passent au rouge quand elles s'épuisent.
 - **Entrepôt frigorifique** (plaine) : augmente la quantité de nourriture que la ville peut garder.
 - **La nourriture dépend du réseau** : les bâtiments de nourriture consomment de l'électricité. Pendant une
   **panne**, ils ne produisent pas et les entrepôts frigorifiques perdent une partie de la nourriture en plus.
-- **Si les réserves sont vides**, la nourriture est importée automatiquement, mais elle coûte cher. Avec la
+- **Si les réserves sont vides**, la nourriture est importée automatiquement par la route nationale, mais elle coûte cher. Avec la
   nourriture importée, la ville ne meurt pas de faim, mais elle **ne grandit pas** : pour grandir, il lui faut au
   moins une journée de réserves à elle.
 - **Si l'argent manque aussi**, c'est la famine, et les habitants s'en vont.
@@ -241,10 +338,11 @@ entier.
 
 - Chaque bâtiment, sauf les lignes électriques, doit toucher par un côté une **route reliée à la mairie**. Sans
   route, il est à l'arrêt et affiche le signal « sans route ». Tu commences avec quatre chemins de terre autour de la
-  mairie.
+  mairie et un vers la route nationale.
 - Outil **Route** (touche **R**, ou le premier bouton de la liste) : clique ou fais glisser pour poser des **chemins
   de terre**. Une route peut passer sous une ligne électrique, mais pas sous d'autres bâtiments.
-- Outil **Améliorer la route** (touche **M**) : **chemin de terre → route goudronnée → avenue**. Chaque niveau
+- Outil **Améliorer la route** (touche **M**) : **chemin de terre → route goudronnée** (à partir du niveau II)
+  **→ avenue** (à partir du niveau III). Chaque niveau
   absorbe plus de trafic et va plus vite, mais coûte du ciment. Après l'amélioration, la case reste quelques heures
   en **chantier**, avec moins de place pour le trafic.
 - **Navetteurs** : les travailleurs vont des quartiers au travail quand leur horaire commence et rentrent chez eux
@@ -279,8 +377,9 @@ entier.
 
 ### Marché
 
-- Le **Marché** se construit depuis l'onglet **Transports** de la liste ; il y en a un par ville. Il lui faut une
-  route et du personnel, et il est ouvert de 8 h à 17 h les jours de semaine.
+- Le **Marché** se construit depuis l'onglet **Transports** de la liste, à partir du niveau II ; il y en a un par
+  ville. Il lui faut une route et du personnel, et il est ouvert de 8 h à 17 h les jours de semaine. Les échanges
+  passent par la **route nationale** : si elle n'est pas reliée, le Marché n'achète ni ne vend rien.
 - Avec le Marché, tu achètes matériaux et nourriture **sans le surcoût** de l'importation, et tu peux aussi acheter
   du **charbon et de la pierre**. Ce dont tu n'as pas besoin, tu le **vends** à 70 % du prix d'achat.
 - Panneau **Marché** (touche **K** ou le bouton à la balance en haut) : stock et prix de chaque matériau ; les
@@ -294,7 +393,7 @@ entier.
   **mairie** ou un **transformateur** (à construire depuis la liste). Plus la centrale est loin, plus elle perd ; le
   panneau Case indique combien.
 - Outil **Améliorer la ligne** (touche **L**) : les lignes passent du niveau **I** au **II** et au **III** et
-  perdent moins, mais coûtent du **cuivre**, qui s'achète à l'extérieur.
+  perdent moins, mais coûtent du **cuivre**, qui s'achète à l'extérieur et arrive par la route nationale.
 - Le graphique **Énergie** en bas a une barre pour les pertes.
 
 ### Mines et lacs
@@ -338,7 +437,7 @@ Le panneau du bas a six onglets. Les cinq premiers montrent les **dernières 24 
 sixième, **Objectifs**, toute la partie avec la prévision. Un clic sur un onglet l'ouvre (le jeu retient ton choix) ;
 en passant la souris sur une colonne, tu lis les valeurs exactes de cette heure-là.
 
-- **Énergie** : production, demande, batteries et pertes en ligne.
+- **Énergie** : production, demande, batteries, pertes en ligne et courant acheté.
 - **Argent** : recettes au-dessus de zéro, dépenses en dessous, et le solde, avec les ventes et les achats au Marché.
 - **Matériaux** : ce qui est produit et consommé pour chaque matériau, et le stock ; le matériau se choisit avec
   les boutons à côté du graphique.
@@ -357,7 +456,7 @@ t'arrêtant sur un bâtiment de la carte, tu vois son état et combien d'énergi
 
 | Commande | Ce qu'elle fait |
 |---|---|
-| Touches **1–9** et **0** | Choisir quoi construire : ligne électrique, mine de charbon, centrale à charbon, centrale solaire, parc éolien, batterie, quartier, ferme, bateau de pêche, serre. Les autres bâtiments (entrepôt frigorifique, parc, hôpital, industries, entrepôts, parc de camions, transformateur, station de pompage, Marché) sont dans la liste de gauche, en six onglets : Énergie, Réseau, Transports, Ville, Nourriture, Industrie |
+| Touches **1–9** et **0** | Choisir quoi construire : ligne électrique, mine de charbon, centrale à charbon, centrale solaire, parc éolien, batterie, quartier, ferme, bateau de pêche, serre. Les autres bâtiments (entrepôt frigorifique, parc, hôpital, industries, entrepôts, parc de camions, transformateur, station de pompage, Marché, Atelier municipal) sont dans la liste de gauche, en six onglets : Énergie, Réseau, Transports, Ville, Nourriture, Industrie |
 | **Clic gauche** | Pose le bâtiment choisi. Sans choix, sélectionne une case et affiche ses détails |
 | **Clic droit** (sur tablette : appui long) | Avec un bâtiment choisi, annule le choix. Sans choix, demande confirmation pour démolir (la moitié du coût est remboursée) |
 | **Échap** | Annule le choix ; s'il n'y a rien à annuler, ouvre le **menu de pause** (Reprendre, Sauvegarder sous…, Sauvegarde rapide, Charger une partie, Sauvegarder et quitter vers le menu, Nouvelle partie, Paramètres) |
@@ -380,7 +479,9 @@ t'arrêtant sur un bâtiment de la carte, tu vois son état et combien d'énergi
 | **H** ou le bouton **Ménages** (en haut) | Panneau des ménages : salaires, dépenses, tarif de l'énergie |
 | **K** ou le bouton à la balance (en haut) | Panneau du Marché : acheter et vendre matériaux et nourriture |
 | Bouton **Renommer** (dans le panneau Case) | Renomme une rue, un quartier, un hôpital ou un parc |
-| Bouton **Démolir** (icône dans le panneau Case) | Démolit le bâtiment sélectionné (la moitié du coût est remboursée) |
+| Bouton **Démolir** (icône dans le panneau Case) | Démolit le bâtiment ou le chantier sélectionné (la moitié du coût est remboursée) |
+| Bouton **Améliorer** (icône dans le panneau Case de la mairie) | Fait passer la mairie au niveau suivant, quand les objectifs du niveau sont remplis |
+| Boutons **Vente** et **Achat** (dans le panneau Case de la ligne frontalière) | Activent et désactivent la vente et l'achat automatiques du courant |
 | Onglets du graphique (en bas) | Énergie, Argent, Matériaux, Ville, Transports, Objectifs |
 
 ### Langues
@@ -440,39 +541,48 @@ l'ordinateur.
 - **Pile de caisses** (cercle violet) : **dépôt plein**, les camions n'arrivent pas à emporter les marchandises à
   temps.
 - **Mine condamnée par des planches** : la mine est **épuisée** et deviendra un lac dans quelques jours.
+- **Chantier** : le bâtiment est encore en travaux ; il fonctionne quand l'équipe a fini.
+- **Icône d'échange** au-dessus de la ligne frontalière : la ville a acheté ou vendu du courant pendant la dernière
+  heure.
 - **Lumières la nuit** : à la tombée de la nuit, les quartiers et la mairie allument leurs lumières. Un bâtiment
   sans courant reste dans le noir : un quartier éteint la nuit est un signal d'alarme.
 
 ### Conseils pour la première partie
 
 1. Mets en pause et regarde la carte : les **collines** conviennent à l'éolien, et les **gisements de charbon**
-   sombres accueillent les mines.
+   sombres accueillent les mines. À l'ouest, il y a le **pont** : c'est par là qu'arrivent le courant et les
+   marchandises de l'extérieur.
 2. Tire une **ligne électrique** depuis la mairie vers l'endroit où tu veux construire, avec une **route**
    (touche **R**) à côté : chaque bâtiment doit en toucher une.
-3. Commence avec un peu de **solaire et d'éolien** et une **batterie** pour le soir.
+3. Au début, la ville **achète son courant** à l'extérieur, au double du prix : pose tout de suite un peu de
+   **solaire et d'éolien** et une **batterie** pour le soir. Les chantiers prennent des heures, et les deux équipes de
+   la mairie font deux travaux à la fois.
 4. Ne construis pas trop de centrales à charbon à la fois : chacune demande environ **17 personnes** sur trois
    équipes, et la ville est encore petite. Le solaire et l'éolien n'ont pas besoin de personnel.
 5. Construis des **quartiers** tant que la production suit la demande.
-6. Pose tôt une **ferme** et pense à l'hiver : en hiver les fermes s'arrêtent, il te faut donc des réserves, un
-   bateau de pêche ou une serre.
-7. Le premier mois, mets une **scierie** dans la forêt et une **carrière** sur une colline ; ajoute une
-   **cimenterie** quand tu as un peu d'argent de côté. Acheter les matériaux à l'extérieur à chaque fois finit par
-   coûter cher. Les industries se reposent le week-end : garde un stock.
-8. Un **parc** posé tôt fait monter le bonheur tant que la ville est petite. Si tu construis des centrales à
-   charbon, prévois un **hôpital**.
-9. Garde un œil sur le graphique **Énergie** en bas : si la ligne rouge (demande) passe au-dessus de la verte
-   (production), une panne approche.
-10. Quand « Pas assez de camions » apparaît, construis un **parc de camions**. Quand la ville grandit, regarde la
+6. Pose tôt une **ferme** et pense à l'hiver : en hiver les fermes s'arrêtent, il te faut donc des réserves et, à
+   partir du niveau II, un bateau de pêche ou une serre.
+7. Ouvre le panneau **Objectifs**, onglet **Niveau**, et appuie sur **Améliorer** dès que tu peux : le niveau II
+   apporte scieries, carrières, entrepôts, le Marché et l'Atelier municipal.
+8. À partir du niveau II, mets une **scierie** dans la forêt et une **carrière** sur une colline ; au niveau III,
+   ajoute une **cimenterie**. Acheter les matériaux à l'extérieur à chaque fois finit par coûter cher. Les industries
+   se reposent le week-end : garde un stock.
+9. Un **parc** posé tôt fait monter le bonheur tant que la ville est petite. Si tu construis des centrales à
+   charbon, prévois un **hôpital** dès le niveau III.
+10. Garde un œil sur le graphique **Énergie** en bas : si la ligne rouge (demande) passe au-dessus de la verte
+    (production), tu achètes du courant ou une panne approche.
+11. Quand les chantiers attendent longtemps leur tour, construis un **Atelier municipal**.
+12. Quand « Pas assez de camions » apparaît, construis un **parc de camions**. Quand la ville grandit, regarde la
     **carte du trafic** (G) et améliore les routes les plus chargées (M) ; ne mets pas d'avenues juste à côté des
     quartiers.
-11. Garde les centrales près de la mairie ou d'un **transformateur** : loin, elles perdent de l'énergie.
-12. Quand la **cloche** devient rouge, ouvre le **journal des événements** (E) : en haut, les problèmes à régler, et
+13. Garde les centrales près de la mairie ou d'un **transformateur** : loin, elles perdent de l'énergie.
+14. Quand la **cloche** devient rouge, ouvre le **journal des événements** (E) : en haut, les problèmes à régler, et
     un clic t'amène sur place.
-13. Regarde la **prévision** dans le panneau Objectifs : si elle dit « hors de la trajectoire », la partie ne se
+15. Regarde la **prévision** dans le panneau Objectifs : si elle dit « hors de la trajectoire », la partie ne se
     gagne pas dans les conditions actuelles.
-14. Quand tes industries produisent plus que ce que tu utilises, un **Marché** vend le surplus et te fait acheter les
+16. Quand tes industries produisent plus que ce que tu utilises, un **Marché** vend le surplus et te fait acheter les
     matériaux moins cher.
-15. Espace tes **parcs éoliens** dans la direction du vent (panneau Météo) : l'un derrière l'autre, ils se volent le
+17. Espace tes **parcs éoliens** dans la direction du vent (panneau Météo) : l'un derrière l'autre, ils se volent le
     vent.
 
 ## Sauvegardes
@@ -533,6 +643,11 @@ Les sauvegardes des versions précédentes se chargent : le journal commence vid
 repart sans expérience et le graphique Objectifs commence le jour où tu reprends la partie. Une sauvegarde de la
 0.10.0 ne s'ouvre pas dans les versions précédentes.
 
+**Depuis la 0.11.0**, le format change de nouveau : niveaux de la mairie, chantiers et liaisons avec le continent.
+Les sauvegardes des versions précédentes se chargent : la mairie part du niveau le plus bas qui comprend tout ce que
+tu as déjà construit, et la carte reçoit le pont, la route nationale et la ligne frontalière, reliés à la ville. Une
+sauvegarde de la 0.11.0 ne s'ouvre pas dans les versions précédentes.
+
 Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivante : le
 [changelog](CHANGELOG.md) le dit quand cela arrive.
 
@@ -540,19 +655,17 @@ Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivan
 
 Ce qui est déjà prévu, à peu près dans cet ordre. Les projets peuvent changer.
 
-- **Objectifs et déblocages** : de petits objectifs, comme « construis 10 maisons », qui débloquent de nouveaux
-  bâtiments et font grandir la mairie ; et un écran **Nouvelle partie** pour choisir le nom de la ville, la
-  difficulté et si tu veux des catastrophes.
-- **Équipes d'entretien et Atelier municipal** : construire prendra du temps. Le travail sera fait par les équipes
-  de la mairie, puis des Ateliers municipaux, qui répareront aussi ce qui s'use, avec tes matériaux.
-- **Pétrole, gaz et chaleur** : de nouvelles sources d'énergie, et le chauffage en hiver.
+- **Chaleur, gaz et carburant** : le chauffage des maisons en hiver, des centrales à gaz pour les heures de pointe et
+  des camions qui consomment du carburant.
 - **Eau et déchets** : réseaux d'eau, stations d'épuration et décharges pour une ville plus grande.
-- **Éducation et recherche** : des écoles, et des technologies à découvrir qui débloquent de nouveaux bâtiments.
-- **Usure, urgences et grèves** : les bâtiments s'usent et doivent être réparés ; des urgences comme les incendies
-  et les catastrophes naturelles, pour qui les choisit.
-- **Nouvelles cartes, et plus tard** : une carte différente à chaque partie, des cartes plus grandes avec des
-  rivières et des ponts, une mini-carte ; puis plusieurs villes reliées entre elles et, plus tard encore, une vue
-  isométrique.
+- **Éducation** : des écoles, et des travailleurs mieux formés.
+- **Recherche** : des technologies à découvrir qui débloquent de nouveaux bâtiments, comme l'extraction du pétrole et
+  du gaz.
+- **Usure et réparations** : les bâtiments s'usent et les équipes les réparent avec tes matériaux ; puis grèves et
+  urgences, pour qui les choisit.
+- **Nouvelles cartes** : une carte différente à chaque partie, des cartes plus grandes avec des rivières et des
+  ponts, et une mini-carte.
+- **Plus tard** : plusieurs villes reliées entre elles et une vue isométrique.
 
 ## Problèmes connus
 
@@ -567,9 +680,6 @@ Ce qui est déjà prévu, à peu près dans cet ordre. Les projets peuvent chang
 - C'est une **alpha** : l'équilibre du jeu (coûts, production, croissance, trafic) change encore d'une version à
   l'autre. Les industries produisent beaucoup en peu d'heures : si leurs dépôts se remplissent, construis tôt un
   parc de camions.
-- Sur un ordinateur lent ou dans le navigateur, un clic très rapide peut parfois être perdu, et le clic
-  suivant déplace alors la carte. Pendant le recalcul de la prévision, la mention de mise à jour recouvre en
-  partie le titre du panneau Objectifs. Les deux seront corrigés dans une prochaine version.
 - Les traductions en allemand, français et espagnol n'ont pas encore été relues par une personne de langue
   maternelle : les signalements d'erreurs sont les bienvenus.
 

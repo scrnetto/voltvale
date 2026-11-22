@@ -16,14 +16,15 @@
 [![Licenza](https://img.shields.io/badge/licenza-gratuito%2C%20tutti%20i%20diritti%20riservati-lightgrey)](LICENSE.md)
 [![Lingue](https://img.shields.io/badge/lingue-it%20%7C%20en%20%7C%20de%20%7C%20fr%20%7C%20es-009246)](#lingue)
 [![Fatto con Unity](https://img.shields.io/badge/fatto%20con-Unity%206-1d2330?logo=unity)](https://unity.com/)
+[![Sito ufficiale](https://img.shields.io/badge/sito-voltvale.it-f2c230)](https://voltvale.it/it/)
 
 **Sei il gestore elettrico di una cittadina che cresce.** Ogni ora la città chiede energia: poca di notte, tanta
 la sera. Costruisci centrali, impianti solari, parchi eolici e batterie, collega tutto con le linee elettriche e
 le strade, trova chi ci lavori, un turno dopo l'altro, dai da mangiare a tutti, porta merci e materiali coi camion senza intasare il
-traffico, e fai crescere la città fino a **400 abitanti in due anni di gioco**, senza blackout continui, senza
-debiti e senza soffocarla di inquinamento.
+traffico, e fai crescere il villaggio fino a **400 abitanti in due anni di gioco**, senza blackout continui, senza
+debiti e senza soffocarlo di inquinamento.
 
-Un gioco originale di **Marco Scarlino**. Gratuito.
+Un gioco originale di **Marco Scarlino**. Gratuito. Sito ufficiale: **[voltvale.it](https://voltvale.it/it/)**.
 
 ![Una partita in corso: la città con le sue strade attorno al municipio, quartieri, impianti solari, parchi eolici, batterie e industrie; a destra la Casella, in basso i grafici](immagini/schermata-partita-it.png)
 
@@ -93,34 +94,127 @@ Su Linux si controlla con `sha256sum -c --ignore-missing SHA256SUMS.txt`, su mac
 
 ## Come si gioca
 
-Il gioco si apre con il **menu iniziale**: **Nuova partita**, oppure **Continua** per riprendere l'ultimo
-salvataggio. La partita comincia **domenica 18 ottobre 2020** alle 8 e parte **in pausa**: premi **Spazio** per far
+Il gioco si apre con il **menu iniziale**: **Nuova partita**, dove scegli il nome della città e la difficoltà (vedi
+[Nuova partita](#nuova-partita)), oppure **Continua** per riprendere l'ultimo salvataggio. La partita comincia **domenica 18 ottobre 2020** alle 8 e parte **in pausa**: premi **Spazio** per far
 scorrere il tempo. A velocità 1× un'ora di gioco dura un secondo, e puoi accelerare a 2× e 4×. Le stagioni seguono
 il calendario: si parte in autunno, e d'inverno le giornate sono più corte e il cielo più coperto. La barra in alto
 mostra il giorno della partita, il giorno della settimana, la data e l'ora, per esempio
 «Giorno 1 · dom 18/10/2020 · 08:00».
 
-- **Obiettivo**: arrivare a **400 abitanti** con l'inquinamento **sotto la soglia** entro **2 anni**.
-- **Sconfitta**: se resti in rosso con i soldi per **30 giorni di fila**, oppure se finiscono i 2 anni.
+- **Obiettivo**: arrivare a **400 abitanti** con l'inquinamento **sotto la soglia** entro **2 anni**. Dopo la
+  vittoria puoi **continuare a giocare**, senza più limite di tempo.
+- **Sconfitta**: se resti in rosso con i soldi per **30 giorni di fila**, oppure se finiscono i 2 anni prima della
+  vittoria.
+- **Il municipio cresce**: da **villaggio** a **paese**, **cittadina** e **città**, compiendo piccoli obiettivi. A ogni
+  livello si sbloccano costruzioni nuove: vedi [Livelli del municipio e obiettivi](#livelli-del-municipio-e-obiettivi).
+- **Si costruisce con le squadre**: un edificio nuovo è prima un **cantiere**, e funziona quando una squadra ha finito
+  il lavoro. Vedi [Cantieri e squadre](#cantieri-e-squadre).
 - **La rete**: ogni costruzione deve essere collegata al **municipio**. Le **linee elettriche** partono dal
   municipio e lo allungano, anche in diagonale. Una costruzione è collegata se tocca il municipio, una linea
   oppure un'altra costruzione già collegata: un gruppo di costruzioni attaccate è collegato se una di loro tocca
   la rete.
 - **Le strade**: oltre alla corrente, ogni costruzione deve toccare con un lato una **strada collegata al
   municipio** (le linee elettriche no). Vedi [Strade e traffico](#strade-e-traffico).
-- **Domanda ed energia**: la città consuma poco di notte e molto la sera, verso le 19. Se l'energia non basta
-  c'è il **blackout**: gli abitanti si arrabbiano e qualcuno se ne va.
+- **Domanda ed energia**: la città consuma poco di notte e molto la sera, verso le 19. Se l'energia non basta, e
+  nemmeno quella comprata da fuori, c'è il **blackout**: gli abitanti si arrabbiano e qualcuno se ne va.
 - **Le fonti**:
   - il **sole** produce solo di giorno, poco d'inverno e col cielo coperto;
   - il **vento** cambia forza e direzione di ora in ora (il pannello Meteo dice da dove soffia); un parco eolico
     **sottovento** a un altro, a poche caselle, rende meno (la «scia» delle pale, fino al 40 % in meno);
   - il **carbone** produce sempre, ma inquina e consuma il carbone estratto dalle **miniere**.
 - **Batterie**: accumulano l'energia in più e la restituiscono quando serve, per esempio la sera.
-- **Il surplus** si vende alla rete esterna, ma più ne offri e meno vale.
+- **Corrente da fuori**: l'energia in più si **vende** e quella che manca si **compra**, al doppio del prezzo, dalla
+  **linea di confine** accanto al ponte; più ne vendi in un'ora, meno vale. Vedi
+  [Collegamenti con la terraferma](#collegamenti-con-la-terraferma).
 - **Inquinamento**: le centrali a carbone inquinano e l'aria si pulisce piano. Una centrale si regge, troppe no.
   Fa ammalare gli abitanti, e sopra la soglia non si vince.
 - **Crescita**: la città cresce se gli abitanti sono abbastanza **felici**, c'è posto nei **quartieri** e c'è abbastanza
   **cibo** in magazzino.
+
+### Nuova partita
+
+**Nuova partita** (dal menu iniziale o dal menu di pausa) apre una schermata dove scegli:
+
+- il **nome della città**: il gioco ne propone uno, il pulsante con il dado ne propone un altro, oppure lo scrivi tu.
+  Il municipio porta il nome della città;
+- la **difficoltà**: **facile** (denaro iniziale ×1,5, manutenzione ×0,8), **normale** o **difficile** (denaro
+  iniziale ×0,7, manutenzione ×1,2).
+
+Le voci «Disastri» e «Dimensione della mappa» ci sono già, ma per ora i disastri sono spenti e la mappa è una sola.
+
+### Livelli del municipio e obiettivi
+
+Il municipio cresce con la città: **I villaggio**, **II paese**, **III cittadina**, **IV città**.
+
+- Ogni livello ha **4 obiettivi**, e ognuno, quando lo compi, dà un **premio in denaro**:
+  - per diventare **paese**: 100 abitanti, 5 quartieri collegati, 3 giorni senza blackout, felicità almeno 60 %;
+  - per diventare **cittadina**: 200 abitanti, una segheria che produce, un deposito, 20 000 in cassa;
+  - per diventare **città**: 400 abitanti, un ospedale, inquinamento sotto 30, 7 giorni senza blackout.
+- Quando gli obiettivi del livello sono tutti compiuti, nella Casella del municipio si accende **Potenzia** (l'icona
+  con la freccia, in alto). Costa denaro e materiali (paese 3 000 e 40 legname, cittadina 8 000, 80 legname e 60
+  pietra, città 15 000, 100 legname, 100 pietra e 80 cemento) e i lavori durano da uno a tre giorni. Il municipio non
+  sale mai da solo.
+- Le costruzioni si **sbloccano** così:
+
+| Livello | Costruzioni |
+|---|---|
+| **I villaggio** | linee, sterrate, quartieri, impianti solari, parchi eolici, centrali e miniere di carbone, batterie, fattorie, parchi |
+| **II paese** | strade asfaltate, depositi, autoparchi, segherie, cave, serre, magazzini frigoriferi, pescherecci, Mercato, Officina |
+| **III cittadina** | viali, cementifici, trasformatori, ospedali, pompaggio |
+| **IV città** | per ora niente di nuovo: servirà alle costruzioni dei prossimi aggiornamenti |
+
+- Nella lista le costruzioni ancora bloccate sono spente, con il **lucchetto**; passando il mouse si legge il livello
+  che serve. Il **Mercato** si costruisce una volta sola per città: dopo il primo diventa grigio.
+- Il pannello **Obiettivi** ha due schede: **Partita** (l'obiettivo finale e la previsione) e **Livello** (gli
+  obiettivi del livello, con quanti ne hai compiuti). Alcuni obiettivi, come la felicità, si contano a mezzanotte: il
+  pannello scrive «raggiunto: conta a mezzanotte».
+- Per il traffico il municipio conta come una strada asfaltata, e come un viale da cittadina.
+
+### Cantieri e squadre
+
+- Quando posi un edificio paghi subito, e al suo posto si apre un **cantiere**. Una **squadra** parte dal municipio,
+  arriva e lavora per le ore del cantiere; l'edificio funziona quando ha finito.
+- Ogni costruzione ha il suo **tempo di costruzione**, scritto nella lista e nel riquadro accanto al costo: per
+  esempio 8 ore per un parco, 12 per un impianto solare, 24 per un parco eolico, 48 per una centrale a carbone o un
+  ospedale. Linee e strade restano immediate.
+- Le squadre lavorano **dalle 8 alle 17**, tutti i giorni. Il municipio ne ha **2**: se i cantieri sono di più, si
+  mettono **in fila** e aspettano una squadra libera.
+- L'**Officina** (scheda Città, da paese) aggiunge **2 squadre**, che partono da lì: conviene quando i cantieri restano
+  a lungo in fila, o lontano dal municipio. Ha bisogno di personale, di corrente e di una strada.
+- Le squadre fanno **esperienza** nei lavori edili, elettrici e meccanici: più lavorano, più sono veloci, fino al 50 %
+  in più.
+- Un clic su un cantiere mostra nella Casella se è in fila (e in che posizione), se la squadra è in arrivo o al
+  lavoro e quante ore mancano. Le Caselle del municipio e dell'Officina mostrano le squadre, che cosa fanno e la loro
+  esperienza.
+- Un cantiere si demolisce come una costruzione, con il rimborso di metà della spesa.
+
+### Collegamenti con la terraferma
+
+La mappa è un'**isola**, unita alla terraferma da un **ponte a ovest**, all'altezza del municipio.
+
+- Accanto al ponte ci sono la **linea di confine** e la **strada statale**, già collegate al municipio da una fila di
+  linee e da una sterrata. Ponte, linea di confine e strada statale non si demoliscono; le linee e la sterrata sì, ma
+  senza collegamento la città non scambia più niente.
+- **Corrente**: l'energia in più si **vende**; quella che manca si **compra**, al doppio del prezzo, finché ci sono
+  soldi. Così la partita non comincia al buio mentre si aspettano i primi cantieri, ma comprare tutto a lungo svuota la
+  cassa.
+- Si scambia solo fino alla **portata** della linea, che cresce con il livello del municipio:
+
+| Municipio | Vendita fino a | Acquisto fino a |
+|---|---|---|
+| I villaggio | 40 MW | 20 MW |
+| II paese | 60 MW | 30 MW |
+| III cittadina | 90 MW | 45 MW |
+| IV città | 120 MW | 60 MW |
+
+  Nelle ore di punta di una città grande la corrente comprata non basta: servono centrali e batterie proprie.
+- Nella Casella della linea di confine ci sono i due interruttori **Vendi** e **Compra**, le portate, il prezzo
+  d'acquisto e quanto si è comprato e venduto nell'ultima ora. Con «Compra: no» la città va in blackout quando la
+  produzione non basta.
+- Un'**icona dello scambio** sopra la linea di confine dice quando nell'ultima ora si è comprato o venduto; il grafico
+  **Energia** mostra la corrente comprata.
+- **Merci da fuori**: cibo importato, rame e scambi del Mercato passano dalla **strada statale**, e arrivano solo se è
+  collegata alle strade della città.
 
 ### Lavoro e personale
 
@@ -129,7 +223,7 @@ Le costruzioni hanno bisogno di qualcuno che le faccia funzionare.
 - Lavora circa il **56 %** degli abitanti. La barra in alto mostra quante persone hanno un lavoro sulla forza
   lavoro disponibile.
 - **Centrali a carbone**, **miniere di carbone**, **industrie**, costruzioni del **cibo**, **ospedali**, **parchi**,
-  **magazzini frigoriferi**, **depositi** e **pompaggio** hanno bisogno di personale. **Impianti solari**, **parchi
+  **magazzini frigoriferi**, **depositi**, **officine** e **pompaggio** hanno bisogno di personale. **Impianti solari**, **parchi
   eolici**, **batterie**, linee e trasformatori vanno da soli.
 - Il pannello **Casella** mostra quanti posti sono coperti, per esempio **Personale: 4/4**, e quante persone ci
   vogliono, turni compresi.
@@ -148,7 +242,7 @@ Ogni costruzione con personale ha il suo orario, che la Casella mostra:
 |---|---|---|
 | **Sempre aperta, 3 turni (6, 14, 22)** | centrali a carbone, miniere di carbone, ospedali, magazzini frigoriferi, autoparchi, pompaggio | circa 4: un posto coperto giorno e notte vuole tre turni più i riposi |
 | **Aperta 8–17, dal lunedì al venerdì** | segherie, cave, cementifici, depositi | 1 |
-| **Aperta 8–17, tutti i giorni** | fattorie, pescherecci, serre, parchi, i servizi dei quartieri | circa 1,4, per i giorni di riposo |
+| **Aperta 8–17, tutti i giorni** | fattorie, pescherecci, serre, parchi, officine, i servizi dei quartieri | circa 1,4, per i giorni di riposo |
 
 - Una centrale a carbone con tutti i posti coperti impiega circa **17 persone**: tienine conto quando costruisci i
   quartieri.
@@ -169,7 +263,7 @@ sta per finire.
 - **Magazzino frigorifero** (pianura): fa crescere la scorta che la città può tenere.
 - **Il cibo passa dalla rete**: le costruzioni del cibo consumano energia. Durante un **blackout** non producono e
   i frigoriferi perdono una parte del cibo in più.
-- **Se la scorta finisce**, il cibo arriva da fuori in automatico, ma costa caro. Con il cibo importato la città
+- **Se la scorta finisce**, il cibo arriva da fuori in automatico dalla strada statale, ma costa caro. Con il cibo importato la città
   non muore di fame, però **non cresce**: per crescere serve almeno un giorno di scorta propria.
 - **Se finiscono anche i soldi** arriva la fame, e gli abitanti se ne vanno.
 - Il pannello **Casella** mostra quanto ha prodotto ogni costruzione nell'ultima ora (per esempio **Cibo: 5,4/h**), quanto spazio
@@ -227,10 +321,12 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 ### Strade e traffico
 
 - Ogni costruzione, linee escluse, deve toccare con un lato una **strada collegata al municipio**. Senza strada è
-  ferma e mostra il segnale «senza strada». Si parte con quattro sterrate attorno al municipio.
+  ferma e mostra il segnale «senza strada». Si parte con quattro sterrate attorno al municipio e una verso la strada
+  statale.
 - Strumento **Strada** (tasto **R**, o il primo pulsante della lista): clic o trascina per posare le **sterrate**.
   Una strada può passare sotto una linea elettrica, ma non sotto altre costruzioni.
-- Strumento **Migliora strada** (tasto **M**): **sterrata → strada asfaltata → viale**. Ogni livello porta più
+- Strumento **Migliora strada** (tasto **M**): **sterrata → strada asfaltata** (da paese) **→ viale** (da
+  cittadina). Ogni livello porta più
   traffico ed è più veloce, ma costa cemento. Dopo il miglioramento la casella resta qualche ora in **cantiere**, con
   meno spazio per il traffico.
 - **Pendolari**: i lavoratori vanno dai quartieri al lavoro quando comincia il loro orario e tornano a casa quando
@@ -260,8 +356,9 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 
 ### Mercato
 
-- Il **Mercato** si costruisce dalla scheda **Trasporti** della lista; ce n'è uno per città. Ha bisogno di una strada
-  e di personale, ed è aperto dalle 8 alle 17 nei giorni feriali.
+- Il **Mercato** si costruisce dalla scheda **Trasporti** della lista, da paese; ce n'è uno per città. Ha bisogno di
+  una strada e di personale, ed è aperto dalle 8 alle 17 nei giorni feriali. Gli scambi passano dalla **strada
+  statale**: se non è collegata, il Mercato non compra né vende.
 - Con il Mercato i materiali e il cibo si comprano **senza il sovrapprezzo** dell'importazione, e si possono comprare
   anche **carbone e pietra**. Quello che avanza si **vende** al 70 % del prezzo d'acquisto.
 - Pannello **Mercato** (tasto **K** o il pulsante con la bilancia in alto): per ogni materiale la scorta e i prezzi; le
@@ -274,7 +371,7 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 - L'energia di una centrale si perde lungo le linee fino al **nodo** più vicino: il **municipio** o un
   **trasformatore** (si costruisce dalla lista). Più la centrale è lontana, più perde; la Casella mostra quanto.
 - Strumento **Migliora linea** (tasto **L**): le linee passano dal livello **I** al **II** e al **III** e perdono
-  meno, ma costano **rame**, che si compra da fuori.
+  meno, ma costano **rame**, che si compra da fuori e arriva dalla strada statale.
 - Il grafico **Energia** in basso ha una barra per le perdite.
 
 ### Miniere e laghi
@@ -317,7 +414,7 @@ Il pannello in basso ha sei schede. Le prime cinque mostrano le **ultime 24 ore*
 **Obiettivi**, tutta la partita con la previsione. Un clic su una scheda la apre (il gioco ricorda la scelta);
 passando il mouse su una colonna leggi i valori esatti di quell'ora.
 
-- **Energia**: produzione, domanda, batterie e perdite di linea.
+- **Energia**: produzione, domanda, batterie, perdite di linea e corrente comprata.
 - **Denaro**: entrate sopra lo zero, uscite sotto, e il saldo, con le vendite e gli acquisti al Mercato.
 - **Materiali**: quanto si produce e si consuma di ogni materiale, e la scorta; il materiale si sceglie con i
   pulsanti accanto al grafico.
@@ -335,7 +432,7 @@ mappa vedi il suo stato e quanta energia produce o consuma.
 
 | Comando | Cosa fa |
 |---|---|
-| Tasti **1–9** e **0** | Scegli cosa costruire: linea elettrica, miniera di carbone, centrale a carbone, impianto solare, parco eolico, batteria, quartiere, fattoria, peschereccio, serra. Le altre costruzioni (magazzino frigorifero, parco, ospedale, industrie, depositi, trasformatore, pompaggio, Mercato) si scelgono dalla lista a sinistra, divisa in sei schede: Energia, Rete, Trasporti, Città, Cibo, Industria |
+| Tasti **1–9** e **0** | Scegli cosa costruire: linea elettrica, miniera di carbone, centrale a carbone, impianto solare, parco eolico, batteria, quartiere, fattoria, peschereccio, serra. Le altre costruzioni (magazzino frigorifero, parco, ospedale, industrie, depositi, trasformatore, pompaggio, Mercato, Officina) si scelgono dalla lista a sinistra, divisa in sei schede: Energia, Rete, Trasporti, Città, Cibo, Industria |
 | **Clic sinistro** | Posa la costruzione scelta. Senza nessuna scelta seleziona una casella e ne mostra i dettagli |
 | **Clic destro** (sul tablet: tocco lungo) | Con una costruzione scelta, annulla la scelta. Senza scelta, chiede conferma per demolire (rimborso di metà del costo) |
 | **Esc** | Annulla la scelta; se non c'è niente da annullare apre il **menu di pausa** (Riprendi, Salva come…, Salvataggio rapido, Carica partita, Salva ed esci al menu, Nuova partita, Impostazioni) |
@@ -358,7 +455,9 @@ mappa vedi il suo stato e quanta energia produce o consuma.
 | **H** o pulsante **Famiglie** (in alto) | Pannello delle famiglie: stipendi, spese, tariffa dell'energia |
 | **K** o il pulsante con la bilancia (in alto) | Pannello del Mercato: compra e vendi materiali e cibo |
 | Pulsante **Rinomina** (nella Casella) | Cambia il nome di una via, di un quartiere, di un ospedale o di un parco |
-| Pulsante **Demolisci** (icona nella Casella) | Demolisce la costruzione selezionata (rimborso di metà del costo) |
+| Pulsante **Demolisci** (icona nella Casella) | Demolisce la costruzione o il cantiere selezionato (rimborso di metà del costo) |
+| Pulsante **Potenzia** (icona nella Casella del municipio) | Porta il municipio al livello successivo, quando gli obiettivi del livello sono compiuti |
+| Pulsanti **Vendi** e **Compra** (nella Casella della linea di confine) | Accendono e spengono la vendita e l'acquisto automatici della corrente |
 | Schede del grafico (in basso) | Energia, Denaro, Materiali, Città, Trasporti, Obiettivi |
 
 ### Lingue
@@ -415,38 +514,45 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
 - **Strada interrotta** (cerchio arancione): **senza strada**, nessuna strada collegata al municipio la raggiunge.
 - **Pila di casse** (cerchio viola): **piazzale pieno**, i camion non fanno in tempo a portare via la merce.
 - **Miniera chiusa con le assi**: la miniera è **esaurita** e fra qualche giorno diventerà un lago.
+- **Cantiere**: la costruzione è ancora in lavori; funziona quando la squadra ha finito.
+- **Icona dello scambio** sopra la linea di confine: nell'ultima ora la città ha comprato o venduto corrente.
 - **Luci di notte**: col buio quartieri e municipio accendono le luci. Una costruzione senza corrente resta al
   buio: un quartiere spento di notte è un campanello d'allarme.
 
 ### Consigli per la prima partita
 
 1. Metti in pausa e guarda la mappa: le **colline** sono buone per l'eolico, i **giacimenti** scuri servono alle
-   miniere.
+   miniere. A ovest c'è il **ponte**: da lì arrivano la corrente e le merci da fuori.
 2. Fai partire una **linea** dal municipio verso dove vuoi costruire, e una **strada** (tasto **R**) accanto: ogni
    costruzione deve toccarne una.
-3. Comincia con un po' di **solare e di eolico** e una **batteria** per la sera.
+3. All'inizio la città **compra la corrente** da fuori, al doppio del prezzo: metti subito un po' di **solare e di
+   eolico** e una **batteria** per la sera. I cantieri richiedono ore, e le due squadre del municipio fanno due lavori
+   alla volta.
 4. Non costruire troppe centrali a carbone tutte insieme: ognuna vuole circa **17 persone** su tre turni, e la città
    è ancora piccola. Solare ed eolico non hanno bisogno di personale.
 5. Costruisci **quartieri** man mano che la produzione regge la domanda.
-6. Metti presto una **fattoria** e pensa all'inverno: d'inverno le fattorie si fermano, e servono una scorta,
-   un peschereccio o una serra.
-7. Nel primo mese metti una **segheria** nel bosco e una **cava** su una collina; aggiungi un **cementificio**
-   quando hai un po' di soldi da parte. Comprare i materiali da fuori ogni volta costa. Le industrie riposano il
-   fine settimana: tieni una scorta.
-8. Un **parco** presto alza la felicità quando la città è piccola. Se costruisci centrali a carbone, pensa a un
-   **ospedale**.
-9. Tieni d'occhio il grafico **Energia** in basso: se la linea rossa (domanda) supera la verde (produzione), sta per
-   arrivare un blackout.
-10. Quando arriva «Camion insufficienti», costruisci un **autoparco**. Quando la città cresce, guarda la **mappa del
+6. Metti presto una **fattoria** e pensa all'inverno: d'inverno le fattorie si fermano, e servono una scorta e, da
+   paese, un peschereccio o una serra.
+7. Apri il pannello **Obiettivi**, scheda **Livello**, e premi **Potenzia** appena puoi: da paese arrivano segherie,
+   cave, depositi, Mercato e Officina.
+8. Da paese metti una **segheria** nel bosco e una **cava** su una collina; da cittadina aggiungi un
+   **cementificio**. Comprare i materiali da fuori ogni volta costa. Le industrie riposano il fine settimana: tieni
+   una scorta.
+9. Un **parco** presto alza la felicità quando la città è piccola. Se costruisci centrali a carbone, da cittadina
+   pensa a un **ospedale**.
+10. Tieni d'occhio il grafico **Energia** in basso: se la linea rossa (domanda) supera la verde (produzione), stai
+    comprando corrente o sta per arrivare un blackout.
+11. Quando i cantieri restano a lungo in fila, costruisci un'**Officina**.
+12. Quando arriva «Camion insufficienti», costruisci un **autoparco**. Quando la città cresce, guarda la **mappa del
     traffico** (G) e migliora le strade più cariche (M); non mettere i viali proprio accanto ai quartieri.
-11. Tieni le centrali vicine al municipio o a un **trasformatore**: lontano perdono energia.
-12. Quando la **campanella** diventa rossa, apri il **registro degli eventi** (E): in cima ci sono i problemi da
+13. Tieni le centrali vicine al municipio o a un **trasformatore**: lontano perdono energia.
+14. Quando la **campanella** diventa rossa, apri il **registro degli eventi** (E): in cima ci sono i problemi da
     risolvere, e un clic ti porta sul posto.
-13. Guarda la **previsione** nel pannello Obiettivi: se dice «fuori strada», alle condizioni attuali la partita non si
+15. Guarda la **previsione** nel pannello Obiettivi: se dice «fuori strada», alle condizioni attuali la partita non si
     vince.
-14. Quando le industrie producono più di quanto usi, un **Mercato** vende l'eccesso e ti fa comprare i materiali a
+16. Quando le industrie producono più di quanto usi, un **Mercato** vende l'eccesso e ti fa comprare i materiali a
     meno.
-15. Distanzia i **parchi eolici** lungo la direzione del vento (pannello Meteo): uno dietro l'altro si rubano il
+17. Distanzia i **parchi eolici** lungo la direzione del vento (pannello Meteo): uno dietro l'altro si rubano il
     vento.
 
 ## Salvataggi
@@ -502,6 +608,11 @@ salvataggi delle versioni precedenti si caricano: il registro parte vuoto, la ta
 senza esperienza e il grafico Obiettivi comincia dal giorno in cui riprendi la partita. Un salvataggio della 0.10.0
 non si apre nelle versioni precedenti.
 
+**Dalla 0.11.0** il formato cambia di nuovo: livelli del municipio, cantieri e collegamenti con la terraferma. I
+salvataggi delle versioni precedenti si caricano: il municipio parte dal livello più basso che comprende tutto quello
+che hai già costruito, e la mappa riceve il ponte, la strada statale e la linea di confine, collegati alla città. Un
+salvataggio della 0.11.0 non si apre nelle versioni precedenti.
+
 I salvataggi di una versione alpha potrebbero non funzionare con la versione successiva: lo scrive il
 [changelog](CHANGELOG.md) quando succede.
 
@@ -509,18 +620,15 @@ I salvataggi di una versione alpha potrebbero non funzionare con la versione suc
 
 Cosa è già previsto, più o meno in quest'ordine. I piani possono cambiare.
 
-- **Obiettivi e sblocchi**: piccoli obiettivi, come «costruisci 10 case», che sbloccano costruzioni nuove e fanno
-  crescere il municipio; e una schermata **Nuova partita** dove scegliere il nome della città, la difficoltà e se
-  volere i disastri.
-- **Manutentori e Officina**: le costruzioni richiederanno tempo, e a farle saranno le squadre del municipio e poi
-  delle Officine, che più avanti ripareranno anche quello che si consuma, con i materiali che hai.
-- **Petrolio, gas e calore**: fonti nuove, e il riscaldamento d'inverno.
+- **Calore, gas e carburante**: il riscaldamento delle case d'inverno, centrali a gas per le ore di punta e camion che
+  consumano carburante.
 - **Acqua e rifiuti**: acquedotti, depuratori e discariche per una città più grande.
-- **Istruzione e ricerca**: scuole, e tecnologie da scoprire che sbloccano costruzioni nuove.
-- **Usura, emergenze e scioperi**: le costruzioni si consumano e vanno riparate; emergenze come incendi e disastri
-  naturali, per chi li sceglie.
-- **Mappe nuove, e più avanti**: una mappa diversa a ogni partita, mappe più grandi con fiumi e ponti, una minimappa;
-  poi più città collegate fra loro e, ancora dopo, la vista isometrica.
+- **Istruzione**: scuole, e lavoratori più preparati.
+- **Ricerca**: tecnologie da scoprire che sbloccano costruzioni nuove, come l'estrazione di petrolio e gas.
+- **Usura e riparazioni**: le costruzioni si consumano e le squadre le riparano con i materiali che hai; poi scioperi
+  ed emergenze, per chi le sceglie.
+- **Mappe nuove**: una mappa diversa a ogni partita, mappe più grandi con fiumi e ponti, e una minimappa.
+- **Più avanti**: più città collegate fra loro e la vista isometrica.
 
 ## Problemi noti
 
@@ -533,9 +641,6 @@ Cosa è già previsto, più o meno in quest'ordine. I piani possono cambiare.
 - È una **alpha**: l'equilibrio del gioco (costi, produzione, crescita, traffico) cambia ancora da una versione
   all'altra. Le industrie producono molto in poche ore: se i loro piazzali si riempiono, costruisci presto un
   autoparco.
-- Su un computer lento o nel browser un clic molto rapido a volte va perso, e il clic successivo sposta la
-  mappa. Mentre la previsione si ricalcola, la scritta «previsione in aggiornamento» copre in parte il titolo del
-  pannello Obiettivi. Saranno corretti in una prossima versione.
 - Le traduzioni in tedesco, francese e spagnolo non sono ancora state rilette da una persona di madrelingua: le
   segnalazioni di errori sono benvenute.
 
