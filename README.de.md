@@ -6,13 +6,13 @@
 
 # ⚡ Voltvale: Energy Grid Tycoon
 
-[![Neueste Version](https://img.shields.io/github/v/release/scrnetto/energy-grid-tycoon-releases?include_prereleases&label=version&color=f2c230)](https://github.com/scrnetto/energy-grid-tycoon-releases/releases)
+[![Neueste Version](https://img.shields.io/github/v/release/scrnetto/voltvale?include_prereleases&label=version&color=f2c230)](https://github.com/scrnetto/voltvale/releases)
 [![Status](https://img.shields.io/badge/status-alpha-orange)](#versionen)
 [![itch.io](https://img.shields.io/badge/itch.io-spielen%20oder%20herunterladen-fa5c5c?logo=itchdotio&logoColor=white)](https://marcoscarlino.itch.io/voltvale)
-[![Im Browser spielen](https://img.shields.io/badge/spielen-im%20browser-3fae5a)](https://scrnetto.github.io/energy-grid-tycoon-releases/)
+[![Im Browser spielen](https://img.shields.io/badge/spielen-im%20browser-3fae5a)](https://scrnetto.github.io/voltvale/)
 [![Plattformen](https://img.shields.io/badge/plattformen-Windows%20%7C%20macOS%20%7C%20Linux%20%7C%20Android%20%7C%20Web-3f8fc9)](#spiel-herunterladen)
-[![Letztes Update](https://img.shields.io/github/release-date-pre/scrnetto/energy-grid-tycoon-releases?label=letztes%20update&color=3f8fc9)](https://github.com/scrnetto/energy-grid-tycoon-releases/releases)
-[![Downloads](https://img.shields.io/github/downloads/scrnetto/energy-grid-tycoon-releases/total?label=downloads&color=3f8fc9)](https://github.com/scrnetto/energy-grid-tycoon-releases/releases)
+[![Letztes Update](https://img.shields.io/github/release-date-pre/scrnetto/voltvale?label=letztes%20update&color=3f8fc9)](https://github.com/scrnetto/voltvale/releases)
+[![Downloads](https://img.shields.io/github/downloads/scrnetto/voltvale/total?label=downloads&color=3f8fc9)](https://github.com/scrnetto/voltvale/releases)
 [![Lizenz](https://img.shields.io/badge/lizenz-kostenlos%2C%20alle%20rechte%20vorbehalten-lightgrey)](LICENSE.md)
 [![Sprachen](https://img.shields.io/badge/sprachen-it%20%7C%20en%20%7C%20de%20%7C%20fr%20%7C%20es-009246)](#sprachen)
 [![Mit Unity gemacht](https://img.shields.io/badge/gemacht%20mit-Unity%206-1d2330?logo=unity)](https://unity.com/)
@@ -30,13 +30,13 @@ Ein Originalspiel von **Marco Scarlino**. Kostenlos. Offizielle Website: **[volt
 
 ## Trailer
 
-[![Trailer von Voltvale: klicken, um das ganze einminütige Video zu sehen](immagini/trailer-de.webp)](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-de.mp4)
+[![Trailer von Voltvale: klicken, um das ganze einminütige Video zu sehen](immagini/trailer-de.webp)](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-de.mp4)
 
-**[▶ Trailer ansehen (1 Minute)](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-de.mp4)** ·
-auch auf [Italienisch](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-it.mp4),
-[Englisch](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-en.mp4),
-[Französisch](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-fr.mp4) und
-[Spanisch](https://scrnetto.github.io/energy-grid-tycoon-releases/trailer/voltvale-trailer-es.mp4)
+**[▶ Trailer ansehen (1 Minute)](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-de.mp4)** ·
+auch auf [Italienisch](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-it.mp4),
+[Englisch](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-en.mp4),
+[Französisch](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-fr.mp4) und
+[Spanisch](https://scrnetto.github.io/voltvale/trailer/voltvale-trailer-es.mp4)
 
 > **Status: in Entwicklung (Alpha).** Das Spiel lässt sich von Anfang bis Ende spielen, aber vieles fehlt noch,
 > und manches funktioniert vielleicht nicht. Jede Meldung hilft: siehe
@@ -44,7 +44,7 @@ auch auf [Italienisch](https://scrnetto.github.io/energy-grid-tycoon-releases/tr
 
 ## Sofort im Browser spielen
 
-**[▶ Voltvale im Browser spielen](https://scrnetto.github.io/energy-grid-tycoon-releases/)**: nichts zu
+**[▶ Voltvale im Browser spielen](https://scrnetto.github.io/voltvale/)**: nichts zu
 installieren. Du brauchst einen aktuellen Browser (Chrome, Firefox, Edge, Safari) auf einem Computer mit Maus und
 Tastatur oder ein Tablet: **Tippen = Klick, langes Drücken = Rechtsklick**. Klicke ins Spiel, bevor du die
 Tastatur benutzt. Deine Spielstände bleiben in dem Browser, den du verwendest.
@@ -655,6 +655,9 @@ Was schon geplant ist, ungefähr in dieser Reihenfolge. Pläne können sich änd
 
 ## Bekannte Probleme
 
+- Die Browser-Version ist nach **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)** umgezogen
+  (die alte Adresse leitet dorthin weiter). Im Browser unter der alten Adresse gespeicherte Spiele erscheinen unter der
+  neuen noch nicht: Sie sind weiterhin in deinem Browser, und eine kommende Version holt sie herüber.
 - Die Versionen für **Windows** und **macOS** wurden noch nicht auf echten Computern getestet: Wenn etwas nicht
   klappt, [sag Bescheid](#ein-problem-oder-eine-idee-melden).
 - Die **Android**-Version wird von Hand installiert, außerhalb des Play Store.
