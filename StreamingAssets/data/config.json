@@ -89,6 +89,7 @@
     "malattie_base": 15,
     "salute_inquinamento": 0.6,
     "salute_fame": 20,
+    "salute_freddo": 12,
     "riduzione_ospedali": 0.6,
     "quota_assenti": 0.5,
     "velocita_avvicinamento": 0.05
@@ -119,7 +120,8 @@
     "emigrazione_pct": 0.001,
     "rumore_viale": 1.5,
     "pendolari": 0.5,
-    "pendolari_max": 8
+    "pendolari_max": 8,
+    "freddo": 20
   },
   "materiali": {
     "iniziali": {
@@ -130,7 +132,7 @@
     },
     "prezzo_importazione": {
       "legname": 10,
-      "cemento": 20,
+      "cemento": 22,
       "rame": 40
     }
   },
@@ -394,5 +396,32 @@
     "conti_k": 2.85,
     "conti_min": -15,
     "conti_max": 10
+  },
+  "combustibili": {
+    "_nota": "O1 (idee/o1-dettagli.md): gas e carburante solo importati, nell'ora, dalla strada statale. attivo = false: tutto come prima di O1 (niente calore, carburante, rampa, crisi); i test dei sistemi lo spengono.",
+    "attivo": true,
+    "prezzo": { "gas": 1.2, "carburante": 6 },
+    "carburante_per_tc": 0.002,
+    "rampa_carbone": 0.25,
+    "crisi": {
+      "inizio_stagione_giorno": 15,
+      "inizio_stagione_mese": 11,
+      "finestra_giorni": 75,
+      "durata_min": 14,
+      "durata_max": 21,
+      "giorno_minimo": 60,
+      "avviso_giorni": 3,
+      "moltiplicatore": { "gas": 2.5, "carburante": 1.5 }
+    }
+  },
+  "calore": {
+    "_nota": "O1: bisogno di calore = abitanti × per_abitante_grado × max(0, soglia − temperatura). Coperto prima dalle centrali termiche a legna, poi dalle caldaie a gas dei quartieri (gas_per_calore unità di gas per unità di calore). Bolletta delle famiglie = fornito × prezzo_famiglie × tariffa × (1 + quota_rincaro_famiglie × (moltiplicatore del gas − 1)).",
+    "soglia": 15,
+    "per_abitante_grado": 0.006,
+    "gas_per_calore": 1.1,
+    "inquinamento_per_gas": 0.004,
+    "prezzo_famiglie": 1.4,
+    "quota_rincaro_famiglie": 0.5,
+    "riscaldamento_iniziale": true
   }
 }
