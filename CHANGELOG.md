@@ -12,6 +12,80 @@ Ogni versione ha queste sezioni, quando servono:
 
 ## [Non ancora pubblicata]
 
+## [0.12.0-alpha.1] - 2026-11-23
+
+Calore e gas, una lista delle costruzioni più compatta e i salvataggi del browser recuperati. *Heat and gas, a more
+compact building list and browser saves recovered.*
+
+### Novità
+- **Il calore delle case**: quando la temperatura scende sotto i 15 °C le case chiedono calore, tanto più quanto fa
+  freddo e quanti più abitanti ci sono. La partita comincia in autunno: il calore serve già dalle prime notti.
+  - Lo danno prima le **centrali termiche a legna**, poi le **caldaie a gas** dei quartieri, che non si costruiscono:
+    ci sono già e comprano il gas da fuori.
+  - Il calore che manca toglie **felicità**, fino a 20 punti (il fattore «Freddo nelle case» nel tooltip), e
+    peggiora la **salute**. I quartieri al freddo mostrano un fiocco di neve, e l'avviso «Case al freddo» compare
+    sopra la mappa e nel registro degli eventi.
+  - Le famiglie pagano al comune la **bolletta del riscaldamento**, con la tariffa scelta nel pannello Famiglie.
+  - Nel pannello **Famiglie** c'è l'interruttore **Riscaldamento a gas: sì/no**. Spento, si risparmia il gas, ma le
+    case restano al freddo.
+- **Centrale termica a legna** (scheda Città, da paese): scalda la città bruciando legname, prima del gas. A pieno dà
+  15 unità di calore all'ora e brucia 3,75 di legname, che i camion portano nel suo silo; d'estate non brucia niente.
+  Costa 800 e 20 di cemento, si costruisce in 20 ore, è sempre aperta e ha bisogno di personale. Senza legname si ferma.
+- **Centrale a gas** (scheda Energia, da paese): 15 MW, costa 900 e 30 di cemento, si costruisce in 24 ore e ha 2 posti
+  di lavoro. Si accende **solo quando manca energia**, dopo le batterie e prima di comprare corrente: copre i picchi
+  della sera e le ore senza vento, e non produce per vendere. A pieno brucia 42 di gas all'ora e inquina meno del
+  carbone.
+- **Carbone lento**: una centrale a carbone cambia potenza al più di **un quarto della sua capacità all'ora**. Una
+  centrale nuova, o rimasta senza carbone, ci mette 4 ore ad arrivare al massimo. Quando la rete non sa dove mettere
+  l'energia (batterie piene, vendita al massimo) la centrale scende e brucia meno carbone, ma poi la sera non risale
+  subito: servono batterie, gas o corrente comprata. La Casella dice se è «in salita» o «in discesa».
+- **Gas e carburante dalla terraferma**: si comprano ora per ora, solo quanto serve, attraverso la **strada statale**,
+  finché c'è denaro. Il gas costa 1,20 all'unità e il carburante 6; con un Mercato in città costano meno, senza
+  sovrapprezzo. Il pannello **Mercato** mostra i prezzi di oggi nel riquadro «Combustibili importati», anche quando il
+  Mercato non è ancora costruito. Gas e carburante non si tengono in magazzino e non si vendono.
+- **I camion consumano carburante**: più strada fanno, più ne bruciano. Senza denaro o con la strada statale
+  scollegata tutta la flotta si ferma: avviso «Camion fermi: niente carburante» e un'icona sugli autoparchi.
+- **Crisi del gas**: una volta per inverno, fra metà novembre e fine gennaio e mai nei primi due mesi di partita, per
+  due o tre settimane il gas costa **2,5 volte** tanto e il carburante 1,5 volte.
+  - Tre giorni prima arriva l'avviso «Tensioni sul gas»; inizio e fine compaiono sopra la mappa e nel registro degli
+    eventi, e finché dura la crisi è fra i problemi in corso, con il giorno in cui finisce.
+  - Metà del rincaro del riscaldamento lo pagano le famiglie, nella bolletta, e metà il comune.
+  - In crisi spesso conviene comprare la corrente invece di accendere la centrale a gas, posare una centrale termica a
+    legna o spegnere il riscaldamento a gas per qualche giorno.
+- **Calore e gas da tenere d'occhio**:
+  - grafici: «dal gas» nella scheda Energia, «gas comprato» nella scheda Denaro, «calore richiesto» e «calore fornito»
+    nella scheda Città;
+  - icone sulla mappa: **senza gas** (fiamma barrata) sulle centrali a gas, **al freddo** (fiocco di neve) sui
+    quartieri, **senza carburante** (tanica barrata) sugli autoparchi;
+  - Casella: produzione, gas e costo al MWh della centrale a gas; potenza attuale e rampa del carbone; calore e legname
+    della centrale termica; calore e fonte di ogni quartiere, oppure quanto calore manca;
+  - il tooltip della lista dice quanto consuma a pieno regime una centrale a gas o a legna;
+  - nelle **Scorte** il legname bruciato dalle centrali termiche entra fra le uscite.
+
+### Modifiche
+- **Scheda compatta delle costruzioni**: nella lista a sinistra ogni costruzione occupa due righe (tre quando costo e
+  ore non stanno accanto), con l'icona in una cornice e il lucchetto nell'angolo, il costo, le ore di cantiere e i
+  materiali. Nella lista entrano circa il doppio delle costruzioni senza scorrere.
+- **Colonna destra più ordinata**: le righe della previsione sotto ogni obiettivo stanno su una riga sola, con «→»;
+  l'andamento (in linea, a rischio, fuori strada) sta accanto alle schede del pannello Obiettivi, o diventa un pallino
+  colorato quando la parola non ci sta; mentre la previsione si ricalcola si attenua invece di scrivere «aggiorno…».
+  Quando manca spazio scorre la Casella, e Meteo e Obiettivi restano interi.
+- L'equilibrio del gioco è stato rivisto con il calore e i combustibili: giocando bene si vince ancora in poco più di
+  un anno di gioco. Il cemento comprato da fuori costa 22 invece di 20.
+
+### Correzioni
+- Nelle finestre alte 800 punti, come 1280×800, quando la previsione degli obiettivi era pronta la colonna destra non
+  ci stava più: il Meteo veniva schiacciato e l'andamento usciva dal titolo del pannello Obiettivi.
+- **Versione web**: le partite salvate nel browser al vecchio indirizzo del gioco, prima che il repository cambiasse
+  nome, ora si **recuperano da sole** la prima volta che apri il nuovo indirizzo con lo stesso browser, e si trovano in
+  **Carica partita** e con **Continua**.
+
+### Da sapere
+- I salvataggi della 0.12.0 hanno un formato nuovo e **non si aprono nelle versioni precedenti**.
+- I salvataggi delle versioni precedenti si caricano: il riscaldamento a gas parte acceso e le centrali a carbone
+  ripartono dalla potenza che avevano. Calore e combustibili valgono subito: se riprendi una partita d'inverno, le case
+  chiedono calore dalla prima ora.
+
 ## [0.11.0-alpha.1] - 2026-11-22
 
 Obiettivi e sblocchi, cantieri e squadre, collegamenti con la terraferma. *Goals and unlocks, construction sites and

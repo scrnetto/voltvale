@@ -20,8 +20,8 @@
 
 **You run the power grid of a growing town.** Every hour the town needs energy: a little at night, a lot in the
 evening. Build power plants, solar farms, wind farms and batteries, connect everything with power lines and
-roads, find people to work in them, shift after shift, feed everyone, move freight and materials by truck without jamming the
-traffic, and grow your village to **400 residents within two game years**, without constant blackouts, without debt
+roads, find people to work in them, shift after shift, feed everyone, keep their homes warm in winter, move freight and
+materials by truck without jamming the traffic, and grow your village to **400 residents within two game years**, without constant blackouts, without debt
 and without choking it with pollution.
 
 An original game by **Marco Scarlino**. Free to play. Official website: **[voltvale.it](https://voltvale.it/en/)**.
@@ -119,7 +119,10 @@ the time, for example «Day 1 · Sun 18 Oct 2020 · 08:00».
   - the **sun** only produces by day, and little in winter or under clouds;
   - the **wind** changes strength and direction from hour to hour (the Weather panel shows where it blows from); a
     wind farm **downwind** of another one, a few tiles away, produces less (the turbines' «wake», up to 40% less);
-  - **coal** always produces, but it pollutes and burns the coal dug up by the **mines**.
+  - **coal** produces day and night, but it pollutes, burns the coal dug up by the **mines** and changes output
+    slowly, by at most a quarter of its capacity per hour;
+  - **gas** only switches on when energy is short, for the evening peaks, but the gas comes from the mainland and
+    costs money every hour.
 - **Batteries** store the extra energy and give it back when needed, for example in the evening.
 - **Energy from outside**: surplus energy is **sold**, and what's missing is **bought** at twice the price, through
   the **border line** next to the bridge; the more you sell in an hour, the less it's worth. See
@@ -128,6 +131,8 @@ the time, for example «Day 1 · Sun 18 Oct 2020 · 08:00».
   It makes residents sick, and above the limit you can't win.
 - **Growth**: the town grows if residents are **happy** enough, there's room in the **districts** and there's enough
   **food** in store.
+- **Heating**: below 15 °C homes need **heat**, from wood-fired heating plants or from the districts' gas boilers.
+  Cold homes make residents unhappy and sick. See [Heating, gas and fuel](#heating-gas-and-fuel).
 
 ### New game
 
@@ -158,7 +163,7 @@ The town hall grows with the town: **I village**, **II small town**, **III town*
 | Level | Buildings |
 |---|---|
 | **I village** | power lines, dirt roads, districts, solar farms, wind farms, coal power plants and mines, batteries, farms, parks |
-| **II small town** | paved roads, depots, truck depots, sawmills, quarries, greenhouses, cold stores, fishing boats, Market, Workshop |
+| **II small town** | paved roads, depots, truck depots, sawmills, quarries, greenhouses, cold stores, fishing boats, gas power plants, wood-fired heating plants, Market, Workshop |
 | **III town** | avenues, cement works, transformers, hospitals, pumped storage |
 | **IV city** | nothing new for now: it's there for the buildings of upcoming updates |
 
@@ -221,13 +226,13 @@ Buildings need people to run them.
 - About **56 %** of the residents work. The bar at the top shows how many people have a job out of the available
   workforce.
 - **Coal power plants**, **coal mines**, **industries**, the **food** buildings, **hospitals**, **parks**, **cold
-  stores**, **depots**, **Workshops** and **pumped storage** need staff. **Solar farms**, **wind farms**, **batteries**, power lines
+  stores**, **depots**, **Workshops**, **pumped storage**, **gas power plants** and **wood-fired heating plants** need staff. **Solar farms**, **wind farms**, **batteries**, power lines
   and transformers run by themselves.
 - The **Tile** panel shows how many jobs are filled, for example **Staff: 4/4**, and how many people that takes,
   shifts included.
 - With too few staff a building produces less; **with no staff at all it stops** and shows the **«no staff»**
   signal.
-- Workers go **to energy first**, then **to food**, then **to hospitals**, then **to industries**, then **to the mines**, then **to services** (districts and parks).
+- Workers go **to energy first**, then **to food**, then **to hospitals and heating plants**, then **to industries**, then **to the mines**, then **to services** (districts and parks).
   Districts keep working even when their services are short of staff.
 - **Unemployment** costs money: people without a job pay no income tax and get unemployment benefit from the town;
   if it's high, residents are less happy.
@@ -238,7 +243,7 @@ Every building with staff has its own working hours, shown in the **Tile** panel
 
 | Hours | Buildings | People per job |
 |---|---|---|
-| **Always open, 3 shifts (6, 14, 22)** | coal power plants, coal mines, hospitals, cold stores, truck depots, pumped storage | about 4: one job covered day and night takes three shifts plus rest days |
+| **Always open, 3 shifts (6, 14, 22)** | coal and gas power plants, wood-fired heating plants, coal mines, hospitals, cold stores, truck depots, pumped storage | about 4: one job covered day and night takes three shifts plus rest days |
 | **Open 8–17, Monday to Friday** | sawmills, quarries, cement works, depots | 1 |
 | **Open 8–17, every day** | farms, fishing boats, greenhouses, parks, Workshops, the services of the districts | about 1.4, for the days off |
 
@@ -268,10 +273,10 @@ running low.
 ### Happiness, health and taxes
 
 - **Happiness** (the smiley in the top bar): it moves slowly towards a value that is the sum of a few factors,
-  namely blackouts in the last 24 hours, food, hunger, unemployment, pollution, health, parks, taxes and the household budget. Hover
+  namely blackouts in the last 24 hours, food, hunger, cold homes, unemployment, pollution, health, parks, taxes and the household budget. Hover
   over the number to see where it's heading and how much each factor weighs, for example «Blackouts −5.0» or
   «Parks +3.0». Below 60 the town doesn't grow, and below 35 people start to leave.
-- **Health** (the heart): drops with pollution and hunger. **Sick people stay home**, so there are fewer workers,
+- **Health** (the heart): drops with pollution, hunger and cold homes. **Sick people stay home**, so there are fewer workers,
   and an unhealthy town is also a less happy one.
 - **Hospital** (plains): treats up to 250 residents, needs staff and uses power. It can't treat anyone during a
   blackout. A must if you go for coal.
@@ -294,6 +299,34 @@ running low.
   normal or high. A high tariff brings the town more money but leaves households with less.
 - What's left for households affects happiness («Household budget» in the happiness tooltip).
 
+### Heating, gas and fuel
+
+- **Heat**: when the temperature drops below **15 °C**, homes need heat, more the colder it is and the more residents
+  there are. The game starts in autumn, so you need it from the very first nights; in summer you don't.
+- Heat comes first from **wood-fired heating plants**, then from the **gas boilers** of the districts. You don't
+  build the boilers: they're already there and buy gas from the mainland.
+- **Cold homes**: the heat that's missing takes up to 20 points of **happiness** («Cold homes» in the happiness
+  tooltip) and makes **health** worse. Districts in the cold show a snowflake, and the «Cold homes» warning appears
+  above the map and in the event log.
+- Households pay the town a **heating bill**, with the energy tariff you've chosen. In the **Households** panel the
+  **Gas heating** switch turns the gas boilers off: you save gas, but homes stay cold.
+- **Wood-fired heating plant** (Town tab, from level II): at full power it gives 15 units of heat per hour and burns
+  3.75 timber, which trucks bring to its silo. It costs 800 and 20 cement, takes 20 hours to build, is always open
+  and needs staff and power. Without timber it stops. The timber it burns is timber you won't build with or sell.
+- **Gas power plant** (Energy tab, from level II): 15 MW, it costs 900 and 30 cement and takes 24 hours to build. It
+  switches on **only when energy is short**: after the batteries and before power is bought. It doesn't produce to
+  sell. At full power it burns 42 gas per hour, and it pollutes less than coal.
+- **Gas and fuel** are bought hour by hour, only as much as needed, through the **highway**, as long as there's
+  money: gas costs 1.20 a unit, fuel 6, less with a Market in town. The Market panel shows today's prices.
+- **Gas crisis**: once every winter, between mid-November and the end of January (never in the first two months of a
+  game), for two or three weeks gas costs **2.5 times** as much and fuel 1.5 times. The «Gas tensions» warning
+  arrives three days before. During the crisis households pay half of the extra heating cost and the town pays the
+  other half, and buying power is often cheaper than running the gas power plant.
+- **Coal is slow**: a coal power plant changes its output by at most a quarter of its capacity per hour, so a new one
+  takes 4 hours to reach full power. When the grid has nowhere to put the energy (batteries full, sales at the
+  limit), it turns down and burns less coal, but then it can't climb back fast for the evening peak. The Tile panel
+  says whether it's ramping up or down.
+
 ### Materials and industries
 
 Most buildings cost **materials** as well as money: **timber** and **cement**. The list on the left shows them
@@ -307,10 +340,10 @@ under the price, with small icons; hover over the button to read them in full.
 - Industries need **staff** and **power**. Workers go to them after energy, food and hospitals, and before the
   coal mines.
 - **If you don't have enough materials** when you build, the missing part is bought from outside straight away
-  (timber 10, cement 20 each). You can play without industries, but it costs more.
+  (timber 10, cement 22 each). You can play without industries, but it costs more.
 - You start with 200 timber and 200 cement.
 - The **Stocks** button, next to coal in the top bar, opens a small panel with coal, timber, stone, cement and
-  food, and how much comes in and goes out each hour. Click outside it or press **Esc** to close it.
+  food, and how much comes in and goes out each hour (timber burned by heating plants included). Click outside it or press **Esc** to close it.
 - The **Tile** panel shows what an industry produces and uses, and «stopped: no stone» when it has run out.
 
 ### Roads and traffic
@@ -338,7 +371,8 @@ under the price, with small icons; hover over the button to read them in full.
 
 - Producers (mines, sawmills, quarries, cement works, farms, fishing boats, greenhouses) put their goods in their
   **yard**. **Trucks** take them to the town hall or the nearest **depot**, and from there to the **silos** of
-  whoever uses them: coal power plants and the cement works. The cold store works as the depot for food.
+  whoever uses them: coal power plants, the cement works and wood-fired heating plants. The cold store works as the
+  depot for food.
 - The town hall has **2 trucks**; each **truck depot** adds **3** (it needs staff and power). Better roads and less
   traffic let the same trucks carry more.
 - If there aren't enough trucks you get the «**Not enough trucks**» warning: yards fill up and producers stop
@@ -346,6 +380,8 @@ under the price, with small icons; hover over the button to read them in full.
 - A yard only holds so much: a busy sawmill, quarry or cement works can fill it before evening if the trucks don't
   keep up.
 - **Food spoils** a little on every trip: the farther the farm, the more you lose.
+- **Trucks burn fuel**, bought hour by hour through the highway: the more they drive, the more it costs. With no money
+  or with the highway cut off, the whole fleet stops («Trucks stopped: no fuel»).
 - The **Tile** panel shows yard, silo and distance from the depot; **Stocks** shows what is waiting in the yards.
 
 ### Market
@@ -359,6 +395,8 @@ under the price, with small icons; hover over the button to read them in full.
   **«Sell above»** and **«Buy below»** thresholds make the Market trade by itself, hour by hour; the **«Buy 10»** and
   **«Sell 10»** buttons work straight away, even outside opening hours.
 - Sales and purchases show up in the event log and in the **Money** tab of the chart.
+- The **Imported fuels** box shows today's prices of gas and fuel, even before you build a Market. With a Market in
+  town they cost less, without the import surcharge. They can't be stored or sold.
 
 ### Line losses
 
@@ -409,10 +447,11 @@ The panel at the bottom has six tabs. The first five show the **last 24 hours**,
 **Goals**, shows the whole game with the forecast. Click a tab to switch (the game remembers your choice), and hover
 over a column to read the exact values of that hour.
 
-- **Energy**: production, demand, batteries, line losses and power bought.
-- **Money**: income above zero, spending below, and the balance, with sales and purchases at the Market.
+- **Energy**: production, demand, batteries, line losses, power bought and power from gas.
+- **Money**: income above zero, spending below, and the balance, with sales and purchases at the Market and the gas
+  bought.
 - **Materials**: how much of each material is produced and used, and the stock; pick the material with the buttons next to the chart.
-- **Town**: food produced and food eaten, the food stock, happiness and health.
+- **Town**: food produced and food eaten, the food stock, happiness and health, heat needed and heat supplied.
 - **Transport**: people going to work and going home, trucks on the road, and how loaded the roads are.
 - **Goals**: residents and pollution since the start of the game, the goal line and the forecast as a dashed line
   (see [Goal forecast](#goal-forecast)).
@@ -452,6 +491,7 @@ and how much energy it produces or uses.
 | **Demolish** button (icon in the Tile panel) | Demolishes the selected building or construction site (half the cost refunded) |
 | **Upgrade** button (icon in the town hall's Tile panel) | Raises the town hall to the next level, once the goals of the level are complete |
 | **Sell** and **Buy** buttons (in the border line's Tile panel) | Switch automatic selling and buying of power on and off |
+| **Gas heating** button (in the Households panel) | Switches the districts' gas boilers on and off |
 | Tabs of the chart (at the bottom) | Energy, Money, Materials, Town, Transport, Goals |
 
 ### Languages
@@ -510,6 +550,9 @@ The layout is picked automatically; you can switch between phone and computer in
 - **Mine boarded up**: the mine is **exhausted** and will become a lake in a few days.
 - **Construction site**: the building is still being built; it works once the crew has finished.
 - **Trade icon** above the border line: the town bought or sold power in the last hour.
+- **Crossed-out flame**: a gas power plant has stopped because **no gas** is arriving (highway cut off or no money).
+- **Snowflake**: **cold homes**, the district isn't getting all the heat it needs.
+- **Crossed-out jerrycan**: **no fuel**, the trucks of this truck depot are stopped.
 - **Lights at night**: after dark, districts and the town hall switch their lights on. A building with no power
   stays dark, so a dark district at night is a warning.
 
@@ -545,6 +588,10 @@ The layout is picked automatically; you can switch between phone and computer in
 16. When your industries make more than you use, a **Market** sells the surplus and lets you buy materials for less.
 17. Space out your **wind farms** along the wind direction (Weather panel): one behind the other, they steal each
     other's wind.
+18. Coal is slow: a new coal power plant takes 4 hours to reach full power, and it can't follow the evening peak by
+    itself. From level II a **gas power plant** covers the peaks, but every hour of gas costs money.
+19. Before winter, think about **heating**: a **wood-fired heating plant** next to a sawmill saves a lot of gas. When
+    the «Gas tensions» warning arrives, you have three days to get ready for the crisis.
 
 ## Saves
 
@@ -603,6 +650,10 @@ from earlier versions still load: the town hall starts at the lowest level that 
 built, and the map gains the bridge, the highway and the border line, connected to the town. A 0.11.0 save doesn't
 open in earlier versions.
 
+**From 0.12.0** the format changes again: heating, gas and fuel. Saves from earlier versions still load: gas
+heating starts switched on and coal power plants carry on from the output they had. A 0.12.0 save doesn't open in
+earlier versions.
+
 Saves from one alpha version might not work with the next one: the [changelog](CHANGELOG.md) says so when it
 happens.
 
@@ -610,20 +661,16 @@ happens.
 
 What's already planned, roughly in this order. Plans may change.
 
-- **Heat, gas and fuel**: heating homes in winter, gas power plants for the peak hours and trucks that burn fuel.
 - **Water and waste**: waterworks, treatment plants and landfills for a bigger town.
 - **Education**: schools, and better-trained workers.
 - **Research**: technologies to discover that unlock new buildings, such as oil and gas extraction.
 - **Wear and repairs**: buildings wear out and crews repair them with the materials you have; then strikes and
   emergencies, for those who choose them.
-- **New maps**: a different map every game, bigger maps with rivers and bridges, and a minimap.
+- **New maps**: maps of different sizes, a different map every game, rivers and bridges, and a minimap.
 - **Later on**: several towns linked together and an isometric view.
 
 ## Known issues
 
-- The browser version has moved to **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)** (the old
-  address sends you there). Games saved in the browser at the old address don't show up at the new one yet: they
-  are still in your browser, and a coming version will bring them over.
 - The **Windows** and **macOS** versions haven't been tested on real computers yet: if something goes wrong,
   [let us know](#reporting-a-problem-or-an-idea).
 - The **Android** version is installed by hand, outside the Play Store.

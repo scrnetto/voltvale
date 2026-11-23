@@ -21,7 +21,7 @@
 **Tu gères le réseau électrique d'une petite ville qui grandit.** Chaque heure, la ville a besoin d'énergie : un
 peu la nuit, beaucoup le soir. Construis des centrales, des centrales solaires, des parcs éoliens et des batteries,
 relie le tout par des lignes électriques et des routes, trouve des gens pour y travailler, équipe après équipe,
-nourris tout le monde, transporte marchandises et matériaux en camion sans bloquer la circulation, et fais grandir
+nourris tout le monde, chauffe les maisons en hiver, transporte marchandises et matériaux en camion sans bloquer la circulation, et fais grandir
 ton village jusqu'à **400 habitants en deux ans de jeu**, sans pannes à répétition, sans dettes et sans l'étouffer
 sous la pollution.
 
@@ -128,7 +128,10 @@ par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
   - le **vent** change de force et de direction d'heure en heure (le panneau Météo dit d'où il souffle) ; un parc
     éolien **sous le vent** d'un autre, à quelques cases, produit moins (le « sillage » des éoliennes, jusqu'à 40 %
     de moins) ;
-  - le **charbon** produit toujours, mais il pollue et brûle le charbon extrait par les **mines**.
+  - le **charbon** produit jour et nuit, mais il pollue, brûle le charbon extrait par les **mines** et change de
+    puissance lentement, d'un quart de sa capacité par heure au plus ;
+  - le **gaz** ne s'allume que quand l'énergie manque, pour les pointes du soir, mais le gaz vient du continent et
+    coûte de l'argent à chaque heure.
 - **Les batteries** stockent l'énergie en trop et la restituent quand il le faut, par exemple le soir.
 - **Le courant de l'extérieur** : l'énergie en trop est **vendue**, et celle qui manque est **achetée** au double du
   prix, par la **ligne frontalière** à côté du pont ; plus tu en vends en une heure, moins elle vaut. Voir
@@ -137,6 +140,9 @@ par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
   non. La pollution rend les habitants malades, et au-dessus du seuil tu ne peux pas gagner.
 - **Croissance** : la ville grandit si les habitants sont assez **heureux**, s'il reste de la place dans les
   **quartiers** et s'il y a assez de **nourriture** en réserve.
+- **Chauffage** : sous 15 °C, les maisons ont besoin de **chaleur**, fournie par les chaufferies au bois ou par les
+  chaudières à gaz des quartiers. Des maisons froides rendent les habitants malheureux et malades. Voir
+  [Chaleur, gaz et carburant](#chaleur-gaz-et-carburant).
 
 ### Nouvelle partie
 
@@ -167,7 +173,7 @@ La mairie grandit avec la ville : **I village**, **II bourg**, **III petite vill
 | Niveau | Bâtiments |
 |---|---|
 | **I village** | lignes, chemins de terre, quartiers, centrales solaires, parcs éoliens, centrales et mines de charbon, batteries, fermes, parcs |
-| **II bourg** | routes goudronnées, entrepôts, parcs de camions, scieries, carrières, serres, entrepôts frigorifiques, bateaux de pêche, Marché, Atelier municipal |
+| **II bourg** | routes goudronnées, entrepôts, parcs de camions, scieries, carrières, serres, entrepôts frigorifiques, bateaux de pêche, centrales à gaz, chaufferies au bois, Marché, Atelier municipal |
 | **III petite ville** | avenues, cimenteries, transformateurs, hôpitaux, stations de pompage |
 | **IV ville** | rien de nouveau pour l'instant : ce niveau servira aux bâtiments des prochaines mises à jour |
 
@@ -231,14 +237,14 @@ Les bâtiments ont besoin de gens pour les faire tourner.
 - Environ **56 %** des habitants travaillent. La barre du haut montre combien de personnes ont un emploi par
   rapport à la main-d'œuvre disponible.
 - Les **centrales à charbon**, les **mines de charbon**, les **industries**, les bâtiments de **nourriture**, les
-  **hôpitaux**, les **parcs**, les **entrepôts frigorifiques**, les **entrepôts**, les **ateliers municipaux** et les
-  **stations de pompage** ont besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les **batteries**, les lignes et les
+  **hôpitaux**, les **parcs**, les **entrepôts frigorifiques**, les **entrepôts**, les **ateliers municipaux**, les
+  **stations de pompage**, les **centrales à gaz** et les **chaufferies au bois** ont besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les **batteries**, les lignes et les
   transformateurs fonctionnent tout seuls.
 - Le panneau **Case** montre combien de postes sont pourvus, par exemple **Personnel : 4/4**, et combien de
   personnes il faut pour cela, toutes équipes comprises.
 - Avec trop peu de personnel, un bâtiment produit moins ; **sans personne, il s'arrête** et affiche le signal
   **« sans personnel »**.
-- Les travailleurs vont **d'abord à l'énergie**, puis **à la nourriture**, puis **aux hôpitaux**, puis **aux
+- Les travailleurs vont **d'abord à l'énergie**, puis **à la nourriture**, puis **aux hôpitaux et aux chaufferies**, puis **aux
   industries**, puis **aux mines**, puis **aux services** (quartiers et parcs). Les quartiers fonctionnent même quand
   leurs services manquent de personnel.
 - Le **chômage** coûte cher : ceux qui ne travaillent pas ne paient pas d'impôt sur le revenu et reçoivent une
@@ -250,7 +256,7 @@ Chaque bâtiment avec du personnel a ses propres horaires, affichés dans le pan
 
 | Horaire | Bâtiments | Personnes par poste |
 |---|---|---|
-| **Toujours ouvert, 3 équipes (6, 14, 22)** | centrales à charbon, mines de charbon, hôpitaux, entrepôts frigorifiques, parcs de camions, stations de pompage | environ 4 : un poste tenu jour et nuit demande trois équipes plus les jours de repos |
+| **Toujours ouvert, 3 équipes (6, 14, 22)** | centrales à charbon et à gaz, chaufferies au bois, mines de charbon, hôpitaux, entrepôts frigorifiques, parcs de camions, stations de pompage | environ 4 : un poste tenu jour et nuit demande trois équipes plus les jours de repos |
 | **Ouvert 8–17, du lundi au vendredi** | scieries, carrières, cimenteries, entrepôts | 1 |
 | **Ouvert 8–17, tous les jours** | fermes, bateaux de pêche, serres, parcs, ateliers municipaux, les services des quartiers | environ 1,4, pour les jours de repos |
 
@@ -284,11 +290,11 @@ blé, et passent au rouge quand elles s'épuisent.
 ### Bonheur, santé et impôts
 
 - **Bonheur** (le smiley dans la barre du haut) : il évolue lentement vers une valeur qui est la somme de quelques
-  facteurs, à savoir les pannes des dernières 24 heures, la nourriture, la faim, le chômage, la pollution, la santé,
+  facteurs, à savoir les pannes des dernières 24 heures, la nourriture, la faim, les maisons froides, le chômage, la pollution, la santé,
   les parcs, les impôts et le budget du ménage. En passant la souris sur le chiffre, tu vois vers quelle valeur il va et combien pèse
   chaque facteur, par exemple « Pannes −5,0 » ou « Parcs +3,0 ». Sous 60, la ville ne grandit pas, et sous 35 les
   gens commencent à partir.
-- **Santé** (le cœur) : baisse avec la pollution et la faim. **Les malades restent chez eux** : il y a donc moins
+- **Santé** (le cœur) : baisse avec la pollution, la faim et les maisons froides. **Les malades restent chez eux** : il y a donc moins
   de travailleurs, et une ville en mauvaise santé est aussi une ville moins heureuse.
 - **Hôpital** (plaine) : soigne jusqu'à 250 habitants, a besoin de personnel et consomme de l'électricité. Pendant
   une panne, il ne soigne personne. Indispensable si tu mises sur le charbon.
@@ -312,6 +318,40 @@ blé, et passent au rouge quand elles s'épuisent.
   l'énergie** : bas, normal ou élevé. Un tarif élevé rapporte plus à la ville, mais laisse moins aux ménages.
 - Ce qui reste aux ménages compte pour le bonheur (« Budget du ménage » dans l'info-bulle du bonheur).
 
+### Chaleur, gaz et carburant
+
+- **Chaleur** : quand la température descend sous **15 °C**, les maisons ont besoin de chaleur, d'autant plus qu'il
+  fait froid et que les habitants sont nombreux. La partie commence en automne : il en faut dès les premières nuits ;
+  en été, non.
+- La chaleur vient d'abord des **chaufferies au bois**, puis des **chaudières à gaz** des quartiers. Les chaudières ne
+  se construisent pas : elles sont déjà là et achètent le gaz au continent.
+- **Maisons froides** : la chaleur qui manque enlève jusqu'à 20 points de **bonheur** (« Maisons froides » dans
+  l'info-bulle du bonheur) et dégrade la **santé**. Les quartiers dans le froid affichent un flocon de neige, et
+  l'avertissement « Maisons froides » apparaît au-dessus de la carte et dans le journal des événements.
+- Les ménages paient à la ville une **facture de chauffage**, au tarif de l'énergie que tu as choisi. Dans le panneau
+  des **ménages**, l'interrupteur **Chauffage au gaz** éteint les chaudières à gaz : on économise le gaz, mais les
+  maisons restent froides.
+- **Chaufferie au bois** (onglet Ville, à partir du niveau II) : à plein régime, elle donne 15 unités de chaleur par
+  heure et brûle 3,75 de bois, que les camions apportent dans son silo. Elle coûte 800 et 20 de ciment, se construit
+  en 20 heures, est toujours ouverte et a besoin de personnel et d'électricité. Sans bois, elle s'arrête. Le bois
+  qu'elle brûle, c'est du bois en moins pour construire ou vendre.
+- **Centrale à gaz** (onglet Énergie, à partir du niveau II) : 15 MW, elle coûte 900 et 30 de ciment et se construit
+  en 24 heures. Elle ne s'allume **que quand l'énergie manque** : après les batteries et avant d'acheter du courant.
+  Elle ne produit pas pour vendre. À plein régime, elle brûle 42 de gaz par heure, et elle pollue moins que le
+  charbon.
+- **Le gaz et le carburant** s'achètent heure par heure, juste ce qu'il faut, par la **route nationale**, tant qu'il
+  y a de l'argent : le gaz coûte 1,20 l'unité, le carburant 6, moins avec un Marché en ville. Le panneau du Marché
+  montre les prix du jour.
+- **Crise du gaz** : une fois par hiver, entre la mi-novembre et la fin janvier (jamais pendant les deux premiers mois
+  d'une partie), pendant deux ou trois semaines, le gaz coûte **2,5 fois** plus cher et le carburant 1,5 fois.
+  L'avertissement « Tensions sur le gaz » arrive trois jours avant. Pendant la crise, les ménages paient la moitié du
+  surcoût du chauffage et la ville l'autre moitié, et acheter du courant coûte souvent moins cher que de faire tourner
+  la centrale à gaz.
+- **Le charbon est lent** : une centrale à charbon change de puissance d'un quart de sa capacité par heure au plus ;
+  une nouvelle met donc 4 heures à atteindre sa pleine puissance. Quand le réseau ne sait pas où mettre l'énergie
+  (batteries pleines, vente au maximum), elle baisse et brûle moins de charbon, mais ensuite elle ne remonte pas vite
+  pour la pointe du soir. Le panneau Case dit si elle monte ou descend.
+
 ### Matériaux et industries
 
 La plupart des bâtiments coûtent, en plus de l'argent, des **matériaux** : du **bois** et du **ciment**. La liste
@@ -326,10 +366,11 @@ entier.
 - Les industries ont besoin de **personnel** et d'**électricité**. Les travailleurs y vont après l'énergie, la
   nourriture et les hôpitaux, et avant les mines de charbon.
 - **Si les matériaux ne suffisent pas** quand tu construis, la partie qui manque est achetée tout de suite à
-  l'extérieur (bois 10, ciment 20 l'unité). On peut jouer sans industries, mais cela coûte plus cher.
+  l'extérieur (bois 10, ciment 22 l'unité). On peut jouer sans industries, mais cela coûte plus cher.
 - Tu commences avec 200 de bois et 200 de ciment.
 - Le bouton **Stocks**, à côté du charbon dans la barre du haut, ouvre un petit panneau avec le charbon, le bois,
-  la pierre, le ciment et la nourriture, et ce qui entre et sort chaque heure. Un clic à côté ou **Échap** le
+  la pierre, le ciment et la nourriture, et ce qui entre et sort chaque heure (y compris le bois brûlé par les
+  chaufferies). Un clic à côté ou **Échap** le
   ferme.
 - Le panneau **Case** montre ce qu'une industrie produit et consomme, et « à l'arrêt : manque de pierre » quand il
   n'y en a plus.
@@ -362,7 +403,7 @@ entier.
 
 - Les producteurs (mines, scieries, carrières, cimenteries, fermes, bateaux de pêche, serres) déposent leurs
   marchandises dans leur **dépôt**. Les **camions** les emportent à la mairie ou à l'**entrepôt** le plus proche, et
-  de là aux **silos** de ceux qui les utilisent : les centrales à charbon et la cimenterie. L'entrepôt frigorifique
+  de là aux **silos** de ceux qui les utilisent : les centrales à charbon, la cimenterie et les chaufferies au bois. L'entrepôt frigorifique
   sert d'entrepôt pour la nourriture.
 - La mairie a **2 camions** ; chaque **parc de camions** en ajoute **3** (il lui faut du personnel et de
   l'électricité). De meilleures routes et moins de trafic permettent aux mêmes camions de transporter davantage.
@@ -372,6 +413,9 @@ entier.
 - Un dépôt ne contient qu'une quantité limitée : une scierie, une carrière ou une cimenterie à plein régime peut le
   remplir avant le soir si les camions ne suivent pas.
 - **La nourriture s'abîme** un peu à chaque trajet : plus la ferme est loin, plus on en perd.
+- **Les camions consomment du carburant**, acheté heure par heure par la route nationale : plus ils roulent, plus ça
+  coûte. Sans argent ou avec la route nationale coupée, toute la flotte s'arrête (« Camions à l'arrêt : pas de
+  carburant »).
 - Le panneau **Case** montre dépôt, silo et distance de l'entrepôt ; les **Stocks** montrent ce qui attend dans les
   dépôts.
 
@@ -386,6 +430,8 @@ entier.
   seuils **« Vendre au-dessus »** et **« Acheter en dessous »** font échanger le Marché tout seul, heure après heure ;
   les boutons **« Acheter 10 »** et **« Vendre 10 »** agissent tout de suite, même en dehors des horaires.
 - Ventes et achats apparaissent dans le journal des événements et dans l'onglet **Argent** du graphique.
+- L'encadré **Combustibles importés** montre les prix du jour du gaz et du carburant, même avant de construire le
+  Marché. Avec un Marché en ville, ils coûtent moins cher, sans surcoût. On ne peut ni les stocker ni les vendre.
 
 ### Pertes en ligne
 
@@ -437,11 +483,13 @@ Le panneau du bas a six onglets. Les cinq premiers montrent les **dernières 24 
 sixième, **Objectifs**, toute la partie avec la prévision. Un clic sur un onglet l'ouvre (le jeu retient ton choix) ;
 en passant la souris sur une colonne, tu lis les valeurs exactes de cette heure-là.
 
-- **Énergie** : production, demande, batteries, pertes en ligne et courant acheté.
-- **Argent** : recettes au-dessus de zéro, dépenses en dessous, et le solde, avec les ventes et les achats au Marché.
+- **Énergie** : production, demande, batteries, pertes en ligne, courant acheté et courant produit au gaz.
+- **Argent** : recettes au-dessus de zéro, dépenses en dessous, et le solde, avec les ventes et les achats au Marché
+  et le gaz acheté.
 - **Matériaux** : ce qui est produit et consommé pour chaque matériau, et le stock ; le matériau se choisit avec
   les boutons à côté du graphique.
-- **Ville** : nourriture produite et nourriture mangée, les réserves de nourriture, le bonheur et la santé.
+- **Ville** : nourriture produite et nourriture mangée, les réserves de nourriture, le bonheur et la santé, la
+  chaleur demandée et la chaleur fournie.
 - **Transports** : personnes qui vont au travail et qui rentrent à la maison, camions en route et charge des routes.
 - **Objectifs** : habitants et pollution depuis le début de la partie, la ligne de l'objectif et la prévision en
   pointillés (voir [Prévision des objectifs](#prévision-des-objectifs)).
@@ -482,6 +530,7 @@ t'arrêtant sur un bâtiment de la carte, tu vois son état et combien d'énergi
 | Bouton **Démolir** (icône dans le panneau Case) | Démolit le bâtiment ou le chantier sélectionné (la moitié du coût est remboursée) |
 | Bouton **Améliorer** (icône dans le panneau Case de la mairie) | Fait passer la mairie au niveau suivant, quand les objectifs du niveau sont remplis |
 | Boutons **Vente** et **Achat** (dans le panneau Case de la ligne frontalière) | Activent et désactivent la vente et l'achat automatiques du courant |
+| Bouton **Chauffage au gaz** (dans le panneau des ménages) | Allume et éteint les chaudières à gaz des quartiers |
 | Onglets du graphique (en bas) | Énergie, Argent, Matériaux, Ville, Transports, Objectifs |
 
 ### Langues
@@ -544,6 +593,10 @@ l'ordinateur.
 - **Chantier** : le bâtiment est encore en travaux ; il fonctionne quand l'équipe a fini.
 - **Icône d'échange** au-dessus de la ligne frontalière : la ville a acheté ou vendu du courant pendant la dernière
   heure.
+- **Flamme barrée** : une centrale à gaz est à l'arrêt parce que **le gaz n'arrive pas** (route nationale coupée ou
+  plus d'argent).
+- **Flocon de neige** : **maisons froides**, le quartier ne reçoit pas toute la chaleur dont il a besoin.
+- **Jerrican barré** : **pas de carburant**, les camions de ce parc de camions sont à l'arrêt.
 - **Lumières la nuit** : à la tombée de la nuit, les quartiers et la mairie allument leurs lumières. Un bâtiment
   sans courant reste dans le noir : un quartier éteint la nuit est un signal d'alarme.
 
@@ -584,6 +637,11 @@ l'ordinateur.
     matériaux moins cher.
 17. Espace tes **parcs éoliens** dans la direction du vent (panneau Météo) : l'un derrière l'autre, ils se volent le
     vent.
+18. Le charbon est lent : une nouvelle centrale à charbon met 4 heures à atteindre sa pleine puissance, et elle ne
+    suit pas toute seule la pointe du soir. À partir du niveau II, une **centrale à gaz** couvre les pointes, mais
+    chaque heure de gaz coûte.
+19. Avant l'hiver, pense au **chauffage** : une **chaufferie au bois** près d'une scierie fait économiser beaucoup de
+    gaz. Quand arrive l'avertissement « Tensions sur le gaz », tu as trois jours pour te préparer à la crise.
 
 ## Sauvegardes
 
@@ -648,6 +706,10 @@ Les sauvegardes des versions précédentes se chargent : la mairie part du nivea
 tu as déjà construit, et la carte reçoit le pont, la route nationale et la ligne frontalière, reliés à la ville. Une
 sauvegarde de la 0.11.0 ne s'ouvre pas dans les versions précédentes.
 
+**Depuis la 0.12.0**, le format change de nouveau : chaleur, gaz et carburant. Les sauvegardes des versions
+précédentes se chargent : le chauffage au gaz est allumé et les centrales à charbon repartent de la puissance qu'elles
+avaient. Une sauvegarde de la 0.12.0 ne s'ouvre pas dans les versions précédentes.
+
 Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivante : le
 [changelog](CHANGELOG.md) le dit quand cela arrive.
 
@@ -655,23 +717,18 @@ Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivan
 
 Ce qui est déjà prévu, à peu près dans cet ordre. Les projets peuvent changer.
 
-- **Chaleur, gaz et carburant** : le chauffage des maisons en hiver, des centrales à gaz pour les heures de pointe et
-  des camions qui consomment du carburant.
 - **Eau et déchets** : réseaux d'eau, stations d'épuration et décharges pour une ville plus grande.
 - **Éducation** : des écoles, et des travailleurs mieux formés.
 - **Recherche** : des technologies à découvrir qui débloquent de nouveaux bâtiments, comme l'extraction du pétrole et
   du gaz.
 - **Usure et réparations** : les bâtiments s'usent et les équipes les réparent avec tes matériaux ; puis grèves et
   urgences, pour qui les choisit.
-- **Nouvelles cartes** : une carte différente à chaque partie, des cartes plus grandes avec des rivières et des
+- **Nouvelles cartes** : des cartes de tailles différentes, une carte différente à chaque partie, des rivières et des
   ponts, et une mini-carte.
 - **Plus tard** : plusieurs villes reliées entre elles et une vue isométrique.
 
 ## Problèmes connus
 
-- La version pour navigateur a déménagé sur **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)**
-  (l'ancienne adresse y renvoie). Les parties sauvegardées dans le navigateur à l'ancienne adresse n'apparaissent pas
-  encore à la nouvelle : elles sont toujours dans ton navigateur, et une prochaine version les récupérera.
 - Les versions **Windows** et **macOS** n'ont pas encore été testées sur de vrais ordinateurs : si quelque chose ne
   va pas, [signale-le](#signaler-un-problème-ou-une-idée).
 - La version **Android** s'installe à la main, en dehors du Play Store.

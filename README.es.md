@@ -20,8 +20,8 @@
 
 **Gestionas la red eléctrica de una pequeña ciudad que crece.** Cada hora la ciudad necesita energía: poca de
 noche, mucha por la tarde. Construye centrales, plantas solares, parques eólicos y baterías, conéctalo todo con
-líneas eléctricas y carreteras, encuentra gente que trabaje en ellas, turno tras turno, da de comer a todos, lleva
-mercancías y materiales en camión sin atascar el tráfico, y haz crecer tu aldea hasta **400 habitantes en dos años
+líneas eléctricas y carreteras, encuentra gente que trabaje en ellas, turno tras turno, da de comer a todos, calienta las casas en
+invierno, lleva mercancías y materiales en camión sin atascar el tráfico, y haz crecer tu aldea hasta **400 habitantes en dos años
 de juego**, sin apagones continuos, sin deudas y sin ahogarla en contaminación.
 
 Un juego original de **Marco Scarlino**. Gratuito. Sitio oficial: **[voltvale.it](https://voltvale.it/es/)**.
@@ -125,7 +125,10 @@ más nublado. La barra de arriba muestra el día de la partida, el día de la se
   - el **viento** cambia de fuerza y de dirección de hora en hora (el panel Tiempo dice de dónde sopla); un parque
     eólico **a sotavento** de otro, a pocas casillas, produce menos (la «estela» de los aerogeneradores, hasta un 40 %
     menos);
-  - el **carbón** produce siempre, pero contamina y quema el carbón que extraen las **minas**.
+  - el **carbón** produce día y noche, pero contamina, quema el carbón que extraen las **minas** y cambia de potencia
+    despacio, como mucho una cuarta parte de su capacidad por hora;
+  - el **gas** solo se enciende cuando falta energía, para los picos de la tarde, pero el gas llega de tierra firme y
+    cuesta dinero cada hora.
 - **Las baterías** almacenan la energía sobrante y la devuelven cuando hace falta, por ejemplo por la tarde.
 - **Electricidad de fuera**: la energía sobrante se **vende**, y la que falta se **compra** al doble de precio, por
   la **línea fronteriza** junto al puente; cuanta más vendes en una hora, menos vale. Consulta
@@ -134,6 +137,9 @@ más nublado. La barra de arriba muestra el día de la partida, el día de la se
   demasiadas no. Enferma a los habitantes, y por encima del límite no se puede ganar.
 - **Crecimiento**: la ciudad crece si los habitantes están lo bastante **felices**, hay sitio en los **barrios** y
   hay suficiente **comida** almacenada.
+- **Calefacción**: por debajo de 15 °C las casas necesitan **calor**, de las centrales térmicas de leña o de las
+  calderas de gas de los barrios. Las casas frías hacen a los habitantes infelices y los enferman. Consulta
+  [Calor, gas y combustible](#calor-gas-y-combustible).
 
 ### Nueva partida
 
@@ -165,7 +171,7 @@ El ayuntamiento crece con la ciudad: **I aldea**, **II pueblo**, **III villa**, 
 | Nivel | Edificios |
 |---|---|
 | **I aldea** | líneas, caminos de tierra, barrios, plantas solares, parques eólicos, centrales y minas de carbón, baterías, granjas, parques |
-| **II pueblo** | carreteras asfaltadas, almacenes, parques de camiones, aserraderos, canteras, invernaderos, almacenes frigoríficos, pesqueros, Mercado, Taller |
+| **II pueblo** | carreteras asfaltadas, almacenes, parques de camiones, aserraderos, canteras, invernaderos, almacenes frigoríficos, pesqueros, centrales de gas, centrales térmicas de leña, Mercado, Taller |
 | **III villa** | avenidas, cementeras, transformadores, hospitales, bombeo |
 | **IV ciudad** | nada nuevo por ahora: servirá para los edificios de las próximas actualizaciones |
 
@@ -230,13 +236,13 @@ Los edificios necesitan gente que los haga funcionar.
 - Trabaja alrededor del **56 %** de los habitantes. La barra de arriba muestra cuántas personas tienen trabajo sobre
   la mano de obra disponible.
 - Las **centrales de carbón**, las **minas de carbón**, las **industrias**, los edificios de **comida**, los
-  **hospitales**, los **parques**, los **almacenes frigoríficos**, los **almacenes**, los **talleres** y el **bombeo**
-  necesitan personal. Las **plantas solares**, los **parques eólicos**, las **baterías**, las líneas y los transformadores
+  **hospitales**, los **parques**, los **almacenes frigoríficos**, los **almacenes**, los **talleres**, el **bombeo**,
+  las **centrales de gas** y las **centrales térmicas de leña** necesitan personal. Las **plantas solares**, los **parques eólicos**, las **baterías**, las líneas y los transformadores
   funcionan solos.
 - El panel **Casilla** muestra cuántos puestos están cubiertos, por ejemplo **Personal: 4/4**, y cuántas personas
   hacen falta para ello, contando todos los turnos.
 - Con poco personal un edificio produce menos; **sin nadie se para** y muestra la señal **«sin personal»**.
-- Los trabajadores van **primero a la energía**, luego **a la comida**, luego **a los hospitales**, luego **a las
+- Los trabajadores van **primero a la energía**, luego **a la comida**, luego **a los hospitales y las centrales térmicas**, luego **a las
   industrias**, luego **a las minas** y luego **a los servicios** (barrios y parques). Los barrios funcionan aunque a
   sus servicios les falte personal.
 - El **desempleo** cuesta: quien no trabaja no paga el impuesto sobre la renta y recibe un subsidio del
@@ -248,7 +254,7 @@ Cada edificio con personal tiene su propio horario, que muestra el panel **Casil
 
 | Horario | Edificios | Personas por puesto |
 |---|---|---|
-| **Siempre abierto, 3 turnos (6, 14, 22)** | centrales de carbón, minas de carbón, hospitales, almacenes frigoríficos, parques de camiones, bombeo | unas 4: un puesto cubierto día y noche necesita tres turnos más los días de descanso |
+| **Siempre abierto, 3 turnos (6, 14, 22)** | centrales de carbón y de gas, centrales térmicas de leña, minas de carbón, hospitales, almacenes frigoríficos, parques de camiones, bombeo | unas 4: un puesto cubierto día y noche necesita tres turnos más los días de descanso |
 | **Abierto 8–17, de lunes a viernes** | aserraderos, canteras, cementeras, almacenes | 1 |
 | **Abierto 8–17, todos los días** | granjas, pesqueros, invernaderos, parques, talleres, los servicios de los barrios | unas 1,4, por los días libres |
 
@@ -281,11 +287,11 @@ en rojo cuando se están acabando.
 ### Felicidad, salud e impuestos
 
 - **Felicidad** (la cara sonriente de la barra de arriba): se mueve despacio hacia un valor que es la suma de
-  algunos factores: apagones de las últimas 24 horas, comida, hambre, desempleo, contaminación, salud, parques,
+  algunos factores: apagones de las últimas 24 horas, comida, hambre, casas frías, desempleo, contaminación, salud, parques,
   impuestos y cuentas de casa. Al pasar el ratón por encima del número ves hacia qué valor va y cuánto pesa cada factor, por ejemplo
   «Apagones −5,0» o «Parques +3,0». Por debajo de 60 la ciudad no crece, y por debajo de 35 la gente empieza a
   irse.
-- **Salud** (el corazón): baja con la contaminación y el hambre. **Los enfermos se quedan en casa**, así que hay
+- **Salud** (el corazón): baja con la contaminación, el hambre y las casas frías. **Los enfermos se quedan en casa**, así que hay
   menos trabajadores, y una ciudad poco sana también es menos feliz.
 - **Hospital** (llanura): atiende hasta 250 habitantes, necesita personal y consume electricidad. Durante un apagón
   no atiende a nadie. Imprescindible si apuestas por el carbón.
@@ -309,6 +315,39 @@ en rojo cuando se están acabando.
   alta. Una tarifa alta da más dinero al ayuntamiento, pero deja menos a las familias.
 - Lo que les queda a las familias pesa en la felicidad («Cuentas de casa» en el recuadro de la felicidad).
 
+### Calor, gas y combustible
+
+- **Calor**: cuando la temperatura baja de **15 °C**, las casas necesitan calor, tanto más cuanto más frío hace y
+  cuantos más habitantes hay. La partida empieza en otoño, así que hace falta desde las primeras noches; en verano,
+  no.
+- El calor lo dan primero las **centrales térmicas de leña** y luego las **calderas de gas** de los barrios. Las
+  calderas no se construyen: ya están ahí y compran el gas a tierra firme.
+- **Casas frías**: el calor que falta quita hasta 20 puntos de **felicidad** («Casas frías» en la información de la
+  felicidad) y empeora la **salud**. Los barrios con frío muestran un copo de nieve, y el aviso «Casas frías» aparece
+  sobre el mapa y en el registro de eventos.
+- Las familias pagan al ayuntamiento una **factura de calefacción**, con la tarifa de la energía que hayas elegido.
+  En el panel de las **familias**, el interruptor **Calefacción de gas** apaga las calderas de gas: se ahorra gas,
+  pero las casas se quedan frías.
+- **Central térmica de leña** (pestaña Ciudad, desde el nivel II): a pleno rendimiento da 15 unidades de calor por
+  hora y quema 3,75 de madera, que los camiones llevan a su silo. Cuesta 800 y 20 de cemento, se construye en 20
+  horas, está siempre abierta y necesita personal y electricidad. Sin madera se para. La madera que quema es madera
+  que no usarás para construir ni venderás.
+- **Central de gas** (pestaña Energía, desde el nivel II): 15 MW, cuesta 900 y 30 de cemento y se construye en 24
+  horas. Se enciende **solo cuando falta energía**: después de las baterías y antes de comprar electricidad. No
+  produce para vender. A pleno rendimiento quema 42 de gas por hora, y contamina menos que el carbón.
+- **El gas y el combustible** se compran hora a hora, solo lo que hace falta, por la **carretera nacional**, mientras
+  haya dinero: el gas cuesta 1,20 la unidad y el combustible 6, menos con un Mercado en la ciudad. El panel del
+  Mercado muestra los precios de hoy.
+- **Crisis del gas**: una vez cada invierno, entre mediados de noviembre y finales de enero (nunca en los dos primeros
+  meses de una partida), durante dos o tres semanas el gas cuesta **2,5 veces** más y el combustible 1,5 veces. El
+  aviso «Tensiones en el gas» llega tres días antes. Durante la crisis las familias pagan la mitad del encarecimiento
+  de la calefacción y el ayuntamiento la otra mitad, y comprar electricidad suele salir más barato que encender la
+  central de gas.
+- **El carbón es lento**: una central de carbón cambia de potencia como mucho una cuarta parte de su capacidad por
+  hora, así que una nueva tarda 4 horas en llegar a plena potencia. Cuando la red no sabe dónde meter la energía
+  (baterías llenas, venta al límite), baja y quema menos carbón, pero luego no vuelve a subir deprisa para el pico de
+  la tarde. El panel Casilla dice si está subiendo o bajando.
+
 ### Materiales e industrias
 
 Casi todos los edificios cuestan, además de dinero, **materiales**: **madera** y **cemento**. La lista de la
@@ -322,10 +361,11 @@ izquierda los muestra debajo del precio, con iconos pequeños; al pasar el rató
 - Las industrias necesitan **personal** y **electricidad**. Los trabajadores van a ellas después de la energía, la
   comida y los hospitales, y antes que a las minas de carbón.
 - **Si los materiales no alcanzan** al construir, la parte que falta se compra fuera al momento (madera 10, cemento
-  20 la unidad). Se puede jugar sin industrias, pero cuesta más.
+  22 la unidad). Se puede jugar sin industrias, pero cuesta más.
 - Empiezas con 200 de madera y 200 de cemento.
 - El botón **Reservas**, junto al carbón en la barra de arriba, abre un pequeño panel con el carbón, la madera, la
-  piedra, el cemento y la comida, y cuánto entra y sale cada hora. Se cierra con un clic fuera o con **Esc**.
+  piedra, el cemento y la comida, y cuánto entra y sale cada hora (también la madera que queman las centrales
+  térmicas). Se cierra con un clic fuera o con **Esc**.
 - El panel **Casilla** muestra lo que produce y consume una industria, y «parado: falta piedra» cuando se ha
   acabado.
 
@@ -356,7 +396,7 @@ izquierda los muestra debajo del precio, con iconos pequeños; al pasar el rató
 
 - Quien produce (minas, aserraderos, canteras, cementeras, granjas, pesqueros, invernaderos) deja sus mercancías en
   su **patio**. Los **camiones** las llevan al ayuntamiento o al **almacén** más cercano, y de allí a los **silos**
-  de quien las usa: las centrales de carbón y la cementera. El almacén frigorífico hace de almacén para la comida.
+  de quien las usa: las centrales de carbón, la cementera y las centrales térmicas de leña. El almacén frigorífico hace de almacén para la comida.
 - El ayuntamiento tiene **2 camiones**; cada **parque de camiones** añade **3** (necesita personal y
   electricidad). Con mejores carreteras y menos tráfico, los mismos camiones transportan más.
 - Si no hay camiones suficientes aparece el aviso «**Faltan camiones**»: los patios se llenan y quien produce se
@@ -364,6 +404,9 @@ izquierda los muestra debajo del precio, con iconos pequeños; al pasar el rató
 - Un patio solo admite una cantidad limitada: un aserradero, una cantera o una cementera a pleno rendimiento pueden
   llenarlo antes de la tarde si los camiones no dan abasto.
 - **La comida se estropea** un poco en cada viaje: cuanto más lejos está la granja, más se pierde.
+- **Los camiones gastan combustible**, que se compra hora a hora por la carretera nacional: cuanto más recorren, más
+  cuesta. Sin dinero o con la carretera nacional cortada, toda la flota se para («Camiones parados: sin
+  combustible»).
 - El panel **Casilla** muestra patio, silo y distancia al almacén; las **Reservas** muestran lo que espera en los
   patios.
 
@@ -378,6 +421,8 @@ izquierda los muestra debajo del precio, con iconos pequeños; al pasar el rató
   **«Vender por encima»** y **«Comprar por debajo»** hacen que el Mercado intercambie solo, hora a hora; los botones
   **«Comprar 10»** y **«Vender 10»** valen al momento, también fuera de horario.
 - Ventas y compras aparecen en el registro de eventos y en la pestaña **Dinero** del gráfico.
+- El recuadro **Combustibles importados** muestra los precios de hoy del gas y del combustible, también antes de
+  construir el Mercado. Con un Mercado en la ciudad cuestan menos, sin recargo. No se pueden almacenar ni vender.
 
 ### Pérdidas en la línea
 
@@ -428,11 +473,13 @@ El panel de abajo tiene seis pestañas. Las cinco primeras muestran las **últim
 sexta, **Objetivos**, toda la partida con la previsión. Un clic en una pestaña la abre (el juego recuerda tu
 elección); al pasar el ratón por una columna lees los valores exactos de esa hora.
 
-- **Energía**: producción, demanda, baterías, pérdidas en la línea y electricidad comprada.
-- **Dinero**: ingresos por encima del cero, gastos por debajo, y el saldo, con las ventas y compras en el Mercado.
+- **Energía**: producción, demanda, baterías, pérdidas en la línea, electricidad comprada y electricidad del gas.
+- **Dinero**: ingresos por encima del cero, gastos por debajo, y el saldo, con las ventas y compras en el Mercado y
+  el gas comprado.
 - **Materiales**: cuánto se produce y se consume de cada material, y las reservas; el material se elige con los
   botones junto al gráfico.
-- **Ciudad**: comida producida y comida consumida, las reservas de comida, la felicidad y la salud.
+- **Ciudad**: comida producida y comida consumida, las reservas de comida, la felicidad y la salud, el calor
+  necesario y el calor suministrado.
 - **Transporte**: personas que van al trabajo y que vuelven a casa, camiones en ruta y carga de las calles.
 - **Objetivos**: habitantes y contaminación desde el inicio de la partida, la línea del objetivo y la previsión
   discontinua (mira [Previsión de los objetivos](#previsión-de-los-objetivos)).
@@ -472,6 +519,7 @@ su estado y cuánta energía produce o consume.
 | Botón **Demoler** (icono en el panel Casilla) | Demuele el edificio o la obra seleccionados (se devuelve la mitad del coste) |
 | Botón **Mejorar** (icono en el panel Casilla del ayuntamiento) | Sube el ayuntamiento al nivel siguiente, cuando los objetivos del nivel están cumplidos |
 | Botones **Venta** y **Compra** (en el panel Casilla de la línea fronteriza) | Activan y desactivan la venta y la compra automáticas de electricidad |
+| Botón **Calefacción de gas** (en el panel de las familias) | Enciende y apaga las calderas de gas de los barrios |
 | Pestañas del gráfico (abajo) | Energía, Dinero, Materiales, Ciudad, Transporte, Objetivos |
 
 ### Idiomas
@@ -532,6 +580,10 @@ La disposición se elige sola; en los Ajustes puedes cambiar entre la del teléf
 - **Obra**: el edificio aún se está construyendo; funciona cuando la cuadrilla termina.
 - **Icono de intercambio** sobre la línea fronteriza: la ciudad ha comprado o vendido electricidad en la última
   hora.
+- **Llama tachada**: una central de gas está parada porque **no llega gas** (carretera nacional cortada o sin
+  dinero).
+- **Copo de nieve**: **casas frías**, el barrio no recibe todo el calor que necesita.
+- **Bidón tachado**: **sin combustible**, los camiones de este parque de camiones están parados.
 - **Luces de noche**: al oscurecer, los barrios y el ayuntamiento encienden las luces. Un edificio sin electricidad
   se queda a oscuras: un barrio apagado de noche es una señal de alarma.
 
@@ -571,6 +623,10 @@ La disposición se elige sola; en los Ajustes puedes cambiar entre la del teléf
     más baratos.
 17. Separa los **parques eólicos** en la dirección del viento (panel Tiempo): uno detrás de otro se roban el
     viento.
+18. El carbón es lento: una central de carbón nueva tarda 4 horas en llegar a plena potencia, y sola no sigue el pico
+    de la tarde. Desde el nivel II una **central de gas** cubre los picos, pero cada hora de gas cuesta.
+19. Antes del invierno piensa en la **calefacción**: una **central térmica de leña** junto a un aserradero ahorra
+    mucho gas. Cuando llega el aviso «Tensiones en el gas», tienes tres días para prepararte para la crisis.
 
 ## Partidas guardadas
 
@@ -634,6 +690,10 @@ partidas guardadas de versiones anteriores se cargan: el ayuntamiento empieza en
 que ya has construido, y el mapa recibe el puente, la carretera nacional y la línea fronteriza, conectados a la
 ciudad. Una partida guardada con la 0.11.0 no se abre en versiones anteriores.
 
+**Desde la 0.12.0** el formato cambia de nuevo: calor, gas y combustible. Las partidas guardadas de versiones
+anteriores se cargan: la calefacción de gas empieza encendida y las centrales de carbón siguen con la potencia que
+tenían. Una partida guardada con la 0.12.0 no se abre en versiones anteriores.
+
 Las partidas guardadas de una versión alpha podrían no funcionar con la siguiente: el
 [changelog](CHANGELOG.md) lo dice cuando ocurre.
 
@@ -641,22 +701,17 @@ Las partidas guardadas de una versión alpha podrían no funcionar con la siguie
 
 Lo que ya está previsto, más o menos en este orden. Los planes pueden cambiar.
 
-- **Calor, gas y combustible**: la calefacción de las casas en invierno, centrales de gas para las horas punta y
-  camiones que gastan combustible.
 - **Agua y residuos**: redes de agua, depuradoras y vertederos para una ciudad más grande.
 - **Educación**: escuelas, y trabajadores mejor formados.
 - **Investigación**: tecnologías por descubrir que desbloquean edificios nuevos, como la extracción de petróleo y
   gas.
 - **Desgaste y reparaciones**: los edificios se desgastan y las cuadrillas los reparan con los materiales que
   tienes; después huelgas y emergencias, para quien las elija.
-- **Mapas nuevos**: un mapa distinto en cada partida, mapas más grandes con ríos y puentes, y un minimapa.
+- **Mapas nuevos**: mapas de distintos tamaños, un mapa distinto en cada partida, ríos y puentes, y un minimapa.
 - **Más adelante**: varias ciudades conectadas entre sí y una vista isométrica.
 
 ## Problemas conocidos
 
-- La versión para navegador se ha trasladado a **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)**
-  (la dirección antigua te lleva allí). Las partidas guardadas en el navegador en la dirección antigua todavía no
-  aparecen en la nueva: siguen en tu navegador, y una próxima versión las recuperará.
 - Las versiones para **Windows** y **macOS** aún no se han probado en ordenadores reales: si algo falla,
   [avísanos](#informar-de-un-problema-o-proponer-una-idea).
 - La versión **Android** se instala a mano, fuera de Play Store.

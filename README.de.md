@@ -20,7 +20,7 @@
 
 **Du betreibst das Stromnetz einer wachsenden Kleinstadt.** Jede Stunde braucht die Stadt Strom: wenig in der
 Nacht, viel am Abend. Baue Kraftwerke, Solarparks, Windparks und Batterien, verbinde alles mit Stromleitungen und
-Straßen, finde Leute, die dort arbeiten, Schicht für Schicht, versorge alle mit Nahrung, bringe Waren und Baustoffe
+Straßen, finde Leute, die dort arbeiten, Schicht für Schicht, versorge alle mit Nahrung, halte im Winter die Häuser warm, bringe Waren und Baustoffe
 mit Lkw ans Ziel, ohne den Verkehr lahmzulegen, und lass dein Dorf **innerhalb von zwei Spieljahren auf 400
 Einwohner** wachsen, ohne ständige Stromausfälle, ohne Schulden und ohne es in Abgasen zu ersticken.
 
@@ -125,7 +125,10 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
   - der **Wind** ändert Stärke und Richtung von Stunde zu Stunde (das Fenster Wetter zeigt, woher er weht); ein
     Windpark **im Windschatten** eines anderen, wenige Felder entfernt, erzeugt weniger (der „Nachlauf“ der
     Anlagen, bis zu 40 % weniger);
-  - **Kohle** liefert immer, verschmutzt aber die Luft und verbrennt die Kohle aus den **Minen**.
+  - **Kohle** liefert Tag und Nacht, verschmutzt aber die Luft, verbrennt die Kohle aus den **Minen** und ändert ihre
+    Leistung nur langsam, um höchstens ein Viertel der Kapazität pro Stunde;
+  - **Gas** springt nur ein, wenn Strom fehlt, für die Spitzen am Abend, aber das Gas kommt vom Festland und kostet
+    jede Stunde Geld.
 - **Batterien** speichern den überschüssigen Strom und geben ihn bei Bedarf ab, zum Beispiel am Abend.
 - **Strom von außen**: Überschüssiger Strom wird **verkauft**, und was fehlt, wird zum doppelten Preis **gekauft**,
   über die **Grenzleitung** neben der Brücke; je mehr du in einer Stunde verkaufst, desto weniger ist er wert. Siehe
@@ -134,6 +137,9 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
   zu viele nicht. Sie macht die Einwohner krank, und über dem Grenzwert kannst du nicht gewinnen.
 - **Wachstum**: Die Stadt wächst, wenn die Einwohner **zufrieden** genug sind, in den **Wohnvierteln** Platz ist und
   genug **Nahrung** auf Vorrat liegt.
+- **Heizung**: Unter 15 °C brauchen die Häuser **Wärme**, aus Holzheizwerken oder aus den Gaskesseln der
+  Wohnviertel. Kalte Häuser machen die Einwohner unzufrieden und krank. Siehe
+  [Wärme, Gas und Kraftstoff](#wärme-gas-und-kraftstoff).
 
 ### Neues Spiel
 
@@ -165,7 +171,7 @@ Das Rathaus wächst mit der Stadt: **I Dorf**, **II Kleinstadt**, **III Stadt**,
 | Stufe | Gebäude |
 |---|---|
 | **I Dorf** | Stromleitungen, Feldwege, Wohnviertel, Solarparks, Windparks, Kohlekraftwerke und Kohleminen, Batterien, Bauernhöfe, Parks |
-| **II Kleinstadt** | asphaltierte Straßen, Lager, Fuhrparks, Sägewerke, Steinbrüche, Gewächshäuser, Kühlhäuser, Fischkutter, Markt, Bauhof |
+| **II Kleinstadt** | asphaltierte Straßen, Lager, Fuhrparks, Sägewerke, Steinbrüche, Gewächshäuser, Kühlhäuser, Fischkutter, Gaskraftwerke, Holzheizwerke, Markt, Bauhof |
 | **III Stadt** | Alleen, Zementwerke, Umspannwerke, Krankenhäuser, Pumpspeicher |
 | **IV Großstadt** | vorerst nichts Neues: Die Stufe ist für die Gebäude der nächsten Updates da |
 
@@ -231,13 +237,13 @@ Gebäude brauchen Leute, die sie betreiben.
 - Etwa **56 %** der Einwohner arbeiten. Die Leiste oben zeigt, wie viele Menschen von den verfügbaren
   Arbeitskräften eine Stelle haben.
 - **Kohlekraftwerke**, **Kohleminen**, **Industrie**, die Gebäude für **Nahrung**, **Krankenhäuser**, **Parks**,
-  **Kühlhäuser**, **Lager**, **Bauhöfe** und **Pumpspeicher** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
+  **Kühlhäuser**, **Lager**, **Bauhöfe**, **Pumpspeicher**, **Gaskraftwerke** und **Holzheizwerke** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
   Stromleitungen und Umspannwerke laufen von selbst.
 - Das Fenster **Feld** zeigt, wie viele Stellen besetzt sind, zum Beispiel **Personal: 4/4**, und wie viele
   Menschen dafür nötig sind, alle Schichten eingerechnet.
 - Mit zu wenig Personal produziert ein Gebäude weniger; **ganz ohne Personal steht es still** und zeigt das
   Signal **„ohne Personal“**.
-- Arbeitskräfte gehen **zuerst zur Energie**, dann **zur Nahrung**, dann **zu den Krankenhäusern**, dann **zur
+- Arbeitskräfte gehen **zuerst zur Energie**, dann **zur Nahrung**, dann **zu den Krankenhäusern und Heizwerken**, dann **zur
   Industrie**, dann **zu den Minen**, dann **zu den Diensten** (Wohnviertel und Parks). Wohnviertel funktionieren
   auch dann, wenn ihren Diensten Personal fehlt.
 - **Arbeitslosigkeit** kostet: Wer keine Arbeit hat, zahlt keine Einkommensteuer und bekommt Arbeitslosengeld von
@@ -249,7 +255,7 @@ Jedes Gebäude mit Personal hat eigene Arbeitszeiten, die das Fenster **Feld** a
 
 | Arbeitszeit | Gebäude | Menschen pro Stelle |
 |---|---|---|
-| **Immer geöffnet, 3 Schichten (6, 14, 22)** | Kohlekraftwerke, Kohleminen, Krankenhäuser, Kühlhäuser, Fuhrparks, Pumpspeicher | etwa 4: Eine Stelle, die Tag und Nacht besetzt ist, braucht drei Schichten plus Ruhetage |
+| **Immer geöffnet, 3 Schichten (6, 14, 22)** | Kohle- und Gaskraftwerke, Holzheizwerke, Kohleminen, Krankenhäuser, Kühlhäuser, Fuhrparks, Pumpspeicher | etwa 4: Eine Stelle, die Tag und Nacht besetzt ist, braucht drei Schichten plus Ruhetage |
 | **Geöffnet 8–17, Montag bis Freitag** | Sägewerke, Steinbrüche, Zementwerke, Lager | 1 |
 | **Geöffnet 8–17, jeden Tag** | Bauernhöfe, Fischkutter, Gewächshäuser, Parks, Bauhöfe, die Dienste der Wohnviertel | etwa 1,4, für die freien Tage |
 
@@ -282,11 +288,11 @@ knapp wird.
 ### Zufriedenheit, Gesundheit und Steuern
 
 - **Zufriedenheit** (der Smiley in der Leiste oben): bewegt sich langsam auf einen Wert zu, der die Summe einiger
-  Faktoren ist, nämlich Stromausfälle der letzten 24 Stunden, Nahrung, Hunger, Arbeitslosigkeit, Verschmutzung,
+  Faktoren ist, nämlich Stromausfälle der letzten 24 Stunden, Nahrung, Hunger, kalte Häuser, Arbeitslosigkeit, Verschmutzung,
   Gesundheit, Parks, Steuern und Haushaltskasse. Fährst du mit der Maus über die Zahl, siehst du, wohin sie sich bewegt und wie stark
   jeder Faktor wiegt, zum Beispiel „Stromausfälle −5,0“ oder „Parks +3,0“. Unter 60 wächst die Stadt nicht, und unter
   35 beginnen die Leute wegzuziehen.
-- **Gesundheit** (das Herz): sinkt mit Verschmutzung und Hunger. **Kranke bleiben zu Hause**, also gibt es weniger
+- **Gesundheit** (das Herz): sinkt mit Verschmutzung, Hunger und kalten Häusern. **Kranke bleiben zu Hause**, also gibt es weniger
   Arbeitskräfte, und eine ungesunde Stadt ist auch eine weniger zufriedene.
 - **Krankenhaus** (Ebene): behandelt bis zu 250 Einwohner, braucht Personal und verbraucht Strom. Bei einem
   Stromausfall kann es niemanden behandeln. Ein Muss, wenn du auf Kohle setzt.
@@ -310,6 +316,37 @@ knapp wird.
   ein: niedrig, normal oder hoch. Ein hoher Tarif bringt der Stadt mehr Geld, lässt den Haushalten aber weniger.
 - Was den Haushalten bleibt, wirkt auf die Zufriedenheit („Haushaltskasse“ im Zufriedenheits-Hinweis).
 
+### Wärme, Gas und Kraftstoff
+
+- **Wärme**: Fällt die Temperatur unter **15 °C**, brauchen die Häuser Wärme, umso mehr, je kälter es ist und je mehr
+  Einwohner es gibt. Das Spiel beginnt im Herbst, also brauchst du sie schon in den ersten Nächten; im Sommer nicht.
+- Die Wärme kommt zuerst aus den **Holzheizwerken**, dann aus den **Gaskesseln** der Wohnviertel. Die Kessel baust du
+  nicht: Sie sind schon da und kaufen Gas vom Festland.
+- **Kalte Häuser**: Fehlende Wärme kostet bis zu 20 Punkte **Zufriedenheit** („Kalte Häuser“ im Tooltip der
+  Zufriedenheit) und verschlechtert die **Gesundheit**. Kalte Wohnviertel zeigen eine Schneeflocke, und die Warnung
+  „Kalte Häuser“ erscheint über der Karte und im Ereignisprotokoll.
+- Die Haushalte zahlen der Stadt eine **Heizkostenrechnung**, mit dem Energietarif, den du gewählt hast. Im Fenster
+  **Haushalte** schaltet der Schalter **Gasheizung** die Gaskessel aus: Das spart Gas, aber die Häuser bleiben kalt.
+- **Holzheizwerk** (Registerkarte Stadt, ab Stufe II): Bei voller Leistung liefert es 15 Einheiten Wärme pro Stunde
+  und verbrennt 3,75 Holz, das Lkw in sein Silo bringen. Es kostet 800 und 20 Zement, wird in 20 Stunden gebaut, ist
+  immer geöffnet und braucht Personal und Strom. Ohne Holz steht es still. Das Holz, das es verbrennt, fehlt dann beim
+  Bauen und beim Verkauf.
+- **Gaskraftwerk** (Registerkarte Energie, ab Stufe II): 15 MW, kostet 900 und 30 Zement und wird in 24 Stunden gebaut.
+  Es springt **nur an, wenn Strom fehlt**: nach den Batterien und bevor Strom gekauft wird. Es produziert nicht für den
+  Verkauf. Bei voller Leistung verbrennt es 42 Gas pro Stunde und verschmutzt weniger als Kohle.
+- **Gas und Kraftstoff** werden Stunde für Stunde gekauft, nur so viel wie nötig, über die **Bundesstraße**, solange
+  Geld da ist: Gas kostet 1,20 pro Einheit, Kraftstoff 6, mit einem Markt in der Stadt weniger. Das Fenster Markt zeigt
+  die heutigen Preise.
+- **Gaskrise**: Einmal pro Winter, zwischen Mitte November und Ende Januar (nie in den ersten zwei Monaten eines
+  Spiels), kostet Gas zwei oder drei Wochen lang das **2,5-Fache** und Kraftstoff das 1,5-Fache. Die Warnung
+  „Spannungen beim Gas“ kommt drei Tage vorher. Während der Krise zahlen die Haushalte die Hälfte der höheren
+  Heizkosten und die Stadt die andere Hälfte, und Strom zu kaufen ist oft billiger, als das Gaskraftwerk laufen zu
+  lassen.
+- **Kohle ist träge**: Ein Kohlekraftwerk ändert seine Leistung um höchstens ein Viertel seiner Kapazität pro Stunde,
+  ein neues braucht also 4 Stunden bis zur vollen Leistung. Weiß das Netz nicht wohin mit dem Strom (Batterien voll,
+  Verkauf am Limit), fährt es herunter und verbrennt weniger Kohle, kommt aber für die Abendspitze nicht schnell wieder
+  hoch. Das Fenster Feld zeigt, ob es hoch- oder herunterfährt.
+
 ### Baustoffe und Industrie
 
 Die meisten Gebäude kosten außer Geld auch **Baustoffe**: **Holz** und **Zement**. Die Liste links zeigt sie
@@ -323,11 +360,12 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
   [Arbeitszeiten und Schichten](#arbeitszeiten-und-schichten)).
 - Die Industrie braucht **Personal** und **Strom**. Die Arbeitskräfte gehen nach Energie, Nahrung und
   Krankenhäusern dorthin, und vor den Kohleminen.
-- **Reichen die Baustoffe beim Bauen nicht**, wird der fehlende Teil sofort von außen gekauft (Holz 10, Zement 20
+- **Reichen die Baustoffe beim Bauen nicht**, wird der fehlende Teil sofort von außen gekauft (Holz 10, Zement 22
   pro Einheit). Man kann auch ohne Industrie spielen, aber es kostet mehr.
 - Du beginnst mit 200 Holz und 200 Zement.
 - Der Knopf **Vorräte** neben der Kohle in der Leiste oben öffnet ein kleines Fenster mit Kohle, Holz, Stein,
-  Zement und Nahrung und zeigt, wie viel jede Stunde hinzukommt und verbraucht wird. Ein Klick daneben oder **Esc**
+  Zement und Nahrung und zeigt, wie viel jede Stunde hinzukommt und verbraucht wird (auch das Holz, das die
+  Heizwerke verbrennen). Ein Klick daneben oder **Esc**
   schließt es.
 - Das Fenster **Feld** zeigt, was ein Industriegebäude produziert und verbraucht, und „steht still: Stein fehlt“,
   wenn der Stein ausgegangen ist.
@@ -359,7 +397,8 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 
 - Wer produziert (Minen, Sägewerke, Steinbrüche, Zementwerke, Bauernhöfe, Fischkutter, Gewächshäuser), legt seine
   Waren auf seinen **Hof**. **Lkw** bringen sie zum Rathaus oder zum nächsten **Lager** und von dort zu den
-  **Silos** der Verbraucher: Kohlekraftwerke und Zementwerk. Das Kühlhaus dient als Lager für Nahrung.
+  **Silos** der Verbraucher: Kohlekraftwerke, Zementwerk und Holzheizwerke. Das Kühlhaus dient als Lager für
+  Nahrung.
 - Das Rathaus hat **2 Lkw**; jeder **Fuhrpark** bringt **3** dazu (er braucht Personal und Strom). Bessere Straßen
   und weniger Verkehr lassen dieselben Lkw mehr transportieren.
 - Reichen die Lkw nicht, erscheint die Warnung „**Zu wenige Lkw**“: Die Höfe füllen sich, und die Erzeuger stehen
@@ -367,6 +406,9 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 - Ein Hof fasst nur eine begrenzte Menge: Ein voll ausgelastetes Sägewerk, ein Steinbruch oder ein Zementwerk
   kann ihn vor dem Abend füllen, wenn die Lkw nicht nachkommen.
 - **Nahrung verdirbt** auf jeder Fahrt ein wenig: Je weiter der Bauernhof entfernt ist, desto mehr geht verloren.
+- **Lkw verbrauchen Kraftstoff**, der Stunde für Stunde über die Bundesstraße gekauft wird: Je mehr sie fahren, desto
+  mehr kostet es. Ohne Geld oder mit abgeschnittener Bundesstraße steht die ganze Flotte still („Lkw stehen still:
+  kein Kraftstoff“).
 - Das Fenster **Feld** zeigt Hof, Silo und Entfernung zum Lager; **Vorräte** zeigt, was auf den Höfen wartet.
 
 ### Markt
@@ -380,6 +422,8 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
   Schwellen **„Verkauf über“** und **„Kauf unter“** lassen den Markt Stunde für Stunde von selbst handeln; die
   Knöpfe **„10 kaufen“** und **„10 verkaufen“** wirken sofort, auch außerhalb der Öffnungszeiten.
 - Verkäufe und Käufe erscheinen im Ereignisprotokoll und auf der Registerkarte **Geld** des Diagramms.
+- Der Kasten **Importierte Brennstoffe** zeigt die heutigen Preise für Gas und Kraftstoff, auch bevor du einen Markt
+  baust. Mit einem Markt in der Stadt kosten sie weniger, ohne Aufschlag. Man kann sie weder lagern noch verkaufen.
 
 ### Leitungsverluste
 
@@ -431,11 +475,13 @@ Das Fenster unten hat sechs Registerkarten. Die ersten fünf zeigen die **letzte
 Stunde; die sechste, **Ziele**, das ganze Spiel mit der Prognose. Ein Klick auf eine Registerkarte wechselt dorthin
 (das Spiel merkt sich deine Wahl); fährst du mit der Maus über eine Spalte, liest du die genauen Werte dieser Stunde.
 
-- **Energie**: Erzeugung, Nachfrage, Batterien, Leitungsverluste und gekaufter Strom.
-- **Geld**: Einnahmen über der Null, Ausgaben darunter, und der Kontostand, mit Verkäufen und Käufen am Markt.
+- **Energie**: Erzeugung, Nachfrage, Batterien, Leitungsverluste, gekaufter Strom und Strom aus Gas.
+- **Geld**: Einnahmen über der Null, Ausgaben darunter, und der Kontostand, mit Verkäufen und Käufen am Markt und dem
+  gekauften Gas.
 - **Materialien**: wie viel von jedem Material erzeugt und verbraucht wird, und der Vorrat; das Material wählst du
   mit den Knöpfen neben dem Diagramm.
-- **Stadt**: erzeugte und verzehrte Nahrung, der Nahrungsvorrat, Zufriedenheit und Gesundheit.
+- **Stadt**: erzeugte und verzehrte Nahrung, der Nahrungsvorrat, Zufriedenheit und Gesundheit, Wärmebedarf und
+  gelieferte Wärme.
 - **Verkehr**: Menschen auf dem Weg zur Arbeit und nach Hause, Lkw unterwegs und die Straßenauslastung.
 - **Ziele**: Einwohner und Verschmutzung seit Spielbeginn, die Ziellinie und die Prognose gestrichelt (siehe
   [Zielprognose](#zielprognose)).
@@ -476,6 +522,7 @@ auf der Karte stehen, siehst du seinen Zustand und wie viel Strom es erzeugt ode
 | Knopf **Abreißen** (Symbol im Fenster Feld) | Reißt das gewählte Gebäude oder die gewählte Baustelle ab (die Hälfte der Kosten wird erstattet) |
 | Knopf **Ausbauen** (Symbol im Fenster Feld des Rathauses) | Hebt das Rathaus auf die nächste Stufe, wenn die Ziele der Stufe erfüllt sind |
 | Knöpfe **Verkauf** und **Kauf** (im Fenster Feld der Grenzleitung) | Schalten den automatischen Verkauf und Kauf von Strom ein und aus |
+| Knopf **Gasheizung** (im Fenster Haushalte) | Schaltet die Gaskessel der Wohnviertel ein und aus |
 | Registerkarten des Diagramms (unten) | Energie, Geld, Materialien, Stadt, Verkehr, Ziele |
 
 ### Sprachen
@@ -537,6 +584,10 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
 - **Mit Brettern vernagelte Mine**: Die Mine ist **erschöpft** und wird in ein paar Tagen zu einem See.
 - **Baustelle**: Das Gebäude wird noch gebaut; es arbeitet, wenn der Trupp fertig ist.
 - **Handelssymbol** über der Grenzleitung: Die Stadt hat in der letzten Stunde Strom gekauft oder verkauft.
+- **Durchgestrichene Flamme**: Ein Gaskraftwerk steht still, weil **kein Gas ankommt** (Bundesstraße abgeschnitten
+  oder kein Geld mehr).
+- **Schneeflocke**: **kalte Häuser**, das Wohnviertel bekommt nicht die ganze Wärme, die es braucht.
+- **Durchgestrichener Kanister**: **kein Kraftstoff**, die Lkw dieses Fuhrparks stehen still.
 - **Licht in der Nacht**: Bei Dunkelheit machen Wohnviertel und Rathaus Licht. Ein Gebäude ohne Strom bleibt
   dunkel: Ein dunkles Wohnviertel in der Nacht ist ein Warnzeichen.
 
@@ -575,6 +626,10 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
     günstiger kaufen.
 17. Stelle **Windparks** in Windrichtung mit Abstand auf (Fenster Wetter): Hintereinander nehmen sie sich gegenseitig
     den Wind.
+18. Kohle ist träge: Ein neues Kohlekraftwerk braucht 4 Stunden bis zur vollen Leistung und kann der Abendspitze
+    allein nicht folgen. Ab Stufe II deckt ein **Gaskraftwerk** die Spitzen, aber jede Stunde Gas kostet.
+19. Denk vor dem Winter an die **Heizung**: Ein **Holzheizwerk** neben einem Sägewerk spart viel Gas. Kommt die
+    Warnung „Spannungen beim Gas“, hast du drei Tage, um dich auf die Krise vorzubereiten.
 
 ## Spielstände
 
@@ -636,6 +691,10 @@ früherer Versionen lassen sich laden: Das Rathaus beginnt auf der niedrigsten S
 gebaut hast, und die Karte bekommt Brücke, Bundesstraße und Grenzleitung, an die Stadt angeschlossen. Ein Spielstand
 der 0.11.0 öffnet sich nicht in früheren Versionen.
 
+**Ab 0.12.0** ändert sich das Format erneut: Wärme, Gas und Kraftstoff. Spielstände früherer Versionen lassen sich
+laden: Die Gasheizung ist eingeschaltet, und die Kohlekraftwerke machen mit der Leistung weiter, die sie hatten. Ein
+Spielstand der 0.12.0 öffnet sich nicht in früheren Versionen.
+
 Spielstände einer Alpha-Version funktionieren in der nächsten vielleicht nicht: Das [Changelog](CHANGELOG.md) sagt
 es, wenn das passiert.
 
@@ -643,21 +702,17 @@ es, wenn das passiert.
 
 Was schon geplant ist, ungefähr in dieser Reihenfolge. Pläne können sich ändern.
 
-- **Wärme, Gas und Kraftstoff**: Heizung der Häuser im Winter, Gaskraftwerke für die Spitzenstunden und Lkw, die
-  Kraftstoff verbrauchen.
 - **Wasser und Abfall**: Wasserwerke, Kläranlagen und Deponien für eine größere Stadt.
 - **Bildung**: Schulen und besser ausgebildete Arbeitskräfte.
 - **Forschung**: Technologien zum Entdecken, die neue Gebäude freischalten, etwa die Förderung von Öl und Gas.
 - **Verschleiß und Reparaturen**: Gebäude nutzen sich ab, und die Trupps reparieren sie mit deinen Baustoffen; danach
   Streiks und Notfälle, für alle, die sie wählen.
-- **Neue Karten**: in jedem Spiel eine andere Karte, größere Karten mit Flüssen und Brücken und eine Minikarte.
+- **Neue Karten**: Karten in verschiedenen Größen, in jedem Spiel eine andere Karte, Flüsse und Brücken und eine
+  Minikarte.
 - **Später**: mehrere miteinander verbundene Städte und eine isometrische Ansicht.
 
 ## Bekannte Probleme
 
-- Die Browser-Version ist nach **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)** umgezogen
-  (die alte Adresse leitet dorthin weiter). Im Browser unter der alten Adresse gespeicherte Spiele erscheinen unter der
-  neuen noch nicht: Sie sind weiterhin in deinem Browser, und eine kommende Version holt sie herüber.
 - Die Versionen für **Windows** und **macOS** wurden noch nicht auf echten Computern getestet: Wenn etwas nicht
   klappt, [sag Bescheid](#ein-problem-oder-eine-idee-melden).
 - Die **Android**-Version wird von Hand installiert, außerhalb des Play Store.

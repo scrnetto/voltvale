@@ -20,7 +20,7 @@
 
 **Sei il gestore elettrico di una cittadina che cresce.** Ogni ora la città chiede energia: poca di notte, tanta
 la sera. Costruisci centrali, impianti solari, parchi eolici e batterie, collega tutto con le linee elettriche e
-le strade, trova chi ci lavori, un turno dopo l'altro, dai da mangiare a tutti, porta merci e materiali coi camion senza intasare il
+le strade, trova chi ci lavori, un turno dopo l'altro, dai da mangiare a tutti, scalda le case d'inverno, porta merci e materiali coi camion senza intasare il
 traffico, e fai crescere il villaggio fino a **400 abitanti in due anni di gioco**, senza blackout continui, senza
 debiti e senza soffocarlo di inquinamento.
 
@@ -121,7 +121,10 @@ mostra il giorno della partita, il giorno della settimana, la data e l'ora, per 
   - il **sole** produce solo di giorno, poco d'inverno e col cielo coperto;
   - il **vento** cambia forza e direzione di ora in ora (il pannello Meteo dice da dove soffia); un parco eolico
     **sottovento** a un altro, a poche caselle, rende meno (la «scia» delle pale, fino al 40 % in meno);
-  - il **carbone** produce sempre, ma inquina e consuma il carbone estratto dalle **miniere**.
+  - il **carbone** produce giorno e notte, ma inquina, consuma il carbone estratto dalle **miniere** e cambia
+    potenza piano, al più di un quarto della capacità all'ora;
+  - il **gas** si accende solo quando l'energia manca, per i picchi della sera, ma il gas arriva dalla terraferma e
+    costa denaro a ogni ora.
 - **Batterie**: accumulano l'energia in più e la restituiscono quando serve, per esempio la sera.
 - **Corrente da fuori**: l'energia in più si **vende** e quella che manca si **compra**, al doppio del prezzo, dalla
   **linea di confine** accanto al ponte; più ne vendi in un'ora, meno vale. Vedi
@@ -130,6 +133,9 @@ mostra il giorno della partita, il giorno della settimana, la data e l'ora, per 
   Fa ammalare gli abitanti, e sopra la soglia non si vince.
 - **Crescita**: la città cresce se gli abitanti sono abbastanza **felici**, c'è posto nei **quartieri** e c'è abbastanza
   **cibo** in magazzino.
+- **Riscaldamento**: sotto i 15 °C le case chiedono **calore**, dalle centrali termiche a legna o dalle caldaie a gas
+  dei quartieri. Le case al freddo rendono gli abitanti infelici e malati. Vedi
+  [Calore, gas e carburante](#calore-gas-e-carburante).
 
 ### Nuova partita
 
@@ -159,7 +165,7 @@ Il municipio cresce con la città: **I villaggio**, **II paese**, **III cittadin
 | Livello | Costruzioni |
 |---|---|
 | **I villaggio** | linee, sterrate, quartieri, impianti solari, parchi eolici, centrali e miniere di carbone, batterie, fattorie, parchi |
-| **II paese** | strade asfaltate, depositi, autoparchi, segherie, cave, serre, magazzini frigoriferi, pescherecci, Mercato, Officina |
+| **II paese** | strade asfaltate, depositi, autoparchi, segherie, cave, serre, magazzini frigoriferi, pescherecci, centrali a gas, centrali termiche a legna, Mercato, Officina |
 | **III cittadina** | viali, cementifici, trasformatori, ospedali, pompaggio |
 | **IV città** | per ora niente di nuovo: servirà alle costruzioni dei prossimi aggiornamenti |
 
@@ -223,13 +229,13 @@ Le costruzioni hanno bisogno di qualcuno che le faccia funzionare.
 - Lavora circa il **56 %** degli abitanti. La barra in alto mostra quante persone hanno un lavoro sulla forza
   lavoro disponibile.
 - **Centrali a carbone**, **miniere di carbone**, **industrie**, costruzioni del **cibo**, **ospedali**, **parchi**,
-  **magazzini frigoriferi**, **depositi**, **officine** e **pompaggio** hanno bisogno di personale. **Impianti solari**, **parchi
+  **magazzini frigoriferi**, **depositi**, **officine**, **pompaggio**, **centrali a gas** e **centrali termiche a legna** hanno bisogno di personale. **Impianti solari**, **parchi
   eolici**, **batterie**, linee e trasformatori vanno da soli.
 - Il pannello **Casella** mostra quanti posti sono coperti, per esempio **Personale: 4/4**, e quante persone ci
   vogliono, turni compresi.
 - Con poco personale una costruzione produce meno; **senza nessuno si ferma** e mostra il segnale **«senza
   personale»**.
-- I lavoratori vanno **prima all'energia**, poi **al cibo**, poi **agli ospedali**, poi **alle industrie**, poi **alle miniere**, poi **ai servizi**
+- I lavoratori vanno **prima all'energia**, poi **al cibo**, poi **agli ospedali e alle centrali termiche**, poi **alle industrie**, poi **alle miniere**, poi **ai servizi**
   (quartieri e parchi). I quartieri funzionano anche quando ai loro servizi manca personale.
 - La **disoccupazione** costa: chi non lavora non paga l'imposta sul reddito e riceve un sussidio dal comune; se è
   alta, gli abitanti sono meno felici.
@@ -240,7 +246,7 @@ Ogni costruzione con personale ha il suo orario, che la Casella mostra:
 
 | Orario | Costruzioni | Persone per posto |
 |---|---|---|
-| **Sempre aperta, 3 turni (6, 14, 22)** | centrali a carbone, miniere di carbone, ospedali, magazzini frigoriferi, autoparchi, pompaggio | circa 4: un posto coperto giorno e notte vuole tre turni più i riposi |
+| **Sempre aperta, 3 turni (6, 14, 22)** | centrali a carbone e a gas, centrali termiche a legna, miniere di carbone, ospedali, magazzini frigoriferi, autoparchi, pompaggio | circa 4: un posto coperto giorno e notte vuole tre turni più i riposi |
 | **Aperta 8–17, dal lunedì al venerdì** | segherie, cave, cementifici, depositi | 1 |
 | **Aperta 8–17, tutti i giorni** | fattorie, pescherecci, serre, parchi, officine, i servizi dei quartieri | circa 1,4, per i giorni di riposo |
 
@@ -272,10 +278,10 @@ sta per finire.
 ### Felicità, salute e tasse
 
 - **Felicità** (lo smile nella barra in alto): si muove piano verso un valore che è la somma di alcuni fattori, cioè
-  blackout delle ultime 24 ore, cibo, fame, disoccupazione, inquinamento, salute, parchi, tasse e conti di casa. Passando il
+  blackout delle ultime 24 ore, cibo, fame, freddo nelle case, disoccupazione, inquinamento, salute, parchi, tasse e conti di casa. Passando il
   mouse sul numero vedi verso quale valore sta andando e quanto pesa ogni fattore, per esempio «Blackout −5,0» o
   «Parchi +3,0». Sotto 60 la città non cresce, e sotto 35 la gente comincia ad andarsene.
-- **Salute** (il cuore): cala con l'inquinamento e con la fame. I **malati restano a casa**, quindi ci sono meno
+- **Salute** (il cuore): cala con l'inquinamento, con la fame e con il freddo nelle case. I **malati restano a casa**, quindi ci sono meno
   lavoratori, e una città poco sana è anche meno felice.
 - **Ospedale** (pianura): cura fino a 250 abitanti, ha bisogno di personale e consuma energia. Durante un
   blackout non cura. Indispensabile se punti sul carbone.
@@ -299,6 +305,36 @@ sta per finire.
   normale o alta. Una tariffa alta porta più soldi al comune, ma lascia meno alle famiglie.
 - Quanto resta alle famiglie pesa sulla felicità («Conti di casa» nel riquadro della felicità).
 
+### Calore, gas e carburante
+
+- **Calore**: quando la temperatura scende sotto i **15 °C** le case chiedono calore, tanto più quanto fa freddo e
+  quanti più abitanti ci sono. La partita comincia in autunno, quindi serve già dalle prime notti; d'estate no.
+- Il calore lo danno prima le **centrali termiche a legna**, poi le **caldaie a gas** dei quartieri. Le caldaie non si
+  costruiscono: ci sono già e comprano il gas dalla terraferma.
+- **Case al freddo**: il calore che manca toglie fino a 20 punti di **felicità** («Freddo nelle case» nel tooltip
+  della felicità) e peggiora la **salute**. I quartieri al freddo mostrano un fiocco di neve, e l'avviso «Case al
+  freddo» compare sopra la mappa e nel registro degli eventi.
+- Le famiglie pagano al comune la **bolletta del riscaldamento**, con la tariffa dell'energia che hai scelto. Nel
+  pannello **Famiglie** l'interruttore **Riscaldamento a gas** spegne le caldaie a gas: si risparmia il gas, ma le
+  case restano al freddo.
+- **Centrale termica a legna** (scheda Città, da paese): a pieno dà 15 unità di calore all'ora e brucia 3,75 di
+  legname, che i camion portano nel suo silo. Costa 800 e 20 di cemento, si costruisce in 20 ore, è sempre aperta e ha
+  bisogno di personale e di corrente. Senza legname si ferma. Il legname che brucia è legname che non userai per
+  costruire né venderai.
+- **Centrale a gas** (scheda Energia, da paese): 15 MW, costa 900 e 30 di cemento e si costruisce in 24 ore. Si accende
+  **solo quando l'energia manca**: dopo le batterie e prima di comprare corrente. Non produce per vendere. A pieno
+  brucia 42 di gas all'ora, e inquina meno del carbone.
+- **Gas e carburante** si comprano ora per ora, solo quanto serve, dalla **strada statale**, finché c'è denaro: il gas
+  costa 1,20 all'unità, il carburante 6, meno con un Mercato in città. Il pannello Mercato mostra i prezzi di oggi.
+- **Crisi del gas**: una volta per inverno, fra metà novembre e fine gennaio (mai nei primi due mesi di partita), per
+  due o tre settimane il gas costa **2,5 volte** tanto e il carburante 1,5 volte. L'avviso «Tensioni sul gas» arriva
+  tre giorni prima. Durante la crisi metà del rincaro del riscaldamento lo pagano le famiglie e metà il comune, e
+  comprare la corrente spesso costa meno che accendere la centrale a gas.
+- **Il carbone è lento**: una centrale a carbone cambia potenza al più di un quarto della sua capacità all'ora, quindi
+  una nuova ci mette 4 ore ad arrivare al massimo. Quando la rete non sa dove mettere l'energia (batterie piene,
+  vendita al limite) scende e brucia meno carbone, ma poi non risale in fretta per il picco della sera. La Casella dice
+  se è in salita o in discesa.
+
 ### Materiali e industrie
 
 Quasi tutte le costruzioni costano, oltre ai soldi, dei **materiali**: **legname** e **cemento**. La lista a
@@ -312,10 +348,10 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 - Le industrie hanno bisogno di **personale** e di **corrente**. I lavoratori ci vanno dopo energia, cibo e
   ospedali, e prima delle miniere di carbone.
 - **Se i materiali non bastano** quando costruisci, la parte che manca si compra subito da fuori (legname 10,
-  cemento 20 l'unità). Si può giocare anche senza industrie, ma costa di più.
+  cemento 22 l'unità). Si può giocare anche senza industrie, ma costa di più.
 - Si parte con 200 di legname e 200 di cemento.
 - Il pulsante **Scorte**, accanto al carbone nella barra in alto, apre un piccolo pannello con carbone, legname,
-  pietra, cemento e cibo, e quanto entra ed esce ogni ora. Si chiude con un clic fuori o con **Esc**.
+  pietra, cemento e cibo, e quanto entra ed esce ogni ora (compreso il legname bruciato dalle centrali termiche). Si chiude con un clic fuori o con **Esc**.
 - Il pannello **Casella** mostra quanto produce e consuma un'industria, e «fermo: manca pietra» quando è finita.
 
 ### Strade e traffico
@@ -344,7 +380,8 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 
 - Chi produce (miniere, segheria, cava, cementificio, fattorie, pescherecci, serre) mette la merce nel suo
   **piazzale**. I **camion** la portano al municipio o al **deposito** più vicino, e da lì ai **silo** di chi la
-  consuma: le centrali a carbone e il cementificio. Il magazzino frigorifero fa da deposito per il cibo.
+  consuma: le centrali a carbone, il cementificio e le centrali termiche a legna. Il magazzino frigorifero fa da
+  deposito per il cibo.
 - Il municipio ha **2 camion**; ogni **autoparco** ne aggiunge **3** (servono personale e corrente). Strade migliori
   e meno traffico fanno viaggiare di più gli stessi camion.
 - Se i camion non bastano arriva l'avviso «**Camion insufficienti**»: i piazzali si riempiono e chi produce si ferma
@@ -352,6 +389,8 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 - Un piazzale tiene una quantità limitata: una segheria, una cava o un cementificio a pieno ritmo possono
   riempirlo prima di sera se i camion non stanno al passo.
 - Il **cibo si rovina** un po' a ogni viaggio: più la fattoria è lontana, più se ne perde.
+- I **camion consumano carburante**, comprato ora per ora dalla strada statale: più strada fanno, più costa. Senza
+  denaro o con la strada statale scollegata tutta la flotta si ferma («Camion fermi: niente carburante»).
 - La Casella mostra piazzale, silo e distanza dal deposito; le **Scorte** mostrano quanto aspetta nei piazzali.
 
 ### Mercato
@@ -365,6 +404,8 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
   soglie **«Vendi sopra»** e **«Compra sotto»** fanno scambiare il Mercato da solo, ora per ora; i pulsanti
   **«Compra 10»** e **«Vendi 10»** valgono subito, anche fuori orario.
 - Vendite e acquisti compaiono nel registro degli eventi e nella scheda **Denaro** del grafico.
+- Il riquadro **Combustibili importati** mostra i prezzi di oggi di gas e carburante, anche prima di costruire il
+  Mercato. Con un Mercato in città costano meno, senza sovrapprezzo. Non si tengono in magazzino e non si vendono.
 
 ### Perdite di linea
 
@@ -414,11 +455,12 @@ Il pannello in basso ha sei schede. Le prime cinque mostrano le **ultime 24 ore*
 **Obiettivi**, tutta la partita con la previsione. Un clic su una scheda la apre (il gioco ricorda la scelta);
 passando il mouse su una colonna leggi i valori esatti di quell'ora.
 
-- **Energia**: produzione, domanda, batterie, perdite di linea e corrente comprata.
-- **Denaro**: entrate sopra lo zero, uscite sotto, e il saldo, con le vendite e gli acquisti al Mercato.
+- **Energia**: produzione, domanda, batterie, perdite di linea, corrente comprata e corrente dal gas.
+- **Denaro**: entrate sopra lo zero, uscite sotto, e il saldo, con le vendite e gli acquisti al Mercato e il gas
+  comprato.
 - **Materiali**: quanto si produce e si consuma di ogni materiale, e la scorta; il materiale si sceglie con i
   pulsanti accanto al grafico.
-- **Città**: cibo prodotto e cibo mangiato, la scorta di cibo, felicità e salute.
+- **Città**: cibo prodotto e cibo mangiato, la scorta di cibo, felicità e salute, calore richiesto e calore fornito.
 - **Trasporti**: persone che vanno al lavoro e che tornano a casa, camion in viaggio e carico delle strade.
 - **Obiettivi**: abitanti e inquinamento dall'inizio della partita, la linea dell'obiettivo e la previsione
   tratteggiata (vedi [Previsione degli obiettivi](#previsione-degli-obiettivi)).
@@ -458,6 +500,7 @@ mappa vedi il suo stato e quanta energia produce o consuma.
 | Pulsante **Demolisci** (icona nella Casella) | Demolisce la costruzione o il cantiere selezionato (rimborso di metà del costo) |
 | Pulsante **Potenzia** (icona nella Casella del municipio) | Porta il municipio al livello successivo, quando gli obiettivi del livello sono compiuti |
 | Pulsanti **Vendi** e **Compra** (nella Casella della linea di confine) | Accendono e spengono la vendita e l'acquisto automatici della corrente |
+| Pulsante **Riscaldamento a gas** (nel pannello Famiglie) | Accende e spegne le caldaie a gas dei quartieri |
 | Schede del grafico (in basso) | Energia, Denaro, Materiali, Città, Trasporti, Obiettivi |
 
 ### Lingue
@@ -516,6 +559,10 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
 - **Miniera chiusa con le assi**: la miniera è **esaurita** e fra qualche giorno diventerà un lago.
 - **Cantiere**: la costruzione è ancora in lavori; funziona quando la squadra ha finito.
 - **Icona dello scambio** sopra la linea di confine: nell'ultima ora la città ha comprato o venduto corrente.
+- **Fiamma barrata**: una centrale a gas è ferma perché **il gas non arriva** (strada statale scollegata o denaro
+  finito).
+- **Fiocco di neve**: **case al freddo**, il quartiere non riceve tutto il calore che gli serve.
+- **Tanica barrata**: **senza carburante**, i camion di questo autoparco sono fermi.
 - **Luci di notte**: col buio quartieri e municipio accendono le luci. Una costruzione senza corrente resta al
   buio: un quartiere spento di notte è un campanello d'allarme.
 
@@ -554,6 +601,10 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
     meno.
 17. Distanzia i **parchi eolici** lungo la direzione del vento (pannello Meteo): uno dietro l'altro si rubano il
     vento.
+18. Il carbone è lento: una centrale a carbone nuova ci mette 4 ore ad arrivare al massimo, e da sola non segue il
+    picco della sera. Da paese una **centrale a gas** copre i picchi, ma ogni ora di gas costa.
+19. Prima dell'inverno pensa al **riscaldamento**: una **centrale termica a legna** vicino a una segheria fa
+    risparmiare molto gas. Quando arriva l'avviso «Tensioni sul gas» hai tre giorni per prepararti alla crisi.
 
 ## Salvataggi
 
@@ -613,6 +664,10 @@ salvataggi delle versioni precedenti si caricano: il municipio parte dal livello
 che hai già costruito, e la mappa riceve il ponte, la strada statale e la linea di confine, collegati alla città. Un
 salvataggio della 0.11.0 non si apre nelle versioni precedenti.
 
+**Dalla 0.12.0** il formato cambia di nuovo: calore, gas e carburante. I salvataggi delle versioni precedenti si
+caricano: il riscaldamento a gas parte acceso e le centrali a carbone ripartono dalla potenza che avevano. Un
+salvataggio della 0.12.0 non si apre nelle versioni precedenti.
+
 I salvataggi di una versione alpha potrebbero non funzionare con la versione successiva: lo scrive il
 [changelog](CHANGELOG.md) quando succede.
 
@@ -620,21 +675,16 @@ I salvataggi di una versione alpha potrebbero non funzionare con la versione suc
 
 Cosa è già previsto, più o meno in quest'ordine. I piani possono cambiare.
 
-- **Calore, gas e carburante**: il riscaldamento delle case d'inverno, centrali a gas per le ore di punta e camion che
-  consumano carburante.
 - **Acqua e rifiuti**: acquedotti, depuratori e discariche per una città più grande.
 - **Istruzione**: scuole, e lavoratori più preparati.
 - **Ricerca**: tecnologie da scoprire che sbloccano costruzioni nuove, come l'estrazione di petrolio e gas.
 - **Usura e riparazioni**: le costruzioni si consumano e le squadre le riparano con i materiali che hai; poi scioperi
   ed emergenze, per chi le sceglie.
-- **Mappe nuove**: una mappa diversa a ogni partita, mappe più grandi con fiumi e ponti, e una minimappa.
+- **Mappe nuove**: mappe di dimensioni diverse, una mappa diversa a ogni partita, fiumi e ponti, e una minimappa.
 - **Più avanti**: più città collegate fra loro e la vista isometrica.
 
 ## Problemi noti
 
-- La versione per il browser si è spostata su **[scrnetto.github.io/voltvale](https://scrnetto.github.io/voltvale/)**
-  (il vecchio indirizzo ti rimanda lì). Le partite salvate nel browser al vecchio indirizzo per ora non si vedono dal
-  nuovo: sono ancora nel tuo browser, e una prossima versione le recupera.
 - Le versioni per **Windows** e **macOS** non sono ancora state provate su computer veri: se qualcosa non va,
   [segnalalo](#segnalare-un-problema-o-unidea).
 - La versione **Android** si installa a mano, fuori dal Play Store.
