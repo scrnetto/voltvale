@@ -20,8 +20,8 @@
 
 **Du betreibst das Stromnetz einer wachsenden Kleinstadt.** Jede Stunde braucht die Stadt Strom: wenig in der
 Nacht, viel am Abend. Baue Kraftwerke, Solarparks, Windparks und Batterien, verbinde alles mit Stromleitungen und
-Straßen, finde Leute, die dort arbeiten, Schicht für Schicht, versorge alle mit Nahrung, halte im Winter die Häuser warm, bringe Waren und Baustoffe
-mit Lkw ans Ziel, ohne den Verkehr lahmzulegen, und lass dein Dorf **innerhalb von zwei Spieljahren auf 400
+Straßen, finde Leute, die dort arbeiten, Schicht für Schicht, versorge alle mit Nahrung, halte im Winter die Häuser warm, bring
+Wasser in die Häuser, schaff den Abfall von den Straßen, bringe Waren und Baustoffe mit Lkw ans Ziel, ohne den Verkehr lahmzulegen, und lass dein Dorf **innerhalb von zwei Spieljahren auf 400
 Einwohner** wachsen, ohne ständige Stromausfälle, ohne Schulden und ohne es in Abgasen zu ersticken.
 
 Ein Originalspiel von **Marco Scarlino**. Kostenlos. Offizielle Website: **[voltvale.it](https://voltvale.it/de/)**.
@@ -106,7 +106,8 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
 
 - **Ziel**: **400 Einwohner** mit einer Verschmutzung **unter dem Grenzwert** innerhalb von **2 Jahren**. Nach dem
   Sieg kannst du **weiterspielen**, ohne Zeitlimit.
-- **Niederlage**: wenn dein Geld **30 Tage am Stück** im Minus bleibt oder die 2 Jahre vor dem Sieg abgelaufen sind.
+- **Niederlage**: wenn dein Geld **30 Tage am Stück** im Minus bleibt, wenn die Stadt **14 Tage am Stück unter 5
+  Einwohnern** bleibt oder wenn die 2 Jahre vor dem Sieg abgelaufen sind.
 - **Das Rathaus wächst**: vom **Dorf** zur **Kleinstadt**, zur **Stadt** und zur **Großstadt**, indem du kleine Ziele
   erfüllst. Jede Stufe schaltet neue Gebäude frei: siehe [Rathausstufen und Ziele](#rathausstufen-und-ziele).
 - **Gebaut wird mit Trupps**: Ein neues Gebäude ist zuerst eine **Baustelle** und arbeitet erst, wenn ein Trupp fertig
@@ -134,12 +135,17 @@ der Himmel bewölkter. Die Leiste oben zeigt den Spieltag, den Wochentag, das Da
   über die **Grenzleitung** neben der Brücke; je mehr du in einer Stunde verkaufst, desto weniger ist er wert. Siehe
   [Verbindungen zum Festland](#verbindungen-zum-festland).
 - **Verschmutzung**: Kohlekraftwerke verschmutzen die Luft, und sie klärt sich nur langsam. Ein Kraftwerk geht,
-  zu viele nicht. Sie macht die Einwohner krank, und über dem Grenzwert kannst du nicht gewinnen.
+  zu viele nicht. Weniger verschmutzen auch Gaskraftwerke und Heizwerke, das Zementwerk, wenn es arbeitet, und die
+  Deponien. Sie macht die Einwohner krank, und über dem Grenzwert kannst du nicht gewinnen.
 - **Wachstum**: Die Stadt wächst, wenn die Einwohner **zufrieden** genug sind, in den **Wohnvierteln** Platz ist und
   genug **Nahrung** auf Vorrat liegt.
 - **Heizung**: Unter 15 °C brauchen die Häuser **Wärme**, aus Holzheizwerken oder aus den Gaskesseln der
   Wohnviertel. Kalte Häuser machen die Einwohner unzufrieden und krank. Siehe
   [Wärme, Gas und Kraftstoff](#wärme-gas-und-kraftstoff).
+- **Wasser**: Die Häuser bekommen Wasser nur von den Quellen, in deren **Reichweite** sie liegen; ohne Wasser sind die
+  Einwohner unzufrieden und werden krank. Siehe [Wasser](#wasser).
+- **Abfall**: Er muss abgeholt und auf die Deponie oder aus der Stadt gebracht werden; Abfall auf den Straßen macht
+  die Stadt unzufriedener. Siehe [Abfall](#abfall).
 
 ### Neues Spiel
 
@@ -170,10 +176,10 @@ Das Rathaus wächst mit der Stadt: **I Dorf**, **II Kleinstadt**, **III Stadt**,
 
 | Stufe | Gebäude |
 |---|---|
-| **I Dorf** | Stromleitungen, Feldwege, Wohnviertel, Solarparks, Windparks, Kohlekraftwerke und Kohleminen, Batterien, Bauernhöfe, Parks |
-| **II Kleinstadt** | asphaltierte Straßen, Lager, Fuhrparks, Sägewerke, Steinbrüche, Gewächshäuser, Kühlhäuser, Fischkutter, Gaskraftwerke, Holzheizwerke, Markt, Bauhof |
-| **III Stadt** | Alleen, Zementwerke, Umspannwerke, Krankenhäuser, Pumpspeicher |
-| **IV Großstadt** | vorerst nichts Neues: Die Stufe ist für die Gebäude der nächsten Updates da |
+| **I Dorf** | Stromleitungen, Feldwege, Wohnviertel, Solarparks, Windparks, Kohlekraftwerke und Kohleminen, Batterien, Bauernhöfe, Parks, Brunnen, Entsorgungshöfe, Deponien |
+| **II Kleinstadt** | asphaltierte Straßen, Lager, Fuhrparks, Sägewerke, Steinbrüche, Gewächshäuser, Kühlhäuser, Fischkutter, Gaskraftwerke, Holzheizwerke, Markt, Bauhof, Wassertürme, Seepumpen; Wasserquellen der Stufe II |
+| **III Stadt** | Alleen, Zementwerke, Umspannwerke, Krankenhäuser, Pumpspeicher, Entsalzungsanlagen; Wasserquellen der Stufe III |
+| **IV Großstadt** | vorerst nichts Neues, außer dass der Brunnen des Rathauses weiter reicht: Die Stufe ist für die Gebäude der nächsten Updates da |
 
 - In der Liste sind noch gesperrte Gebäude ausgegraut, mit einem **Schloss**; fährst du mit der Maus darüber, siehst
   du die nötige Stufe. Den **Markt** gibt es nur einmal pro Stadt: Nach dem ersten wird er grau.
@@ -228,7 +234,8 @@ verbunden ist.
 - Ein **Handelssymbol** über der Grenzleitung zeigt, wann in der letzten Stunde Strom gekauft oder verkauft wurde; das
   Diagramm **Energie** zeigt den gekauften Strom.
 - **Waren von außen**: Importierte Nahrung, Kupfer und der Handel des Markts kommen über die **Bundesstraße** und
-  kommen nur an, wenn sie mit den Straßen der Stadt verbunden ist.
+  kommen nur an, wenn sie mit den Straßen der Stadt verbunden ist. Über dieselbe Straße fährt der Abfall, der aus der
+  Stadt gebracht wird.
 
 ### Arbeit und Personal
 
@@ -237,15 +244,17 @@ Gebäude brauchen Leute, die sie betreiben.
 - Etwa **56 %** der Einwohner arbeiten. Die Leiste oben zeigt, wie viele Menschen von den verfügbaren
   Arbeitskräften eine Stelle haben.
 - **Kohlekraftwerke**, **Kohleminen**, **Industrie**, die Gebäude für **Nahrung**, **Krankenhäuser**, **Parks**,
-  **Kühlhäuser**, **Lager**, **Bauhöfe**, **Pumpspeicher**, **Gaskraftwerke** und **Holzheizwerke** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
-  Stromleitungen und Umspannwerke laufen von selbst.
+  **Kühlhäuser**, **Lager**, **Bauhöfe**, **Pumpspeicher**, **Gaskraftwerke**, **Holzheizwerke**,
+  **Entsalzungsanlagen** und **Entsorgungshöfe** brauchen Personal. **Solarparks**, **Windparks**, **Batterien**,
+  Stromleitungen, Umspannwerke, **Brunnen**, **Wassertürme**, **Seepumpen** und **Deponien** laufen von selbst.
 - Das Fenster **Feld** zeigt, wie viele Stellen besetzt sind, zum Beispiel **Personal: 4/4**, und wie viele
   Menschen dafür nötig sind, alle Schichten eingerechnet.
 - Mit zu wenig Personal produziert ein Gebäude weniger; **ganz ohne Personal steht es still** und zeigt das
   Signal **„ohne Personal“**.
-- Arbeitskräfte gehen **zuerst zur Energie**, dann **zur Nahrung**, dann **zu den Krankenhäusern und Heizwerken**, dann **zur
-  Industrie**, dann **zu den Minen**, dann **zu den Diensten** (Wohnviertel und Parks). Wohnviertel funktionieren
-  auch dann, wenn ihren Diensten Personal fehlt.
+- Zu Beginn gehen die Arbeitskräfte **zuerst zu Energie und Transport**, dann **zur Nahrung**, dann **zu
+  Krankenhäusern, Wärme und Wasser**, dann **zu Industrie und Müll**, dann **zu den Minen**, dann **zu Wohnvierteln
+  und Parks**. Die Reihenfolge änderst du im Fenster **Arbeit**: siehe [Arbeitsprioritäten](#arbeitsprioritäten).
+  Wohnviertel funktionieren auch dann, wenn ihren Diensten Personal fehlt.
 - **Arbeitslosigkeit** kostet: Wer keine Arbeit hat, zahlt keine Einkommensteuer und bekommt Arbeitslosengeld von
   der Stadt; ist sie hoch, sind die Einwohner weniger zufrieden.
 
@@ -255,9 +264,9 @@ Jedes Gebäude mit Personal hat eigene Arbeitszeiten, die das Fenster **Feld** a
 
 | Arbeitszeit | Gebäude | Menschen pro Stelle |
 |---|---|---|
-| **Immer geöffnet, 3 Schichten (6, 14, 22)** | Kohle- und Gaskraftwerke, Holzheizwerke, Kohleminen, Krankenhäuser, Kühlhäuser, Fuhrparks, Pumpspeicher | etwa 4: Eine Stelle, die Tag und Nacht besetzt ist, braucht drei Schichten plus Ruhetage |
+| **Immer geöffnet, 3 Schichten (6, 14, 22)** | Kohle- und Gaskraftwerke, Holzheizwerke, Kohleminen, Krankenhäuser, Kühlhäuser, Fuhrparks, Pumpspeicher, Entsalzungsanlagen | etwa 4: Eine Stelle, die Tag und Nacht besetzt ist, braucht drei Schichten plus Ruhetage |
 | **Geöffnet 8–17, Montag bis Freitag** | Sägewerke, Steinbrüche, Zementwerke, Lager | 1 |
-| **Geöffnet 8–17, jeden Tag** | Bauernhöfe, Fischkutter, Gewächshäuser, Parks, Bauhöfe, die Dienste der Wohnviertel | etwa 1,4, für die freien Tage |
+| **Geöffnet 8–17, jeden Tag** | Bauernhöfe, Fischkutter, Gewächshäuser, Parks, Bauhöfe, Entsorgungshöfe, die Dienste der Wohnviertel | etwa 1,4, für die freien Tage |
 
 - Ein Kohlekraftwerk mit allen Stellen besetzt beschäftigt etwa **17 Menschen**: Plane deine Wohnviertel danach.
 - **Außerhalb der Arbeitszeit ist ein Gebäude geschlossen**: Es produziert nichts und verbraucht weder Strom noch
@@ -288,11 +297,12 @@ knapp wird.
 ### Zufriedenheit, Gesundheit und Steuern
 
 - **Zufriedenheit** (der Smiley in der Leiste oben): bewegt sich langsam auf einen Wert zu, der die Summe einiger
-  Faktoren ist, nämlich Stromausfälle der letzten 24 Stunden, Nahrung, Hunger, kalte Häuser, Arbeitslosigkeit, Verschmutzung,
-  Gesundheit, Parks, Steuern und Haushaltskasse. Fährst du mit der Maus über die Zahl, siehst du, wohin sie sich bewegt und wie stark
+  Faktoren ist, nämlich Stromausfälle der letzten 24 Stunden, Nahrung, Hunger, kalte Häuser, Wassermangel, Abfall auf
+  den Straßen, Deponien in der Nähe, Arbeitslosigkeit, Verschmutzung, Gesundheit, Parks, Steuern und Haushaltskasse. Fährst du mit der Maus über die Zahl, siehst du, wohin sie sich bewegt und wie stark
   jeder Faktor wiegt, zum Beispiel „Stromausfälle −5,0“ oder „Parks +3,0“. Unter 60 wächst die Stadt nicht, und unter
   35 beginnen die Leute wegzuziehen.
-- **Gesundheit** (das Herz): sinkt mit Verschmutzung, Hunger und kalten Häusern. **Kranke bleiben zu Hause**, also gibt es weniger
+- **Gesundheit** (das Herz): sinkt mit Verschmutzung, Hunger, kalten Häusern, Wassermangel und Abfall auf den
+  Straßen. **Kranke bleiben zu Hause**, also gibt es weniger
   Arbeitskräfte, und eine ungesunde Stadt ist auch eine weniger zufriedene.
 - **Krankenhaus** (Ebene): behandelt bis zu 250 Einwohner, braucht Personal und verbraucht Strom. Bei einem
   Stromausfall kann es niemanden behandeln. Ein Muss, wenn du auf Kohle setzt.
@@ -308,8 +318,8 @@ knapp wird.
 - Das Personal sammelt **Erfahrung**: Wer an derselben Stelle bleibt, erzeugt bis zu **15 %** mehr, verdient aber
   auch mehr. Wechselt das Personal, sinkt die Erfahrung: Es lohnt sich, die Arbeitskräfte zu halten. Das Fenster Feld
   zeigt Erfahrung und Löhne jedes Gebäudes.
-- Die Haushalte zahlen der Stadt **Einkommensteuer**, die **Stromrechnung** der Wohnviertel, **Nahrung** und
-  **Miete**. Wer keine Arbeit hat, bekommt **Arbeitslosengeld**. Die Haushalte haben auch sonstige Einkünfte, etwa
+- Die Haushalte zahlen der Stadt **Einkommensteuer**, die **Stromrechnung** der Wohnviertel, die Rechnungen für
+  **Heizung** und **Wasser**, die **Müllgebühr**, **Nahrung** und **Miete**. Wer keine Arbeit hat, bekommt **Arbeitslosengeld**. Die Haushalte haben auch sonstige Einkünfte, etwa
   Renten und Arbeit außerhalb der Stadt.
 - Fenster **Haushalte** (Taste **H** oder der Knopf oben): Einnahmen und Ausgaben der Haushalte in den letzten 24
   Stunden, was jedem Einwohner pro Tag übrig bleibt, und der Durchschnittslohn. Hier stellst du den **Energietarif**
@@ -338,7 +348,7 @@ knapp wird.
   Geld da ist: Gas kostet 1,20 pro Einheit, Kraftstoff 6, mit einem Markt in der Stadt weniger. Das Fenster Markt zeigt
   die heutigen Preise.
 - **Gaskrise**: Einmal pro Winter, zwischen Mitte November und Ende Januar (nie in den ersten zwei Monaten eines
-  Spiels), kostet Gas zwei oder drei Wochen lang das **2,5-Fache** und Kraftstoff das 1,5-Fache. Die Warnung
+  Spiels), kostet Gas zwei oder drei Wochen lang das **2,7-Fache** und Kraftstoff das 1,5-Fache. Die Warnung
   „Spannungen beim Gas“ kommt drei Tage vorher. Während der Krise zahlen die Haushalte die Hälfte der höheren
   Heizkosten und die Stadt die andere Hälfte, und Strom zu kaufen ist oft billiger, als das Gaskraftwerk laufen zu
   lassen.
@@ -347,6 +357,68 @@ knapp wird.
   Verkauf am Limit), fährt es herunter und verbrennt weniger Kohle, kommt aber für die Abendspitze nicht schnell wieder
   hoch. Das Fenster Feld zeigt, ob es hoch- oder herunterfährt.
 
+### Wasser
+
+- **Wer Wasser braucht**: die **Häuser**, also die Wohnviertel und das Rathaus, jede Stunde, morgens und abends mehr
+  und bei Hitze über 18 °C mehr. Industrie und Dienste brauchen keins.
+- **Die Reichweite**: Ein Haus bekommt Wasser nur, wenn es in der **Reichweite** einer Quelle liegt, einem Quadrat um
+  die Quelle: 3 Felder in jede Richtung auf Stufe I (ein Quadrat von 7×7). Rohre werden nicht verlegt: Die Reichweite
+  ist das Netz. Ein Haus außerhalb jeder Reichweite bleibt ohne Wasser, auch wenn die Stadt genug davon hat.
+- Das **Rathaus** hat schon einen **Brunnen** (1,6 Wasser pro Stunde) und einen **Speicher** für 8. Seine Reichweite
+  wächst mit der Rathausstufe: 3, 4, 5 und 6 Felder. Das reicht für die ersten Häuser.
+- Die Quellen (Registerkarte **Versorgung** der Liste):
+
+| Gebäude | Wasser | Wo | Ab | Kosten |
+|---|---|---|---|---|
+| **Brunnen** | 3 pro Stunde, im Sommer etwas weniger | Ebene, Hügel | Dorf | 350 und 5 Zement, 8 Stunden |
+| **Wasserturm** | fasst bis zu 60, Reichweite 4 Felder | Ebene, Hügel | Kleinstadt | 500 und 20 Zement, 12 Stunden |
+| **Seepumpe** | 8 pro Stunde, mit wenig Strom | neben einem See | Kleinstadt | 900 und 15 Zement, 16 Stunden |
+| **Entsalzungsanlage** | 6 pro Stunde in jeder Jahreszeit, viel Strom, 1 Arbeitsstelle | Küste | Stadt | 2.200, 40 Zement und 5 Kupfer, 40 Stunden |
+
+- Der **Wasserturm** gibt sein Wasser an die Häuser in bis zu 4 Feldern Entfernung. Gefüllt wird er von den Pumpen, in
+  deren Reichweite er steht, nie von einem anderen Turm: Am Rand der Reichweite eines Brunnens bringt er das Wasser
+  einen Schritt weiter. Das Fenster Feld zeigt, wie viele Pumpen ihn füllen.
+- **Ausbauen** (Symbol im Fenster Feld von Brunnen, Seepumpen und Entsalzungsanlagen): Stufe **II** (ab Kleinstadt)
+  bringt die Reichweite auf 5 Felder und das Wasser auf das Anderthalbfache, Stufe **III** (ab Stadt) auf 7 Felder und
+  das Doppelte. Es kostet 40 % oder 80 % des Baupreises, dazu Zement und Kupfer; die Quelle läuft dabei weiter.
+  Wassertürme lassen sich nicht ausbauen.
+- Die **Pumpen verbrauchen Strom**: eine Entsalzungsanlage viel, eine Seepumpe wenig. Bei einem Stromausfall liefern sie
+  weniger Wasser.
+- **Betriebsart der Pumpen** (Fenster **Wasser und Abfall**, Taste **U**):
+  - **„Pumpen: folgen dem Verbrauch“** (zu Beginn): Die Pumpen liefern das Wasser, wenn es gebraucht wird, auch um 19
+    Uhr in der Abendspitze;
+  - **„Pumpen: mit überschüssigem Strom“**: Die Türme geben das Wasser zuerst ab und halten ein Viertel als Reserve,
+    und die Pumpen füllen sie mit dem Strom, der übrig ist, nach den Batterien und bevor er verkauft wird. Am Abend
+    belasten die Pumpen das Netz weniger. Dafür braucht es mindestens einen Wasserturm.
+- **Wassermangel**: Fehlendes Wasser kostet bis zu **15 Punkte Zufriedenheit** („Wassermangel“ im Tooltip) und
+  verschlechtert die **Gesundheit**. Wohnviertel, die weniger als die Hälfte des nötigen Wassers bekommen, zeigen einen
+  durchgestrichenen Tropfen.
+- Die Haushalte zahlen der Stadt eine **Wasserrechnung** für das Wasser, das sie bekommen, mit dem Tarif aus dem
+  Fenster Haushalte.
+
+### Abfall
+
+- Die Stadt erzeugt jede Stunde **Abfall**: je mehr Einwohner, desto mehr Abfall.
+- Abgeholt wird er von den **Trupps des Rathauses**, von 8 bis 17 Uhr, und von den **Entsorgungshöfen** (ab Dorf, 500
+  und 20 Holz): 3 Tonnen pro Stunde, 4 Arbeitsstellen, jeden Tag von 8 bis 17 Uhr geöffnet. Nachts sammelt sich der
+  Abfall an: Das ist normal.
+- Der abgeholte Abfall kommt auf die **Deponien** (ab Dorf, kosten 400, fassen 5.000 Tonnen), in der Reihenfolge, in
+  der du sie gebaut hast. Sind alle voll, wird er über die Bundesstraße **aus der Stadt** gebracht, für **3 pro Tonne**;
+  ist die Bundesstraße abgeschnitten oder das Geld aufgebraucht, bleibt er auf den Straßen.
+- Eine Deponie:
+  - **stinkt**: Wohnviertel in bis zu 2 Feldern Entfernung verlieren etwas Zufriedenheit („Deponie in der Nähe“);
+  - verschmutzt das **Grundwasser**: Ein Brunnen in bis zu 2 Feldern Entfernung, auch von einer leeren Deponie, steht
+    still („verschmutztes Grundwasser“). Seepumpen, Entsalzungsanlagen und der Brunnen des Rathauses sind nicht
+    betroffen;
+  - verschmutzt ein wenig die **Luft**, umso mehr, je voller sie ist;
+  - **lässt sich nicht abreißen**, solange Abfall darin liegt.
+- **Abfall auf den Straßen**: Liegt mehr als ein Tag Abfall auf den Straßen, verliert die Stadt bis zu **10 Punkte
+  Zufriedenheit** und etwas Gesundheit.
+- Die Haushalte zahlen eine **Müllgebühr**, fest pro Einwohner.
+- Das Fenster **Wasser und Abfall** (Taste **U** oder der Knopf mit dem Wasserhahn oben) zeigt Wasserbedarf und
+  geliefertes Wasser, Speicher und Pumpen, Häuser außerhalb der Reichweite sowie erzeugten, abgeholten, auf den
+  Straßen liegenden, deponierten und aus der Stadt gebrachten Abfall.
+
 ### Baustoffe und Industrie
 
 Die meisten Gebäude kosten außer Geld auch **Baustoffe**: **Holz** und **Zement**. Die Liste links zeigt sie
@@ -354,8 +426,9 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 
 - **Sägewerk** (nur im **Wald**, den dunkelgrünen Feldern): 7,5 Holz pro Stunde.
 - **Steinbruch** (Hügel): 7,5 Stein pro Stunde.
-- **Zementwerk** (Ebene): macht aus 7,5 Stein pro Stunde 7,5 Zement und verbraucht viel Strom. Ohne Stein steht es
-  still und verbraucht dann auch keinen Strom.
+- **Zementwerk** (Ebene): macht aus 7,5 Stein pro Stunde 7,5 Zement, verbraucht viel Strom und **verschmutzt die
+  Luft** im Verhältnis zu dem, was es produziert: bei voller Leistung so viel wie ein Viertel eines Kohlekraftwerks.
+  Ohne Stein steht es still und verbraucht dann weder Strom, noch verschmutzt es die Luft.
 - Die Industrie arbeitet **von 8 bis 17 Uhr, Montag bis Freitag** (siehe
   [Arbeitszeiten und Schichten](#arbeitszeiten-und-schichten)).
 - Die Industrie braucht **Personal** und **Strom**. Die Arbeitskräfte gehen nach Energie, Nahrung und
@@ -387,7 +460,8 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
   Sind die Straßen voll, kommen alle langsamer voran: Wer zu spät kommt, leistet weniger, und die Verspätungen des
   Vortags kosten **Zufriedenheit** („Pendlerverkehr“ im Zufriedenheits-Hinweis).
 - **Alleen** tragen viel Verkehr, sind aber **laut**: Sie nehmen den Wohnvierteln daneben ein wenig Zufriedenheit.
-- **Verkehrskarte** (Taste **G**): färbt die Straßen nach ihrer Auslastung.
+- **Verkehrsansicht** (Taste **G** oder über den Knopf **Ansichten**): färbt die Straßen nach ihrer Auslastung.
+  Siehe [Kartenansichten](#kartenansichten).
 - Fenster **Verkehr** (Taste **J** oder der Lkw-Knopf oben): Personen und Waren unterwegs, durchschnittliche
   Fahrzeit, eingesetzte Lkw, die **am stärksten belasteten Straßen** (ein Klick zeigt sie im Fenster Feld) und die
   letzten 24 Stunden.
@@ -455,7 +529,8 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 
 - Die **Glocke** oben zählt die neuen Ereignisse; sie wird rot, wenn eines ernst ist.
 - Das Fenster **Ereignisse** (Taste **E** oder die Glocke) zeigt oben die **aktuellen Probleme**: Schulden, Gebäude
-  ohne Netz, ohne Personal oder ohne Straße, volle Höfe, Minen, die zur Neige gehen, importierte Nahrung. Darunter
+  ohne Netz, ohne Personal oder ohne Straße, volle Höfe, Minen, die zur Neige gehen, importierte Nahrung, Häuser ohne
+  Wasser oder außer Reichweite, Brunnen mit verschmutztem Grundwasser, volle Deponien, Abfall auf den Straßen. Darunter
   steht der **Verlauf** des Geschehens, mit Filtern nach Art.
 - Ein Klick auf eine Zeile zentriert die Karte auf die Stelle und öffnet das Fenster Feld.
 
@@ -469,20 +544,56 @@ unter dem Preis mit kleinen Symbolen; fährst du mit der Maus über den Knopf, l
 - Die Registerkarte **Ziele** des Diagramms zeigt Einwohner und Verschmutzung seit Spielbeginn, die Ziellinie und
   die Prognose gestrichelt.
 
+### Kartenansichten
+
+- Der Knopf **Ansichten** oben links auf der Karte (Taste **I**) färbt die Karte nach einem Thema: **Verkehr**,
+  **Stromnetz**, **Wasser** oder **Abfall und Deponien**. Der Rest der Karte wird abgedunkelt, und unten links erklärt
+  eine **Legende** die Farben und sagt, was unter der Maus liegt. **Esc** schaltet die Ansicht aus.
+  - **Verkehr**: die Straßen nach ihrer Auslastung.
+  - **Stromnetz**: verbundene und nicht verbundene Gebäude, Leitungen nach Stufe.
+  - **Wasser**: die Reichweite der Quellen, versorgte, teilweise versorgte, Häuser ohne Wasser oder außer Reichweite;
+    bei eingeschalteter Ansicht tragen ausgebaute Quellen das Schild II oder III.
+  - **Abfall und Deponien**: wie voll die Deponien sind, der Bereich von Gestank und Grundwasser, stillstehende
+    Brunnen.
+- **Beim Platzieren öffnet sich die passende Ansicht von selbst**: Straßen für den Verkehr, Leitungen und Umspannwerke
+  für das Stromnetz, Wasserquellen und Wohnviertel für das Wasser, Deponien und Entsorgungshöfe für den Abfall. Danach
+  kommt die vorherige zurück. In den Einstellungen lässt sich das ausschalten („Automatische Ansichten beim
+  Platzieren“).
+- Wählst du eine Wasserquelle, folgt das Quadrat ihrer Reichweite der Maus, und die Legende sagt, wie viele Häuser
+  hineinfallen würden und wie viele heute ohne Wasser sind.
+- Die Farben sind auch für Menschen lesbar, die Rot und Grün nicht unterscheiden.
+
+### Arbeitsprioritäten
+
+- Fenster **Arbeit** (Taste **P** oder der Knopf mit dem Schutzhelm oben): die sechs Arbeitskategorien (**Energie und
+  Transport**, **Nahrung**, **Krankenhäuser, Wärme, Wasser**, **Industrie und Müll**, **Bergwerke**, **Wohnviertel und
+  Parks**) mit den besetzten Stellen jeder Kategorie. Die Arbeitskräfte gehen zuerst zu den oberen Kategorien:
+  Reichen sie nicht, bleiben die letzten ohne Personal.
+- Mit den **Pfeilen** schiebst du eine Kategorie nach oben oder unten; **Zurücksetzen** stellt die Reihenfolge vom
+  Anfang wieder her.
+- Im Fenster Feld eines Gebäudes, das ohne Personal stillsteht, gibt es zwei Knöpfe:
+  - **Stilllegen**: Das Gebäude nimmt keine Arbeitskräfte und produziert nichts, die Wartung kostet aber weiter. Zum
+    Beispiel das Zementwerk im Winter stilllegen, um dem Krankenhaus Personal zu geben. **Fortsetzen** lässt es wieder
+    laufen;
+  - **Hohe Priorität**: Es bekommt Arbeitskräfte, und Lieferungen ins Silo, vor den anderen seiner Kategorie.
+- Auf der Karte tragen stillgelegte Gebäude ein graues Abzeichen mit dem Pausezeichen, Gebäude mit hoher Priorität ein
+  grünes mit zwei Pfeilen.
+
 ### Diagramme
 
-Das Fenster unten hat sechs Registerkarten. Die ersten fünf zeigen die **letzten 24 Stunden**, eine Spalte pro
-Stunde; die sechste, **Ziele**, das ganze Spiel mit der Prognose. Ein Klick auf eine Registerkarte wechselt dorthin
+Das Fenster unten hat sieben Registerkarten. Die ersten sechs zeigen die **letzten 24 Stunden**, eine Spalte pro
+Stunde; die siebte, **Ziele**, das ganze Spiel mit der Prognose. Ein Klick auf eine Registerkarte wechselt dorthin
 (das Spiel merkt sich deine Wahl); fährst du mit der Maus über eine Spalte, liest du die genauen Werte dieser Stunde.
 
 - **Energie**: Erzeugung, Nachfrage, Batterien, Leitungsverluste, gekaufter Strom und Strom aus Gas.
-- **Geld**: Einnahmen über der Null, Ausgaben darunter, und der Kontostand, mit Verkäufen und Käufen am Markt und dem
-  gekauften Gas.
+- **Geld**: Einnahmen über der Null, Ausgaben darunter, und der Kontostand, mit Verkäufen und Käufen am Markt, dem
+  gekauften Gas, den Wasserrechnungen und der Müllgebühr.
 - **Materialien**: wie viel von jedem Material erzeugt und verbraucht wird, und der Vorrat; das Material wählst du
   mit den Knöpfen neben dem Diagramm.
 - **Stadt**: erzeugte und verzehrte Nahrung, der Nahrungsvorrat, Zufriedenheit und Gesundheit, Wärmebedarf und
   gelieferte Wärme.
 - **Verkehr**: Menschen auf dem Weg zur Arbeit und nach Hause, Lkw unterwegs und die Straßenauslastung.
+- **Versorgung**: Wasserbedarf und geliefertes Wasser, Strom der Pumpen, Abfall auf den Straßen.
 - **Ziele**: Einwohner und Verschmutzung seit Spielbeginn, die Ziellinie und die Prognose gestrichelt (siehe
   [Zielprognose](#zielprognose)).
 
@@ -496,10 +607,10 @@ auf der Karte stehen, siehst du seinen Zustand und wie viel Strom es erzeugt ode
 
 | Steuerung | Was sie tut |
 |---|---|
-| Tasten **1–9** und **0** | Wählen, was gebaut wird: Stromleitung, Kohlemine, Kohlekraftwerk, Solarpark, Windpark, Batterie, Wohnviertel, Bauernhof, Fischkutter, Gewächshaus. Die übrigen Gebäude (Kühlhaus, Park, Krankenhaus, Industrie, Lager, Fuhrpark, Umspannwerk, Pumpspeicher, Markt, Bauhof) stehen in der Liste links, auf sechs Reitern: Energie, Netz, Verkehr, Stadt, Nahrung, Industrie |
+| Tasten **1–9** und **0** | Wählen, was gebaut wird: Stromleitung, Kohlemine, Kohlekraftwerk, Solarpark, Windpark, Batterie, Wohnviertel, Bauernhof, Fischkutter, Gewächshaus. Die übrigen Gebäude (Kühlhaus, Park, Krankenhaus, Industrie, Lager, Fuhrpark, Umspannwerk, Pumpspeicher, Markt, Bauhof, Wasser und Abfall) stehen in der Liste links, auf sieben Reitern: Energie, Netz, Verkehr, Stadt, Versorgung, Nahrung, Industrie |
 | **Linksklick** | Setzt das gewählte Gebäude. Ohne Auswahl wählt er ein Feld und zeigt dessen Details |
 | **Rechtsklick** (auf dem Tablet: langes Drücken) | Mit gewähltem Gebäude: hebt die Auswahl auf. Ohne Auswahl: fragt nach, ob abgerissen werden soll (die Hälfte der Kosten wird erstattet) |
-| **Esc** | Hebt die Auswahl auf; gibt es nichts aufzuheben, öffnet es das **Pausenmenü** (Weiter, Speichern unter…, Schnellspeichern, Spiel laden, Speichern und zum Menü, Neues Spiel, Einstellungen) |
+| **Esc** | Hebt die Auswahl auf oder schaltet die Kartenansicht aus; gibt es nichts aufzuheben, öffnet es das **Pausenmenü** (Weiter, Speichern unter…, Schnellspeichern, Spiel laden, Speichern und zum Menü, Neues Spiel, Einstellungen) |
 | Knopf **⚙** (oben) | Öffnet das Pausenmenü, wie Esc: Spielstände, Einstellungen, Beenden |
 | **F11** | Vollbild / Fenster |
 | **Leertaste** oder der Knopf ▶/❚❚ | Pause / weiter |
@@ -513,17 +624,23 @@ auf der Karte stehen, siehst du seinen Zustand und wie viel Strom es erzeugt ode
 | **R** | Werkzeug **Straße**: klicken oder ziehen, um Feldwege zu legen |
 | **M** | Werkzeug **Straße ausbauen**: Feldweg → asphaltierte Straße → Allee |
 | **L** | Werkzeug **Leitung ausbauen**: Leitungen von Stufe I → II → III |
-| **G** | Verkehrskarte |
+| **G** | Verkehrsansicht |
+| **I** oder der Knopf **Ansichten** (auf der Karte, oben links) | Kartenansichten: Verkehr, Stromnetz, Wasser, Abfall |
 | **J** oder der Knopf **Verkehr** (oben) | Fenster Verkehr: Personen, Waren, am stärksten belastete Straßen |
 | **E** oder die Glocke (oben) | Ereignisprotokoll: aktuelle Probleme und Verlauf |
 | **H** oder der Knopf **Haushalte** (oben) | Fenster Haushalte: Löhne, Ausgaben, Energietarif |
 | **K** oder der Knopf mit der Waage (oben) | Fenster Markt: Baustoffe und Nahrung kaufen und verkaufen |
+| **U** oder der Knopf mit dem Wasserhahn (oben) | Fenster Wasser und Abfall: Wasser, Pumpen, Abholung und Deponien |
+| **P** oder der Knopf mit dem Schutzhelm (oben) | Fenster Arbeit: in welcher Reihenfolge die Arbeitskräfte zu den Gebäuden gehen |
 | Knopf **Umbenennen** (im Fenster Feld) | Benennt eine Straße, ein Wohnviertel, ein Krankenhaus oder einen Park um |
 | Knopf **Abreißen** (Symbol im Fenster Feld) | Reißt das gewählte Gebäude oder die gewählte Baustelle ab (die Hälfte der Kosten wird erstattet) |
 | Knopf **Ausbauen** (Symbol im Fenster Feld des Rathauses) | Hebt das Rathaus auf die nächste Stufe, wenn die Ziele der Stufe erfüllt sind |
+| Knopf **Ausbauen** (Symbol im Fenster Feld einer Wasserquelle) | Hebt Brunnen, Seepumpen und Entsalzungsanlagen auf Stufe II oder III: größere Reichweite und mehr Wasser |
+| Knöpfe **Stilllegen** und **Hohe Priorität** (im Fenster Feld) | Halten ein Gebäude an oder geben ihm die Arbeitskräfte vor den anderen seiner Kategorie |
+| Knopf der **Pumpen** (im Fenster Wasser und Abfall) | Pumpen, die dem Verbrauch folgen oder mit überschüssigem Strom arbeiten |
 | Knöpfe **Verkauf** und **Kauf** (im Fenster Feld der Grenzleitung) | Schalten den automatischen Verkauf und Kauf von Strom ein und aus |
 | Knopf **Gasheizung** (im Fenster Haushalte) | Schaltet die Gaskessel der Wohnviertel ein und aus |
-| Registerkarten des Diagramms (unten) | Energie, Geld, Materialien, Stadt, Verkehr, Ziele |
+| Registerkarten des Diagramms (unten) | Energie, Geld, Materialien, Stadt, Verkehr, Versorgung, Ziele |
 
 ### Sprachen
 
@@ -542,6 +659,7 @@ wechselt zum nächsten Wert, und deine Wahl wird gespeichert.
 - **Automatisch speichern**: jeden Tag, alle 3 Tage, alle 7 Tage oder aus.
 - **Größe der Oberfläche**: 90, 100 oder 110 %.
 - **Anordnung**: automatisch, Computer oder Telefon.
+- **Automatische Ansichten beim Platzieren**: an oder aus (siehe [Kartenansichten](#kartenansichten)).
 - **Animationen**: an oder aus. Aus hält den bewegten Verkehr, die Wolken, den Rauch und die anderen Effekte an:
   praktisch auf langsamen Computern.
 - **Musik** und **Soundeffekte**: 100, 75, 50 oder 25 % oder aus.
@@ -555,7 +673,9 @@ Auf einem Smartphone im **Querformat** verwendet das Spiel eine Anordnung für k
 - die **Kategorien** der Gebäude stehen unten: Ein Tippen öffnet ihr Raster, ein Tippen auf ein Gebäude zeigt seine
   Karte mit der Beschreibung und dem Knopf **Bauen**;
 - die Fenster (Feld, Wetter, Ziele, Diagramme und die anderen) gleiten von unten herein; die Werte des Diagramms
-  liest du, indem du auf eine Spalte tippst.
+  liest du, indem du auf eine Spalte tippst;
+- **Wasser & Müll** und **Arbeit** öffnest du über das Blatt **Mehr**; der Knopf der Ansichten liegt auf der Karte, oben
+  links.
 
 Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen Telefon und Computer wechseln.
 
@@ -588,6 +708,12 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
   oder kein Geld mehr).
 - **Schneeflocke**: **kalte Häuser**, das Wohnviertel bekommt nicht die ganze Wärme, die es braucht.
 - **Durchgestrichener Kanister**: **kein Kraftstoff**, die Lkw dieses Fuhrparks stehen still.
+- **Durchgestrichener Tropfen**: **Wassermangel**, das Wohnviertel bekommt weniger als die Hälfte des Wassers, das es
+  braucht.
+- **Trüber Tropfen**: Der Brunnen steht still, **Grundwasser verschmutzt** durch eine Deponie in der Nähe.
+- **Haufen mit Pfeil**: **Deponie voll**, der Abfall wird gegen Bezahlung aus der Stadt gebracht.
+- **Graues Abzeichen mit Pausezeichen**: von dir **stillgelegtes** Gebäude.
+- **Grünes Abzeichen mit zwei Pfeilen**: Gebäude mit **hoher Priorität**.
 - **Licht in der Nacht**: Bei Dunkelheit machen Wohnviertel und Rathaus Licht. Ein Gebäude ohne Strom bleibt
   dunkel: Ein dunkles Wohnviertel in der Nacht ist ein Warnzeichen.
 
@@ -615,7 +741,7 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
 10. Behalte das Diagramm **Energie** unten im Auge: Steigt die rote Linie (Nachfrage) über die grüne (Erzeugung),
     kaufst du Strom oder es kommt gleich ein Stromausfall.
 11. Warten Baustellen lange in der Schlange, baue einen **Bauhof**.
-12. Erscheint „Zu wenige Lkw“, baue einen **Fuhrpark**. Wenn die Stadt wächst, sieh auf die **Verkehrskarte** (G)
+12. Erscheint „Zu wenige Lkw“, baue einen **Fuhrpark**. Wenn die Stadt wächst, sieh auf die **Verkehrsansicht** (G)
     und baue die am stärksten belasteten Straßen aus (M); setze Alleen nicht direkt neben Wohnviertel.
 13. Halte Kraftwerke nahe am Rathaus oder an einem **Umspannwerk**: Weit weg verlieren sie Strom.
 14. Wird die **Glocke** rot, öffne das **Ereignisprotokoll** (E): Oben stehen die Probleme, die du lösen musst, und
@@ -630,6 +756,13 @@ Die Anordnung wird automatisch gewählt; in den Einstellungen kannst du zwischen
     allein nicht folgen. Ab Stufe II deckt ein **Gaskraftwerk** die Spitzen, aber jede Stunde Gas kostet.
 19. Denk vor dem Winter an die **Heizung**: Ein **Holzheizwerk** neben einem Sägewerk spart viel Gas. Kommt die
     Warnung „Spannungen beim Gas“, hast du drei Tage, um dich auf die Krise vorzubereiten.
+20. Der Brunnen des Rathauses reicht für die ersten Häuser. Baust du Wohnviertel weiter weg, schalte die Ansicht
+    **Wasser** ein (I) und setze einen **Brunnen** in ihre Nähe; ein **Wasserturm** mit Pumpen „mit überschüssigem
+    Strom“ nimmt die Pumpen aus der Abendspitze.
+21. Setze die **Deponie** weit weg von Wohnvierteln und Brunnen (mindestens 3 Felder), und einen **Entsorgungshof**,
+    wenn der Abfall auf den Straßen wächst.
+22. Fehlen Arbeitskräfte, öffne das Fenster **Arbeit** (P): Schieb nach oben, was am meisten zählt, oder **lege** ein
+    Industriegebäude für ein paar Tage **still**.
 
 ## Spielstände
 
@@ -695,6 +828,12 @@ der 0.11.0 öffnet sich nicht in früheren Versionen.
 laden: Die Gasheizung ist eingeschaltet, und die Kohlekraftwerke machen mit der Leistung weiter, die sie hatten. Ein
 Spielstand der 0.12.0 öffnet sich nicht in früheren Versionen.
 
+**Ab 0.13.0** ändert sich das Format erneut: Wasser, Abfall und Arbeitsprioritäten. Spielstände früherer Versionen
+lassen sich laden: Der Speicher des Rathauses ist voll, die Pumpen „folgen dem Verbrauch“, die Straßen sind sauber,
+und die Arbeitskräfte folgen der Reihenfolge vom Anfang. Spiele, die vor dem Wasser gespeichert wurden, bekommen
+**7 Tage Tankwagen**, kostenlos, die den Häusern das ganze nötige Wasser bringen: Zeit genug, um Brunnen zu setzen.
+Ein Spielstand der 0.13.0 öffnet sich nicht in früheren Versionen.
+
 Spielstände einer Alpha-Version funktionieren in der nächsten vielleicht nicht: Das [Changelog](CHANGELOG.md) sagt
 es, wenn das passiert.
 
@@ -702,14 +841,16 @@ es, wenn das passiert.
 
 Was schon geplant ist, ungefähr in dieser Reihenfolge. Pläne können sich ändern.
 
-- **Wasser und Abfall**: Wasserwerke, Kläranlagen und Deponien für eine größere Stadt.
-- **Bildung**: Schulen und besser ausgebildete Arbeitskräfte.
+- **Bildung**: Schulen und qualifizierte Arbeitskräfte für die schwierigeren Gebäude.
 - **Forschung**: Technologien zum Entdecken, die neue Gebäude freischalten, etwa die Förderung von Öl und Gas.
 - **Verschleiß und Reparaturen**: Gebäude nutzen sich ab, und die Trupps reparieren sie mit deinen Baustoffen; danach
   Streiks und Notfälle, für alle, die sie wählen.
 - **Neue Karten**: Karten in verschiedenen Größen, in jedem Spiel eine andere Karte, Flüsse und Brücken und eine
   Minikarte.
-- **Später**: mehrere miteinander verbundene Städte und eine isometrische Ansicht.
+- **Tutorial in Stufen**: eine Anleitung zu Beginn, dann Level mit wenigen Gebäuden auf einmal, mit Beispielen
+  erklärt.
+- **Beta**: Nach dem Tutorial geht das Spiel in die Beta-Phase, mit allen Hauptteilen.
+- **Nach der 1.0**: mehrere miteinander verbundene Städte und eine isometrische Ansicht.
 
 ## Bekannte Probleme
 

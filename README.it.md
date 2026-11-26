@@ -20,8 +20,8 @@
 
 **Sei il gestore elettrico di una cittadina che cresce.** Ogni ora la città chiede energia: poca di notte, tanta
 la sera. Costruisci centrali, impianti solari, parchi eolici e batterie, collega tutto con le linee elettriche e
-le strade, trova chi ci lavori, un turno dopo l'altro, dai da mangiare a tutti, scalda le case d'inverno, porta merci e materiali coi camion senza intasare il
-traffico, e fai crescere il villaggio fino a **400 abitanti in due anni di gioco**, senza blackout continui, senza
+le strade, trova chi ci lavori, un turno dopo l'altro, dai da mangiare a tutti, scalda le case d'inverno, porta
+l'acqua nelle case e togli i rifiuti dalle strade, porta merci e materiali coi camion senza intasare il traffico, e fai crescere il villaggio fino a **400 abitanti in due anni di gioco**, senza blackout continui, senza
 debiti e senza soffocarlo di inquinamento.
 
 Un gioco originale di **Marco Scarlino**. Gratuito. Sito ufficiale: **[voltvale.it](https://voltvale.it/it/)**.
@@ -103,8 +103,8 @@ mostra il giorno della partita, il giorno della settimana, la data e l'ora, per 
 
 - **Obiettivo**: arrivare a **400 abitanti** con l'inquinamento **sotto la soglia** entro **2 anni**. Dopo la
   vittoria puoi **continuare a giocare**, senza più limite di tempo.
-- **Sconfitta**: se resti in rosso con i soldi per **30 giorni di fila**, oppure se finiscono i 2 anni prima della
-  vittoria.
+- **Sconfitta**: se resti in rosso con i soldi per **30 giorni di fila**, se la città resta sotto i **5 abitanti per
+  14 giorni di fila**, oppure se finiscono i 2 anni prima della vittoria.
 - **Il municipio cresce**: da **villaggio** a **paese**, **cittadina** e **città**, compiendo piccoli obiettivi. A ogni
   livello si sbloccano costruzioni nuove: vedi [Livelli del municipio e obiettivi](#livelli-del-municipio-e-obiettivi).
 - **Si costruisce con le squadre**: un edificio nuovo è prima un **cantiere**, e funziona quando una squadra ha finito
@@ -130,12 +130,17 @@ mostra il giorno della partita, il giorno della settimana, la data e l'ora, per 
   **linea di confine** accanto al ponte; più ne vendi in un'ora, meno vale. Vedi
   [Collegamenti con la terraferma](#collegamenti-con-la-terraferma).
 - **Inquinamento**: le centrali a carbone inquinano e l'aria si pulisce piano. Una centrale si regge, troppe no.
-  Fa ammalare gli abitanti, e sopra la soglia non si vince.
+  Inquinano anche, meno, le centrali a gas e termiche, il cementificio quando lavora e le discariche. Fa ammalare gli
+  abitanti, e sopra la soglia non si vince.
 - **Crescita**: la città cresce se gli abitanti sono abbastanza **felici**, c'è posto nei **quartieri** e c'è abbastanza
   **cibo** in magazzino.
 - **Riscaldamento**: sotto i 15 °C le case chiedono **calore**, dalle centrali termiche a legna o dalle caldaie a gas
   dei quartieri. Le case al freddo rendono gli abitanti infelici e malati. Vedi
   [Calore, gas e carburante](#calore-gas-e-carburante).
+- **Acqua**: le case ricevono l'acqua solo dalle fonti che le hanno nel loro **raggio**; senz'acqua gli abitanti sono
+  infelici e si ammalano. Vedi [Acqua](#acqua).
+- **Rifiuti**: vanno raccolti e portati in discarica o fuori città; i rifiuti per strada rendono la città meno felice.
+  Vedi [Rifiuti](#rifiuti).
 
 ### Nuova partita
 
@@ -164,10 +169,10 @@ Il municipio cresce con la città: **I villaggio**, **II paese**, **III cittadin
 
 | Livello | Costruzioni |
 |---|---|
-| **I villaggio** | linee, sterrate, quartieri, impianti solari, parchi eolici, centrali e miniere di carbone, batterie, fattorie, parchi |
-| **II paese** | strade asfaltate, depositi, autoparchi, segherie, cave, serre, magazzini frigoriferi, pescherecci, centrali a gas, centrali termiche a legna, Mercato, Officina |
-| **III cittadina** | viali, cementifici, trasformatori, ospedali, pompaggio |
-| **IV città** | per ora niente di nuovo: servirà alle costruzioni dei prossimi aggiornamenti |
+| **I villaggio** | linee, sterrate, quartieri, impianti solari, parchi eolici, centrali e miniere di carbone, batterie, fattorie, parchi, pozzi, centri di raccolta, discariche |
+| **II paese** | strade asfaltate, depositi, autoparchi, segherie, cave, serre, magazzini frigoriferi, pescherecci, centrali a gas, centrali termiche a legna, Mercato, Officina, torri dell'acqua, prese dal lago; fonti d'acqua di livello II |
+| **III cittadina** | viali, cementifici, trasformatori, ospedali, pompaggio, desalinizzatori; fonti d'acqua di livello III |
+| **IV città** | per ora niente di nuovo, salvo il pozzo del municipio che arriva più lontano: servirà alle costruzioni dei prossimi aggiornamenti |
 
 - Nella lista le costruzioni ancora bloccate sono spente, con il **lucchetto**; passando il mouse si legge il livello
   che serve. Il **Mercato** si costruisce una volta sola per città: dopo il primo diventa grigio.
@@ -220,7 +225,7 @@ La mappa è un'**isola**, unita alla terraferma da un **ponte a ovest**, all'alt
 - Un'**icona dello scambio** sopra la linea di confine dice quando nell'ultima ora si è comprato o venduto; il grafico
   **Energia** mostra la corrente comprata.
 - **Merci da fuori**: cibo importato, rame e scambi del Mercato passano dalla **strada statale**, e arrivano solo se è
-  collegata alle strade della città.
+  collegata alle strade della città. Dalla stessa strada escono i rifiuti portati fuori città.
 
 ### Lavoro e personale
 
@@ -229,14 +234,17 @@ Le costruzioni hanno bisogno di qualcuno che le faccia funzionare.
 - Lavora circa il **56 %** degli abitanti. La barra in alto mostra quante persone hanno un lavoro sulla forza
   lavoro disponibile.
 - **Centrali a carbone**, **miniere di carbone**, **industrie**, costruzioni del **cibo**, **ospedali**, **parchi**,
-  **magazzini frigoriferi**, **depositi**, **officine**, **pompaggio**, **centrali a gas** e **centrali termiche a legna** hanno bisogno di personale. **Impianti solari**, **parchi
-  eolici**, **batterie**, linee e trasformatori vanno da soli.
+  **magazzini frigoriferi**, **depositi**, **officine**, **pompaggio**, **centrali a gas**, **centrali termiche a legna**,
+  **desalinizzatori** e **centri di raccolta** hanno bisogno di personale. **Impianti solari**, **parchi eolici**,
+  **batterie**, linee, trasformatori, **pozzi**, **torri dell'acqua**, **prese dal lago** e **discariche** vanno da soli.
 - Il pannello **Casella** mostra quanti posti sono coperti, per esempio **Personale: 4/4**, e quante persone ci
   vogliono, turni compresi.
 - Con poco personale una costruzione produce meno; **senza nessuno si ferma** e mostra il segnale **«senza
   personale»**.
-- I lavoratori vanno **prima all'energia**, poi **al cibo**, poi **agli ospedali e alle centrali termiche**, poi **alle industrie**, poi **alle miniere**, poi **ai servizi**
-  (quartieri e parchi). I quartieri funzionano anche quando ai loro servizi manca personale.
+- All'inizio i lavoratori vanno **prima all'energia e ai trasporti**, poi **al cibo**, poi **a ospedali, calore e
+  acqua**, poi **alle industrie e ai rifiuti**, poi **alle miniere**, poi **a quartieri e parchi**. L'ordine lo cambi
+  tu nel pannello **Lavoro**: vedi [Priorità del lavoro](#priorità-del-lavoro). I quartieri funzionano anche quando
+  ai loro servizi manca personale.
 - La **disoccupazione** costa: chi non lavora non paga l'imposta sul reddito e riceve un sussidio dal comune; se è
   alta, gli abitanti sono meno felici.
 
@@ -246,9 +254,9 @@ Ogni costruzione con personale ha il suo orario, che la Casella mostra:
 
 | Orario | Costruzioni | Persone per posto |
 |---|---|---|
-| **Sempre aperta, 3 turni (6, 14, 22)** | centrali a carbone e a gas, centrali termiche a legna, miniere di carbone, ospedali, magazzini frigoriferi, autoparchi, pompaggio | circa 4: un posto coperto giorno e notte vuole tre turni più i riposi |
+| **Sempre aperta, 3 turni (6, 14, 22)** | centrali a carbone e a gas, centrali termiche a legna, miniere di carbone, ospedali, magazzini frigoriferi, autoparchi, pompaggio, desalinizzatori | circa 4: un posto coperto giorno e notte vuole tre turni più i riposi |
 | **Aperta 8–17, dal lunedì al venerdì** | segherie, cave, cementifici, depositi | 1 |
-| **Aperta 8–17, tutti i giorni** | fattorie, pescherecci, serre, parchi, officine, i servizi dei quartieri | circa 1,4, per i giorni di riposo |
+| **Aperta 8–17, tutti i giorni** | fattorie, pescherecci, serre, parchi, officine, centri di raccolta, i servizi dei quartieri | circa 1,4, per i giorni di riposo |
 
 - Una centrale a carbone con tutti i posti coperti impiega circa **17 persone**: tienine conto quando costruisci i
   quartieri.
@@ -278,10 +286,12 @@ sta per finire.
 ### Felicità, salute e tasse
 
 - **Felicità** (lo smile nella barra in alto): si muove piano verso un valore che è la somma di alcuni fattori, cioè
-  blackout delle ultime 24 ore, cibo, fame, freddo nelle case, disoccupazione, inquinamento, salute, parchi, tasse e conti di casa. Passando il
+  blackout delle ultime 24 ore, cibo, fame, freddo nelle case, acqua che manca, rifiuti per strada, discariche vicine,
+  disoccupazione, inquinamento, salute, parchi, tasse e conti di casa. Passando il
   mouse sul numero vedi verso quale valore sta andando e quanto pesa ogni fattore, per esempio «Blackout −5,0» o
   «Parchi +3,0». Sotto 60 la città non cresce, e sotto 35 la gente comincia ad andarsene.
-- **Salute** (il cuore): cala con l'inquinamento, con la fame e con il freddo nelle case. I **malati restano a casa**, quindi ci sono meno
+- **Salute** (il cuore): cala con l'inquinamento, con la fame, con il freddo nelle case, con l'acqua che manca e con i
+  rifiuti per strada. I **malati restano a casa**, quindi ci sono meno
   lavoratori, e una città poco sana è anche meno felice.
 - **Ospedale** (pianura): cura fino a 250 abitanti, ha bisogno di personale e consuma energia. Durante un
   blackout non cura. Indispensabile se punti sul carbone.
@@ -297,8 +307,8 @@ sta per finire.
 - Il personale fa **esperienza**: chi resta nello stesso lavoro rende fino al **15 %** in più, ma guadagna anche di
   più. Quando il personale cambia, l'esperienza cala: tenere stabili i lavoratori conviene. La Casella mostra
   esperienza e stipendi di ogni costruzione.
-- Le famiglie pagano al comune l'**imposta sul reddito**, la **bolletta della luce** dei quartieri, il **cibo** e
-  l'**affitto**. Chi non ha lavoro riceve un **sussidio**. Le famiglie hanno anche altri redditi, come pensioni e
+- Le famiglie pagano al comune l'**imposta sul reddito**, la **bolletta della luce** dei quartieri, quelle del
+  **riscaldamento** e dell'**acqua**, la **tassa sui rifiuti**, il **cibo** e l'**affitto**. Chi non ha lavoro riceve un **sussidio**. Le famiglie hanno anche altri redditi, come pensioni e
   lavoro fuori città.
 - Pannello **Famiglie** (tasto **H** o il pulsante in alto): entrate e spese delle famiglie nelle ultime 24 ore,
   quanto resta a ogni abitante al giorno e stipendio medio. Da qui si cambia la **tariffa dell'energia**: bassa,
@@ -327,13 +337,69 @@ sta per finire.
 - **Gas e carburante** si comprano ora per ora, solo quanto serve, dalla **strada statale**, finché c'è denaro: il gas
   costa 1,20 all'unità, il carburante 6, meno con un Mercato in città. Il pannello Mercato mostra i prezzi di oggi.
 - **Crisi del gas**: una volta per inverno, fra metà novembre e fine gennaio (mai nei primi due mesi di partita), per
-  due o tre settimane il gas costa **2,5 volte** tanto e il carburante 1,5 volte. L'avviso «Tensioni sul gas» arriva
+  due o tre settimane il gas costa **2,7 volte** tanto e il carburante 1,5 volte. L'avviso «Tensioni sul gas» arriva
   tre giorni prima. Durante la crisi metà del rincaro del riscaldamento lo pagano le famiglie e metà il comune, e
   comprare la corrente spesso costa meno che accendere la centrale a gas.
 - **Il carbone è lento**: una centrale a carbone cambia potenza al più di un quarto della sua capacità all'ora, quindi
   una nuova ci mette 4 ore ad arrivare al massimo. Quando la rete non sa dove mettere l'energia (batterie piene,
   vendita al limite) scende e brucia meno carbone, ma poi non risale in fretta per il picco della sera. La Casella dice
   se è in salita o in discesa.
+
+### Acqua
+
+- **Chi ha bisogno d'acqua**: le **case**, cioè i quartieri e il municipio, ogni ora, di più al mattino e alla sera e
+  di più col caldo, sopra i 18 °C. Industrie e servizi ne fanno a meno.
+- **Il raggio**: una casa riceve l'acqua solo se sta nel **raggio** di una fonte, un quadrato attorno alla fonte: 3
+  caselle in ogni direzione al livello I (un quadrato di 7×7). Le tubature non si posano: il raggio è la rete. Una casa fuori da
+  ogni raggio resta senz'acqua anche se la città ne ha in abbondanza.
+- Il **municipio** ha già un **pozzo** (1,6 d'acqua all'ora) e un **serbatoio** da 8. Il suo raggio cresce con il
+  livello del municipio: 3, 4, 5 e 6 caselle. Basta alle prime case.
+- Le fonti (scheda **Servizi** della lista):
+
+| Costruzione | Acqua | Dove | Da | Costo |
+|---|---|---|---|---|
+| **Pozzo** | 3 all'ora, d'estate un po' meno | pianura, collina | villaggio | 350 e 5 di cemento, 8 ore |
+| **Torre dell'acqua** | tiene fino a 60, raggio 4 caselle | pianura, collina | paese | 500 e 20 di cemento, 12 ore |
+| **Presa dal lago** | 8 all'ora, con poca energia | accanto a un lago | paese | 900 e 15 di cemento, 16 ore |
+| **Desalinizzatore** | 6 all'ora in ogni stagione, molta energia, 1 posto di lavoro | costa | cittadina | 2 200, 40 di cemento e 5 di rame, 40 ore |
+
+- La **torre** dà la sua acqua alle case entro 4 caselle. La riempiono le pompe che la hanno nel loro raggio, mai
+  un'altra torre: messa al bordo del raggio di un pozzo, porta l'acqua un passo più in là. La Casella dice quante pompe
+  la riempiono.
+- **Potenzia** (icona nella Casella di pozzi, prese dal lago e desalinizzatori): il livello **II** (da paese) porta il
+  raggio a 5 caselle e l'acqua a una volta e mezza; il livello **III** (da cittadina) a 7 caselle e al doppio. Costa il
+  40 % o l'80 % del prezzo della costruzione, più cemento e rame; la fonte non si ferma. Le torri non si potenziano.
+- Le **pompe consumano energia**: un desalinizzatore molta, una presa dal lago poca. In blackout danno meno acqua.
+- **Modalità delle pompe** (pannello **Acquedotto e rifiuti**, tasto **U**):
+  - **«Seguono il consumo»** (di partenza): le pompe danno l'acqua quando serve, anche alle 19, nel picco della sera;
+  - **«Con l'energia in più»**: le torri danno l'acqua per prime, tenendo un quarto di riserva, e le pompe le
+    riempiono con l'energia che avanza, dopo le batterie e prima di venderla. La sera le pompe pesano meno sulla rete.
+    Serve almeno una torre.
+- **Senz'acqua**: l'acqua che manca toglie fino a **15 punti di felicità** («Senz'acqua» nel tooltip) e peggiora la
+  **salute**. I quartieri che ricevono meno di metà dell'acqua che serve mostrano una goccia barrata.
+- Le famiglie pagano al comune la **bolletta dell'acqua** che ricevono, con la tariffa scelta nel pannello Famiglie.
+
+### Rifiuti
+
+- La città produce **rifiuti** ogni ora: più abitanti, più rifiuti.
+- Li raccolgono le **squadre del municipio**, dalle 8 alle 17, e i **centri di raccolta** (da villaggio, 500 e 20 di
+  legname): 3 tonnellate all'ora, 4 posti di lavoro, aperti dalle 8 alle 17 tutti i giorni. La notte i rifiuti si
+  accumulano: è normale.
+- I rifiuti raccolti vanno nelle **discariche** (da villaggio, costano 400, tengono 5 000 tonnellate), nell'ordine in
+  cui le hai costruite. Quando sono tutte piene si portano **fuori città** dalla strada statale, a **3 la tonnellata**;
+  se la strada statale è scollegata o il denaro è finito, restano per strada.
+- Una discarica:
+  - **puzza**: i quartieri entro 2 caselle perdono un po' di felicità («Discarica vicina»);
+  - inquina la **falda**: un pozzo entro 2 caselle, anche da una discarica vuota, si ferma («falda inquinata»). Prese
+    dal lago, desalinizzatori e il pozzo del municipio non ne risentono;
+  - inquina un po' l'**aria**, tanto più quanto è piena;
+  - **non si demolisce** finché contiene rifiuti.
+- **Rifiuti per strada**: quando restano per strada più di un giorno di rifiuti, la città perde fino a **10 punti di
+  felicità** e un po' di salute.
+- Le famiglie pagano la **tassa sui rifiuti**, fissa per abitante.
+- Il pannello **Acquedotto e rifiuti** (tasto **U** o il pulsante con il rubinetto in alto) mostra acqua richiesta e
+  fornita, serbatoi e pompe, case fuori dal raggio, e i rifiuti prodotti, raccolti, per strada, nelle discariche e
+  portati fuori città.
 
 ### Materiali e industrie
 
@@ -342,8 +408,9 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 
 - **Segheria** (solo nel **bosco**, le caselle verde scuro): 7,5 legname all'ora.
 - **Cava** (colline): 7,5 pietra all'ora.
-- **Cementificio** (pianura): trasforma 7,5 pietra in 7,5 cemento all'ora e consuma molta corrente. Senza pietra si
-  ferma, e smette anche di consumare corrente.
+- **Cementificio** (pianura): trasforma 7,5 pietra in 7,5 cemento all'ora, consuma molta corrente e **inquina** in
+  proporzione a quanto produce: a pieno ritmo quanto un quarto di una centrale a carbone. Senza pietra si ferma, e
+  smette anche di consumare corrente e di inquinare.
 - Le industrie lavorano **dalle 8 alle 17, dal lunedì al venerdì** (vedi [Orari e turni](#orari-e-turni)).
 - Le industrie hanno bisogno di **personale** e di **corrente**. I lavoratori ci vanno dopo energia, cibo e
   ospedali, e prima delle miniere di carbone.
@@ -371,7 +438,8 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
   piene si va piano: chi arriva in ritardo rende meno, e il ritardo del giorno prima toglie **felicità**
   («Traffico dei pendolari» nel riquadro della felicità).
 - I **viali** reggono molto traffico ma sono **rumorosi**: tolgono un po' di felicità ai quartieri accanto.
-- **Mappa del traffico** (tasto **G**): colora le strade secondo quanto sono cariche.
+- **Vista del traffico** (tasto **G**, o dal pulsante **Viste**): colora le strade secondo quanto sono cariche. Vedi
+  [Viste della mappa](#viste-della-mappa).
 - Pannello **Trasporti** (tasto **J** o il pulsante con il camion in alto): persone e merci in viaggio, tempo medio,
   camion usati, le **strade più cariche** (un clic le mostra nella Casella) e l'andamento delle ultime 24 ore.
 - Per demolire una strada: clic destro, come per le costruzioni (rimborso di metà della spesa).
@@ -436,7 +504,8 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 
 - La **campanella** in alto conta gli eventi nuovi; diventa rossa quando uno è grave.
 - Il pannello **Eventi** (tasto **E** o la campanella) mostra in cima i **problemi in corso**: debito, costruzioni
-  scollegate, senza personale o senza strada, piazzali pieni, miniere quasi esaurite, cibo importato. Sotto c'è lo
+  scollegate, senza personale o senza strada, piazzali pieni, miniere quasi esaurite, cibo importato, case senz'acqua o
+  fuori dal raggio, pozzi con la falda inquinata, discariche piene, rifiuti per strada. Sotto c'è lo
   **storico** di quello che è successo, con i filtri per tipo.
 - Un clic su una riga centra la mappa sul posto e apre la Casella.
 
@@ -449,19 +518,51 @@ sinistra li mostra sotto il prezzo, con piccole icone; passando il mouse sul pul
 - La scheda **Obiettivi** del grafico mostra abitanti e inquinamento dall'inizio della partita, la linea
   dell'obiettivo e la previsione tratteggiata.
 
+### Viste della mappa
+
+- Il pulsante **Viste** in alto a sinistra sulla mappa (tasto **I**) colora la mappa secondo un tema: **Traffico**,
+  **Rete elettrica**, **Acqua** o **Rifiuti e discariche**. Il resto della mappa si scurisce, e in basso a sinistra una
+  **legenda** spiega i colori e dice che cosa c'è sotto il mouse. **Esc** spegne la vista.
+  - **Traffico**: le strade secondo quanto sono cariche.
+  - **Rete elettrica**: costruzioni collegate e scollegate, linee per livello.
+  - **Acqua**: il raggio delle fonti, le case servite, servite in parte, senz'acqua o fuori dal raggio; con la vista
+    accesa le fonti potenziate portano la targhetta II o III.
+  - **Rifiuti e discariche**: quanto sono piene le discariche, l'area dell'odore e della falda, i pozzi fermi.
+- **Durante la posa la vista giusta si apre da sola**: strade per il traffico, linee e trasformatori per la rete,
+  fonti d'acqua e quartieri per l'acqua, discariche e centri di raccolta per i rifiuti. Finita la posa torna quella di
+  prima. Si spegne nelle Impostazioni («Viste automatiche durante la posa»).
+- Quando scegli una fonte d'acqua, il quadrato del suo raggio segue il mouse e la legenda dice quante case entrerebbero
+  e quante oggi sono senz'acqua.
+- I colori si leggono anche da chi non distingue il rosso dal verde.
+
+### Priorità del lavoro
+
+- Pannello **Lavoro** (tasto **P** o il pulsante con il casco in alto): le sei categorie del lavoro (**Energia e
+  trasporti**, **Cibo**, **Ospedali, calore e acqua**, **Industrie e rifiuti**, **Miniere**, **Quartieri e parchi**),
+  con i posti coperti di ognuna. I lavoratori vanno prima alle categorie più in alto: se non bastano, restano senza
+  personale le ultime.
+- Con le **frecce** sposti una categoria in su o in giù; **Ripristina** torna all'ordine di partenza.
+- Nella Casella di una costruzione che senza personale si ferma ci sono due comandi:
+  - **Sospendi**: la costruzione non prende lavoratori e non produce, ma la manutenzione si paga. Per esempio, il
+    cementificio fermo d'inverno per dare personale all'ospedale. **Riprendi** la fa ripartire;
+  - **Priorità alta**: riceve i lavoratori, e le consegne nel silo, prima delle altre della sua categoria.
+- Sulla mappa le costruzioni sospese hanno un distintivo grigio con la pausa, quelle con priorità alta uno verde con
+  due frecce.
+
 ### Grafici
 
-Il pannello in basso ha sei schede. Le prime cinque mostrano le **ultime 24 ore**, una colonna per ora; la sesta,
+Il pannello in basso ha sette schede. Le prime sei mostrano le **ultime 24 ore**, una colonna per ora; la settima,
 **Obiettivi**, tutta la partita con la previsione. Un clic su una scheda la apre (il gioco ricorda la scelta);
 passando il mouse su una colonna leggi i valori esatti di quell'ora.
 
 - **Energia**: produzione, domanda, batterie, perdite di linea, corrente comprata e corrente dal gas.
-- **Denaro**: entrate sopra lo zero, uscite sotto, e il saldo, con le vendite e gli acquisti al Mercato e il gas
-  comprato.
+- **Denaro**: entrate sopra lo zero, uscite sotto, e il saldo, con le vendite e gli acquisti al Mercato, il gas
+  comprato, le bollette dell'acqua e la tassa sui rifiuti.
 - **Materiali**: quanto si produce e si consuma di ogni materiale, e la scorta; il materiale si sceglie con i
   pulsanti accanto al grafico.
 - **Città**: cibo prodotto e cibo mangiato, la scorta di cibo, felicità e salute, calore richiesto e calore fornito.
 - **Trasporti**: persone che vanno al lavoro e che tornano a casa, camion in viaggio e carico delle strade.
+- **Servizi**: acqua richiesta e acqua fornita, energia delle pompe, rifiuti per strada.
 - **Obiettivi**: abitanti e inquinamento dall'inizio della partita, la linea dell'obiettivo e la previsione
   tratteggiata (vedi [Previsione degli obiettivi](#previsione-degli-obiettivi)).
 
@@ -474,10 +575,10 @@ mappa vedi il suo stato e quanta energia produce o consuma.
 
 | Comando | Cosa fa |
 |---|---|
-| Tasti **1–9** e **0** | Scegli cosa costruire: linea elettrica, miniera di carbone, centrale a carbone, impianto solare, parco eolico, batteria, quartiere, fattoria, peschereccio, serra. Le altre costruzioni (magazzino frigorifero, parco, ospedale, industrie, depositi, trasformatore, pompaggio, Mercato, Officina) si scelgono dalla lista a sinistra, divisa in sei schede: Energia, Rete, Trasporti, Città, Cibo, Industria |
+| Tasti **1–9** e **0** | Scegli cosa costruire: linea elettrica, miniera di carbone, centrale a carbone, impianto solare, parco eolico, batteria, quartiere, fattoria, peschereccio, serra. Le altre costruzioni (magazzino frigorifero, parco, ospedale, industrie, depositi, trasformatore, pompaggio, Mercato, Officina, acqua e rifiuti) si scelgono dalla lista a sinistra, divisa in sette schede: Energia, Rete, Trasporti, Città, Servizi, Cibo, Industria |
 | **Clic sinistro** | Posa la costruzione scelta. Senza nessuna scelta seleziona una casella e ne mostra i dettagli |
 | **Clic destro** (sul tablet: tocco lungo) | Con una costruzione scelta, annulla la scelta. Senza scelta, chiede conferma per demolire (rimborso di metà del costo) |
-| **Esc** | Annulla la scelta; se non c'è niente da annullare apre il **menu di pausa** (Riprendi, Salva come…, Salvataggio rapido, Carica partita, Salva ed esci al menu, Nuova partita, Impostazioni) |
+| **Esc** | Annulla la scelta o spegne la vista della mappa; se non c'è niente da annullare apre il **menu di pausa** (Riprendi, Salva come…, Salvataggio rapido, Carica partita, Salva ed esci al menu, Nuova partita, Impostazioni) |
 | Pulsante **⚙** (in alto) | Apre il menu di pausa, come Esc: salvataggi, impostazioni, uscita |
 | **F11** | Schermo intero / finestra |
 | **Spazio** o pulsante ▶/❚❚ | Pausa / riprendi |
@@ -491,17 +592,23 @@ mappa vedi il suo stato e quanta energia produce o consuma.
 | **R** | Strumento **Strada**: clic o trascina per posare le sterrate |
 | **M** | Strumento **Migliora strada**: sterrata → strada asfaltata → viale |
 | **L** | Strumento **Migliora linea**: linee di livello I → II → III |
-| **G** | Mappa del traffico |
+| **G** | Vista del traffico |
+| **I** o pulsante **Viste** (sulla mappa, in alto a sinistra) | Viste della mappa: traffico, rete elettrica, acqua, rifiuti |
 | **J** o pulsante **Trasporti** (in alto) | Pannello dei trasporti: persone, merci, strade più cariche |
 | **E** o la campanella (in alto) | Registro degli eventi: problemi in corso e storico |
 | **H** o pulsante **Famiglie** (in alto) | Pannello delle famiglie: stipendi, spese, tariffa dell'energia |
 | **K** o il pulsante con la bilancia (in alto) | Pannello del Mercato: compra e vendi materiali e cibo |
+| **U** o il pulsante con il rubinetto (in alto) | Pannello Acquedotto e rifiuti: acqua, pompe, raccolta e discariche |
+| **P** o il pulsante con il casco (in alto) | Pannello Lavoro: in che ordine i lavoratori vanno alle costruzioni |
 | Pulsante **Rinomina** (nella Casella) | Cambia il nome di una via, di un quartiere, di un ospedale o di un parco |
 | Pulsante **Demolisci** (icona nella Casella) | Demolisce la costruzione o il cantiere selezionato (rimborso di metà del costo) |
 | Pulsante **Potenzia** (icona nella Casella del municipio) | Porta il municipio al livello successivo, quando gli obiettivi del livello sono compiuti |
+| Pulsante **Potenzia** (icona nella Casella di una fonte d'acqua) | Porta pozzi, prese dal lago e desalinizzatori al livello II o III: raggio più grande e più acqua |
+| Pulsanti **Sospendi** e **Priorità alta** (nella Casella) | Fermano una costruzione, o le danno i lavoratori prima delle altre della sua categoria |
+| Pulsante delle **pompe** (nel pannello Acquedotto e rifiuti) | Pompe che seguono il consumo o che lavorano con l'energia in più |
 | Pulsanti **Vendi** e **Compra** (nella Casella della linea di confine) | Accendono e spengono la vendita e l'acquisto automatici della corrente |
 | Pulsante **Riscaldamento a gas** (nel pannello Famiglie) | Accende e spegne le caldaie a gas dei quartieri |
-| Schede del grafico (in basso) | Energia, Denaro, Materiali, Città, Trasporti, Obiettivi |
+| Schede del grafico (in basso) | Energia, Denaro, Materiali, Città, Trasporti, Servizi, Obiettivi |
 
 ### Lingue
 
@@ -519,6 +626,7 @@ successivo, e le scelte restano salvate.
 - **Salvataggio automatico**: ogni giorno, ogni 3 giorni, ogni 7 giorni o spento.
 - **Dimensione dell'interfaccia**: 90, 100 o 110 %.
 - **Disposizione**: automatica, computer o telefono.
+- **Viste automatiche durante la posa**: sì o no (vedi [Viste della mappa](#viste-della-mappa)).
 - **Animazioni**: sì o no. Con «no» si fermano il traffico animato, le nuvole, il fumo e gli altri effetti: utile
   sui computer lenti.
 - **Musica** ed **Effetti sonori**: 100, 75, 50 o 25 %, oppure muto.
@@ -532,7 +640,9 @@ Su un telefono tenuto **in orizzontale** il gioco usa una disposizione fatta per
 - le **categorie** delle costruzioni sono in basso: un tocco apre la loro griglia, un tocco su una costruzione mostra
   la sua scheda con la descrizione e il pulsante **Costruisci**;
 - i pannelli (Casella, Meteo, Obiettivi, grafici e gli altri) salgono dal basso; i valori del grafico si leggono
-  toccando una colonna.
+  toccando una colonna;
+- **Acqua e rifiuti** e **Lavoro** si aprono dal foglio **Altro**; il pulsante delle viste è sulla mappa, in alto a
+  sinistra.
 
 La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella del telefono a quella del computer.
 
@@ -563,6 +673,11 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
   finito).
 - **Fiocco di neve**: **case al freddo**, il quartiere non riceve tutto il calore che gli serve.
 - **Tanica barrata**: **senza carburante**, i camion di questo autoparco sono fermi.
+- **Goccia barrata**: **senz'acqua**, il quartiere riceve meno di metà dell'acqua che gli serve.
+- **Goccia torbida**: il pozzo è fermo, **falda inquinata** da una discarica vicina.
+- **Cumulo con la freccia**: **discarica piena**, i rifiuti vanno fuori città a pagamento.
+- **Distintivo grigio con la pausa**: costruzione **sospesa** da te.
+- **Distintivo verde con due frecce**: costruzione con **priorità alta**.
 - **Luci di notte**: col buio quartieri e municipio accendono le luci. Una costruzione senza corrente resta al
   buio: un quartiere spento di notte è un campanello d'allarme.
 
@@ -590,7 +705,7 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
 10. Tieni d'occhio il grafico **Energia** in basso: se la linea rossa (domanda) supera la verde (produzione), stai
     comprando corrente o sta per arrivare un blackout.
 11. Quando i cantieri restano a lungo in fila, costruisci un'**Officina**.
-12. Quando arriva «Camion insufficienti», costruisci un **autoparco**. Quando la città cresce, guarda la **mappa del
+12. Quando arriva «Camion insufficienti», costruisci un **autoparco**. Quando la città cresce, guarda la **vista del
     traffico** (G) e migliora le strade più cariche (M); non mettere i viali proprio accanto ai quartieri.
 13. Tieni le centrali vicine al municipio o a un **trasformatore**: lontano perdono energia.
 14. Quando la **campanella** diventa rossa, apri il **registro degli eventi** (E): in cima ci sono i problemi da
@@ -605,6 +720,13 @@ La disposizione si sceglie da sola; nelle Impostazioni si può passare da quella
     picco della sera. Da paese una **centrale a gas** copre i picchi, ma ogni ora di gas costa.
 19. Prima dell'inverno pensa al **riscaldamento**: una **centrale termica a legna** vicino a una segheria fa
     risparmiare molto gas. Quando arriva l'avviso «Tensioni sul gas» hai tre giorni per prepararti alla crisi.
+20. Il pozzo del municipio basta alle prime case. Quando costruisci quartieri lontani, accendi la vista **Acqua** (I) e
+    metti un **pozzo** vicino a loro; una **torre dell'acqua** con le pompe «con l'energia in più» toglie le pompe dal
+    picco della sera.
+21. Metti la **discarica** lontano da quartieri e pozzi (almeno 3 caselle), e un **centro di raccolta** quando i
+    rifiuti per strada crescono.
+22. Se mancano lavoratori, apri il pannello **Lavoro** (P): porta in alto quello che conta di più, oppure
+    **sospendi** un'industria per qualche giorno.
 
 ## Salvataggi
 
@@ -668,6 +790,12 @@ salvataggio della 0.11.0 non si apre nelle versioni precedenti.
 caricano: il riscaldamento a gas parte acceso e le centrali a carbone ripartono dalla potenza che avevano. Un
 salvataggio della 0.12.0 non si apre nelle versioni precedenti.
 
+**Dalla 0.13.0** il formato cambia di nuovo: acqua, rifiuti e priorità del lavoro. I salvataggi delle versioni
+precedenti si caricano: il serbatoio del municipio parte pieno, le pompe «seguono il consumo», le strade sono pulite e
+i lavoratori seguono l'ordine di partenza. Le partite salvate prima dell'acqua ricevono **7 giorni di autobotti**,
+gratis, che portano tutta l'acqua che serve alle case: il tempo di posare i pozzi. Un salvataggio della 0.13.0 non si
+apre nelle versioni precedenti.
+
 I salvataggi di una versione alpha potrebbero non funzionare con la versione successiva: lo scrive il
 [changelog](CHANGELOG.md) quando succede.
 
@@ -675,13 +803,14 @@ I salvataggi di una versione alpha potrebbero non funzionare con la versione suc
 
 Cosa è già previsto, più o meno in quest'ordine. I piani possono cambiare.
 
-- **Acqua e rifiuti**: acquedotti, depuratori e discariche per una città più grande.
-- **Istruzione**: scuole, e lavoratori più preparati.
+- **Istruzione**: scuole, e lavoratori qualificati per le costruzioni più difficili.
 - **Ricerca**: tecnologie da scoprire che sbloccano costruzioni nuove, come l'estrazione di petrolio e gas.
 - **Usura e riparazioni**: le costruzioni si consumano e le squadre le riparano con i materiali che hai; poi scioperi
   ed emergenze, per chi le sceglie.
 - **Mappe nuove**: mappe di dimensioni diverse, una mappa diversa a ogni partita, fiumi e ponti, e una minimappa.
-- **Più avanti**: più città collegate fra loro e la vista isometrica.
+- **Tutorial a livelli**: una guida all'inizio, poi livelli con poche costruzioni alla volta, spiegate con esempi.
+- **Beta**: dopo il tutorial il gioco passa alla fase beta, con tutte le parti principali.
+- **Dopo la 1.0**: più città collegate fra loro e la vista isometrica.
 
 ## Problemi noti
 

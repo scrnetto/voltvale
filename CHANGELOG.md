@@ -12,6 +12,104 @@ Ogni versione ha queste sezioni, quando servono:
 
 ## [Non ancora pubblicata]
 
+## [0.13.0-alpha.1] - 2026-11-26
+
+Acqua e rifiuti, viste della mappa e priorità del lavoro scelte da te. *Water and waste, map views and work priorities
+you choose.*
+
+### Novità
+- **L'acqua delle case**: gli abitanti hanno bisogno d'acqua ogni ora, di più al mattino e alla sera e di più col
+  caldo, sopra i 18 °C. L'acqua serve solo alle case (quartieri e municipio): industrie e servizi ne fanno a meno.
+  - Una casa riceve l'acqua solo se sta nel **raggio** di una fonte, un quadrato attorno alla fonte: 3 caselle in
+    ogni direzione al livello I, cioè un quadrato di 7×7. Le tubature non si posano: il raggio è la rete.
+  - Il **municipio** ha già un **pozzo** (1,6 d'acqua all'ora) e un **serbatoio** da 8; il suo raggio cresce con il
+    livello del municipio, da 3 a 6 caselle. Basta alle prime case; quando la città cresce servono altre fonti.
+  - **Pozzo** (scheda Servizi, da villaggio): 3 d'acqua all'ora, d'estate un po' meno. Costa 350 e 5 di cemento, si
+    costruisce in 8 ore.
+  - **Torre dell'acqua** (da paese): tiene fino a 60 d'acqua e la dà alle case entro 4 caselle. La riempiono le pompe
+    che la hanno nel loro raggio, mai un'altra torre. Costa 500 e 20 di cemento, 12 ore.
+  - **Presa dal lago** (da paese): si costruisce accanto a un lago nato da una miniera esaurita; 8 d'acqua all'ora con
+    poca energia. Costa 900 e 15 di cemento, 16 ore.
+  - **Desalinizzatore** (da cittadina, sulla costa): 6 d'acqua all'ora in ogni stagione, ma consuma molta energia e
+    vuole una persona sempre al lavoro. Costa 2 200, 40 di cemento e 5 di rame, 40 ore.
+  - **Potenzia** nella Casella di pozzi, prese dal lago e desalinizzatori: il livello **II** (da paese) porta il raggio
+    a 5 caselle e l'acqua a una volta e mezza, il livello **III** (da cittadina) a 7 caselle e al doppio. Costa una parte
+    del prezzo della costruzione, più cemento e rame; la fonte non si ferma.
+  - Le **pompe consumano energia**, e in blackout danno meno acqua. Nel pannello Acquedotto e rifiuti scegli come
+    lavorano: **«Seguono il consumo»** (di partenza) oppure **«Con l'energia in più»**. Nel secondo modo le torri danno
+    l'acqua per prime, tenendo un quarto di riserva, e le pompe le riempiono con l'energia che avanza, dopo le batterie
+    e prima di venderla: la sera le pompe pesano meno sulla rete. Serve almeno una torre.
+  - L'acqua che manca toglie fino a **15 punti di felicità** («Senz'acqua» nel tooltip) e peggiora la **salute**.
+  - Le famiglie pagano al comune la **bolletta dell'acqua**, con la tariffa scelta nel pannello Famiglie.
+- **I rifiuti**: la città produce rifiuti ogni ora, più abitanti ha e più ne produce.
+  - Li raccolgono le **squadre del municipio**, dalle 8 alle 17, e i **centri di raccolta** (scheda Servizi, da
+    villaggio: 3 tonnellate all'ora, 4 posti di lavoro, aperti dalle 8 alle 17 tutti i giorni; costano 500 e 20 di
+    legname).
+  - I rifiuti raccolti vanno nelle **discariche** (da villaggio, costano 400, tengono 5 000 tonnellate). Quando sono
+    piene si portano **fuori città** dalla strada statale, a 3 la tonnellata, finché c'è denaro.
+  - Una discarica **puzza**: i quartieri entro 2 caselle perdono un po' di felicità. Inquina anche la **falda**: un
+    pozzo entro 2 caselle si ferma («falda inquinata»). Più è piena, più inquina l'aria. Non si demolisce finché
+    contiene rifiuti.
+  - I **rifiuti per strada**, oltre un giorno di raccolta mancata, tolgono fino a **10 punti di felicità** e peggiorano
+    la salute.
+  - Le famiglie pagano la **tassa sui rifiuti**, fissa per abitante.
+- **Pannello «Acquedotto e rifiuti»** (tasto **U** o il pulsante con il rubinetto in alto; sul telefono dal foglio
+  «Altro»): acqua richiesta e fornita, serbatoi, portata e consumo delle pompe, il pulsante delle pompe, case fuori dal
+  raggio; rifiuti prodotti, raccolti, per strada, nelle discariche e portati fuori città.
+- **Scheda «Servizi»** nella lista delle costruzioni, con le sei costruzioni nuove; il tooltip dice il raggio di ogni
+  fonte. Nei **grafici** c'è la scheda **Servizi** (acqua richiesta e fornita, energia delle pompe, rifiuti per strada),
+  e nella scheda Denaro la bolletta dell'acqua e la tassa sui rifiuti.
+- **Acqua e rifiuti da tenere d'occhio**: problemi in corso nel registro degli eventi (senz'acqua, case fuori dal
+  raggio, pozzo con la falda inquinata, discarica piena, rifiuti per strada, rifiuti portati fuori città), avvisi sopra
+  la mappa e tre icone nuove: **goccia barrata** sui quartieri senz'acqua, **goccia torbida** sui pozzi fermi per la
+  falda, **cumulo con la freccia** sulle discariche piene. La Casella mostra raggio, livello e acqua pompata di ogni
+  fonte, il contenuto delle torri (e quante pompe le riempiono) e delle discariche, e per ogni quartiere quanta
+  acqua riceve, oppure che è fuori dal raggio.
+- **Viste della mappa**: il pulsante **Viste** in alto a sinistra sulla mappa (tasto **I**) colora la mappa per
+  **Traffico**, **Rete elettrica**, **Acqua** o **Rifiuti e discariche**, con una legenda in basso a sinistra che dice
+  anche cosa c'è sotto il mouse. **Esc** spegne la vista. I colori si leggono anche da chi non distingue il rosso dal
+  verde.
+  - **Durante la posa la vista giusta si apre da sola**: strade per il traffico, linee e trasformatori per la rete,
+    fonti d'acqua e quartieri per l'acqua, discariche e centri di raccolta per i rifiuti; finita la posa torna quella di
+    prima. Si spegne nelle Impostazioni, voce «Viste automatiche durante la posa».
+  - Scegliendo una fonte d'acqua, il quadrato del suo raggio segue il mouse e la legenda dice quante case entrerebbero
+    e quante oggi sono senz'acqua.
+- **Priorità del lavoro**: pannello **Lavoro** (tasto **P** o il pulsante con il casco in alto; sul telefono dal
+  foglio «Altro») con le sei categorie, da **Energia e trasporti** a **Quartieri e parchi**, e i posti coperti di
+  ognuna. Con le **frecce** scegli chi riceve per primo i lavoratori; **Ripristina** torna all'ordine di partenza.
+  - Nella Casella di una costruzione che senza personale si ferma ci sono due comandi nuovi. **Sospendi**: niente
+    lavoratori e niente produzione, ma la manutenzione si paga (per esempio, il cementificio fermo d'inverno per dare
+    personale all'ospedale). **Priorità alta**: riceve i lavoratori, e le consegne nel silo, prima delle altre della
+    sua categoria.
+  - Sulla mappa le costruzioni sospese hanno un distintivo grigio con la pausa, quelle con priorità alta uno verde con
+    due frecce.
+
+### Modifiche
+- **La mappa del traffico è diventata una vista**: il tasto **G** e il pulsante nel pannello Trasporti accendono la
+  vista Traffico, con i colori nuovi e la legenda.
+- **Sconfitta per città abbandonata**: se la città resta sotto i 5 abitanti per 14 giorni di gioco di fila, la
+  partita è persa. Prima una città svuotata poteva restare aperta fino alla fine dei due anni.
+- **Il cementificio inquina**, in proporzione a quanto produce: a pieno ritmo quanto un quarto di una centrale a
+  carbone; fermo, niente.
+- La **crisi del gas** è più dura: il gas costa **2,7 volte** tanto invece di 2,5.
+- Ordine di partenza dei lavoratori: i desalinizzatori stanno con ospedali e centrali termiche, i centri di raccolta
+  con le industrie.
+- L'equilibrio del gioco è stato rivisto con acqua, rifiuti e cementificio: giocando bene si vince ancora in poco più
+  di un anno di gioco.
+- Il pannello dei grafici ha sette schede e la lista delle costruzioni sette categorie.
+
+### Correzioni
+- Nella legenda dei grafici, quando va a capo, ogni pallino resta accanto alla sua scritta (prima in inglese, a
+  1920×1080, una scritta poteva finire sulla riga dopo e il suo pallino restare sopra).
+
+### Da sapere
+- I salvataggi della 0.13.0 hanno un formato nuovo e **non si aprono nelle versioni precedenti**.
+- I salvataggi delle versioni precedenti si caricano: il serbatoio del municipio parte pieno, le pompe «seguono il
+  consumo», le strade sono pulite e i lavoratori seguono l'ordine di partenza. Le partite salvate prima dell'acqua
+  ricevono **7 giorni di autobotti**, gratis, che portano tutta l'acqua che serve alle case: il tempo di posare i pozzi
+  vicino ai quartieri. Un avviso lo dice all'inizio e il giorno prima della fine, e il pannello Acquedotto e rifiuti
+  mostra quanti giorni restano.
+
 ## [0.12.0-alpha.1] - 2026-11-23
 
 Calore e gas, una lista delle costruzioni più compatta e i salvataggi del browser recuperati. *Heat and gas, a more

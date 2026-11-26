@@ -21,7 +21,8 @@
 **Tu gères le réseau électrique d'une petite ville qui grandit.** Chaque heure, la ville a besoin d'énergie : un
 peu la nuit, beaucoup le soir. Construis des centrales, des centrales solaires, des parcs éoliens et des batteries,
 relie le tout par des lignes électriques et des routes, trouve des gens pour y travailler, équipe après équipe,
-nourris tout le monde, chauffe les maisons en hiver, transporte marchandises et matériaux en camion sans bloquer la circulation, et fais grandir
+nourris tout le monde, chauffe les maisons en hiver, apporte l'eau aux maisons et débarrasse les rues des déchets,
+transporte marchandises et matériaux en camion sans bloquer la circulation, et fais grandir
 ton village jusqu'à **400 habitants en deux ans de jeu**, sans pannes à répétition, sans dettes et sans l'étouffer
 sous la pollution.
 
@@ -108,8 +109,8 @@ par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
 
 - **Objectif** : atteindre **400 habitants** avec une pollution **sous le seuil** en **2 ans**. Après la victoire,
   tu peux **continuer à jouer**, sans limite de temps.
-- **Défaite** : si ton argent reste dans le rouge **30 jours d'affilée**, ou si les 2 ans s'écoulent avant la
-  victoire.
+- **Défaite** : si ton argent reste dans le rouge **30 jours d'affilée**, si la ville reste sous les **5 habitants
+  pendant 14 jours d'affilée**, ou si les 2 ans s'écoulent avant la victoire.
 - **La mairie grandit** : de **village** à **bourg**, **petite ville** et **ville**, en remplissant de petits
   objectifs. Chaque niveau débloque de nouveaux bâtiments : voir
   [Niveaux de la mairie et objectifs](#niveaux-de-la-mairie-et-objectifs).
@@ -137,12 +138,17 @@ par exemple « Jour 1 · dim 18/10/2020 · 08:00 ».
   prix, par la **ligne frontalière** à côté du pont ; plus tu en vends en une heure, moins elle vaut. Voir
   [Liaisons avec le continent](#liaisons-avec-le-continent).
 - **Pollution** : les centrales à charbon polluent et l'air se purifie lentement. Une centrale, ça passe ; trop,
-  non. La pollution rend les habitants malades, et au-dessus du seuil tu ne peux pas gagner.
+  non. Polluent aussi, moins, les centrales à gaz et les chaufferies, la cimenterie quand elle travaille et les
+  décharges. La pollution rend les habitants malades, et au-dessus du seuil tu ne peux pas gagner.
 - **Croissance** : la ville grandit si les habitants sont assez **heureux**, s'il reste de la place dans les
   **quartiers** et s'il y a assez de **nourriture** en réserve.
 - **Chauffage** : sous 15 °C, les maisons ont besoin de **chaleur**, fournie par les chaufferies au bois ou par les
   chaudières à gaz des quartiers. Des maisons froides rendent les habitants malheureux et malades. Voir
   [Chaleur, gaz et carburant](#chaleur-gaz-et-carburant).
+- **Eau** : les maisons ne reçoivent l'eau que des sources qui les ont dans leur **rayon** ; sans eau, les habitants
+  sont malheureux et tombent malades. Voir [Eau](#eau).
+- **Déchets** : il faut les ramasser et les porter à la décharge ou hors de la ville ; les déchets dans les rues
+  rendent la ville moins heureuse. Voir [Déchets](#déchets).
 
 ### Nouvelle partie
 
@@ -172,10 +178,10 @@ La mairie grandit avec la ville : **I village**, **II bourg**, **III petite vill
 
 | Niveau | Bâtiments |
 |---|---|
-| **I village** | lignes, chemins de terre, quartiers, centrales solaires, parcs éoliens, centrales et mines de charbon, batteries, fermes, parcs |
-| **II bourg** | routes goudronnées, entrepôts, parcs de camions, scieries, carrières, serres, entrepôts frigorifiques, bateaux de pêche, centrales à gaz, chaufferies au bois, Marché, Atelier municipal |
-| **III petite ville** | avenues, cimenteries, transformateurs, hôpitaux, stations de pompage |
-| **IV ville** | rien de nouveau pour l'instant : ce niveau servira aux bâtiments des prochaines mises à jour |
+| **I village** | lignes, chemins de terre, quartiers, centrales solaires, parcs éoliens, centrales et mines de charbon, batteries, fermes, parcs, puits, centres de collecte, décharges |
+| **II bourg** | routes goudronnées, entrepôts, parcs de camions, scieries, carrières, serres, entrepôts frigorifiques, bateaux de pêche, centrales à gaz, chaufferies au bois, Marché, Atelier municipal, châteaux d'eau, prises d'eau du lac ; sources d'eau de niveau II |
+| **III petite ville** | avenues, cimenteries, transformateurs, hôpitaux, stations de pompage, usines de dessalement ; sources d'eau de niveau III |
+| **IV ville** | rien de nouveau pour l'instant, sauf le puits de la mairie qui porte plus loin : ce niveau servira aux bâtiments des prochaines mises à jour |
 
 - Dans la liste, les bâtiments encore bloqués sont grisés, avec un **cadenas** ; en passant la souris dessus, tu lis
   le niveau nécessaire. Le **Marché** ne se construit qu'une fois par ville : après le premier, il devient gris.
@@ -228,7 +234,8 @@ La carte est une **île**, reliée au continent par un **pont à l'ouest**, à l
 - Une **icône d'échange** au-dessus de la ligne frontalière indique quand du courant a été acheté ou vendu pendant la
   dernière heure ; le graphique **Énergie** montre le courant acheté.
 - **Marchandises de l'extérieur** : la nourriture importée, le cuivre et les échanges du Marché passent par la
-  **route nationale**, et n'arrivent que si elle est reliée aux routes de la ville.
+  **route nationale**, et n'arrivent que si elle est reliée aux routes de la ville. Les déchets emportés hors de la
+  ville partent par la même route.
 
 ### Travail et personnel
 
@@ -238,15 +245,19 @@ Les bâtiments ont besoin de gens pour les faire tourner.
   rapport à la main-d'œuvre disponible.
 - Les **centrales à charbon**, les **mines de charbon**, les **industries**, les bâtiments de **nourriture**, les
   **hôpitaux**, les **parcs**, les **entrepôts frigorifiques**, les **entrepôts**, les **ateliers municipaux**, les
-  **stations de pompage**, les **centrales à gaz** et les **chaufferies au bois** ont besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les **batteries**, les lignes et les
-  transformateurs fonctionnent tout seuls.
+  **stations de pompage**, les **centrales à gaz**, les **chaufferies au bois**, les **usines de dessalement** et les
+  **centres de collecte** ont besoin de personnel. Les **centrales solaires**, les **parcs éoliens**, les
+  **batteries**, les lignes, les transformateurs, les **puits**, les **châteaux d'eau**, les **prises d'eau du lac** et
+  les **décharges** fonctionnent tout seuls.
 - Le panneau **Case** montre combien de postes sont pourvus, par exemple **Personnel : 4/4**, et combien de
   personnes il faut pour cela, toutes équipes comprises.
 - Avec trop peu de personnel, un bâtiment produit moins ; **sans personne, il s'arrête** et affiche le signal
   **« sans personnel »**.
-- Les travailleurs vont **d'abord à l'énergie**, puis **à la nourriture**, puis **aux hôpitaux et aux chaufferies**, puis **aux
-  industries**, puis **aux mines**, puis **aux services** (quartiers et parcs). Les quartiers fonctionnent même quand
-  leurs services manquent de personnel.
+- Au départ, les travailleurs vont **d'abord à l'énergie et aux transports**, puis **à la nourriture**, puis **aux
+  hôpitaux, à la chaleur et à l'eau**, puis **à l'industrie et aux déchets**, puis **aux mines**, puis **aux quartiers
+  et aux parcs**. C'est toi qui changes l'ordre dans le panneau **Travail** : voir
+  [Priorités du travail](#priorités-du-travail). Les quartiers fonctionnent même quand leurs services manquent de
+  personnel.
 - Le **chômage** coûte cher : ceux qui ne travaillent pas ne paient pas d'impôt sur le revenu et reçoivent une
   allocation de la ville ; s'il est élevé, les habitants sont moins heureux.
 
@@ -256,9 +267,9 @@ Chaque bâtiment avec du personnel a ses propres horaires, affichés dans le pan
 
 | Horaire | Bâtiments | Personnes par poste |
 |---|---|---|
-| **Toujours ouvert, 3 équipes (6, 14, 22)** | centrales à charbon et à gaz, chaufferies au bois, mines de charbon, hôpitaux, entrepôts frigorifiques, parcs de camions, stations de pompage | environ 4 : un poste tenu jour et nuit demande trois équipes plus les jours de repos |
+| **Toujours ouvert, 3 équipes (6, 14, 22)** | centrales à charbon et à gaz, chaufferies au bois, mines de charbon, hôpitaux, entrepôts frigorifiques, parcs de camions, stations de pompage, usines de dessalement | environ 4 : un poste tenu jour et nuit demande trois équipes plus les jours de repos |
 | **Ouvert 8–17, du lundi au vendredi** | scieries, carrières, cimenteries, entrepôts | 1 |
-| **Ouvert 8–17, tous les jours** | fermes, bateaux de pêche, serres, parcs, ateliers municipaux, les services des quartiers | environ 1,4, pour les jours de repos |
+| **Ouvert 8–17, tous les jours** | fermes, bateaux de pêche, serres, parcs, ateliers municipaux, centres de collecte, les services des quartiers | environ 1,4, pour les jours de repos |
 
 - Une centrale à charbon avec tous ses postes pourvus emploie environ **17 personnes** : prévois tes quartiers en
   conséquence.
@@ -290,11 +301,13 @@ blé, et passent au rouge quand elles s'épuisent.
 ### Bonheur, santé et impôts
 
 - **Bonheur** (le smiley dans la barre du haut) : il évolue lentement vers une valeur qui est la somme de quelques
-  facteurs, à savoir les pannes des dernières 24 heures, la nourriture, la faim, les maisons froides, le chômage, la pollution, la santé,
+  facteurs, à savoir les pannes des dernières 24 heures, la nourriture, la faim, les maisons froides, le manque d'eau,
+  les déchets dans les rues, les décharges à proximité, le chômage, la pollution, la santé,
   les parcs, les impôts et le budget du ménage. En passant la souris sur le chiffre, tu vois vers quelle valeur il va et combien pèse
   chaque facteur, par exemple « Pannes −5,0 » ou « Parcs +3,0 ». Sous 60, la ville ne grandit pas, et sous 35 les
   gens commencent à partir.
-- **Santé** (le cœur) : baisse avec la pollution, la faim et les maisons froides. **Les malades restent chez eux** : il y a donc moins
+- **Santé** (le cœur) : baisse avec la pollution, la faim, les maisons froides, le manque d'eau et les déchets dans
+  les rues. **Les malades restent chez eux** : il y a donc moins
   de travailleurs, et une ville en mauvaise santé est aussi une ville moins heureuse.
 - **Hôpital** (plaine) : soigne jusqu'à 250 habitants, a besoin de personnel et consomme de l'électricité. Pendant
   une panne, il ne soigne personne. Indispensable si tu mises sur le charbon.
@@ -310,8 +323,8 @@ blé, et passent au rouge quand elles s'épuisent.
 - Le personnel prend de l'**expérience** : ceux qui restent au même poste produisent jusqu'à **15 %** de plus, mais
   gagnent aussi plus. Quand le personnel change, l'expérience baisse : garder ses travailleurs est payant. Le
   panneau Case montre l'expérience et les salaires de chaque bâtiment.
-- Les ménages paient à la ville l'**impôt sur le revenu**, la **facture d'électricité** des quartiers, la
-  **nourriture** et le **loyer**. Ceux qui n'ont pas de travail reçoivent une **allocation chômage**. Les ménages ont
+- Les ménages paient à la ville l'**impôt sur le revenu**, la **facture d'électricité** des quartiers, celles du
+  **chauffage** et de l'**eau**, la **taxe sur les déchets**, la **nourriture** et le **loyer**. Ceux qui n'ont pas de travail reçoivent une **allocation chômage**. Les ménages ont
   aussi d'autres revenus, comme les retraites et le travail hors de la ville.
 - Panneau **Ménages** (touche **H** ou le bouton en haut) : revenus et dépenses des ménages sur les dernières 24
   heures, ce qui reste à chaque habitant par jour et le salaire moyen. C'est là que tu choisis le **tarif de
@@ -343,7 +356,7 @@ blé, et passent au rouge quand elles s'épuisent.
   y a de l'argent : le gaz coûte 1,20 l'unité, le carburant 6, moins avec un Marché en ville. Le panneau du Marché
   montre les prix du jour.
 - **Crise du gaz** : une fois par hiver, entre la mi-novembre et la fin janvier (jamais pendant les deux premiers mois
-  d'une partie), pendant deux ou trois semaines, le gaz coûte **2,5 fois** plus cher et le carburant 1,5 fois.
+  d'une partie), pendant deux ou trois semaines, le gaz coûte **2,7 fois** plus cher et le carburant 1,5 fois.
   L'avertissement « Tensions sur le gaz » arrive trois jours avant. Pendant la crise, les ménages paient la moitié du
   surcoût du chauffage et la ville l'autre moitié, et acheter du courant coûte souvent moins cher que de faire tourner
   la centrale à gaz.
@@ -351,6 +364,66 @@ blé, et passent au rouge quand elles s'épuisent.
   une nouvelle met donc 4 heures à atteindre sa pleine puissance. Quand le réseau ne sait pas où mettre l'énergie
   (batteries pleines, vente au maximum), elle baisse et brûle moins de charbon, mais ensuite elle ne remonte pas vite
   pour la pointe du soir. Le panneau Case dit si elle monte ou descend.
+
+### Eau
+
+- **Qui a besoin d'eau** : les **maisons**, c'est-à-dire les quartiers et la mairie, chaque heure, davantage le matin
+  et le soir et davantage quand il fait chaud, au-dessus de 18 °C. Les industries et les services s'en passent.
+- **Le rayon** : une maison ne reçoit l'eau que si elle est dans le **rayon** d'une source, un carré autour de la
+  source : 3 cases dans chaque direction au niveau I (un carré de 7×7). On ne pose pas de canalisations : le rayon, c'est le
+  réseau. Une maison hors de tout rayon reste sans eau même si la ville en a en abondance.
+- La **mairie** a déjà un **puits** (1,6 d'eau par heure) et un **réservoir** de 8. Son rayon grandit avec le niveau
+  de la mairie : 3, 4, 5 et 6 cases. Il suffit aux premières maisons.
+- Les sources (onglet **Services** de la liste) :
+
+| Bâtiment | Eau | Où | À partir de | Coût |
+|---|---|---|---|---|
+| **Puits** | 3 par heure, un peu moins en été | plaine, colline | village | 350 et 5 de ciment, 8 heures |
+| **Château d'eau** | garde jusqu'à 60, rayon de 4 cases | plaine, colline | bourg | 500 et 20 de ciment, 12 heures |
+| **Prise d'eau du lac** | 8 par heure, avec peu d'énergie | à côté d'un lac | bourg | 900 et 15 de ciment, 16 heures |
+| **Usine de dessalement** | 6 par heure en toute saison, beaucoup d'énergie, 1 poste de travail | côte | petite ville | 2 200, 40 de ciment et 5 de cuivre, 40 heures |
+
+- Le **château d'eau** donne son eau aux maisons à 4 cases au plus. Il est rempli par les pompes qui l'ont dans leur
+  rayon, jamais par un autre château d'eau : placé au bord du rayon d'un puits, il porte l'eau un pas plus loin. Le
+  panneau Case dit combien de pompes le remplissent.
+- **Améliorer** (icône dans le panneau Case des puits, des prises d'eau du lac et des usines de dessalement) : le
+  niveau **II** (à partir du bourg) porte le rayon à 5 cases et l'eau à une fois et demie ; le niveau **III** (à
+  partir de la petite ville) à 7 cases et au double. Cela coûte 40 % ou 80 % du prix du bâtiment, plus du ciment et du
+  cuivre ; la source ne s'arrête pas. Les châteaux d'eau ne s'améliorent pas.
+- Les **pompes consomment de l'électricité** : une usine de dessalement beaucoup, une prise d'eau du lac peu. Pendant
+  une panne, elles donnent moins d'eau.
+- **Mode des pompes** (panneau **Eau et déchets**, touche **U**) :
+  - **« Pompes : suivent la consommation »** (au départ) : les pompes donnent l'eau quand il en faut, même à 19 h, à
+    la pointe du soir ;
+  - **« Pompes : avec l'énergie en trop »** : les châteaux d'eau donnent l'eau en premier, en gardant un quart de
+    réserve, et les pompes les remplissent avec l'énergie en trop, après les batteries et avant de la vendre. Le soir,
+    les pompes pèsent moins sur le réseau. Il faut au moins un château d'eau.
+- **Manque d'eau** : l'eau qui manque enlève jusqu'à **15 points de bonheur** (« Manque d'eau » dans l'info-bulle) et
+  dégrade la **santé**. Les quartiers qui reçoivent moins de la moitié de l'eau dont ils ont besoin affichent une
+  goutte barrée.
+- Les ménages paient à la ville la **facture d'eau** qu'ils reçoivent, au tarif choisi dans le panneau des ménages.
+
+### Déchets
+
+- La ville produit des **déchets** chaque heure : plus d'habitants, plus de déchets.
+- Ils sont ramassés par les **équipes de la mairie**, de 8 h à 17 h, et par les **centres de collecte** (à partir du
+  village, 500 et 20 de bois) : 3 tonnes par heure, 4 postes de travail, ouverts de 8 h à 17 h tous les jours. La nuit,
+  les déchets s'accumulent : c'est normal.
+- Les déchets ramassés vont dans les **décharges** (à partir du village, 400, 5 000 tonnes), dans l'ordre où tu les as
+  construites. Quand elles sont toutes pleines, ils sont emportés **hors de la ville** par la route nationale, à
+  **3 la tonne** ; si la route nationale est coupée ou s'il n'y a plus d'argent, ils restent dans les rues.
+- Une décharge :
+  - **sent mauvais** : les quartiers à 2 cases au plus perdent un peu de bonheur (« Décharge à proximité ») ;
+  - pollue la **nappe** : un puits à 2 cases au plus, même d'une décharge vide, s'arrête (« nappe polluée »). Les prises
+    d'eau du lac, les usines de dessalement et le puits de la mairie n'en souffrent pas ;
+  - pollue un peu l'**air**, d'autant plus qu'elle est pleine ;
+  - **ne se démolit pas** tant qu'elle contient des déchets.
+- **Déchets dans les rues** : quand il reste dans les rues plus d'une journée de déchets, la ville perd jusqu'à **10
+  points de bonheur** et un peu de santé.
+- Les ménages paient la **taxe sur les déchets**, fixe par habitant.
+- Le panneau **Eau et déchets** (touche **U** ou le bouton au robinet en haut) montre l'eau demandée et fournie, les
+  réservoirs et les pompes, les maisons hors du rayon, et les déchets produits, ramassés, dans les rues, dans les
+  décharges et emportés hors de la ville.
 
 ### Matériaux et industries
 
@@ -360,8 +433,9 @@ entier.
 
 - **Scierie** (seulement dans la **forêt**, les cases vert foncé) : 7,5 de bois par heure.
 - **Carrière** (collines) : 7,5 de pierre par heure.
-- **Cimenterie** (plaine) : transforme 7,5 de pierre en 7,5 de ciment par heure et consomme beaucoup
-  d'électricité. Sans pierre, elle s'arrête et cesse aussi de consommer de l'électricité.
+- **Cimenterie** (plaine) : transforme 7,5 de pierre en 7,5 de ciment par heure, consomme beaucoup d'électricité et
+  **pollue** en proportion de ce qu'elle produit : à plein régime, autant qu'un quart de centrale à charbon. Sans
+  pierre, elle s'arrête et cesse aussi de consommer de l'électricité et de polluer.
 - Les industries travaillent **de 8 h à 17 h, du lundi au vendredi** (voir [Horaires et équipes](#horaires-et-équipes)).
 - Les industries ont besoin de **personnel** et d'**électricité**. Les travailleurs y vont après l'énergie, la
   nourriture et les hôpitaux, et avant les mines de charbon.
@@ -393,7 +467,8 @@ entier.
   **bonheur** (« Trafic des navetteurs » dans l'info-bulle du bonheur).
 - Les **avenues** absorbent beaucoup de trafic mais sont **bruyantes** : elles enlèvent un peu de bonheur aux
   quartiers voisins.
-- **Carte du trafic** (touche **G**) : colore les routes selon leur charge.
+- **Vue du trafic** (touche **G**, ou depuis le bouton **Vues**) : colore les routes selon leur charge. Voir
+  [Vues de la carte](#vues-de-la-carte).
 - Panneau **Transports** (touche **J** ou le bouton au camion en haut) : personnes et marchandises en route, temps
   moyen, camions utilisés, les **routes les plus chargées** (un clic les montre dans le panneau Case) et les
   dernières 24 heures.
@@ -463,7 +538,8 @@ entier.
 
 - La **cloche** en haut compte les nouveaux événements ; elle devient rouge quand l'un d'eux est grave.
 - Le panneau **Événements** (touche **E** ou la cloche) montre en haut les **problèmes en cours** : dette, bâtiments
-  non reliés, sans personnel ou sans route, dépôts pleins, mines presque épuisées, nourriture importée. En dessous,
+  non reliés, sans personnel ou sans route, dépôts pleins, mines presque épuisées, nourriture importée, maisons sans
+  eau ou hors du rayon, puits à la nappe polluée, décharges pleines, déchets dans les rues. En dessous,
   l'**historique** de ce qui s'est passé, avec des filtres par type.
 - Un clic sur une ligne centre la carte sur l'endroit et ouvre le panneau Case.
 
@@ -477,20 +553,53 @@ entier.
 - L'onglet **Objectifs** du graphique montre les habitants et la pollution depuis le début de la partie, la ligne de
   l'objectif et la prévision en pointillés.
 
+### Vues de la carte
+
+- Le bouton **Vues** en haut à gauche de la carte (touche **I**) colore la carte selon un thème : **Trafic**,
+  **Réseau électrique**, **Eau** ou **Déchets et décharges**. Le reste de la carte s'assombrit, et en bas à gauche une
+  **légende** explique les couleurs et dit ce qu'il y a sous la souris. **Échap** éteint la vue.
+  - **Trafic** : les routes selon leur charge.
+  - **Réseau électrique** : bâtiments raccordés et non raccordés, lignes par niveau.
+  - **Eau** : le rayon des sources, les maisons desservies, desservies en partie, sans eau ou hors du rayon ; avec la
+    vue allumée, les sources améliorées portent l'étiquette II ou III.
+  - **Déchets et décharges** : le remplissage des décharges, la zone de l'odeur et de la nappe, les puits arrêtés.
+- **Pendant la pose, la bonne vue s'ouvre toute seule** : routes pour le trafic, lignes et transformateurs pour le
+  réseau, sources d'eau et quartiers pour l'eau, décharges et centres de collecte pour les déchets. Une fois la pose
+  finie, la vue d'avant revient. Cela se désactive dans les Paramètres (« Vues automatiques pendant la pose »).
+- Quand tu choisis une source d'eau, le carré de son rayon suit la souris et la légende dit combien de maisons y
+  entreraient et combien sont aujourd'hui sans eau.
+- Les couleurs se lisent aussi quand on ne distingue pas le rouge du vert.
+
+### Priorités du travail
+
+- Panneau **Travail** (touche **P** ou le bouton au casque en haut) : les six catégories du travail (**Énergie et
+  transport**, **Nourriture**, **Hôpitaux, chaleur et eau**, **Industrie et déchets**, **Mines**, **Quartiers et
+  parcs**), avec les postes pourvus de chacune. Les travailleurs vont d'abord aux catégories du haut : s'ils ne
+  suffisent pas, les dernières restent sans personnel.
+- Avec les **flèches**, tu montes ou descends une catégorie ; **Rétablir** revient à l'ordre de départ.
+- Dans le panneau Case d'un bâtiment qui s'arrête sans personnel, il y a deux commandes :
+  - **Suspendre** : le bâtiment ne prend pas de travailleurs et ne produit rien, mais l'entretien reste payé. Par
+    exemple, la cimenterie arrêtée en hiver pour donner du personnel à l'hôpital. **Reprendre** le relance ;
+  - **Priorité haute** : il reçoit les travailleurs, et les livraisons dans son silo, avant les autres de sa
+    catégorie.
+- Sur la carte, les bâtiments suspendus ont un badge gris avec le symbole pause, ceux en priorité haute un badge vert
+  avec deux flèches.
+
 ### Graphiques
 
-Le panneau du bas a six onglets. Les cinq premiers montrent les **dernières 24 heures**, une colonne par heure ; le
-sixième, **Objectifs**, toute la partie avec la prévision. Un clic sur un onglet l'ouvre (le jeu retient ton choix) ;
+Le panneau du bas a sept onglets. Les six premiers montrent les **dernières 24 heures**, une colonne par heure ; le
+septième, **Objectifs**, toute la partie avec la prévision. Un clic sur un onglet l'ouvre (le jeu retient ton choix) ;
 en passant la souris sur une colonne, tu lis les valeurs exactes de cette heure-là.
 
 - **Énergie** : production, demande, batteries, pertes en ligne, courant acheté et courant produit au gaz.
-- **Argent** : recettes au-dessus de zéro, dépenses en dessous, et le solde, avec les ventes et les achats au Marché
-  et le gaz acheté.
+- **Argent** : recettes au-dessus de zéro, dépenses en dessous, et le solde, avec les ventes et les achats au Marché,
+  le gaz acheté, les factures d'eau et la taxe sur les déchets.
 - **Matériaux** : ce qui est produit et consommé pour chaque matériau, et le stock ; le matériau se choisit avec
   les boutons à côté du graphique.
 - **Ville** : nourriture produite et nourriture mangée, les réserves de nourriture, le bonheur et la santé, la
   chaleur demandée et la chaleur fournie.
 - **Transports** : personnes qui vont au travail et qui rentrent à la maison, camions en route et charge des routes.
+- **Services** : eau demandée et eau fournie, électricité des pompes, déchets dans les rues.
 - **Objectifs** : habitants et pollution depuis le début de la partie, la ligne de l'objectif et la prévision en
   pointillés (voir [Prévision des objectifs](#prévision-des-objectifs)).
 
@@ -504,10 +613,10 @@ t'arrêtant sur un bâtiment de la carte, tu vois son état et combien d'énergi
 
 | Commande | Ce qu'elle fait |
 |---|---|
-| Touches **1–9** et **0** | Choisir quoi construire : ligne électrique, mine de charbon, centrale à charbon, centrale solaire, parc éolien, batterie, quartier, ferme, bateau de pêche, serre. Les autres bâtiments (entrepôt frigorifique, parc, hôpital, industries, entrepôts, parc de camions, transformateur, station de pompage, Marché, Atelier municipal) sont dans la liste de gauche, en six onglets : Énergie, Réseau, Transports, Ville, Nourriture, Industrie |
+| Touches **1–9** et **0** | Choisir quoi construire : ligne électrique, mine de charbon, centrale à charbon, centrale solaire, parc éolien, batterie, quartier, ferme, bateau de pêche, serre. Les autres bâtiments (entrepôt frigorifique, parc, hôpital, industries, entrepôts, parc de camions, transformateur, station de pompage, Marché, Atelier municipal, eau et déchets) sont dans la liste de gauche, en sept onglets : Énergie, Réseau, Transports, Ville, Services, Nourriture, Industrie |
 | **Clic gauche** | Pose le bâtiment choisi. Sans choix, sélectionne une case et affiche ses détails |
 | **Clic droit** (sur tablette : appui long) | Avec un bâtiment choisi, annule le choix. Sans choix, demande confirmation pour démolir (la moitié du coût est remboursée) |
-| **Échap** | Annule le choix ; s'il n'y a rien à annuler, ouvre le **menu de pause** (Reprendre, Sauvegarder sous…, Sauvegarde rapide, Charger une partie, Sauvegarder et quitter vers le menu, Nouvelle partie, Paramètres) |
+| **Échap** | Annule le choix ou éteint la vue de la carte ; s'il n'y a rien à annuler, ouvre le **menu de pause** (Reprendre, Sauvegarder sous…, Sauvegarde rapide, Charger une partie, Sauvegarder et quitter vers le menu, Nouvelle partie, Paramètres) |
 | Bouton **⚙** (en haut) | Ouvre le menu de pause, comme Échap : sauvegardes, paramètres, quitter |
 | **F11** | Plein écran / fenêtre |
 | **Espace** ou le bouton ▶/❚❚ | Pause / reprise |
@@ -521,17 +630,23 @@ t'arrêtant sur un bâtiment de la carte, tu vois son état et combien d'énergi
 | **R** | Outil **Route** : clique ou fais glisser pour poser des chemins de terre |
 | **M** | Outil **Améliorer la route** : chemin de terre → route goudronnée → avenue |
 | **L** | Outil **Améliorer la ligne** : lignes du niveau I → II → III |
-| **G** | Carte du trafic |
+| **G** | Vue du trafic |
+| **I** ou le bouton **Vues** (sur la carte, en haut à gauche) | Vues de la carte : trafic, réseau électrique, eau, déchets |
 | **J** ou le bouton **Transports** (en haut) | Panneau des transports : personnes, marchandises, routes les plus chargées |
 | **E** ou la cloche (en haut) | Journal des événements : problèmes en cours et historique |
 | **H** ou le bouton **Ménages** (en haut) | Panneau des ménages : salaires, dépenses, tarif de l'énergie |
 | **K** ou le bouton à la balance (en haut) | Panneau du Marché : acheter et vendre matériaux et nourriture |
+| **U** ou le bouton au robinet (en haut) | Panneau Eau et déchets : eau, pompes, collecte et décharges |
+| **P** ou le bouton au casque (en haut) | Panneau Travail : dans quel ordre les travailleurs vont aux bâtiments |
 | Bouton **Renommer** (dans le panneau Case) | Renomme une rue, un quartier, un hôpital ou un parc |
 | Bouton **Démolir** (icône dans le panneau Case) | Démolit le bâtiment ou le chantier sélectionné (la moitié du coût est remboursée) |
 | Bouton **Améliorer** (icône dans le panneau Case de la mairie) | Fait passer la mairie au niveau suivant, quand les objectifs du niveau sont remplis |
+| Bouton **Améliorer** (icône dans le panneau Case d'une source d'eau) | Fait passer puits, prises d'eau du lac et usines de dessalement au niveau II ou III : rayon plus grand et plus d'eau |
+| Boutons **Suspendre** et **Priorité haute** (dans le panneau Case) | Arrêtent un bâtiment, ou lui donnent les travailleurs avant les autres de sa catégorie |
+| Bouton des **pompes** (dans le panneau Eau et déchets) | Pompes qui suivent la consommation ou qui tournent avec l'énergie en trop |
 | Boutons **Vente** et **Achat** (dans le panneau Case de la ligne frontalière) | Activent et désactivent la vente et l'achat automatiques du courant |
 | Bouton **Chauffage au gaz** (dans le panneau des ménages) | Allume et éteint les chaudières à gaz des quartiers |
-| Onglets du graphique (en bas) | Énergie, Argent, Matériaux, Ville, Transports, Objectifs |
+| Onglets du graphique (en bas) | Énergie, Argent, Matériaux, Ville, Transports, Services, Objectifs |
 
 ### Langues
 
@@ -549,6 +664,7 @@ passe à la valeur suivante, et tes choix sont mémorisés.
 - **Sauvegarde automatique** : chaque jour, tous les 3 jours, tous les 7 jours, ou désactivée.
 - **Taille de l'interface** : 90, 100 ou 110 %.
 - **Disposition** : automatique, ordinateur ou téléphone.
+- **Vues automatiques pendant la pose** : oui ou non (voir [Vues de la carte](#vues-de-la-carte)).
 - **Animations** : oui ou non. Avec « non », le trafic animé, les nuages, la fumée et les autres effets s'arrêtent :
   pratique sur les ordinateurs lents.
 - **Musique** et **Effets sonores** : 100, 75, 50 ou 25 %, ou muet.
@@ -562,7 +678,9 @@ Sur un téléphone tenu **à l'horizontale**, le jeu utilise une disposition fai
 - les **catégories** de bâtiments sont en bas : en toucher une ouvre sa grille, toucher un bâtiment montre sa fiche
   avec la description et le bouton **Construire** ;
 - les panneaux (Case, Météo, Objectifs, graphiques et les autres) montent depuis le bas ; on lit les valeurs du
-  graphique en touchant une colonne.
+  graphique en touchant une colonne ;
+- **Eau et déchets** et **Travail** s'ouvrent depuis la feuille **Plus** ; le bouton des vues est sur la carte, en haut
+  à gauche.
 
 La disposition se choisit toute seule ; dans les Paramètres, tu peux passer de celle du téléphone à celle de
 l'ordinateur.
@@ -597,6 +715,11 @@ l'ordinateur.
   plus d'argent).
 - **Flocon de neige** : **maisons froides**, le quartier ne reçoit pas toute la chaleur dont il a besoin.
 - **Jerrican barré** : **pas de carburant**, les camions de ce parc de camions sont à l'arrêt.
+- **Goutte barrée** : **manque d'eau**, le quartier reçoit moins de la moitié de l'eau dont il a besoin.
+- **Goutte trouble** : le puits est à l'arrêt, **nappe polluée** par une décharge voisine.
+- **Tas avec une flèche** : **décharge pleine**, les déchets partent hors de la ville en payant.
+- **Badge gris avec le symbole pause** : bâtiment **suspendu** par toi.
+- **Badge vert avec deux flèches** : bâtiment en **priorité haute**.
 - **Lumières la nuit** : à la tombée de la nuit, les quartiers et la mairie allument leurs lumières. Un bâtiment
   sans courant reste dans le noir : un quartier éteint la nuit est un signal d'alarme.
 
@@ -626,7 +749,7 @@ l'ordinateur.
     (production), tu achètes du courant ou une panne approche.
 11. Quand les chantiers attendent longtemps leur tour, construis un **Atelier municipal**.
 12. Quand « Pas assez de camions » apparaît, construis un **parc de camions**. Quand la ville grandit, regarde la
-    **carte du trafic** (G) et améliore les routes les plus chargées (M) ; ne mets pas d'avenues juste à côté des
+    **vue du trafic** (G) et améliore les routes les plus chargées (M) ; ne mets pas d'avenues juste à côté des
     quartiers.
 13. Garde les centrales près de la mairie ou d'un **transformateur** : loin, elles perdent de l'énergie.
 14. Quand la **cloche** devient rouge, ouvre le **journal des événements** (E) : en haut, les problèmes à régler, et
@@ -642,6 +765,13 @@ l'ordinateur.
     chaque heure de gaz coûte.
 19. Avant l'hiver, pense au **chauffage** : une **chaufferie au bois** près d'une scierie fait économiser beaucoup de
     gaz. Quand arrive l'avertissement « Tensions sur le gaz », tu as trois jours pour te préparer à la crise.
+20. Le puits de la mairie suffit aux premières maisons. Quand tu construis des quartiers éloignés, allume la vue
+    **Eau** (I) et place un **puits** près d'eux ; un **château d'eau** avec les pompes « avec l'énergie en trop » retire
+    les pompes de la pointe du soir.
+21. Mets la **décharge** loin des quartiers et des puits (au moins 3 cases), et un **centre de collecte** quand les
+    déchets dans les rues augmentent.
+22. S'il manque des travailleurs, ouvre le panneau **Travail** (P) : mets en haut ce qui compte le plus, ou
+    **suspends** une industrie pendant quelques jours.
 
 ## Sauvegardes
 
@@ -710,6 +840,12 @@ sauvegarde de la 0.11.0 ne s'ouvre pas dans les versions précédentes.
 précédentes se chargent : le chauffage au gaz est allumé et les centrales à charbon repartent de la puissance qu'elles
 avaient. Une sauvegarde de la 0.12.0 ne s'ouvre pas dans les versions précédentes.
 
+**Depuis la 0.13.0**, le format change de nouveau : eau, déchets et priorités du travail. Les sauvegardes des
+versions précédentes se chargent : le réservoir de la mairie est plein, les pompes « suivent la consommation », les
+rues sont propres et les travailleurs suivent l'ordre de départ. Les parties sauvegardées avant l'eau reçoivent
+**7 jours de camions-citernes**, gratuits, qui apportent aux maisons toute l'eau dont elles ont besoin : le temps de
+poser les puits. Une sauvegarde de la 0.13.0 ne s'ouvre pas dans les versions précédentes.
+
 Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivante : le
 [changelog](CHANGELOG.md) le dit quand cela arrive.
 
@@ -717,15 +853,17 @@ Les sauvegardes d'une version alpha pourraient ne pas fonctionner avec la suivan
 
 Ce qui est déjà prévu, à peu près dans cet ordre. Les projets peuvent changer.
 
-- **Eau et déchets** : réseaux d'eau, stations d'épuration et décharges pour une ville plus grande.
-- **Éducation** : des écoles, et des travailleurs mieux formés.
+- **Éducation** : des écoles, et des travailleurs qualifiés pour les bâtiments les plus difficiles.
 - **Recherche** : des technologies à découvrir qui débloquent de nouveaux bâtiments, comme l'extraction du pétrole et
   du gaz.
 - **Usure et réparations** : les bâtiments s'usent et les équipes les réparent avec tes matériaux ; puis grèves et
   urgences, pour qui les choisit.
 - **Nouvelles cartes** : des cartes de tailles différentes, une carte différente à chaque partie, des rivières et des
   ponts, et une mini-carte.
-- **Plus tard** : plusieurs villes reliées entre elles et une vue isométrique.
+- **Tutoriel par niveaux** : un guide au début, puis des niveaux avec peu de bâtiments à la fois, expliqués avec
+  des exemples.
+- **Bêta** : après le tutoriel, le jeu passe en phase bêta, avec toutes les parties principales.
+- **Après la 1.0** : plusieurs villes reliées entre elles et une vue isométrique.
 
 ## Problèmes connus
 

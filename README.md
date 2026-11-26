@@ -20,8 +20,8 @@
 
 **You run the power grid of a growing town.** Every hour the town needs energy: a little at night, a lot in the
 evening. Build power plants, solar farms, wind farms and batteries, connect everything with power lines and
-roads, find people to work in them, shift after shift, feed everyone, keep their homes warm in winter, move freight and
-materials by truck without jamming the traffic, and grow your village to **400 residents within two game years**, without constant blackouts, without debt
+roads, find people to work in them, shift after shift, feed everyone, keep their homes warm in winter, bring water to
+their homes and clear the waste from the streets, move freight and materials by truck without jamming the traffic, and grow your village to **400 residents within two game years**, without constant blackouts, without debt
 and without choking it with pollution.
 
 An original game by **Marco Scarlino**. Free to play. Official website: **[voltvale.it](https://voltvale.it/en/)**.
@@ -103,7 +103,8 @@ the time, for example «Day 1 · Sun 18 Oct 2020 · 08:00».
 
 - **Goal**: reach **400 residents** with pollution **below the limit** within **2 years**. After the victory you
   can **keep playing**, with no more time limit.
-- **Defeat**: if your money stays in the red for **30 days in a row**, or if the 2 years run out before you win.
+- **Defeat**: if your money stays in the red for **30 days in a row**, if the town stays below **5 residents for 14
+  days in a row**, or if the 2 years run out before you win.
 - **The town hall grows**: from **village** to **small town**, **town** and **city**, as you complete small goals.
   Each level unlocks new buildings: see [Town hall levels and goals](#town-hall-levels-and-goals).
 - **Crews do the building**: a new building is first a **construction site**, and it works once a crew has finished
@@ -128,11 +129,16 @@ the time, for example «Day 1 · Sun 18 Oct 2020 · 08:00».
   the **border line** next to the bridge; the more you sell in an hour, the less it's worth. See
   [Links to the mainland](#links-to-the-mainland).
 - **Pollution**: coal power plants pollute and the air clears slowly. One power plant is fine, too many are not.
-  It makes residents sick, and above the limit you can't win.
+  Gas and heating plants, the cement works while it runs and landfills pollute too, but less. It makes residents
+  sick, and above the limit you can't win.
 - **Growth**: the town grows if residents are **happy** enough, there's room in the **districts** and there's enough
   **food** in store.
 - **Heating**: below 15 °C homes need **heat**, from wood-fired heating plants or from the districts' gas boilers.
   Cold homes make residents unhappy and sick. See [Heating, gas and fuel](#heating-gas-and-fuel).
+- **Water**: homes only get water from the sources that have them within their **range**; without water residents
+  are unhappy and get sick. See [Water](#water).
+- **Waste**: it has to be collected and taken to a landfill or out of town; waste in the streets makes the town less
+  happy. See [Waste](#waste).
 
 ### New game
 
@@ -162,10 +168,10 @@ The town hall grows with the town: **I village**, **II small town**, **III town*
 
 | Level | Buildings |
 |---|---|
-| **I village** | power lines, dirt roads, districts, solar farms, wind farms, coal power plants and mines, batteries, farms, parks |
-| **II small town** | paved roads, depots, truck depots, sawmills, quarries, greenhouses, cold stores, fishing boats, gas power plants, wood-fired heating plants, Market, Workshop |
-| **III town** | avenues, cement works, transformers, hospitals, pumped storage |
-| **IV city** | nothing new for now: it's there for the buildings of upcoming updates |
+| **I village** | power lines, dirt roads, districts, solar farms, wind farms, coal power plants and mines, batteries, farms, parks, wells, waste collection centres, landfills |
+| **II small town** | paved roads, depots, truck depots, sawmills, quarries, greenhouses, cold stores, fishing boats, gas power plants, wood-fired heating plants, Market, Workshop, water towers, lake intakes; level II water sources |
+| **III town** | avenues, cement works, transformers, hospitals, pumped storage, desalination plants; level III water sources |
+| **IV city** | nothing new for now, except that the town hall's well reaches further: it's there for the buildings of upcoming updates |
 
 - In the list, buildings that are still locked are greyed out with a **padlock**; hover over them to see the level
   they need. The **Market** can be built only once per town: after the first one it turns grey.
@@ -217,7 +223,7 @@ The map is an **island**, joined to the mainland by a **bridge to the west**, le
 - A **trade icon** above the border line shows when power was bought or sold in the last hour; the **Energy** chart
   shows the power bought.
 - **Goods from outside**: imported food, copper and Market trades come through the **highway**, and only arrive if
-  it's connected to the town's roads.
+  it's connected to the town's roads. Waste taken out of town leaves by the same road.
 
 ### Work and staff
 
@@ -226,14 +232,17 @@ Buildings need people to run them.
 - About **56 %** of the residents work. The bar at the top shows how many people have a job out of the available
   workforce.
 - **Coal power plants**, **coal mines**, **industries**, the **food** buildings, **hospitals**, **parks**, **cold
-  stores**, **depots**, **Workshops**, **pumped storage**, **gas power plants** and **wood-fired heating plants** need staff. **Solar farms**, **wind farms**, **batteries**, power lines
-  and transformers run by themselves.
+  stores**, **depots**, **Workshops**, **pumped storage**, **gas power plants**, **wood-fired heating plants**,
+  **desalination plants** and **waste collection centres** need staff. **Solar farms**, **wind farms**, **batteries**,
+  power lines, transformers, **wells**, **water towers**, **lake intakes** and **landfills** run by themselves.
 - The **Tile** panel shows how many jobs are filled, for example **Staff: 4/4**, and how many people that takes,
   shifts included.
 - With too few staff a building produces less; **with no staff at all it stops** and shows the **«no staff»**
   signal.
-- Workers go **to energy first**, then **to food**, then **to hospitals and heating plants**, then **to industries**, then **to the mines**, then **to services** (districts and parks).
-  Districts keep working even when their services are short of staff.
+- At the start, workers go **to energy and transport first**, then **to food**, then **to hospitals, heat and
+  water**, then **to industry and waste**, then **to the mines**, then **to districts and parks**. You can change the
+  order in the **Work** panel: see [Work priorities](#work-priorities). Districts keep working even when their
+  services are short of staff.
 - **Unemployment** costs money: people without a job pay no income tax and get unemployment benefit from the town;
   if it's high, residents are less happy.
 
@@ -243,9 +252,9 @@ Every building with staff has its own working hours, shown in the **Tile** panel
 
 | Hours | Buildings | People per job |
 |---|---|---|
-| **Always open, 3 shifts (6, 14, 22)** | coal and gas power plants, wood-fired heating plants, coal mines, hospitals, cold stores, truck depots, pumped storage | about 4: one job covered day and night takes three shifts plus rest days |
+| **Always open, 3 shifts (6, 14, 22)** | coal and gas power plants, wood-fired heating plants, coal mines, hospitals, cold stores, truck depots, pumped storage, desalination plants | about 4: one job covered day and night takes three shifts plus rest days |
 | **Open 8–17, Monday to Friday** | sawmills, quarries, cement works, depots | 1 |
-| **Open 8–17, every day** | farms, fishing boats, greenhouses, parks, Workshops, the services of the districts | about 1.4, for the days off |
+| **Open 8–17, every day** | farms, fishing boats, greenhouses, parks, Workshops, waste collection centres, the services of the districts | about 1.4, for the days off |
 
 - A coal power plant with all its jobs filled employs about **17 people**: plan your districts accordingly.
 - **Outside its hours a building is closed**: it produces nothing and uses no power or materials. The Tile panel
@@ -273,10 +282,12 @@ running low.
 ### Happiness, health and taxes
 
 - **Happiness** (the smiley in the top bar): it moves slowly towards a value that is the sum of a few factors,
-  namely blackouts in the last 24 hours, food, hunger, cold homes, unemployment, pollution, health, parks, taxes and the household budget. Hover
+  namely blackouts in the last 24 hours, food, hunger, cold homes, water shortage, waste in the streets, nearby
+  landfills, unemployment, pollution, health, parks, taxes and the household budget. Hover
   over the number to see where it's heading and how much each factor weighs, for example «Blackouts −5.0» or
   «Parks +3.0». Below 60 the town doesn't grow, and below 35 people start to leave.
-- **Health** (the heart): drops with pollution, hunger and cold homes. **Sick people stay home**, so there are fewer workers,
+- **Health** (the heart): drops with pollution, hunger, cold homes, water shortage and waste in the streets. **Sick
+  people stay home**, so there are fewer workers,
   and an unhealthy town is also a less happy one.
 - **Hospital** (plains): treats up to 250 residents, needs staff and uses power. It can't treat anyone during a
   blackout. A must if you go for coal.
@@ -291,7 +302,8 @@ running low.
 - Staff gain **experience**: people who stay in the same job produce up to **15%** more, but they also earn more.
   When the staff change, experience drops: keeping your workers pays off. The Tile panel shows the experience and
   wages of every building.
-- Households pay the town **income tax**, the **electricity bill** of the districts, **food** and **rent**. People
+- Households pay the town **income tax**, the **electricity bill** of the districts, the **heating** and **water**
+  bills, the **waste charge**, **food** and **rent**. People
   without a job get **unemployment benefit**. Households also have other income, such as pensions and work outside
   town.
 - **Households** panel (**H** key or the button at the top): household income and spending over the last 24 hours,
@@ -319,13 +331,69 @@ running low.
 - **Gas and fuel** are bought hour by hour, only as much as needed, through the **highway**, as long as there's
   money: gas costs 1.20 a unit, fuel 6, less with a Market in town. The Market panel shows today's prices.
 - **Gas crisis**: once every winter, between mid-November and the end of January (never in the first two months of a
-  game), for two or three weeks gas costs **2.5 times** as much and fuel 1.5 times. The «Gas tensions» warning
+  game), for two or three weeks gas costs **2.7 times** as much and fuel 1.5 times. The «Gas tensions» warning
   arrives three days before. During the crisis households pay half of the extra heating cost and the town pays the
   other half, and buying power is often cheaper than running the gas power plant.
 - **Coal is slow**: a coal power plant changes its output by at most a quarter of its capacity per hour, so a new one
   takes 4 hours to reach full power. When the grid has nowhere to put the energy (batteries full, sales at the
   limit), it turns down and burns less coal, but then it can't climb back fast for the evening peak. The Tile panel
   says whether it's ramping up or down.
+
+### Water
+
+- **Who needs water**: **homes**, that is districts and the town hall, every hour, more in the morning and in the
+  evening and more when it's hot, above 18 °C. Industries and services do without.
+- **Range**: a home only gets water if it's within the **range** of a source, a square around the source: 3 tiles in
+  every direction at level I (a 7×7 square). You don't lay pipes: the range is the network. A home outside every range
+  stays dry even if the town has plenty of water.
+- The **town hall** already has a **well** (1.6 water per hour) and a **tank** holding 8. Its range grows with the town
+  hall's level: 3, 4, 5 and 6 tiles. It's enough for the first homes.
+- The sources (**Utilities** tab of the list):
+
+| Building | Water | Where | From | Cost |
+|---|---|---|---|---|
+| **Well** | 3 per hour, a little less in summer | plains, hills | village | 350 and 5 cement, 8 hours |
+| **Water tower** | holds up to 60, range 4 tiles | plains, hills | small town | 500 and 20 cement, 12 hours |
+| **Lake intake** | 8 per hour, with little energy | next to a lake | small town | 900 and 15 cement, 16 hours |
+| **Desalination plant** | 6 per hour in every season, a lot of energy, 1 job | coast | town | 2,200, 40 cement and 5 copper, 40 hours |
+
+- A **water tower** gives its water to the homes within 4 tiles. It's filled by the pumps that have it within their
+  range, never by another tower: placed at the edge of a well's range, it takes water one step further. The Tile
+  panel says how many pumps fill it.
+- **Upgrade** (icon in the Tile panel of wells, lake intakes and desalination plants): level **II** (from small town)
+  takes the range to 5 tiles and the water to one and a half times; level **III** (from town) to 7 tiles and double.
+  It costs 40% or 80% of the building's price, plus cement and copper; the source doesn't stop. Towers can't be
+  upgraded.
+- **Pumps use energy**: a desalination plant a lot, a lake intake little. During a blackout they give less water.
+- **Pump mode** (**Water and waste** panel, **U** key):
+  - **«Follow demand»** (the default): pumps give water when it's needed, at 7 pm too, right in the evening peak;
+  - **«On spare energy»**: towers give their water first, keeping a quarter in reserve, and the pumps refill them
+    with the energy left over, after the batteries and before it's sold. In the evening the pumps weigh less on the
+    grid. You need at least one tower.
+- **Water shortage**: missing water costs up to **15 points of happiness** («Water shortage» in the tooltip) and
+  harms **health**. Districts getting less than half the water they need show a crossed-out drop.
+- Households pay the town a **water bill** for the water they get, with the tariff chosen in the Households panel.
+
+### Waste
+
+- The town produces **waste** every hour: more residents, more waste.
+- It's collected by the **town hall's crews**, from 8 to 17, and by **waste collection centres** (from village, 500 and
+  20 timber): 3 tonnes per hour, 4 jobs, open from 8 to 17 every day. At night waste piles up: that's normal.
+- Collected waste goes to the **landfills** (from village, cost 400, hold 5,000 tonnes), in the order you built them.
+  When they're all full it's taken **out of town** along the highway, at **3 per tonne**; if the highway is cut off or
+  the money has run out, it stays in the streets.
+- A landfill:
+  - **smells**: districts within 2 tiles lose a little happiness («Nearby landfill»);
+  - pollutes the **groundwater**: a well within 2 tiles, even of an empty landfill, stops («polluted groundwater»).
+    Lake intakes, desalination plants and the town hall's well aren't affected;
+  - pollutes the **air** a little, more the fuller it gets;
+  - **can't be demolished** while it holds any waste.
+- **Waste in the streets**: when more than a day's worth of waste is left in the streets, the town loses up to **10
+  points of happiness** and some health.
+- Households pay a **waste charge**, a fixed amount per resident.
+- The **Water and waste** panel (**U** key or the tap button at the top) shows the water needed and supplied, tanks
+  and pumps, homes out of range, and the waste produced, collected, in the streets, in the landfills and taken out of
+  town.
 
 ### Materials and industries
 
@@ -334,8 +402,9 @@ under the price, with small icons; hover over the button to read them in full.
 
 - **Sawmill** (only in the **woods**, the dark green tiles): 7.5 timber per hour.
 - **Quarry** (hills): 7.5 stone per hour.
-- **Cement works** (plains): turns 7.5 stone into 7.5 cement per hour, and uses a lot of power. Without stone it
-  stops, and stops using power too.
+- **Cement works** (plains): turns 7.5 stone into 7.5 cement per hour, uses a lot of power and **pollutes** in
+  proportion to what it makes: at full output, as much as a quarter of a coal power plant. Without stone it stops,
+  and stops using power and polluting too.
 - Industries work **from 8 to 17, Monday to Friday** (see [Working hours and shifts](#working-hours-and-shifts)).
 - Industries need **staff** and **power**. Workers go to them after energy, food and hospitals, and before the
   coal mines.
@@ -362,7 +431,8 @@ under the price, with small icons; hover over the button to read them in full.
   weekend industries are closed and the roads are quieter. If the roads are full, everyone slows down: late workers produce less, and the previous day's delays cost **happiness**
   («Commuter traffic» in the happiness tooltip).
 - **Avenues** carry a lot of traffic but are **noisy**: they take a little happiness from the districts next to them.
-- **Traffic map** (**G** key): colours the roads by how busy they are.
+- **Traffic view** (**G** key, or from the **Views** button): colours the roads by how busy they are. See
+  [Map views](#map-views).
 - **Transport** panel (**J** key or the truck button at the top): people and freight on the move, average travel
   time, trucks in use, the **busiest roads** (click one to see it in the Tile panel) and the last 24 hours.
 - To demolish a road: right-click, as for buildings (half the cost refunded).
@@ -427,7 +497,8 @@ under the price, with small icons; hover over the button to read them in full.
 
 - The **bell** at the top counts new events; it turns red when one is serious.
 - The **Events** panel (**E** key or the bell) shows the **current problems** at the top: debt, buildings that are
-  not connected or have no staff or no road, full yards, mines running out, imported food. Below is the **log** of
+  not connected or have no staff or no road, full yards, mines running out, imported food, homes without water or out
+  of range, wells with polluted groundwater, full landfills, waste in the streets. Below is the **log** of
   what happened, with filters by type.
 - Click a line to centre the map on the spot and open the Tile panel.
 
@@ -441,18 +512,50 @@ under the price, with small icons; hover over the button to read them in full.
 - The **Goals** tab of the chart shows residents and pollution since the start of the game, the goal line and the
   forecast as a dashed line.
 
+### Map views
+
+- The **Views** button at the top left of the map (**I** key) colours the map by theme: **Traffic**, **Power grid**,
+  **Water** or **Waste and landfills**. The rest of the map goes dark, and a **legend** at the bottom left explains the
+  colours and tells you what's under the mouse. **Esc** switches the view off.
+  - **Traffic**: roads by how busy they are.
+  - **Power grid**: connected and unconnected buildings, lines by level.
+  - **Water**: the range of the sources, homes supplied, partly supplied, without water or out of range; with the view
+    on, upgraded sources carry a II or III tag.
+  - **Waste and landfills**: how full the landfills are, the area of the smell and of the groundwater, stopped wells.
+- **While placing, the right view opens by itself**: roads for traffic, lines and transformers for the grid, water
+  sources and districts for water, landfills and collection centres for waste. When you're done, the previous view
+  comes back. Switch this off in the Settings («Automatic views while placing»).
+- When you pick a water source, the square of its range follows the mouse and the legend says how many homes it
+  would reach and how many of them are without water today.
+- The colours can be read by people who can't tell red from green.
+
+### Work priorities
+
+- **Work** panel (**P** key or the hard-hat button at the top): the six work categories (**Energy and transport**,
+  **Food**, **Hospitals, heat and water**, **Industry and waste**, **Mines**, **Districts and parks**), with the jobs
+  filled in each. Workers go to the categories at the top first: if there aren't enough, the last ones go without
+  staff.
+- Use the **arrows** to move a category up or down; **Reset** goes back to the starting order.
+- The Tile panel of a building that stops without staff has two commands:
+  - **Suspend**: the building takes no workers and produces nothing, but its upkeep is still paid. For example, the
+    cement works stopped in winter to free staff for the hospital. **Resume** starts it again;
+  - **High priority**: it gets workers, and deliveries to its silo, before the others in its category.
+- On the map, suspended buildings carry a grey badge with the pause sign, high-priority ones a green badge with two
+  arrows.
+
 ### Charts
 
-The panel at the bottom has six tabs. The first five show the **last 24 hours**, one column per hour; the sixth,
+The panel at the bottom has seven tabs. The first six show the **last 24 hours**, one column per hour; the seventh,
 **Goals**, shows the whole game with the forecast. Click a tab to switch (the game remembers your choice), and hover
 over a column to read the exact values of that hour.
 
 - **Energy**: production, demand, batteries, line losses, power bought and power from gas.
-- **Money**: income above zero, spending below, and the balance, with sales and purchases at the Market and the gas
-  bought.
+- **Money**: income above zero, spending below, and the balance, with sales and purchases at the Market, the gas
+  bought, the water bills and the waste charge.
 - **Materials**: how much of each material is produced and used, and the stock; pick the material with the buttons next to the chart.
 - **Town**: food produced and food eaten, the food stock, happiness and health, heat needed and heat supplied.
 - **Transport**: people going to work and going home, trucks on the road, and how loaded the roads are.
+- **Utilities**: water needed and water supplied, energy used by the pumps, waste in the streets.
 - **Goals**: residents and pollution since the start of the game, the goal line and the forecast as a dashed line
   (see [Goal forecast](#goal-forecast)).
 
@@ -465,10 +568,10 @@ and how much energy it produces or uses.
 
 | Control | What it does |
 |---|---|
-| Keys **1–9** and **0** | Pick what to build: Power line, Coal mine, Coal power plant, Solar farm, Wind farm, Battery, District, Farm, Fishing boat, Greenhouse. The other buildings (cold store, park, hospital, industries, depots, transformer, pumped storage, Market, Workshop) are in the list on the left, in six tabs: Energy, Grid, Transport, Town, Food, Industry |
+| Keys **1–9** and **0** | Pick what to build: Power line, Coal mine, Coal power plant, Solar farm, Wind farm, Battery, District, Farm, Fishing boat, Greenhouse. The other buildings (cold store, park, hospital, industries, depots, transformer, pumped storage, Market, Workshop, water and waste) are in the list on the left, in seven tabs: Energy, Grid, Transport, Town, Utilities, Food, Industry |
 | **Left click** | Places the chosen building. With nothing chosen, selects a tile and shows its details |
 | **Right click** (on a tablet: long press) | With a building chosen, cancels the choice. With nothing chosen, asks to confirm demolition (half the cost refunded) |
-| **Esc** | Cancels the choice; if there's nothing to cancel, opens the **pause menu** (Resume, Save as…, Quick save, Load game, Save and quit to menu, New game, Settings) |
+| **Esc** | Cancels the choice or switches off the map view; if there's nothing to cancel, opens the **pause menu** (Resume, Save as…, Quick save, Load game, Save and quit to menu, New game, Settings) |
 | **⚙** button (at the top) | Opens the pause menu, like Esc: saves, settings, quit |
 | **F11** | Full screen / window |
 | **Space** or the ▶/❚❚ button | Pause / resume |
@@ -482,17 +585,23 @@ and how much energy it produces or uses.
 | **R** | **Road** tool: click or drag to lay dirt roads |
 | **M** | **Upgrade road** tool: dirt road → paved road → avenue |
 | **L** | **Upgrade line** tool: lines from level I → II → III |
-| **G** | Traffic map |
+| **G** | Traffic view |
+| **I** or the **Views** button (on the map, top left) | Map views: traffic, power grid, water, waste |
 | **J** or the **Transport** button (at the top) | Transport panel: people, freight, busiest roads |
 | **E** or the bell (at the top) | Event log: current problems and what happened |
 | **H** or the **Households** button (at the top) | Households panel: wages, spending, energy tariff |
 | **K** or the scales button (at the top) | Market panel: buy and sell materials and food |
+| **U** or the tap button (at the top) | Water and waste panel: water, pumps, collection and landfills |
+| **P** or the hard-hat button (at the top) | Work panel: the order in which workers go to buildings |
 | **Rename** button (in the Tile panel) | Renames a street, district, hospital or park |
 | **Demolish** button (icon in the Tile panel) | Demolishes the selected building or construction site (half the cost refunded) |
 | **Upgrade** button (icon in the town hall's Tile panel) | Raises the town hall to the next level, once the goals of the level are complete |
+| **Upgrade** button (icon in a water source's Tile panel) | Takes wells, lake intakes and desalination plants to level II or III: wider range and more water |
+| **Suspend** and **High priority** buttons (in the Tile panel) | Stop a building, or give it workers before the others in its category |
+| **Pumps** button (in the Water and waste panel) | Pumps that follow demand or run on spare energy |
 | **Sell** and **Buy** buttons (in the border line's Tile panel) | Switch automatic selling and buying of power on and off |
 | **Gas heating** button (in the Households panel) | Switches the districts' gas boilers on and off |
-| Tabs of the chart (at the bottom) | Energy, Money, Materials, Town, Transport, Goals |
+| Tabs of the chart (at the bottom) | Energy, Money, Materials, Town, Transport, Utilities, Goals |
 
 ### Languages
 
@@ -510,6 +619,7 @@ next value, and your choices are remembered.
 - **Autosave**: every day, every 3 days, every 7 days, or off.
 - **Interface size**: 90, 100 or 110%.
 - **Layout**: automatic, computer or phone.
+- **Automatic views while placing**: on or off (see [Map views](#map-views)).
 - **Animations**: on or off. Off stops the moving traffic, clouds, smoke and the other effects: handy on slow
   computers.
 - **Music** and **Sound effects**: 100, 75, 50 or 25%, or off.
@@ -523,7 +633,8 @@ On a phone held **sideways** the game uses a layout made for small screens:
 - the building **categories** are at the bottom: tap one to open its grid, then tap a building to see its card with
   the description and the **Build** button;
 - the panels (Tile, Weather, Goals, charts and the others) slide up from the bottom; tap a column of a chart to read
-  its values.
+  its values;
+- **Water & waste** and **Work** open from the **More** sheet; the views button is on the map, at the top left.
 
 The layout is picked automatically; you can switch between phone and computer in the Settings.
 
@@ -553,6 +664,11 @@ The layout is picked automatically; you can switch between phone and computer in
 - **Crossed-out flame**: a gas power plant has stopped because **no gas** is arriving (highway cut off or no money).
 - **Snowflake**: **cold homes**, the district isn't getting all the heat it needs.
 - **Crossed-out jerrycan**: **no fuel**, the trucks of this truck depot are stopped.
+- **Crossed-out drop**: **water shortage**, the district gets less than half the water it needs.
+- **Murky drop**: the well has stopped, **groundwater polluted** by a nearby landfill.
+- **Heap with an arrow**: **landfill full**, waste goes out of town at a price.
+- **Grey badge with the pause sign**: a building you've **suspended**.
+- **Green badge with two arrows**: a building with **high priority**.
 - **Lights at night**: after dark, districts and the town hall switch their lights on. A building with no power
   stays dark, so a dark district at night is a warning.
 
@@ -579,7 +695,7 @@ The layout is picked automatically; you can switch between phone and computer in
 10. Keep an eye on the **Energy** chart at the bottom: if the red line (demand) goes above the green one
     (production), you're buying power or a blackout is coming.
 11. When construction sites wait a long time in the queue, build a **Workshop**.
-12. When «Not enough trucks» shows up, build a **truck depot**. As the town grows, check the **traffic map** (G)
+12. When «Not enough trucks» shows up, build a **truck depot**. As the town grows, check the **traffic view** (G)
     and upgrade the busiest roads (M); don't put avenues right next to districts.
 13. Keep power plants close to the town hall or a **transformer**: far away they lose energy.
 14. When the **bell** turns red, open the **event log** (E): the problems to fix are at the top, and a click takes
@@ -592,6 +708,13 @@ The layout is picked automatically; you can switch between phone and computer in
     itself. From level II a **gas power plant** covers the peaks, but every hour of gas costs money.
 19. Before winter, think about **heating**: a **wood-fired heating plant** next to a sawmill saves a lot of gas. When
     the «Gas tensions» warning arrives, you have three days to get ready for the crisis.
+20. The town hall's well is enough for the first homes. When you build districts further away, switch on the
+    **Water** view (I) and put a **well** near them; a **water tower** with the pumps «on spare energy» takes the
+    pumps out of the evening peak.
+21. Keep **landfills** away from districts and wells (at least 3 tiles), and build a **waste collection centre** when
+    the waste in the streets keeps growing.
+22. Short of workers? Open the **Work** panel (P): move what matters most to the top, or **suspend** an industry for
+    a few days.
 
 ## Saves
 
@@ -654,6 +777,11 @@ open in earlier versions.
 heating starts switched on and coal power plants carry on from the output they had. A 0.12.0 save doesn't open in
 earlier versions.
 
+**From 0.13.0** the format changes again: water, waste and work priorities. Saves from earlier versions still load:
+the town hall's tank starts full, the pumps «follow demand», the streets are clean and workers follow the starting
+order. Games saved before water existed get **7 days of tanker trucks**, free, bringing all the water homes need:
+time to place your wells. A 0.13.0 save doesn't open in earlier versions.
+
 Saves from one alpha version might not work with the next one: the [changelog](CHANGELOG.md) says so when it
 happens.
 
@@ -661,13 +789,14 @@ happens.
 
 What's already planned, roughly in this order. Plans may change.
 
-- **Water and waste**: waterworks, treatment plants and landfills for a bigger town.
-- **Education**: schools, and better-trained workers.
+- **Education**: schools, and skilled workers for the most demanding buildings.
 - **Research**: technologies to discover that unlock new buildings, such as oil and gas extraction.
 - **Wear and repairs**: buildings wear out and crews repair them with the materials you have; then strikes and
   emergencies, for those who choose them.
 - **New maps**: maps of different sizes, a different map every game, rivers and bridges, and a minimap.
-- **Later on**: several towns linked together and an isometric view.
+- **Tutorial in levels**: a guide at the start, then levels with a few buildings at a time, explained with examples.
+- **Beta**: after the tutorial the game moves to the beta stage, with all the main parts in place.
+- **After 1.0**: several towns linked together and an isometric view.
 
 ## Known issues
 
