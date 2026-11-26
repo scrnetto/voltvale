@@ -16,6 +16,9 @@
   "popolazione_obiettivo": 400,
   "soglia_inquinamento": 50,
   "giorni_negativi_sconfitta": 30,
+  "_nota_abbandono": "SG (23/11/2026): sconfitta «città abbandonata» con meno di abitanti_abbandono abitanti per giorni_abbandono_sconfitta giorni di fila; il testo esito.sconfitta_abbandono ripete i numeri.",
+  "abitanti_abbandono": 5,
+  "giorni_abbandono_sconfitta": 14,
   "domanda_per_abitante": 0.1,
   "curva_domanda": [
     0.55, 0.5, 0.5, 0.5, 0.5, 0.6, 0.8, 1.0,
@@ -35,6 +38,7 @@
   "crescita_abitanti_ora": 0.05,
   "capacita_base_municipio": 20,
   "smaltimento_frazione_ora": 0.02,
+  "inquinamento_industrie": true,
   "fattore_prezzo_minimo": 0.1,
   "prezzo_pieno_a_surplus": 150,
   "previsione_ore": 3,
@@ -90,6 +94,8 @@
     "salute_inquinamento": 0.6,
     "salute_fame": 20,
     "salute_freddo": 12,
+    "salute_acqua": 15,
+    "salute_rifiuti": 6,
     "riduzione_ospedali": 0.6,
     "quota_assenti": 0.5,
     "velocita_avvicinamento": 0.05
@@ -121,7 +127,10 @@
     "rumore_viale": 1.5,
     "pendolari": 0.5,
     "pendolari_max": 8,
-    "freddo": 20
+    "freddo": 20,
+    "senza_acqua": 15,
+    "rifiuti": 10,
+    "discarica": 3
   },
   "materiali": {
     "iniziali": {
@@ -411,7 +420,7 @@
       "durata_max": 21,
       "giorno_minimo": 60,
       "avviso_giorni": 3,
-      "moltiplicatore": { "gas": 2.5, "carburante": 1.5 }
+      "moltiplicatore": { "gas": 2.7, "carburante": 1.5 }
     }
   },
   "calore": {
@@ -423,5 +432,49 @@
     "prezzo_famiglie": 1.4,
     "quota_rincaro_famiglie": 0.5,
     "riscaldamento_iniziale": true
+  },
+  "acqua": {
+    "_nota": "AR (idee/ar-dettagli.md, rivisto col raggio il 23/11): bisogno della città = abitanti × per_abitante × curva[ora] × (1 + caldo_per_grado × max(0, T − caldo_soglia)); bisogno di una casa = la sua quota di capacità. Le case ricevono acqua solo dalle pompe e dalle torri che le hanno nel raggio (distanza a scacchiera). Pompe nell'ordine lago, pozzi, desalinizzatori, municipio; livelli in 'livelli' (raggio, moltiplicatore della portata, quota del costo della costruzione, materiali, livello minimo del municipio). attivo = false: tutto come prima di AR; i test dei sistemi lo spengono.",
+    "attivo": true,
+    "per_abitante": 0.02,
+    "curva": [
+      0.4, 0.3, 0.3, 0.3, 0.4, 0.7, 1.3, 1.7,
+      1.5, 1.1, 1.0, 1.0, 1.2, 1.1, 0.9, 0.9,
+      1.0, 1.2, 1.5, 1.7, 1.6, 1.3, 0.9, 0.7
+    ],
+    "caldo_soglia": 18,
+    "caldo_per_grado": 0.02,
+    "livelli": [
+      {"id": "I", "raggio": 3, "portata": 1.0, "quota_costo": 0, "materiali": {}, "municipio_minimo": 1},
+      {"id": "II", "raggio": 5, "portata": 1.5, "quota_costo": 0.4, "materiali": {"cemento": 10, "rame": 1}, "municipio_minimo": 2},
+      {"id": "III", "raggio": 7, "portata": 2.0, "quota_costo": 0.8, "materiali": {"cemento": 25, "rame": 3}, "municipio_minimo": 3}
+    ],
+    "raggio_torre": 4,
+    "pompa_municipio": 1.6,
+    "energia_municipio": 0.25,
+    "serbatoio_municipio": 8,
+    "raggio_municipio": [3, 4, 5, 6],
+    "riserva": 0.25,
+    "modalita_iniziale": "segue_consumo",
+    "grazia_giorni": 7,
+    "prezzo_famiglie": 0.5,
+    "fattore_siccita": 1.0
+  },
+  "rifiuti": {
+    "_nota": "AR: produzione = abitanti × per_abitante (t/h). Raccolta: municipio raccolta_municipio t/h dalle ore_inizio alle ore_fine delle squadre, più i centri di raccolta. Destinazioni: discariche in ordine di posa, poi smaltimento fuori città a prezzo_smaltimento per t (solo con l'ingresso collegato). attivo = false: tutto come prima di AR.",
+    "attivo": true,
+    "per_abitante": 0.004,
+    "raccolta_municipio": 0.8,
+    "tetto_giorni": 4,
+    "prezzo_smaltimento": 3,
+    "tassa_ora": 0.01,
+    "raggio_rispetto": 2,
+    "inquinamento_discarica": 0.08
+  },
+  "inquinamento_locale": {
+    "_nota": "VM-3 (idee/vm-dettagli.md §3): l'inquinamento della città distribuito sulla mappa. Quota della casella φ = Σ peso × max(0, 1 − d/(raggio+1)) / Σ peso, d a scacchiera, peso = emissione a pieno regime delle fonti funzionanti. Valore = inquinamento × (fondo + (1 − fondo) × φ). Le case respirano il valore della loro casella; salute e felicità usano la media pesata sugli abitanti. attivo = false: tutto come prima.",
+    "attivo": true,
+    "raggio": 5,
+    "fondo": 0.35
   }
 }
